@@ -1,28 +1,43 @@
-# Host_Gozadoras_Club
-Maqueta inicial lista para pruebas
+# Gozadoras Club - MVP Mapa de la Vida Erótica
 
-Arquitectura Técnica del Motor SPA (Single-Page Application)
+Este repositorio contiene la maqueta funcional y el MVP (Producto Mínimo Viable) del **Mapa de la Vida Erótica** para Gozadoras Club. 
 
-La maqueta actual se diseñó para operar en un entorno cerrado y seguro, procesando la lógica en el cliente para mantener la confidencialidad absoluta de las respuestas de las usuarias.
+## Descripción del Proyecto
 
-1. El DOM y las Pantallas (Screens)
-2. El Motor de Preguntas (State Machine)
-El Motor de Preguntas (State Machine)
-Renderizado Dinámico (`renderQuestion`)
-En lugar de tener 39 archivos HTML distintos, el motor toma el contenedor principal:
-1. `bubble`: Inyecta el texto de la pregunta.
-2. `qbody`: Inyecta el bloque de botones de opción (radio/checkboxes) o `textarea` según el `type`.
-3. Re-evalúa en tiempo real si el botón `Siguiente` debe estar habilitado comprobando la variable de estado local `answers`.
+El proyecto consiste en una aplicación web interactiva (Single-Page Application) diseñada para guiar a las usuarias a través de una batería de 39 preguntas cuidadosamente estructuradas, con el fin de explorar su vida erótica, autoconocimiento y límites, para finalmente entregar una de las 5 posibles rutas o "destinos" de exploración.
 
-### Gestión del Estado e Historial
-- `answers = {}`: Un diccionario que almacena la respuesta actual ligada a la `id` de la pregunta.
-- `historyArr = []`: Una pila (stack) que guarda la ruta exacta que tomó la usuaria. Esto permite que el botón "Volver" retroceda correctamente a la pregunta condicional previa sin romper el flujo, haciendo un `.pop()` del array.
+Todo el desarrollo de la interfaz de usuario y la lógica de ramificación (saltos lógicos) se ha empaquetado en una arquitectura sin dependencias externas (Vanilla JavaScript, HTML5 y CSS3), garantizando máxima privacidad, fluidez y facilidad de despliegue.
 
-## 3. Seguridad Estructural y Restricciones
-Durante las iteraciones de diseño, se tomaron decisiones críticas de arquitectura para cumplir las directrices del negocio:
-1. **Eliminación del Módulo de Audio:** Se removió la lógica de `window.AudioContext` y los botones asociados para evitar permisos innecesarios o sensaciones de monitoreo.
-2. **Purgado de Funciones de Cámara:** Se eliminaron los nodos de interacción de "fotografías del entorno", transformando las solicitudes a variables basadas en texto o eliminándolas, asegurando la premisa "Toda la interacción es en la plataforma y anónima".
-3. **Optimización CSS/DOM:** Se resolvieron conflictos de interpolación y renderización (`opacity: 0` atrapada por animaciones CSS conflictivas) para asegurar compatibilidad universal entre navegadores.
+## Características Principales
 
-## 4. Algoritmo de Resultados
-Alcanzar el nodo mágico `'END'` en la función `next()` dispara la transición a `s-sum`. En la etapa actual del MVP, `renderResults()` inyecta en el DOM las 5 tarjetas de destino narrativo establecidas por el equipo de negocio. A futuro, este bloque podrá conectarse a una matriz matemática que asigne pesos a las claves en `answers{}` para ordenar dinámicamente los destinos.
+- **Privacidad desde el Diseño:** No hay conexión a bases de datos ni backend. Toda la evaluación se ejecuta localmente en el dispositivo del usuario. No se solicitan fotografías corporales ni acceso a micrófonos.
+- **Flujo Dinámico SPA:** Transiciones suaves entre pantallas (`s-splash`, `s-consent`, `s-q`, `s-sum`) sin recargar la página.
+- **Motor de Preguntas Complejo:** Soporta múltiples tipos de inputs:
+  - `single`: Selección única.
+  - `multiple`: Selección múltiple con límites máximos (`max`) y opciones mutuamente excluyentes (`ex`).
+  - `gradient`: Escalas de valoración.
+  - `text`: Campos de texto libre.
+- **Lógica de Saltos:** Ramificación de preguntas en tiempo real basada en las respuestas anteriores (por ejemplo, si responde "Otro", se despliega una pregunta de texto específica antes de continuar el flujo).
+- **Algoritmo de Destinos:** Al finalizar la batería, se procesan las respuestas y se asignan destinos narrativos (Reconexión Corporal, Exploración Sensorial, Diálogo y Límites, Autocuidado Radical, Transición Consciente).
+
+## Estructura del Repositorio
+
+- `gozadoras-club.html`: El archivo central que contiene toda la estructura visual, estilos (CSS) y lógica del motor (JS). 
+- `docs/`: (Opcional) Documentos de arquitectura y especificaciones del cliente.
+- `README.md`: Este archivo.
+- `ARCHITECTURE.md`: Documentación técnica detallada del motor en JavaScript.
+- `CHANGELOG.md`: Registro de las iteraciones, errores corregidos y versiones.
+
+## Despliegue (Deployment)
+
+Dado que la aplicación es 100% estática del lado del cliente, puede ser desplegada en cualquier servidor web estándar o servicios como:
+- **GitHub Pages** (Ver flujo en `.github/workflows`)
+- **Vercel**
+- **Netlify**
+- **AWS S3 / CloudFront**
+
+Para ejecutar localmente, simplemente haz doble clic en `gozadoras-club.html` o levanta un servidor local:
+```bash
+python -m http.server 8000
+```
+Y visita `http://localhost:8000/gozadoras-club.html`.
