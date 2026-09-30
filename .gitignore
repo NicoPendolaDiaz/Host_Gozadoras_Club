@@ -1,0 +1,20 @@
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# Logs and databases
+*.log
+*.sqlite
+
+# Python scripts used for debugging/building the MVP
+*.py
+*.js
+body_only.txt
+sq_dump.txt
+gozadoras_restored.html
