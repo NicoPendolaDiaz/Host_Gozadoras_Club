@@ -59,7 +59,7 @@ function go(screenId) {
 }
 
 function renderQuestion(id, viewIdx = 0) {
-    if (id === 'END') {
+    if (id === 'END_NO_ELIGIBLE') { go('s-info'); document.getElementById('i-title').innerText = 'Fin del Cuestionario'; document.getElementById('i-text').innerText = 'Este instrumento está diseñado específicamente para mujeres que se encuentran en una relación de pareja. Agradecemos tu interés.'; document.getElementById('i-next').innerText = 'Terminar'; document.getElementById('i-next').onclick = restart; return; } if (id === 'END') {
         summary();
         go('s-sum');
         return;
@@ -417,3 +417,4 @@ window.toggleAmbient = function(){
 window.openSheet = function(){document.getElementById('sheet').classList.add('on');document.getElementById('scrim').classList.add('on');};
 window.closeSheet = function(){document.getElementById('sheet').classList.remove('on');document.getElementById('scrim').classList.remove('on');};
 window.restart = function() { clearState(); go('s-splash'); };
+window.startChapter = function(n) { renderQuestion('PRE01'); };
