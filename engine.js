@@ -23,6 +23,31 @@ function getAns(id) {
     return answers[id] || [];
 }
 
+function el(tag, cls, text) {
+    const e = document.createElement(tag);
+    if(cls) e.className = cls;
+    if(text) e.textContent = text;
+    return e;
+}
+
+const ZONES = {
+  Z01:{x:50,y:9,l:"Rostro y labios"}, Z02:{x:50,y:21,l:"Orejas y cuello"}, Z03:{x:50,y:33,l:"Pecho"},
+  Z04:{x:14,y:62,l:"Manos"}, Z05:{x:50,y:48,l:"Abdomen y espalda"}, Z06:{x:50,y:58,l:"Pelvis"}, 
+  Z07:{x:50,y:65,l:"Vulva"}, Z08:{x:36,y:74,l:"Glúteos y muslos"}, Z09:{x:36,y:85,l:"Piernas y pies"}
+};
+
+function silhouette(){return `<svg viewBox="0 0 210 340" aria-hidden="true" style="max-width:200px; display:block; margin: 0 auto;">
+  <defs><clipPath id="bodyclip"><ellipse cx="105" cy="32" rx="26" ry="30"/><path d="M70 60 C70 100 60 110 55 150 L55 250 C55 290 65 320 80 332 L130 332 C145 320 155 290 155 250 L155 150 C150 110 140 100 140 60 Z"/></clipPath></defs>
+  <ellipse cx="105" cy="32" rx="26" ry="30" fill="#14291f" stroke="#254333"/>
+  <path d="M70 60 C70 100 60 110 55 150 L55 250 C55 290 65 320 80 332 L130 332 C145 320 155 290 155 250 L155 150 C150 110 140 100 140 60 Z" fill="#14291f" stroke="#254333" stroke-width="1.2"/>
+  <g clip-path="url(#bodyclip)" fill="none" stroke="#4fae7b" stroke-width=".8" opacity=".35">
+    <path d="M60 110 C90 100 120 100 150 110 M58 140 C90 128 120 128 152 140 M56 170 C90 156 120 156 154 170 M56 200 C90 186 120 186 154 200 M58 230 C90 218 120 218 152 230 M62 260 C90 250 120 250 148 260 M68 290 C90 282 120 282 142 290"/>
+    <path d="M85 20 C95 10 115 10 125 20 M82 40 C95 30 115 30 128 40 M78 75 C95 66 115 66 132 75"/>
+  </g>
+  <path d="M55 150 C40 160 30 190 32 220" fill="none" stroke="#254333" stroke-width="10" stroke-linecap="round"/>
+  <path d="M155 150 C170 160 180 190 178 220" fill="none" stroke="#254333" stroke-width="10" stroke-linecap="round"/>
+</svg>`;}
+
 function go(screenId) {
     document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
     let scr = document.getElementById(screenId);
@@ -30,6 +55,12 @@ function go(screenId) {
 }
 
 function renderQuestion(id, viewIdx = 0) {
+    if (id === 'END') {
+        summary();
+        go('s-sum');
+        return;
+    }
+    
     currentQId = id;
     currentView = viewIdx;
     let q = QUESTIONS.find(x => x.id === id);
@@ -38,11 +69,6 @@ function renderQuestion(id, viewIdx = 0) {
         go('s-landscape');
         document.getElementById('l-title').innerText = q.title;
         document.getElementById('l-text').innerText = q.text;
-        document.getElementById('l-next').onclick = () => {
-            historyArr.push({id: id, view: viewIdx});
-            saveState();
-            if (q.next) renderQuestion(q.next);
-        };
         return;
     }
     
@@ -51,11 +77,6 @@ function renderQuestion(id, viewIdx = 0) {
         document.getElementById('i-title').innerText = q.title;
         document.getElementById('i-text').innerText = q.text;
         document.getElementById('i-next').innerText = q.button || "Continuar";
-        document.getElementById('i-next').onclick = () => {
-            historyArr.push({id: id, view: viewIdx});
-            saveState();
-            if (q.next) renderQuestion(q.next);
-        };
         return;
     }
 
@@ -63,10 +84,25 @@ function renderQuestion(id, viewIdx = 0) {
     let qbody = document.getElementById('qbody');
     let bubble = document.getElementById('bubble');
     let pcap = document.getElementById('pcap');
+    let nextBtn = document.getElementById('nextbtn');
+    let skipBtn = document.getElementById('skip');
+    
+    // Update Chapter progress visualization based on id prefix
+    let chText = "Contexto";
+    if (id.startsWith('P')) {
+        let num = parseInt(id.substring(1,3));
+        if (num <= 5) chText = "Mirador";
+        else if (num <= 12) chText = "Manantial";
+        else if (num <= 18) chText = "Sendero";
+        else if (num <= 21) chText = "Clima";
+        else chText = "Horizonte";
+    }
+    document.getElementById('plbl').innerText = chText;
     
     let ans = answers[id] || [];
     let isMulti = q.type === 'multiple' || q.type === 'carousel' || q.type === 'body_map' || q.type === 'views';
-    if(q.type === 'views') {
+    
+    if (q.type === 'views') {
         bubble.innerText = q.text;
         let viewData = q.views[viewIdx];
         pcap.innerText = viewData.title + ` (Vista ${viewIdx + 1} de ${q.views.length})`;
@@ -79,13 +115,20 @@ function renderQuestion(id, viewIdx = 0) {
         html += '</div>';
         qbody.innerHTML = html;
         
-    } else if (q.type === 'carousel') {
+    } else if (q.type === 'body_map') {
         bubble.innerText = q.text;
-        pcap.innerText = 'Selecciona hasta ' + q.max;
-        let html = '<div class="carousel-container">';
+        pcap.innerText = 'Toca las zonas';
+        let html = '<div class="bmap" style="position:relative; margin-bottom:20px;">' + silhouette();
+        
         q.options.forEach(opt => {
+            if(opt.out_of_scale) return; // handled as normal buttons below
+            let sel = ans.includes(opt.id) ? 'on' : '';
+            html += `<div class="hot ${sel}" style="left:${ZONES[opt.id].x}%; top:${ZONES[opt.id].y}%;" onclick="toggleOpt('${opt.id}', true, false, 99)"><span></span></div>`;
+        });
+        html += '</div><div class="options-list">';
+        q.options.filter(o => o.out_of_scale).forEach(opt => {
             let sel = ans.includes(opt.id) ? 'selected' : '';
-            html += `<button class="opt-btn ${sel}" onclick="toggleOpt('${opt.id}', true, ${!!opt.ex}, ${q.max || 99})">${opt.text}</button>`;
+            html += `<button class="opt-btn ${sel} out-scale" onclick="toggleOpt('${opt.id}', true, true, 99)">${opt.text}</button>`;
         });
         html += '</div>';
         qbody.innerHTML = html;
@@ -93,27 +136,27 @@ function renderQuestion(id, viewIdx = 0) {
     } else if (q.type === 'text') {
         bubble.innerText = q.text;
         pcap.innerText = '';
-        qbody.innerHTML = `<textarea id="txt-ans" placeholder="${q.placeholder || 'Escribe aquí...'}" oninput="updateTextAns()">${ans[0] || ''}</textarea>`;
+        qbody.innerHTML = `<textarea id="txt-ans" placeholder="${q.placeholder || 'Escribe aquí...'}" oninput="updateTextAns()" style="width:100%; height:120px; border-radius:8px; padding:12px; font-size:16px; font-family:inherit; border:1px solid #4fae7b; background:transparent; color:#f0f2f0;">${ans[0] || ''}</textarea>`;
     } else if (q.type === 'density_field') {
         bubble.innerText = q.text;
-        pcap.innerText = 'Selecciona un punto del clima';
+        pcap.innerText = 'Selecciona el nivel';
         
-        // Background density effect
+        // Let's use opacity of a green div to simulate density
         let level = 3;
         if(ans[0]) {
             let idx = q.options.findIndex(x => x.id === ans[0]);
             if(idx >= 0 && idx < 5) level = idx + 1;
         }
-        let opacities = {1:0.2, 2:0.35, 3:0.5, 4:0.65, 5:0.8};
-        qbody.innerHTML = `<div class="density-bg" style="opacity: ${opacities[level]}"></div>`;
+        let opacities = {1:0.1, 2:0.3, 3:0.5, 4:0.7, 5:0.9};
         
-        let html = '<div class="density-controls" style="position:relative; z-index:2;">';
+        let html = `<div style="position:absolute; top:0;left:0;right:0;bottom:0; background:rgba(79, 174, 123, ${opacities[level]}); pointer-events:none; transition: opacity 0.5s; z-index:-1;"></div>`;
+        html += '<div class="options-list" style="margin-top:20px;">';
         q.options.forEach(opt => {
             let sel = ans.includes(opt.id) ? 'selected' : '';
             html += `<button class="opt-btn ${sel}" onclick="toggleOpt('${opt.id}', false, false, 1); updateDensity(this)">${opt.text}</button>`;
         });
         html += '</div>';
-        qbody.innerHTML += html;
+        qbody.innerHTML = html;
     } else {
         // generic spatial, single, multiple, etc
         bubble.innerText = q.text;
@@ -129,36 +172,50 @@ function renderQuestion(id, viewIdx = 0) {
         qbody.innerHTML = html;
     }
     
-    // Inject Next/Back/Omitir
-    let btnHtml = '<div class="action-btns">';
-    btnHtml += `<button class="btn btn-sec" onclick="goBack()">Volver</button>`;
-    
-    if (q.optional) {
-        btnHtml += `<button class="btn btn-sec" onclick="doOmit()">Omitir por ahora</button>`;
-    }
-    
+    // Update footer buttons
     let canNext = ans.length > 0;
     if(q.type === 'text') canNext = ans[0] && ans[0].trim().length > 0;
     if(q.optional) canNext = true; 
     
-    let nextText = "Siguiente";
+    if (q.optional) skipBtn.style.display = 'inline-flex';
+    else skipBtn.style.display = 'none';
+    
     if (q.type === 'views' && viewIdx < q.views.length - 1) {
-        nextText = "Siguiente vista";
+        nextBtn.innerText = "Siguiente vista";
+    } else {
+        nextBtn.innerText = "Siguiente";
     }
     
-    btnHtml += `<button class="btn btn-primary" id="btn-next" ${canNext ? '' : 'disabled'} onclick="goNext()">${nextText}</button>`;
-    btnHtml += '</div>';
-    qbody.innerHTML += btnHtml;
+    if(canNext) {
+        nextBtn.classList.remove('disabled');
+        nextBtn.style.opacity = '1';
+        nextBtn.disabled = false;
+    } else {
+        nextBtn.classList.add('disabled');
+        nextBtn.style.opacity = '0.5';
+        nextBtn.disabled = true;
+    }
 }
 
 window.updateDensity = function(btn) {
-    renderQuestion(currentQId, currentView); // re-renders to update opacity
+    renderQuestion(currentQId, currentView); 
 };
 
 window.updateTextAns = function() {
     let val = document.getElementById('txt-ans').value;
     answers[currentQId] = [val];
-    document.getElementById('btn-next').disabled = val.trim().length === 0;
+    let q = QUESTIONS.find(x => x.id === currentQId);
+    let canNext = val.trim().length > 0 || q.optional;
+    let nextBtn = document.getElementById('nextbtn');
+    if(canNext) {
+        nextBtn.classList.remove('disabled');
+        nextBtn.style.opacity = '1';
+        nextBtn.disabled = false;
+    } else {
+        nextBtn.classList.add('disabled');
+        nextBtn.style.opacity = '0.5';
+        nextBtn.disabled = true;
+    }
 };
 
 window.toggleOpt = function(optId, isMulti, isEx, max) {
@@ -169,9 +226,8 @@ window.toggleOpt = function(optId, isMulti, isEx, max) {
         answers[currentQId] = [optId];
     } else {
         if (isEx) {
-            answers[currentQId] = [optId]; // exclusive replaces everything
+            answers[currentQId] = [optId];
         } else {
-            // remove any exclusive options
             let q = QUESTIONS.find(x => x.id === currentQId);
             let optsList = q.options || [];
             if(q.type === 'views') {
@@ -193,16 +249,14 @@ window.toggleOpt = function(optId, isMulti, isEx, max) {
     renderQuestion(currentQId, currentView);
 };
 
-window.doOmit = function() {
-    answers[currentQId] = ['OMITTED'];
-    goNext();
-};
-
-window.goNext = function() {
+window.next = function(isSkip) {
+    if(isSkip) {
+        answers[currentQId] = ['OMITTED'];
+    }
+    
     let q = QUESTIONS.find(x => x.id === currentQId);
     let ans = answers[currentQId] || [];
     
-    // Check if it has more views
     if (q.type === 'views' && currentView < q.views.length - 1) {
         historyArr.push({id: currentQId, view: currentView});
         saveState();
@@ -226,7 +280,7 @@ window.goNext = function() {
     }
 };
 
-window.goBack = function() {
+window.prev = function() {
     if (historyArr.length === 0) {
         go('s-splash');
         return;
@@ -236,7 +290,94 @@ window.goBack = function() {
     renderQuestion(last.id, last.view);
 };
 
+window.nextInfo = function() {
+    let q = QUESTIONS.find(x => x.id === currentQId);
+    historyArr.push({id: currentQId, view: 0});
+    saveState();
+    if (q.next) renderQuestion(q.next, 0);
+};
+
+window.nextLandscape = function() {
+    let q = QUESTIONS.find(x => x.id === currentQId);
+    historyArr.push({id: currentQId, view: 0});
+    saveState();
+    if (q.next) renderQuestion(q.next, 0);
+};
+
+function summary() {
+  const s = document.getElementById('sum'); 
+  s.innerHTML = '';
+  const h = el('h2','', 'Tu cuerpo-territorio (v1.0)'); 
+  s.appendChild(h);
+  
+  const m = el('div','bmap'); 
+  m.innerHTML = silhouette();
+  
+  const hits = new Set(getAns('P11'));
+  
+  Object.keys(ZONES).forEach(z => {
+      const d = el('div','hot');
+      d.style.left = ZONES[z].x + '%';
+      d.style.top = ZONES[z].y + '%';
+      d.innerHTML = '<span></span>';
+      if(hits.has(z)) d.classList.add('on');
+      else d.classList.add('dim');
+      m.appendChild(d);
+  });
+  s.appendChild(m);
+  
+  const tg = el('div','tags'); 
+  [...hits].forEach(z => {
+      const t = el('span','hi', ZONES[z].l);
+      tg.appendChild(t);
+  }); 
+  if(!tg.children.length) tg.appendChild(el('span','','Sin zonas marcadas aún')); 
+  s.appendChild(tg);
+  
+  const kv = document.createElement('dl');
+  kv.className = 'kv';
+  
+  const getOptText = (qId, ansId) => {
+      let q = QUESTIONS.find(x => x.id === qId);
+      if(!q) return ansId;
+      let opts = q.options;
+      if(q.type === 'views') opts = q.views.flatMap(v => v.options);
+      if(!opts) return ansId;
+      let opt = opts.find(o => o.id === ansId);
+      return opt ? opt.text : ansId;
+  };
+  
+  let p02_ans = getAns('P02')[0];
+  let p15_ans = getAns('P15')[0];
+  let p22_ans = getAns('P22').map(a => getOptText('P22', a)).join(', ');
+  
+  const rows = [
+      ["Cercanía al deseo", p02_ans ? getOptText('P02', p02_ans) : '-'],
+      ["Protagonismo de placer", p15_ans ? getOptText('P15', p15_ans) : '-'],
+      ["Lo más valioso", p22_ans || '-']
+  ];
+  
+  rows.filter(r => r[1]).forEach(([k,v]) => {
+      const dt = document.createElement('dt'); dt.textContent = k;
+      const dd = document.createElement('dd'); dd.textContent = v;
+      kv.append(dt,dd);
+  });
+  s.appendChild(kv);
+  
+  const done = Object.keys(answers).length; 
+  s.appendChild(el('p','lead',`${done} dimensiones respondidas.`));
+  
+  const tn = el('div','terr-note');
+  tn.innerHTML = 'Lo que marcaste no es un diagnóstico: es un <em>mapa situado</em> de tu territorio en tu estación actual. Guarda una captura de pantalla de esta hoja.';
+  s.appendChild(tn);
+}
+
 function startApp() {
+    // Check if the original event listeners exist, we are hijacking them via HTML inline onclick mostly
+    document.getElementById('startbtn')?.addEventListener('click', () => {
+        renderQuestion('PRE01');
+    });
+    
     if (historyArr.length > 0) {
         let last = historyArr[historyArr.length - 1];
         renderQuestion(last.id, last.view);
@@ -246,3 +387,28 @@ function startApp() {
 }
 
 window.onload = startApp;
+
+let AC=null, ambOn=false, ambNodes=[];
+window.toggleAmbient = function(){
+  const btn=document.getElementById('ambbtn');
+  if(ambOn){ ambNodes.forEach(n=>{try{n.stop&&n.stop();n.disconnect&&n.disconnect();}catch(e){}}); ambNodes=[]; ambOn=false; btn.classList.remove('on'); return; }
+  try{
+    AC=AC||new (window.AudioContext||window.webkitAudioContext)();
+    const master=AC.createGain(); master.gain.value=0.0001; master.connect(AC.destination);
+    master.gain.exponentialRampToValueAtTime(0.18, AC.currentTime+2.5);
+    const buf=AC.createBuffer(1, AC.sampleRate*2, AC.sampleRate); const d=buf.getChannelData(0); let last=0;
+    for(let i=0;i<d.length;i++){ const w=Math.random()*2-1; last=(last+0.02*w)/1.02; d[i]=last*3.5; }
+    const src=AC.createBufferSource(); src.buffer=buf; src.loop=true;
+    const lp=AC.createBiquadFilter(); lp.type='lowpass'; lp.frequency.value=900;
+    const lfo=AC.createOscillator(); lfo.frequency.value=0.07; const lfoG=AC.createGain(); lfoG.gain.value=300; lfo.connect(lfoG); lfoG.connect(lp.frequency); lfo.start();
+    src.connect(lp); lp.connect(master); src.start();
+    const chirp=AC.createOscillator(); chirp.type='sine'; chirp.frequency.value=4200;
+    const cg=AC.createGain(); cg.gain.value=0; chirp.connect(cg); cg.connect(master); chirp.start();
+    const am=AC.createOscillator(); am.frequency.value=38; const amG=AC.createGain(); amG.gain.value=0.012; am.connect(amG); amG.connect(cg.gain); am.start();
+    const bp=AC.createBiquadFilter(); bp.type='highpass'; bp.frequency.value=3500;
+    ambNodes=[src,lfo,chirp,am,master];
+    ambOn=true; btn.classList.add('on');
+  }catch(e){ console.warn('audio no disponible',e); }
+};
+window.openSheet = function(){document.getElementById('sheet').classList.add('on');document.getElementById('scrim').classList.add('on');};
+window.closeSheet = function(){document.getElementById('sheet').classList.remove('on');document.getElementById('scrim').classList.remove('on');};
