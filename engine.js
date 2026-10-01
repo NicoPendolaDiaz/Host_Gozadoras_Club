@@ -31,21 +31,25 @@ function el(tag, cls, text) {
 }
 
 const ZONES = {
-  Z01:{x:50,y:9,l:"Rostro y labios"}, Z02:{x:50,y:21,l:"Orejas y cuello"}, Z03:{x:50,y:33,l:"Pecho"},
-  Z04:{x:14,y:62,l:"Manos"}, Z05:{x:50,y:48,l:"Abdomen y espalda"}, Z06:{x:50,y:58,l:"Pelvis"}, 
-  Z07:{x:50,y:65,l:"Vulva"}, Z08:{x:36,y:74,l:"Glúteos y muslos"}, Z09:{x:36,y:85,l:"Piernas y pies"}
+  Z01:{x:50,y:10,l:"Rostro y labios"}, Z02:{x:50,y:20,l:"Orejas y cuello"}, Z03:{x:50,y:32,l:"Pecho"},
+  Z04:{x:15,y:50,l:"Manos"}, Z05:{x:50,y:48,l:"Abdomen y espalda"}, Z06:{x:50,y:60,l:"Pelvis"}, 
+  Z07:{x:50,y:68,l:"Vulva"}, Z08:{x:35,y:72,l:"Glúteos y muslos"}, Z09:{x:35,y:90,l:"Piernas y pies"}
 };
 
-function silhouette(){return `<svg viewBox="0 0 210 340" aria-hidden="true" style="max-width:200px; display:block; margin: 0 auto;">
-  <defs><clipPath id="bodyclip"><ellipse cx="105" cy="32" rx="26" ry="30"/><path d="M70 60 C70 100 60 110 55 150 L55 250 C55 290 65 320 80 332 L130 332 C145 320 155 290 155 250 L155 150 C150 110 140 100 140 60 Z"/></clipPath></defs>
-  <ellipse cx="105" cy="32" rx="26" ry="30" fill="#14291f" stroke="#254333"/>
-  <path d="M70 60 C70 100 60 110 55 150 L55 250 C55 290 65 320 80 332 L130 332 C145 320 155 290 155 250 L155 150 C150 110 140 100 140 60 Z" fill="#14291f" stroke="#254333" stroke-width="1.2"/>
+function silhouette(){return `<svg viewBox="0 0 200 400" aria-hidden="true" style="max-width:200px; display:block; margin: 0 auto;">
+  <defs>
+    <clipPath id="bodyclip">
+      <path d="M100 20 C115 20 125 35 125 50 C125 70 115 80 115 85 C130 90 145 95 150 110 C155 125 155 160 145 180 C135 200 145 220 150 240 C155 260 160 300 155 350 L145 380 C140 395 120 395 115 380 L105 280 L95 280 L85 380 C80 395 60 395 55 380 L45 350 C40 300 45 260 50 240 C55 220 65 200 55 180 C45 160 45 125 50 110 C55 95 70 90 85 85 C85 80 75 70 75 50 C75 35 85 20 100 20 Z"/>
+    </clipPath>
+  </defs>
+  <path d="M100 20 C115 20 125 35 125 50 C125 70 115 80 115 85 C130 90 145 95 150 110 C155 125 155 160 145 180 C135 200 145 220 150 240 C155 260 160 300 155 350 L145 380 C140 395 120 395 115 380 L105 280 L95 280 L85 380 C80 395 60 395 55 380 L45 350 C40 300 45 260 50 240 C55 220 65 200 55 180 C45 160 45 125 50 110 C55 95 70 90 85 85 C85 80 75 70 75 50 C75 35 85 20 100 20 Z" fill="#14291f" stroke="#254333" stroke-width="1.2"/>
   <g clip-path="url(#bodyclip)" fill="none" stroke="#4fae7b" stroke-width=".8" opacity=".35">
-    <path d="M60 110 C90 100 120 100 150 110 M58 140 C90 128 120 128 152 140 M56 170 C90 156 120 156 154 170 M56 200 C90 186 120 186 154 200 M58 230 C90 218 120 218 152 230 M62 260 C90 250 120 250 148 260 M68 290 C90 282 120 282 142 290"/>
-    <path d="M85 20 C95 10 115 10 125 20 M82 40 C95 30 115 30 128 40 M78 75 C95 66 115 66 132 75"/>
+    <!-- Contour lines for breasts, belly, hips -->
+    <path d="M65 120 C80 110 90 140 100 140 C110 140 120 110 135 120" />
+    <path d="M55 140 C80 160 120 160 145 140" />
+    <path d="M65 190 C80 200 120 200 135 190" />
+    <path d="M50 230 C80 250 120 250 150 230" />
   </g>
-  <path d="M55 150 C40 160 30 190 32 220" fill="none" stroke="#254333" stroke-width="10" stroke-linecap="round"/>
-  <path d="M155 150 C170 160 180 190 178 220" fill="none" stroke="#254333" stroke-width="10" stroke-linecap="round"/>
 </svg>`;}
 
 function go(screenId) {
@@ -107,10 +111,10 @@ function renderQuestion(id, viewIdx = 0) {
         let viewData = q.views[viewIdx];
         pcap.innerText = viewData.title + ` (Vista ${viewIdx + 1} de ${q.views.length})`;
         
-        let html = '<div class="options-grid">';
+        let html = '<div class="chips" style="display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-bottom:20px;">';
         viewData.options.forEach(opt => {
-            let sel = ans.includes(opt.id) ? 'selected' : '';
-            html += `<button class="opt-btn ${sel}" onclick="toggleOpt('${opt.id}', true, ${!!opt.ex}, ${q.max || 99})">${opt.text}</button>`;
+            let sel = ans.includes(opt.id) ? 'on' : '';
+            html += `<button class="chip ${sel}" onclick="toggleOpt('${opt.id}', true, ${!!opt.ex}, ${q.max || 99})">${opt.text}</button>`;
         });
         html += '</div>';
         qbody.innerHTML = html;
@@ -125,10 +129,10 @@ function renderQuestion(id, viewIdx = 0) {
             let sel = ans.includes(opt.id) ? 'on' : '';
             html += `<div class="hot ${sel}" style="left:${ZONES[opt.id].x}%; top:${ZONES[opt.id].y}%;" onclick="toggleOpt('${opt.id}', true, false, 99)"><span></span></div>`;
         });
-        html += '</div><div class="options-list">';
+        html += '</div><div class="chips">';
         q.options.filter(o => o.out_of_scale).forEach(opt => {
-            let sel = ans.includes(opt.id) ? 'selected' : '';
-            html += `<button class="opt-btn ${sel} out-scale" onclick="toggleOpt('${opt.id}', true, true, 99)">${opt.text}</button>`;
+            let sel = ans.includes(opt.id) ? 'on' : '';
+            html += `<button class="chip ${sel} out-scale" onclick="toggleOpt('${opt.id}', true, true, 99)">${opt.text}</button>`;
         });
         html += '</div>';
         qbody.innerHTML = html;
@@ -150,10 +154,10 @@ function renderQuestion(id, viewIdx = 0) {
         let opacities = {1:0.1, 2:0.3, 3:0.5, 4:0.7, 5:0.9};
         
         let html = `<div style="position:absolute; top:0;left:0;right:0;bottom:0; background:rgba(79, 174, 123, ${opacities[level]}); pointer-events:none; transition: opacity 0.5s; z-index:-1;"></div>`;
-        html += '<div class="options-list" style="margin-top:20px;">';
+        html += '<div class="chips" style="margin-top:20px;">';
         q.options.forEach(opt => {
-            let sel = ans.includes(opt.id) ? 'selected' : '';
-            html += `<button class="opt-btn ${sel}" onclick="toggleOpt('${opt.id}', false, false, 1); updateDensity(this)">${opt.text}</button>`;
+            let sel = ans.includes(opt.id) ? 'on' : '';
+            html += `<button class="chip ${sel}" onclick="toggleOpt('${opt.id}', false, false, 1); updateDensity(this)">${opt.text}</button>`;
         });
         html += '</div>';
         qbody.innerHTML = html;
@@ -161,11 +165,11 @@ function renderQuestion(id, viewIdx = 0) {
         // generic spatial, single, multiple, etc
         bubble.innerText = q.text;
         pcap.innerText = '';
-        let html = '<div class="options-list">';
+        let html = '<div class="chips">';
         if(q.options) {
             q.options.forEach(opt => {
-                let sel = ans.includes(opt.id) ? 'selected' : '';
-                html += `<button class="opt-btn ${sel} ${opt.out_of_scale ? 'out-scale':''}" onclick="toggleOpt('${opt.id}', ${isMulti}, ${!!opt.ex}, ${q.max || 99})">${opt.text}</button>`;
+                let sel = ans.includes(opt.id) ? 'on' : '';
+                html += `<button class="chip ${sel} ${opt.out_of_scale ? 'out-scale':''}" onclick="toggleOpt('${opt.id}', ${isMulti}, ${!!opt.ex}, ${q.max || 99})">${opt.text}</button>`;
             });
         }
         html += '</div>';
@@ -412,3 +416,4 @@ window.toggleAmbient = function(){
 };
 window.openSheet = function(){document.getElementById('sheet').classList.add('on');document.getElementById('scrim').classList.add('on');};
 window.closeSheet = function(){document.getElementById('sheet').classList.remove('on');document.getElementById('scrim').classList.remove('on');};
+window.restart = function() { clearState(); go('s-splash'); };
