@@ -1,0 +1,259 @@
+GOZADORAS CLUB
+MVP Mapa de la Vida Erótica
+Especificación de Experiencia e Interfaz · Freeze v1.0
+FREEZE v1.0 · PARA IMPLEMENTACIÓN Y QA · PASS CON RESERVAS
+Fecha de corte: 01/10/2026
+0. Relación con el Instrumento
+Este documento gobierna la experiencia, interacción, composición y criterios de aceptación de interfaz. El documento A —“Instrumento del Mapa de la Vida Erótica · Freeze v1.0”— gobierna preguntas, redacción, opciones, emojis, cardinalidades, estatutos, branches y Gate. Este documento no los duplica salvo cuando una etiqueta exacta sea necesaria para especificar un componente.
+Orden de diseño: contenido/significado → interacción → recorrido/ritmo → marca.
+Una misma pieza visual no debe utilizarse como solución homogénea para todas las preguntas.
+Los activos narrativos o de marca señalados como ACTIVO GOZADORAS PENDIENTE no deben ser sustituidos o reinventados por implementación; su ausencia no impide corregir arquitectura, interacción, vistas, cardinalidad ni recorrido.
+Precondición de entrada: la sesión del Mapa comienza una vez creado session_id y resuelto el consentimiento aplicable. Landing/captación y consentimiento de marketing quedan fuera de esta especificación salvo acuerdo separado.
+Continuidad de devolución: hasta que se entregue el documento C, siguen vigentes del preliminar del 25/09 la Configuración situada, cinco Destinos ordenados (tres visibles + dos alternativos), resonancia inicial y Puente. A/B no implementan todavía el ranking: el catálogo de 11 Destinos y las reglas señal → ranking son insumos bloqueantes del documento C.
+1. Portada
+Marca: 
+GOZADORAS CLUB · wordmark vigente; variante horizontal en evaluación, no requisito para la primera corrección técnica
+Título: 
+Mapa de la Vida Erótica
+Copy aprobado: 
+Tu vida erótica no es un territorio fijo. Recorrer este mapa es mirar ese paisaje y descubrir qué empieza a tomar forma desde ahí.
+Criterio: 
+Portada editorial, no formulario. Evitar “Pregunta X/N” y cualquier apariencia de test clínico.
+1.1 PRE01 · Antes de recorrer tu Mapa
+Ubicación: inmediatamente después de la portada y antes de CTX/Mirador. Renderizar el copy exacto definido en el documento A. El anclaje “últimas 4 semanas” aparece aquí una sola vez y no se repite en cada pregunta.
+1.2 CTX · Para situar tu Mapa
+Ubicación: después de PRE01 y antes de la lámina MIRADOR. Implementar CTX00–CTX05 según A. Los CTX son metadatos de contexto, no preguntas Pxx, no participan del Gate y no alteran por sí solos Configuración/Destinos.
+Flujo de entrada v1: PORTADA → PRE01 → CTX → MIRADOR → P01. El MVP asume que las sesiones que alcanzan P01 corresponden a mujeres actualmente en pareja; por eso P13–P18 no incluyen “No tengo pareja / No aplica”.
+2. Láminas de transición de paisaje
+Nomenclatura canónica v1: MIRADOR · MANANTIAL · SENDERO · CLIMA · HORIZONTE. Sustituye las referencias anteriores del Encargo 28/09 donde el bloque P13–P18 aparecía como “Clima” y P19–P21 como “Suelo”.
+Las cinco láminas son pantallas de transición visibles. Aparecen antes de la primera pregunta del rango indicado. Solo muestran nombre del paisaje + copy narrativo. La pregunta backstage no es visible. P25–P40 no abren un sexto paisaje.
+MIRADOR · antes de P01
+Todo mapa comienza con una mirada. Antes de avanzar, observa desde dónde estás mirando.
+Backstage (no visible): ¿Dónde estoy ahora?
+MANANTIAL · antes de P06
+Bajo la superficie, el agua está en movimiento. El cauce aparece cuando encuentra su rumbo.
+Backstage (no visible): ¿Qué me está pasando?
+SENDERO · antes de P13
+Compartir camino cambia el paso. Entre dos, la intimidad tiene su propia geografía.
+Backstage (no visible): ¿Cómo me siento con mi pareja?
+CLIMA · antes de P19
+Lo cotidiano se filtra en lo íntimo. Algunos días dejan aire; otros piden espacio.
+Backstage (no visible): ¿Con qué condiciones cuento?
+HORIZONTE · antes de P22
+Una dirección puede hacerse visible antes de tener nombre. El horizonte empieza justo ahí.
+Backstage (no visible): ¿Hacia dónde quiero ir?
+3. Glosario de componentes
+Tarjeta de opción: 
+Control táctil de tamaño suficiente para texto y, cuando el Instrumento lo indique, emoji. Puede ser selección única o múltiple; cardinalidad según documento A.
+Gradiente de 5 puntos: 
+Cinco posiciones equidistantes en una línea/continuo. Cada posición mapea exactamente a una categoría verbal. Estados fuera del eje aparecen debajo, físicamente separados.
+Campo de texto: 
+Caja de texto breve o amplia según el Instrumento. Placeholder neutro: “Escribe aquí…”.
+Par comparativo: 
+Dos preguntas consecutivas con la misma composición/control para facilitar comparación perceptiva sin mostrar la respuesta anterior.
+Transición de paisaje: 
+Pantalla con nombre + copy aprobado. No contiene controles de respuesta.
+Microdespliegue condicional: 
+Información adicional dentro de la misma pregunta; no crea un nuevo ID Pxx.
+Secuencia de vistas: 
+Una misma pregunta distribuida en varias vistas. El enunciado permanece fijo, las selecciones persisten y el contador refleja el máximo total.
+Mapa corporal: 
+Silueta propia GOZADORAS con zonas/puntos seleccionables y etiqueta al tocar. Sin submapa anatómico genital.
+4. Navegación, progreso y estados
+No mostrar “Pregunta X / 40” porque el recorrido es adaptativo. El progreso visible se expresa por paisaje: Mirador → Manantial → Sendero → Clima → Horizonte. Dentro de un paisaje no mostrar porcentaje de preguntas. Durante P25–P40 mantener Horizonte como paisaje activo y señalar solo un subestado discreto de profundización, sin crear un sexto paisaje.
+Atrás disponible mientras IN_PROGRESS; las selecciones persisten al navegar entre vistas de la misma pregunta.
+Continuar se habilita con la cardinalidad mínima canónica: selección única = 1 respuesta válida; selección múltiple = mínimo 1 y respetar el máximo; P11 = mínimo 1 zona o un estado externo; texto requerido = no vacío; pregunta omisible = también puede avanzar mediante “Omitir por ahora”. Estados excluyentes sustituyen respuestas sustantivas.
+“Omitir por ahora” solo aparece en las preguntas omisibles definidas en A.
+“Prefiero no responder” se presenta como alternativa cuando A la contempla; no se trata como navegación.
+“No mostrada” es estado backend, nunca un elemento de interfaz.
+Guardar de forma persistente al confirmar cada pregunta o vista estable. Un refresh/cierre accidental no debe borrar respuestas ya confirmadas.
+Al reingresar a una session_id IN_PROGRESS, recuperar respuestas y volver al último punto estable del recorrido; no crear una sesión paralela por refresh.
+Una session_id COMPLETE se abre en modo lectura para respuestas/resultado; no reabre edición del snapshot.
+5. Preguntas con múltiples vistas
+Las agrupaciones, textos y emojis están en A y deben implementarse literalmente; no sustituir símbolos ni copy por decisión de interfaz. Aquí se gobierna el comportamiento común:
+No desplegar listas extensas en una sola pantalla.
+Una pregunta conserva un único question_id a través de todas sus vistas.
+Enunciado fijo o reiterado en forma consistente; selección persiste.
+Mostrar contador cuando exista máximo: “Elegidas X de N”.
+Permitir volver a una vista anterior antes de continuar.
+Al final, cuando aporte claridad, mostrar una revisión breve de opciones seleccionadas.
+No revelar una opción por animación automática ni obligar a elegir una por vista.
+Los nombres “Vista 1 · …”, “Vista 2 · …” del documento A son etiquetas estructurales/backstage. No mostrarlos por defecto a la usuaria. Si más adelante GOZADORAS aprueba subtítulos visibles, se incorporan sin cambiar question_id ni opciones.
+Aplican: 
+P03, P07, P20, P22 y P24; P01 puede usar baraja/carrusel de reconocimiento en vez de vistas por grupos.
+6. Especificaciones visuales por patrón
+6.1 P01 · Baraja/carrusel de reconocimiento
+Una tarjeta grande por vez, con indicio visual de la siguiente.
+La usuaria debe poder recorrer todas antes de cerrar la pregunta.
+Persistir selección; máximo 2; mostrar contador.
+Final de la secuencia: revisión de seleccionadas antes de Continuar.
+No convertir cada tarjeta en una pantalla independiente irreversible.
+6.2 P02 · Gradiente espacial
+Cinco puntos equidistantes: Muy cerca / Bastante cerca / Más o menos / Bastante lejos / Muy lejos.
+“Estoy bien tal como está” y “No sé” aparecen debajo como tarjetas separadas; no son puntos 6 y 7.
+6.3 P08–P09 · Secuencia temporal
+Mismo activo narrativo en ambas preguntas: secuencia temporal orgánica, ligeramente sinuosa, con dos hitos.
+P08 destaca hito “ANTES DE EMPEZAR”; P09 destaca hito “CUANDO YA EMPEZÓ”.
+La secuencia temporal sitúa el momento temporal; no reemplaza la escala de respuesta.
+Debajo de la secuencia temporal, P08 usa gradiente de frecuencia de cinco puntos. P09 usa gradiente de cinco puntos y estados externos debajo.
+ACTIVO GOZADORAS PENDIENTE: SVG de la secuencia temporal con estados normal/activo. No diseñar una versión definitiva por cuenta propia.
+RESERVA QA P08: v1.0 mantiene su escala actual sin estado “sin encuentros recientes”. Observar en Group 0 la asimetría con P09/P10; cualquier estado nuevo se incorpora solo en v1.1 con IDs/reglas versionados.
+6.4 P11 · Mapa corporal
+Una sola silueta frontal, adulta, sobria, no clínica, no caricaturesca, sin rostro expresivo.
+Zonas/puntos tocables con nombre visible al seleccionar. Las zonas exactas e IDs se rigen por A.
+Selección múltiple sin máximo. Seleccionar/deseleccionar debe ser reversible.
+Los estados externos aparecen fuera de la figura y son excluyentes.
+ACTIVO GOZADORAS PENDIENTE: silueta final. No reutilizar el cuerpo de Cami (“Tortuga Ninja”), no generar vista posterior ni submapa pélvico.
+6.5 P13–P14 · Distancia entre dos
+Misma composición para ambas preguntas; cinco configuraciones visuales de dos puntos/círculos que se separan progresivamente.
+Muy cerca: puntos prácticamente juntos. Bastante cerca: separación corta. Ni cerca ni distante: media. Bastante distante: amplia. Muy distante: máxima.
+P13 rotula el foco “Afectivamente”; P14 “Eróticamente”.
+Los estados Depende / No lo tengo claro / No me importa aparecen debajo. P14 no muestra la respuesta elegida en P13.
+6.6 P19 · Atmósfera de Clima
+Detrás del gradiente bipolar existe un campo gráfico de cinco zonas iguales. Cada zona usa el mismo motivo orgánico abstracto, mismo color, misma opacidad, mismo grosor y misma altura media. Solo cambia la densidad visual:
+Punto
+Respuesta
+Densidad visual objetivo
+1
+La favorece mucho
+20 %
+2
+La favorece algo
+35 %
+3
+A veces la favorece y a veces la dificulta
+50 %
+4
+La dificulta algo
+65 %
+5
+La dificulta mucho
+80 %
+Tolerancia aproximada: ±5 %.
+20 % = aproximadamente una quinta parte del área ocupada por trazos/motivos; 80 % = aproximadamente cuatro quintas partes.
+No cambiar color, oscuridad, grosor, luminosidad ni usar sol/nubes/tormenta.
+El campo completo se ve antes de responder. Al seleccionar, solo se destaca el punto y su etiqueta; el fondo no se anima ni se reconfigura.
+La densidad atmosférica nunca sustituye el lenguaje. Mostrar siempre el copy verbal exacto del documento A para cada una de las cinco posiciones de P19: “La favorece mucho” · “La favorece algo” · “A veces la favorece y a veces la dificulta” · “La dificulta algo” · “La dificulta mucho”.
+7. Mapeo componente por pregunta
+ID
+Componente / patrón
+P01
+Baraja/carrusel de reconocimiento
+P02
+Gradiente espacial
+P03
+Secuencia de 4 vistas + tarjetas con emoji + microdespliegue Medicamento
+P04
+Tarjetas simples
+P05
+Campo de texto breve
+P06
+Tarjetas simples
+P07
+Secuencia de 3 vistas + tarjetas con emoji
+P08
+Secuencia temporal + gradiente
+P09
+Secuencia temporal + gradiente + estados externos
+P10
+Gradiente + estados externos
+P11
+Mapa corporal
+P12
+Tarjetas múltiples
+P13
+Par comparativo · distancia entre dos
+P14
+Par comparativo · distancia entre dos
+P15
+Gradiente de frecuencia + estados externos
+P16
+Tarjetas sobrias
+P17
+Tarjetas sobrias
+P18
+Tarjetas sobrias
+P19
+Gradiente bipolar + campo de densidad
+P20
+Secuencia de 2 vistas + tarjetas con emoji
+P21
+Gradiente + estado externo
+P22
+Secuencia de 4 vistas + tarjetas con emoji
+P23
+Campo de texto amplio
+P24
+Secuencia de 5 vistas + tarjetas con emoji
+P25
+Tarjetas
+P26
+Gradiente + estado externo
+P27
+Gradiente + estado externo
+P28
+Tarjetas
+P29
+Tarjetas sobrias
+P30
+Gradiente de 5 puntos + estados externos
+P31
+Tarjetas
+P32
+Gradiente verbal + estado externo
+P33
+Tarjetas múltiples sobrias
+P34
+Campo de texto breve
+P35
+Campo de texto breve
+P36
+Campo de texto breve
+P37
+Campo de texto breve
+P38
+Campo de texto breve
+P39
+Campo de texto breve
+P40
+Campo de texto breve
+8. Preguntas sensibles y cuidado
+P11, P16–P18, P25, P29–P33 requieren tratamiento sobrio: sin animaciones festivas, sin dramatización y con salida clara. Los bloques de cuidado P16–P18 y P33 tienen prioridad de claridad y privacidad.
+La privacidad debe ser visible a nivel global; no convertir cada pregunta sensible en una “pantalla oscura” especial.
+“Prefiero no responder” conserva su significado y no debe disparar una insistencia posterior.
+9. Accesibilidad y robustez de interfaz
+No comunicar selección o estado solo mediante color; combinar forma, borde, icono o texto.
+Emojis son apoyo visual: el texto de la opción sigue siendo la etiqueta semántica y accesible.
+Controles táctiles con área objetivo mínima de 44 × 44 CSS px cuando sea técnicamente posible; evitar hotspots diminutos, especialmente en P11.
+Gradientes: cada posición debe tener etiqueta accesible y ser operable sin depender de arrastrar con precisión.
+P11 debe ofrecer una alternativa equivalente en lista de zonas para quien no pueda o no quiera interactuar con la silueta.
+Orden de foco y navegación por teclado coherentes en web; estados seleccionados deben anunciarse de forma accesible.
+Probar al menos en ancho móvil de 360–390 px y escritorio; sin texto cortado, solapamientos ni scroll horizontal involuntario.
+10. Activos GOZADORAS pendientes
+Silueta corporal final para P11.
+SVG secuencia temporal P08–P09.
+Posible variante horizontal del wordmark GOZADORAS CLUB.
+Ajustes de branding adicionales y recursos gráficos finales.
+Estos activos pueden entregarse después del paquete de estructura. Su ausencia no bloquea la implementación/corrección de arquitectura, interacción, vistas, cardinalidades, branches y recorrido. Mientras estén pendientes, usar placeholders neutros identificados como tales; no convertirlos en diseño definitivo.
+11. Criterios de aceptación v1
+El flujo inicia PORTADA → PRE01 → CTX → MIRADOR → P01; el anclaje de las últimas 4 semanas aparece una vez en PRE01.
+P19 conserva simultáneamente la atmósfera de densidad y las etiquetas verbales exactas de A; ninguna respuesta puede inferirse solo por el gráfico.
+El MVP no puede resolver todas las preguntas con un único patrón de botones/píldoras homogéneos.
+Las cinco transiciones aparecen en las posiciones definidas y no existe un sexto paisaje para P25–P40.
+Las preguntas de varias vistas mantienen question_id, selección persistente y cardinalidad total.
+Los gradientes separan físicamente los estados fuera de escala.
+P13/P14 preservan identidad visual del par comparativo.
+P08/P09 preservan identidad visual del secuencia temporal.
+P19 implementa densidad 20/35/50/65/80 ±5 % sin modificar otras variables visuales.
+P11 permite selección/deselección múltiple de zonas y estados externos excluyentes.
+No se muestra “Pregunta X/40”.
+Branches y Gate se rigen por A; la interfaz no inventa activaciones.
+No queda ningún branch expresado como “si hace falta”, “puede abrirse” o equivalente ambiguo.
+La lógica de omisión respeta el modo de activación de P28/P29 y las preguntas omisibles listadas en A.
+P30 usa una única dimensión de intensidad (Mucho → Nada); no mezcla intensidad con frecuencia.
+P32 no presupone convivencia con la pareja.
+La interfaz cumple los requisitos de accesibilidad de la sección 9.
+Refresh o cierre accidental no elimina respuestas ya confirmadas; una session_id IN_PROGRESS puede reanudarse sin duplicar sesión.
+Una session_id COMPLETE no permite editar el snapshot cerrado.
+12. Estado
+FREEZE DE EXPERIENCIA E INTERFAZ v1.0 · PASS CON RESERVAS para implementación y QA. No declara FINAL. Reservas explícitas: QA P08 y activos GOZADORAS pendientes. El ranking de Destinos queda fuera de A/B hasta cerrar catálogo de 11 Destinos + reglas señal → ranking en el documento C.

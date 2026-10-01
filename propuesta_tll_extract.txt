@@ -1,0 +1,580 @@
+--- PAGE 1 ---\nTHE LEGAL LEGION
+Escudero y Miranda Servicios Profesionales y Consultoría TI SpA
+Consultoría sociotécnica · Región de Valparaíso, Chile
+P R O P U E S TA  T É C N I C A  Y  C O M E R C I A L  ·  E N  R E S P U E S TA  A L  B R I E F  D E L  2 2 - 0 9 - 2 0 2 6
+MVP · Mapa de la
+Vida Erótica
+Una experiencia multisensorial, trazable y de su propiedad,
+construida sobre AWS serverless para GOZADORAS CLUB.
+M V P
+GRATISGRATIS
+desarrollo sin costo
+para Gozadoras
+Preparado para
+Destinataria Mónica — producto, metodología y aceptación
+Fecha 22 de septiembre de 2026
+Equipo Camila Reyes Miranda · Yetsy (Li) Carvallo Escudero
+\n--- PAGE 2 ---\nTHE LEGAL LEGION
+Escudero y Miranda Servicios Profesionales y Consultoría TI SpA
+Valparaíso, 22 de septiembre de 2026
+Señora
+Mónica
+Producto y metodología
+GOZADORAS CLUB
+Presente
+De nuestra consideración:
+Respondemos al Brief de colaboración técnica — MVP Mapa de la Vida Erótica. Somos Escudero y Miranda Servicios
+Profesionales y Consultoría TI SpA, cuyo nombre de fantasía es THE LEGAL LEGION: una consultora sociotécnica fundada
+por dos profesionales en la Región de Valparaíso. Trabajamos donde la tecnología toca a las personas. El mismo equipo
+diseña el sistema, construye la canalización de datos y responde por el tratamiento cuidadoso de la información.
+Su brief pide algo preciso: una versión funcional, ﬁel y trazable del Mapa, antes del 5 de octubre, tratando información
+sexual y relacional sensible. Nuestra respuesta es una aplicación web propia, alojada en su cuenta AWS, que ya existe
+como maqueta navegable con la identidad de Gozadoras Club. El desarrollo de este MVP es gratis : lo ofrecemos
+como muestra de nuestro trabajo, y el código, la infraestructura y los datos quedan a su nombre.
+Para un instrumento de esta naturaleza, hay un compromiso nuestro que usted puede veriﬁcar. La prohibición de usar la
+información de nuestros clientes en productos propios o en beneﬁcio de terceros está escrita en los estatutos de la
+sociedad como límite de su objeto social, y solo puede modiﬁcarse con la aprobación unánime de las accionistas. Las
+respuestas de las usuarias de Gozadoras nunca alimentarán nada que no sea de Gozadoras.
+Queremos ser transparentes: la empresa se constituye en 2026 y aún no tiene historial propio. Lo que sí tiene
+trayectoria es su equipo —dieciséis años de arquitectura tecnológica en banca y cinco años de investigación social y
+ciencia de datos—, y la maqueta adjunta es la mejor evidencia de lo que podemos hacer por usted.
+Nos encantaría revisar esta propuesta en una conversación de treinta minutos antes del 24 de septiembre, para proteger
+el hito del 2 de octubre.
+Le saludan atentamente,
+Camila Reyes Miranda
+Gerenta General · Cofundadora
+Yetsy Lizbhet Carvallo Escudero
+Cofundadora · Estudios sociales y datos
+Contacto: [correo comercial]  · [teléfono]  · [sitio web]
+ THE LEGAL LEGION · Escudero y Miranda SpA Propuesta MVP Mapa de la Vida Erótica · Gozadoras Club 2\n--- PAGE 3 ---\nL O  E S E N C I A L  E N  U N A  PÁ G I N A
+01Resumen ejecutivo
+GRATIS
+USD 0 de desarrollo
+El MVP completo se entrega gratis a Gozadoras Club. Diseño, código,
+infraestructura como código, despliegue en su cuenta, QA y sesión de
+traspaso no tienen costo. Gozadoras solo asume la operación de su propia
+cuenta AWS —estimada en menos de USD 1 al mes en validación— y, si
+decide activar a Munay, el consumo de DeepSeek.
+Dimensión Propuesta
+Qué se entrega Aplicación web móvil del Mapa (48 preguntas + lógica adaptativa), backend serverless, base de
+datos trazable, exportación y repositorio Git con toda la infraestructura como código.
+Stack S3 + CloudFront (plan ﬂat-rate Free) · API Gateway HTTP API · Lambda · DynamoDB · AWS SAM
+· GitHub Actions. Munay: Lambda → DeepSeek, apagado por defecto.
+Propiedad Cuenta AWS de Gozadoras desde el día 1; repositorio transferido a su GitHub con cesión de
+derechos sobre el código.
+Operación estimada USD 0–1/mes (300–3.000 mapas/mes) · ~USD 26–37/mes a 30.000 mapas/mes · DeepSeek
+~USD 0,005 por mapa, solo si Munay está activo.
+Salvaguarda de plazo Control go / no-go el 28-sep; si la ruta no cumple, plan B con Jotform sin comprometer el 2-
+oct.
+Identidad Gozadoras desde la
+portada
+El jaguar acompaña cada capítulo
+ Resultado sin puntaje global
+ THE LEGAL LEGION · Escudero y Miranda SpA Propuesta MVP Mapa de la Vida Erótica · Gozadoras Club 3\n--- PAGE 4 ---\nB R I E F  § 3  Y  § 6
+02Respuesta a las cinco preguntas del brief
+Pregunta del brief Respuesta
+¿Puede asumirse dentro de la
+ventana del MVP?
+Sí, con el plan de la sección 09 y un control go / no-go el 28-sep. La maqueta ya construida
+reduce el trabajo a carga del instrumento, lógica, datos y QA.
+¿Con qué tecnología conocida, y por
+qué?
+AWS serverless, el dominio profesional diario de la arquitecta a cargo. No hay herramienta
+nueva que aprender ni servidores que mantener, y permite trazabilidad por evento que un
+formulario SaaS no entrega de forma nativa.
+¿Maneja 48 preguntas, lógica
+adaptativa, registro/exportación y
+móvil?
+Sí. El instrumento vive en instrument.vN.json  con IDs estables y reglas de apertura.
+Cada respuesta y cada paso del recorrido se registran; la exportación entrega JSONL y CSV en
+formato largo. Interfaz mobile-ﬁrst.
+¿Cómo se organizan acceso,
+avances y decisiones?
+GitHub: issues como backlog, pull requests como registro de cambios, ADR para decisiones.
+URL de revisión en entorno dev para Mónica. Acceso a AWS por rol temporal, revocado en la
+entrega.
+¿Qué información se necesita para
+comenzar?
+Instrumento vigente de 48 preguntas con alternativas y reglas; cuenta AWS con MFA; cuenta
+GitHub; dominio si existe; API key DeepSeek solo en la fase 5.
+Cobertura de lo fijo para el MVP
+Requisito ﬁjo Cómo se cumple Estado
+48 preguntas + lógica adaptativa Motor de recorrido sobre reglas declarativas; texto y alternativas se
+cargan literales, sin edición.
+Cubierto
+Respuestas originales intactas Escritura append-only: corregir crea un registro nuevo que referencia al
+anterior.
+Cubierto
+Sin score global No se calcula ni se muestra puntaje agregado. Cubierto
+Trazabilidad y versionado instrument_version , question_id , secuencia y timestamp en
+cada registro; variables en capa separada.
+Cubierto
+Versión base antes que Munay Munay detrás de feature ﬂag apagado; la base funciona completa sin él. Cubierto
+ THE LEGAL LEGION · Escudero y Miranda SpA Propuesta MVP Mapa de la Vida Erótica · Gozadoras Club 4\n--- PAGE 5 ---\nC A P T U R A S  R E A L E S  ·  I P H O N E  3 9 0 × 8 4 4
+03La maqueta: una experiencia, no un formulario
+La maqueta ya está construida y funciona sin conexión en cualquier smartphone. Traduce la identidad de Gozadoras —el
+jaguar grabado en rojo óxido, el lettering didona— a una selva nocturna inspirada en la metodología cuerpo-territorio.
+Se entrega gratis  y queda disponible para reutilizarse en todo el ecosistema Gozadoras.
+Portada. El logotipo de la marca
+como primera impresión.
+Acuerdos. Privacidad y derecho a
+omitir, antes de la primera
+pregunta.
+Transición. El jaguar entra, se
+disuelve en chispas y abre el
+capítulo.
+Selección. Botones táctiles de 48
+px, pensados para mujeres 40+.
+Principios de diseño
+Principio Decisión en la interfaz
+Identidad Gozadoras El jaguar grabado del logotipo, extraído del arte original, acompaña cada pantalla: avatar,
+transiciones de capítulo y portada. Tipografía didona coherente con el lettering de la marca.
+Cuerpo-territorio Ocho capítulos nombrados como accidentes del territorio —Raíz, Corteza, Dosel, Manantial, Clima,
+Semilla, Sendero, Estaciones—, inspirados en la metodología de colectivas feministas de Quito y
+Abya Yala, con su fuente declarada en la app.
+Mujeres 40+ Objetivos táctiles de 48 px, texto ≥ 16 px, alto contraste, sin infantilizar el tono ni imponer un
+cuerpo estándar.
+Privacidad visible Acuerdos antes de empezar, candado siempre a mano, ícono discreto y salida rápida.
+El contenido de las preguntas en la maqueta es ilustrativo. El MVP carga el instrumento vigente de Gozadoras —48 preguntas y sus
+alternativas— sin alterar su redacción; la interfaz solo elige el componente visual de cada tipo de respuesta.
+ THE LEGAL LEGION · Escudero y Miranda SpA Propuesta MVP Mapa de la Vida Erótica · Gozadoras Club 5\n--- PAGE 6 ---\nU N  C O M P O N E N T E  P O R  T I P O  D E  R E S P U E S TA
+03Componentes multisensoriales
+Texturas. Seda, terciopelo, piedra,
+lana: elección sensorial.
+Intensidad. Deslizador con cifra
+grande y respuesta háptica.
+Cuerpo-territorio. Silueta con
+curvas de nivel; las zonas se
+encienden al tocarlas.
+Submapa. Nomenclatura
+anatómica precisa, sin
+eufemismos.
+Tipo de respuesta del
+instrumento Componente en la maqueta Registro trazable
+Selección única / múltiple Chips y tarjetas con ícono option_id  estable
+Escala Deslizador 1–10 con extremos rotulados valor numérico original
+Ubicación corporal Mapa topográﬁco y submapa pélvico lista de zone_id
+Orden de preferencia Ranking por toque secuencia ordenada
+Texto libre Área de texto amplia texto literal
+ THE LEGAL LEGION · Escudero y Miranda SpA Propuesta MVP Mapa de la Vida Erótica · Gozadoras Club 6\n--- PAGE 7 ---\nPA N TA L L A S  D E  C I E R R E  Y  C O N T R O L
+03Cuidado, resultado y privacidad
+Escucha. El avatar se enciende
+mientras la IA procesa.
+Capítulo 4 · Manantial. Ocho
+capítulos con glifo elemental
+propio.
+Resultado. Un mapa situado, sin
+puntaje global.
+Privacidad. Bloqueo,
+almacenamiento local, ícono
+discreto, salida rápida.
+Lo que la maqueta ya resuelve
+Identidad visual de Gozadoras en todas las pantallas.
+Navegación por capítulos con progreso visible.
+Omitir, volver y retomar sin perder respuestas.
+Accesibilidad: tipografía ≥ 16 px, contraste alto,
+movimiento reducido respetado.
+Archivo único autocontenido, veriﬁcado sin
+conexión.
+Lo que agrega el MVP en AWS
+Instrumento oﬁcial de 48 preguntas y reglas de
+apertura.
+Persistencia en DynamoDB, registro del recorrido y
+versionado.
+Exportación para el análisis de la validación F2.
+Panel de administración con MFA.
+Munay opcional, apagado por defecto.
+La captura de imagen y audio de la maqueta es demostrativa: queda fuera del alcance del MVP salvo que el instrumento de Gozadoras la
+incluya.
+ THE LEGAL LEGION · Escudero y Miranda SpA Propuesta MVP Mapa de la Vida Erótica · Gozadoras Club 7\n--- PAGE 8 ---\nÍ C O N O S  O F I C I A L E S  AW S
+04Arquitectura propuesta
+Diagrama 1 · Todo el sistema reside en la cuenta AWS de Gozadoras. DeepSeek es el único servicio externo y se entrega desactivado.
+ THE LEGAL LEGION · Escudero y Miranda SpA Propuesta MVP Mapa de la Vida Erótica · Gozadoras Club 8\n--- PAGE 9 ---\nC A D A  S E R V I C I O ,  S U  F U N C I Ó N  Y  S U  C O S T O
+04Componentes y recorrido de una respuesta
+Servicio Función Régimen de costo
+CloudFront ﬂat-rate Free CDN, HTTPS y dominio único para frontend y API. Incluye WAF (5
+reglas), Shield Standard, DNS Route 53, TLS y 5 GB de crédito S3.
+USD 0 hasta 1 M solicitudes y 100
+GB/mes
+S3 privado (OAC) HTML/CSS/JS e instrumento versionado; sin acceso público
+directo.
+Cubierto por el crédito S3 del
+plan
+API Gateway HTTP API Rutas de sesiones, respuestas, exportación y Munay; autorizador
+JWT para administración.
+USD 1,00 por millón de llamadas
+AWS Lambda Cuatro funciones de responsabilidad única, sin VPC (evita NAT). Siempre gratis: 1 M invocaciones,
+400.000 GB-s
+DynamoDB Sesiones, respuestas, recorrido y versiones, con recuperación a
+un punto en el tiempo.
+Siempre gratis: 25 GB; PITR USD
+0,20/GB-mes
+Cognito Acceso de administración con MFA. Uso marginal
+Parameter Store API key de DeepSeek cifrada (SecureString). Nivel estándar sin costo
+CloudWatch · CloudTrail ·
+Budgets
+Logs sin contenido de respuestas, alarmas, auditoría y alertas de
+gasto.
+Dentro de cuotas gratuitas (A y B)
+Recorrido de una respuesta
+Diagrama 2 · Cada respuesta pasa por WAF, se valida contra la versión del instrumento y se escribe de forma condicional: nunca sobrescribe un
+registro anterior.
+ THE LEGAL LEGION · Escudero y Miranda SpA Propuesta MVP Mapa de la Vida Erótica · Gozadoras Club 9\n--- PAGE 10 ---\nL O  Q U E  E L L A  R E S P O N D I Ó ,  S E PA R A D O  D E  L O  Q U E  E L  S I S T E M A  I N F I E R E
+05Modelo de datos y trazabilidad
+La cadena del brief —preguntas → recorrido adaptativo → respuestas → variables → conﬁguración → destinos— se
+implementa separando físicamente la evidencia original de la inferencia.
+Diagrama 3 · Evidencia original inmutable y capa de inferencia versionada.
+Entidad Campos clave Garantía
+INSTRUMENT#vN versión, preguntas con question_id , alternativas con
+option_id , reglas de apertura
+Inmutable; un cambio es una
+versión nueva
+SESSION#id ID seudónimo, versión de instrumento y de consentimiento, inicio y
+término
+Sin nombre, correo ni teléfono por
+defecto
+RESPONSE# valor original, option_ids , timestamp, supersedes  si corrige Append-only
+ROUTE# pregunta mostrada, regla que la abrió, omisión, retroceso Reconstrucción exacta del
+recorrido
+VARIABLE# nombre, valor, rule_version , source_response_ids Recalculable; nunca toca la
+evidencia
+Exportación. JSONL completo y CSV largo (una ﬁla por respuesta), generados en un bucket privado y entregados por URL
+preﬁrmada que expira; las exportaciones se eliminan a los 7 días.
+ THE LEGAL LEGION · Escudero y Miranda SpA Propuesta MVP Mapa de la Vida Erótica · Gozadoras Club 10\n--- PAGE 11 ---\nA D R  R E S U M I D O S  ·  C O N T R O L E S  PA R A  D AT O S  S E N S I B L E S
+06Decisiones de arquitectura y seguridad
+Decisión Elección y motivo
+ADR-01 · Base de datos DynamoDB, gestionada por AWS y sin servidor: la única base con cuota siempre gratuita relevante (25
+GB). EC2 o RDS no son gratuitos tras los créditos iniciales.
+ADR-02 · IaC AWS SAM: estado administrado por AWS sin costo, nada extra que traspasar. Terraform como
+alternativa.
+ADR-03 · API HTTP API: menor costo y latencia que REST API. Límite de 30 s por solicitud; Munay acota su salida.
+ADR-04 · Región us-east-1 por precio y cuotas; parametrizable a sa-east-1 (São Paulo) en un despliegue.
+ADR-05 · IA DeepSeek vía Lambda, apagado por defecto hasta cumplir las condiciones de la sección 07.
+Controles para información sexual y relacional sensible
+La Ley 21.719 considera sensibles, entre otros, los datos referidos a la vida sexual; su entrada en vigencia está prevista
+para el 1-dic-2026. La arquitectura se diseña desde ahora para ese estándar.
+Control Implementación
+Minimización Sin identidad por defecto; ID seudónimo por sesión; contacto solo si Mónica lo deﬁne, en tabla
+separada.
+Cifrado TLS extremo a extremo; cifrado en reposo en DynamoDB y S3.
+Acceso Exportación solo con Cognito + MFA; mínimo privilegio por función; despliegue por OIDC, sin llaves
+estáticas.
+Perímetro WAF con reglas administradas y límite de tasa por IP.
+Registro Logs operativos sin contenido de respuestas; CloudTrail para cambios de infraestructura.
+Consentimiento y borrado Versión de consentimiento en cada sesión; endpoint de supresión; retención conﬁgurable.
+ THE LEGAL LEGION · Escudero y Miranda SpA Propuesta MVP Mapa de la Vida Erótica · Gozadoras Club 11\n--- PAGE 12 ---\nC Ó M O  P R O T E G E M O S  L O  M Á S  S E N S I B L E
+07Munay y nuestra garantía estructural
+Munay con DeepSeek: condición de activación
+La política de privacidad de DeepSeek declara que recolecta, procesa y almacena datos personales en la República Popular
+China. Por eso Munay se entrega desplegado pero apagado, tal como pide el brief (§8): no opera con datos reales hasta
+deﬁnir consentimiento, retención y proveedor.
+En la demo: solo datos sintéticos.
+Con datos reales: solo atributos seudonimizados y mínimos; nunca texto identiﬁcable, imágenes ni audio.
+Alternativas que mantienen los datos fuera de la RPC: modelos DeepSeek en Amazon Bedrock (veriﬁcar disponibilidad al
+activar) o pesos abiertos auto-alojados. El cambio se hace en una sola función.
+Garantía estructural de Escudero y Miranda
+Los estatutos de la sociedad convierten la lealtad con el cliente en un límite del propio objeto social. Contravenirlo
+excede las facultades de la administración, y modiﬁcarlo exige la unanimidad de las accionistas.
+No aprovechamiento La información, los datos y los entregables de Gozadoras no se usan para desarrollar
+productos propios ni en beneﬁcio de otro cliente sin su autorización escrita.
+Titularidad de entregables Lo desarrollado por encargo de Gozadoras le pertenece. En esta propuesta, además, se
+transﬁere el repositorio completo.
+Revelación de conﬂictos Todo conﬂicto de interés actual o previsible se informa por escrito antes de contratar.
+Exigibilidad directa Estas reglas pueden incorporarse por referencia al acuerdo de la demo y exigirse como
+derecho propio.
+Nuestra línea propia de analítica jurisprudencial nunca se alimenta con datos de clientes. No somos un estudio jurídico: cuando un tema
+requiere opinión legal habilitada, lo declaramos y trabajamos con abogados.
+ THE LEGAL LEGION · Escudero y Miranda SpA Propuesta MVP Mapa de la Vida Erótica · Gozadoras Club 12\n--- PAGE 13 ---\nN A D A  Q U E D A  A M A R R A D O  A  N O S O T R A S
+08Entrega como código y transferencia de propiedad
+Diagrama 4 · Despliegue continuo desde GitHub hacia la cuenta AWS de Gozadoras mediante un rol OIDC.
+Estructura del repositorio
+frontend/ HTML, CSS, JS y componentes
+reutilizables
+frontend/instrument/ instrument.v1.json  +
+esquema
+backend/functions/ sessions, responses, export,
+munay
+infra/template.yaml AWS SAM: toda la infraestructura
+.github/workflows/ CI y despliegue
+docs/ ADR, diccionario de datos,
+runbook
+tests/ recorridos, exportación,
+reconstrucción
+Checklist de traspaso
+Transferencia del repositorio a la cuenta GitHub de
+Gozadoras.
+Cesión escrita de derechos patrimoniales sobre el
+código.
+Eliminación de todo acceso nuestro a la cuenta AWS y
+rotación de credenciales.
+Runbook: desplegar, revertir, exportar, activar Munay,
+borrar una sesión.
+Sesión de traspaso de 60 minutos, grabada.
+ THE LEGAL LEGION · Escudero y Miranda SpA Propuesta MVP Mapa de la Vida Erótica · Gozadoras Club 13\n--- PAGE 14 ---\n2 2  D E  S E P T I E M B R E  →  5  D E  O C T U B R E
+09Plan de trabajo alineado a los hitos
+F1
+22–24 sep
+Repositorio, stack
+dev en la cuenta
+de Gozadoras,
+maqueta en URL
+de revisión.
+F2
+25–28 sep
+48 preguntas y
+reglas de apertura
+desde el
+instrumento
+vigente.
+Control
+28 sep
+Go / no-go
+con Mónica.
+F3
+27–30 sep
+Append-only, IDs,
+versionado,
+exportación,
+reconstrucción.
+F4
+1–4 oct
+2-oct candidata;
+3–4-oct QA en iOS
+y Android.
+Hito
+5 oct
+Lista para la
+validación F2 con
+usuarias.
+Fase Fechas Resultado veriﬁcable
+F1 22 – 24 sep Stack desplegado y maqueta navegable en URL de revisión.
+F2 25 – 28 sep Recorrido adaptativo completo en móvil, con el texto literal del instrumento.
+Control 28 sep Si el recorrido no está completo y ﬁel, se activa el plan B (Jotform) con el instrumento ya
+estructurado.
+F3 27 – 30 sep Registro, versionado y prueba de reconstrucción de recorridos desde la exportación.
+F4 1 – 4 oct Candidata funcional el 2-oct; QA de lógica, datos, exportación y errores.
+F5 (opcional) desde 5 oct Munay con datos sintéticos, sin alterar el instrumento ni la versión base.
+Regla de prioridad del brief
+Esta ruta agrega complejidad frente a un formulario SaaS. La compensan tres condiciones: la maqueta ya existe, la
+arquitecta trabaja con este stack a diario y el control del 28-sep acota el riesgo de plazo. Si alguna falla, recomendamos
+volver a Jotform para esta fase.
+ THE LEGAL LEGION · Escudero y Miranda SpA Propuesta MVP Mapa de la Vida Erótica · Gozadoras Club 14\n--- PAGE 15 ---\nE L  D E S A R R O L L O  E S  G R AT I S ;  E S T O  E S  L O  Q U E  C U E S TA  O P E R A R
+10Costos de operación
+GRATIS
+Desarrollo, despliegue, QA y traspaso: USD 0. Las cifras de esta sección corresponden
+solo a la operación en la cuenta AWS de Gozadoras.
+Qué es gratis en AWS y qué no, con precisión
+Situación de la cuenta Efecto
+Cuenta nueva (desde 15-jul-
+2025)
+Plan Free con USD 100 de créditos (hasta USD 200), por hasta 6 meses. Al vencer, una cuenta
+en plan Free se cierra: para operar 24 meses debe pasar a plan Paid antes del mes 6; los
+créditos se conservan.
+Cuenta legado (anterior) 12 meses gratuitos de API Gateway y S3 si aún está en su primer año.
+Siempre gratis Lambda, DynamoDB (25 GB), CloudWatch (5 GB de logs), CloudFront ﬂat-rate Free.
+Marginal API Gateway HTTP API (USD 1,00/millón) y PITR (USD 0,20/GB-mes).
+Supuestos por mapa: 60 llamadas API · ~60 KB almacenados · 1,3 MB transferidos · Munay: 3 llamadas, 7.500 tokens de entrada y 2.100 de
+salida a tarifa punta de deepseek-flash  (USD 0,30 / 1,20 por millón) · datos retenidos 24 meses · us-east-1 · sin impuestos.
+Costo mensual estimado (USD)
+Escenario AWS mes 7 AWS mes 24 DeepSeek/mes (si Munay activo) Datos mes 24
+A · Validación F2
+300 mapas/mes
+USD 0,04 USD 0,10 USD 1,43 0,43 GB
+B · Lanzamiento
+3.000 mapas/mes
+USD 0,43 USD 1,04 USD 14,31 4,32 GB
+C · Escala
+30.000 mapas/mes
+USD 25,83 USD 36,50 USD 143,10 43,2 GB
+En C el costo AWS se explica por CloudFront Pro (USD 15/mes sobre 1 M solicitudes), DynamoDB bajo demanda, almacenamiento sobre 25 GB
+y PITR.
+ THE LEGAL LEGION · Escudero y Miranda SpA Propuesta MVP Mapa de la Vida Erótica · Gozadoras Club 15\n--- PAGE 16 ---\nT R E S  E S C E N A R I O S  D E  V O L U M E N
+11Presupuesto AWS a 24 meses
+Escenario Meses 1–6
+bruto / pagado Meses 7–12 Meses 13–24 AWS 24 meses DeepSeek 24 meses Total con Munay
+A · Validación F2 USD 0,19
+pagado USD 0,00
+USD 0,31 USD 1,01 USD 1,32 USD 34,32 USD 35,64
+B · Lanzamiento USD 1,84
+pagado USD 0,00
+USD 3,13 USD 10,15 USD 13,28 USD 343,44 USD 356,72
+C · Escala USD 147,42
+pagado USD 47,40
+USD 160,38 USD 384,94 USD 592,72 USD 3.434,40 USD 4.027,12
+Créditos: USD 100 en meses 1–6. Sin Munay, DeepSeek cuesta cero. Recomendado: alertas de AWS Budgets en USD 5 y USD 20 y tope de gasto
+en la consola de DeepSeek.
+Costo AWS acumulado a 24 meses, sin IA.
+Incertidumbre declarada
+API Gateway y CloudFront ﬂat-rate: veriﬁcados en documentación oﬁcial AWS. Lambda, DynamoDB y CloudWatch:
+precios de lista us-east-1; conﬁrmar en AWS Pricing Calculator.
+DeepSeek cambió tarifas varias veces en 2026 (última conocida: 10-sep-2026); cifras de fuentes secundarias
+concordantes al 17–21-sep, no de la página oﬁcial.
+El volumen real de F2 es desconocido: los escenarios son supuestos de trabajo, no proyecciones de demanda.
+El comportamiento de CloudFront al exceder el plan Free debe conﬁrmarse; se asume el paso a Pro.
+A · Validación USD 1,32
+B · Lanzamiento USD 13,28
+C · Escala USD 592,72
+ THE LEGAL LEGION · Escudero y Miranda SpA Propuesta MVP Mapa de la Vida Erótica · Gozadoras Club 16\n--- PAGE 17 ---\nC O N T R A  L O S  C R I T E R I O S  D E L  B R I E F  § 2
+12Comparativa técnica con Jotform
+Criterio Jotform MVP propuesto (AWS)
+Reproducir el
+instrumento
+Sí; Starter admite 100 campos por formulario. Sí, literal desde JSON versionado, con componentes
+propios.
+Lógica adaptativa Sí, condicional sin código. Sí, reglas declarativas probadas en CI.
+Trazabilidad del
+recorrido
+Guarda el envío ﬁnal; el paso a paso requiere
+campos ocultos o widgets.
+Nativa: cada paso, apertura y corrección.
+Versionado Manual (clonar formularios o campo oculto). Versión inmutable en cada registro.
+Exportación CSV/Excel/PDF. JSONL + CSV largo con IDs estables.
+Experiencia de marca Temas y CSS acotados. A medida: jaguar, transiciones, cuerpo-territorio.
+Datos sensibles HIPAA solo en Gold y Enterprise; datos en el
+proveedor.
+Datos en la cuenta de Gozadoras; sin certiﬁcación
+propia.
+Propiedad Datos exportables; lógica y diseño no portables. 100 % de Gozadoras.
+Tiempo a primera
+versión
+Superior: horas. Días; mitigado por la maqueta existente.
+Edición por Mónica Superior: editor visual. Vía JSON o repositorio; editor visual fuera de alcance.
+Soporte Superior: proveedor con soporte. Entrega «as is».
+Costo de construcción Conﬁguración propia. GRATIS
+Plataforma a 24 meses, sin IA
+Escenario Plan Jotform necesario Jotform MVP AWS
+A · 300 mapas/mes Bronze (Starter: 100 envíos/mes, 500 almacenados) USD 816 USD 1,32
+B · 3.000 mapas/mes Gold (Silver: 2.500/mes) USD 2.376 USD 13,28
+C · 30.000 mapas/mes Enterprise Cotización USD 592,72
+Jotform con facturación anual (Bronze USD 408/año; Gold USD 99/mes). Un envío por mapa completado.
+ THE LEGAL LEGION · Escudero y Miranda SpA Propuesta MVP Mapa de la Vida Erótica · Gozadoras Club 17\n--- PAGE 18 ---\nC O N S U LT O R Í A  S O C I O T É C N I C A :  T E C N O L O G Í A ,  D AT O S  Y  P E R S O N A S
+13Quiénes somos
+Integramos dos disciplinas que normalmente se contratan por separado. La
+ingeniería resuelve cómo funciona un sistema; las ciencias sociales, cómo lo viven las
+personas y qué efectos produce. Cuando ambas trabajan desde el inicio, el resultado
+se adopta mejor, cumple la normativa y resiste la revisión de un comité de riesgo.
+Por qué este encargo encaja con nosotras
+Lo que pide el brief Lo que aporta el equipo
+Versión funcional, ﬁel y a tiempo Arquitectura cloud en entornos regulados, donde disponibilidad y trazabilidad no son
+opcionales.
+Instrumento que no se simpliﬁca Diseño metodológico y construcción de instrumentos conﬁables, con validez y ﬁabilidad.
+Separar respuesta de inferencia Arquitectura de datos, canalizaciones de ML y MLOps con versionado.
+Datos sexuales y relacionales sensibles Seguridad de la información e implementación técnica de la Ley 21.719.
+Munay, sin riesgo para la base Diseño y control de agentes de IA con límites de autonomía e intervención humana.
+Lectura situada de la experiencia Perspectiva de género y diversidad; investigación cualitativa y cuantitativa.
+Cómo trabajamos
+Intervención humana garantizada No implementamos decisiones exclusivamente automatizadas con efectos signiﬁcativos sobre
+personas sin explicación, intervención humana y revisión.
+Límites claros de competencia No somos un estudio jurídico; cuando se requiere opinión legal, lo declaramos y trabajamos
+con abogados.
+Sin métricas inventadas No presentamos clientes, casos ni certiﬁcaciones que no existan. Por eso ofrecemos este MVP
+gratis: para que nos evalúe por evidencia.
+Compromiso social Condiciones de costo o preferentes para entidades sin ﬁnes de lucro.
+ THE LEGAL LEGION · Escudero y Miranda SpA Propuesta MVP Mapa de la Vida Erótica · Gozadoras Club 18\n--- PAGE 19 ---\nR E S U M E N  C U R R I C U L A R  D E  L A S  S O C I A S
+14Equipo fundador
+Camila Reyes Miranda
+Gerenta General · Cofundadora · Ingeniera en informática
+Arquitecta cloud senior con más de dieciséis años en
+tecnologías de la información para banca, ﬁntech e
+industria ﬁnanciera. Diseño de arquitecturas de sistemas
+y de datos, seguridad de la información e integración en
+entornos regulados.
+Arquitectura cloud, de sistemas y de integración en
+entornos ﬁnancieros regulados; certiﬁcada en AWS.
+Arquitectura de datos, canalizaciones de aprendizaje
+automático y MLOps.
+Seguridad de la información y auditoría técnica de
+soluciones y proveedores.
+Diseño y control de agentes de IA; IA local orientada
+a soberanía de inferencia.
+Magíster en intervención psicosocial y género.
+En este proyecto: arquitectura, IaC, backend, seguridad,
+frontend multisensorial y traspaso.
+Yetsy Lizbhet Carvallo
+Escudero
+Cofundadora · Socióloga y cientíﬁca de datos
+Alrededor de cinco años en investigación social y análisis
+de datos. Combina el diseño metodológico de las ciencias
+sociales con herramientas cuantitativas y de aprendizaje
+automático para formular las preguntas correctas,
+construir instrumentos conﬁables e interpretar
+resultados en su contexto social.
+Diseño metodológico y levantamiento cuantitativo y
+cualitativo.
+Asesoría en instrumentos de recolección para
+profesionales del área terapéutica.
+Análisis de datos, modelamiento estadístico y
+aprendizaje automático; NLP y explicabilidad (LIME,
+SHAP).
+Diagnósticos de clima organizacional, género y
+diversidad.
+Socióloga (U. de Valparaíso); Diplomado en Ciencia
+de Datos para Políticas Públicas (PUC).
+En este proyecto: diccionario de datos, validación de
+exportaciones, capa de variables y análisis de la
+validación F2.
+Trabajo conjunto previo
+Ambas cofundaron el subgrupo «Análisis de Sesgos en Algoritmos e IA Aplicada» de la Red de Educación Diversa y Disidente
+(REDYD), dedicado a visibilizar sesgos cis-heteropatriarcales, coloniales y capacitistas en sistemas de IA.
+ THE LEGAL LEGION · Escudero y Miranda SpA Propuesta MVP Mapa de la Vida Erótica · Gozadoras Club 19\n--- PAGE 20 ---\nD E S P U É S  D E L  M V P  G R AT I S ,  S I  U S T E D  L O  D E C I D E
+15Líneas de servicio para Gozadoras Club
+Ninguno de estos servicios es condición de la entrega del MVP. Se cotizan por separado.
+Línea Aplicación a Gozadoras Club Entregable típico
+TI y transformación digital Evolución del MVP a producto: PWA instalable, editor visual del
+instrumento para Mónica, integración con el ecosistema Gozadoras.
+Hoja de ruta priorizada,
+informe de arquitectura
+Datos, ML y MLOps Capa de variables, Conﬁguración y Destinos con modelos
+interpretables y explicabilidad por caso.
+Pipeline documentado,
+Model Card, tablero de
+monitoreo
+Agentes de IA Munay con consentimiento especíﬁco, contenido propio (RAG),
+límites de conversación y proveedor según residencia de datos.
+Especiﬁcación, matriz de
+controles, pruebas previas a
+producción
+Estudios sociales y de
+mercado
+Análisis de la validación F2: calidad de datos, consistencia del
+instrumento, lectura cuali-cuantitativa.
+Informe de resultados, base
+documentada
+Género y diversidad Auditoría de sesgos del instrumento, las reglas y la IA desde
+perspectivas de género, disidencia sexual y decolonialidad.
+Diagnóstico y
+recomendaciones
+Protección de datos (Ley
+21.719)
+Evaluación de impacto del tratamiento del Mapa, registro de
+actividades, protocolo de anonimización y procedimiento de
+derechos de las titulares.
+EIPD, registro, protocolos
+Otras líneas de la ﬁrma: territorio y comunidad; prevención del acoso laboral y sexual (Ley 21.643).
+ THE LEGAL LEGION · Escudero y Miranda SpA Propuesta MVP Mapa de la Vida Erótica · Gozadoras Club 20\n--- PAGE 21 ---\nC L A R I D A D  D E S D E  E L  I N I C I O
+16Condiciones del MVP gratis
+Precio GRATIS  — desarrollo, despliegue, QA y sesión de traspaso sin costo, como muestra de
+nuestro trabajo.
+Garantía Entregado «as is», sin garantía de funcionamiento continuo ni soporte posterior al traspaso.
+Aporta Gozadoras Cuenta AWS (MFA y método de pago), cuenta GitHub, API key DeepSeek (solo fase 5),
+instrumento vigente estructurado, dominio si corresponde.
+Costos operacionales A cargo de Gozadoras: AWS, DeepSeek, dominio y servicios que decida activar.
+Propiedad Código, infraestructura, datos y documentación a nombre de Gozadoras. La marca, el logotipo
+y el instrumento siguen siendo suyos.
+Conﬁdencialidad Solo trabajamos con datos de prueba; nunca accedemos a respuestas reales de usuarias.
+Aplican las reglas estatutarias de la sección 07.
+Fuera de alcance Algoritmo ﬁnal de Conﬁguración y Destinos, análisis de imagen/audio, editor visual, app
+nativa, asesoría legal.
+Fuentes consultadas (22-09-2026)
+AWS API Gateway — precios aws.amazon.com/api-gateway/pricing
+CloudFront ﬂat-rate plans docs.aws.amazon.com/PricingPlanManager
+Capa gratuita AWS (15-jul-2025) builder.aws.com · guías independientes 2026
+DeepSeek — privacidad cdn.deepseek.com/policies
+DeepSeek — tarifas sep-2026 benchlm.ai · deepseek.ai/pricing (secundarias)
+Jotform — planes jotform.com/pricing
+Ley 21.719 — vigencia Biblioteca del Congreso Nacional
+THE LEGAL LEGION
+Escudero y Miranda Servicios Profesionales y Consultoría TI SpA
+Región de Valparaíso, Chile
+[correo comercial]  · [teléfono]
+ THE LEGAL LEGION · Escudero y Miranda SpA Propuesta MVP Mapa de la Vida Erótica · Gozadoras Club 21

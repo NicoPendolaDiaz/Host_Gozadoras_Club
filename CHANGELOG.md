@@ -1,25 +1,48 @@
-# Registro de Variaciones y Procesos (Changelog)
+# Changelog - Gozadoras Club
 
-Este documento recopila las iteraciones, errores críticos corregidos y variaciones ejecutadas en la maqueta original para alcanzar el MVP funcional requerido por la líder del proyecto.
+## [V1.0.0-Freeze] - 2026-10-01
+### Added
+- **Arquitectura Desacoplada**: Creación e integración de `engine.js` (motor de renderizado dinámico) y `data.js` (base de datos canónica de preguntas).
+- **Componente *Density Scale* (P19 - Clima)**: Integración de una interfaz visual paramétrica que renderiza 5 densidades espaciales (20% al 80%) de forma estática y simultánea, sin afectar opacidades ni colores, cumpliendo con la solicitud técnica de interacción fluida.
 
-## [1.1.0] - Estabilización Definitiva del Motor Lógico
-### Añadido
-- **Nueva Arquitectura de Lógica de Saltos:** Se integró un motor SPA robusto con 39 preguntas oficiales, derivadas del documento `"Instrumento_Mapa_Vida_Erotica_PRELIMINAR"`.
-- **Botones Dinámicos de Flujo:** Reemplazo de la barra estática de navegación (`nav-bar` / `ftr`) por un inyector dinámico que evalúa en tiempo real si el botón debe decir "Siguiente" o "Omitir", y valida las opciones mutuamente excluyentes (`ex: true`).
-- **Historial de Navegación (`historyArr`):** Implementación de una pila lógica para que el botón "Volver" funcione incluso con los saltos condicionales complejos.
+Sistema de Excepciones: Implementación de lógica modular en engine.js para procesar excepciones sin caída del sistema (ej. renderizado seguro en ausencia de rutas válidas).
+Control de Privacidad Funcional: Activación del panel modal de seguridad (Acuerdos y Código Biométrico) para interactividad táctil (Toggle switches en estado ON/OFF).
+Changed
+Lógica de Contexto (CTX00): Modificación de data.js para asegurar un flujo no restrictivo. Se eliminó el cierre abrupto (END_NO_ELIGIBLE) permitiendo que la usuaria avance libremente independientemente de su estado civil.
+Auto-Guardado (Suspendido para Pruebas): Ajuste en la función startApp() para que, temporalmente y para facilitar la labor de QA, el cuestionario inicie siempre desde s-splash (pantalla de bienvenida) independientemente del localStorage.
+Renderizado de Bloques de Información (s-info): Reestructuración total del CSS y contenedores flexibles en index.html para s-info y s-landscape, solucionando problemas de desbordamiento (overflow) y aplastamiento de texto, asegurando la accesibilidad del botón "Continuar".
+Fixed
+Visualización en Pantallas Textuales: Corrección crítica de flexbox en .hdr que rompía la maqueta en pantallas de introducción.
+**Ciclo de Navegación: Se enlazó correctamente el objeto global window.startChapter para asegurar la transición de la pantalla de Acuerdos a las preguntas de fondo.
 
-### Eliminado (Requerimientos de Negocio)
-- **Eliminación Total de "Captura de Fotografías":** Purgado de textos, APIs y lógicas asociadas a permisos de cámara.
-- **Eliminación Total de Grabación/Sonido Ambiental:** Purgado del botón `<button id="ambbtn">` y todo su bloque lógico de `AudioContext` en JavaScript, previniendo malentendidos sobre monitoreo o escucha.
 
-### Corregido (Debug)
-- **Error del Contenedor Fantasma (Pantalla en Blanco):** En una iteración intermedia, la aplicación colapsaba en la "Página 3" porque el motor de renderizado estaba apuntando a un identificador CSS de contenedor (`#opts`) que no existía en el diseño visual original, en su lugar se reconstruyó el apuntador al ID real (`#qbody` y `#bubble`). Esto solucionó la parálisis total de la interacción.
-- **Conflictos CSS (Elementos Invisibles):** Se limpiaron inyecciones experimentales previas que alteraban el flujo con `opacity: 0` y forzaban animaciones `@keyframes`, devolviendo a la plataforma su fluidez visual nativa e inmediata.
-- **Textos de Consentimiento:** Se consolidó una sola versión final de los acuerdos de privacidad dejando sumamente explícito que el análisis es anónimo y textual.
+---
 
-## [1.0.0] - Maqueta Base (Diseño Visual Front-End)
-- Creación de interfaz gráfica con estética "Gozadoras Club".
-- Paleta de colores cálida/selvática, logotipo SVG animado.
-- Pestaña inferior deslizable ("Privacidad").
-- Modos "Splash", "Consentimiento", "Preguntas" y "Resumen".
-- Arquitectura de componentes puramente visual sin la matriz matemática conectada.
+### 2. Reemplaza el contenido de `ARCHITECTURE.md`
+Este archivo explica el funcionamiento bajo el capó de lo que diseñamos hoy, pensando en el backend propuesto.
+
+```markdown
+# Architecture Overview - Gozadoras Club
+
+## Arquitectura V1.0 (Frontend Desacoplado)
+El proyecto ha transicionado de una maqueta de HTML rígido a una Single Page Application (SPA) dinámica sin dependencias de frameworks externos (Vanilla JS puro), garantizando velocidad extrema y portabilidad.
+
+### 1. Capa de Datos (`data.js`)
+Actúa como un catálogo inmutable que expone la constante `QUESTIONS`. 
+- Separa el contenido de la lógica de interfaz.
+- Estructura agnóstica basada en JSON.
+- Permite modificaciones por perfiles no técnicos (gestores de contenido) sin arriesgar la funcionalidad.
+
+### 2. Motor de Visualización (`engine.js`)
+Lógica central que lee `data.js` e inyecta dinámicamente HTML en el DOM.
+- **Tipos de Renderizado Dinámico**: `single`, `multiple`, `carousel`, `landscape` y la recientemente añadida `density_scale`.
+- **Manejo de Estado**: Implementa una variable en memoria temporal (`ans` y `historyArr`) que recolecta el estado del cuestionario en tiempo real.
+- **Microinteracciones**: Control centralizado de clases CSS (`.on`, `fade`) para mantener la respuesta táctil sin código repetitivo.
+
+### 3. Propuesta de Arquitectura Cloud (Escala Futura)
+Para mantener la autonomía de GOZADORAS sobre los datos recolectados, la arquitectura propuesta es una topología Serverless basada en AWS:
+
+Alojamiento del Frontend: Amazon S3 + CloudFront CDN (Garantiza entrega estática de ultra baja latencia a nivel global).
+Recolección (API): AWS API Gateway para recibir el JSON Configuration Object generado en la pantalla COMPLETE.
+Motor Lógico en la Nube: AWS Lambda. Funciones sin estado que procesarán la matriz matemática de las respuestas para calcular el perfil final de la usuaria.
+Persistencia Segura: Amazon DynamoDB, con encriptación nativa en reposo mediante AWS KMS, asegurando que solo el cliente (GOZADORAS) controle el acceso a la base de datos íntima.

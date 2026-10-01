@@ -1,19 +1,27 @@
-# Arquitectura Técnica v1.0 (FREEZE)
+# Architecture Overview - Gozadoras Club
 
-## 1. Patrones de Navegación y Sesión
-- **Persistencia:** La sesión (`IN_PROGRESS`) se guarda en `localStorage.getItem('gozadoras_session')`. Si la usuaria refresca, la máquina de estados retoma la última vista de la última pregunta registrada.
-- **Transiciones de Paisaje:** Las pantallas de transición (MIRADOR, MANANTIAL, SENDERO, CLIMA, HORIZONTE) se inyectan en el historial antes de las preguntas P01, P06, P13, P19 y P22.
-- **Filtro CTX (Contexto):** Antes de iniciar la batería, las preguntas `CTX00` a `CTX05` filtran la elegibilidad (ej. estar en pareja) sin mezclarse con la numeración canónica `Pxx`.
+## Arquitectura V1.0 (Frontend Desacoplado)
+El proyecto ha transicionado de una maqueta de HTML estático y rígido a una Single Page Application (SPA) dinámica sin dependencias de frameworks externos (Vanilla JS puro). Esto garantiza una velocidad extrema de carga, compatibilidad universal y máxima portabilidad.
 
-## 2. Tipos de Controles (Componentes Reactivos Vanilla)
-El motor de renderizado despacha el HTML basado en el `type` de la pregunta:
-- `carousel`: Tarjetas deslizables de a una por vez (usado en P01).
-- `gradient_spatial`: Gradiente de 5 puntos (usado en P02, P21, P26, P27, P30).
-- `timeline_gradient`: SVG de tiempo y gradiente (usado en P08, P09).
-- `body_map`: Componente SVG interactivo de 9 zonas (P11).
-- `distance_pair`: Puntos que se separan dinámicamente (P13, P14).
-- `density_field`: Fondo que altera su `opacity` o `stroke-density` en CSS según el gradiente elegido (P19).
-- `views`: Arreglo de sub-pantallas para preguntas múltiples extensas (P03, P07, P20, P22, P24).
+1. Capa de Datos (data.js)
 
-## 3. Resolución de Estados (Gate y Complete)
-El array `historyArr` gestiona la ruta exacta. El motor avanza evaluando la regla `next(answers)` definida en el JSON de cada pregunta. Al llegar al nodo final, el estado pasa a `COMPLETE` y bloquea la edición de `localStorage`.
+Actúa como un catálogo inmutable y base de datos local que expone la constante QUESTIONS.
+
+Desacoplamiento total: Separa el contenido duro (textos, preguntas, rutas) de la lógica de interfaz visual.
+Estructura agnóstica: Basada enteramente en la notación JSON.
+Mantenibilidad escalable: Permite modificaciones por parte de perfiles no técnicos (gestores de contenido o PMs) sin arriesgar la funcionalidad visual del sistema.
+2. Motor de Visualización (engine.js)
+
+Es el corazón operativo del proyecto. Consiste en la lógica central que lee el archivo data.js e inyecta dinámicamente el HTML estructurado dentro del DOM (index.html).
+
+Tipos de Renderizado Dinámico: Gestiona múltiples componentes visuales como single, multiple, carousel, landscape y la recientemente añadida density_scale (para representaciones paramétricas del Clima).
+Manejo de Estado e Historial: Implementa una variable en memoria temporal (ans y historyArr) que recolecta las respuestas y el progreso del usuario en tiempo real, permitiendo navegar hacia atrás de forma segura.
+Microinteracciones y UI: Control centralizado de clases CSS (.on, fade) e inyecciones de código en línea, manteniendo la respuesta táctil fluida y sofisticada sin saturar los archivos de hojas de estilo.
+3. Propuesta de Arquitectura Cloud (Fase 2 / Escalabilidad)
+
+Para mantener la autonomía, la seguridad absoluta de la información y la soberanía de GOZADORAS sobre los datos íntimos recolectados, la arquitectura propuesta para el ecosistema completo es una topología Serverless basada en AWS (Amazon Web Services):
+
+Alojamiento del Frontend: Amazon S3 + CloudFront CDN. Garantiza la entrega de la aplicación estática (HTML/JS/CSS) con latencia ultra baja a nivel global y alta disponibilidad.
+Recolección de Datos (API): Amazon API Gateway. Actuará como la puerta de entrada segura (HTTPS/TLS) para recibir el objeto JSON Configuration Object generado en la pantalla COMPLETE.
+Motor Lógico Matemático: AWS Lambda. Funciones sin estado que procesarán la matriz matemática de las respuestas para calcular el perfil final de la usuaria, ejecutándose solo cuando sea necesario, lo que optimiza costos.
+Persistencia Segura: Amazon DynamoDB. Una base de datos NoSQL ideal para almacenar JSONs flexibles. Todo estará asegurado con encriptación nativa en reposo mediante AWS KMS (Key Management Service), asegurando que el cliente (GOZADORAS) tenga control exclusivo y total sobre el cifrado de datos.

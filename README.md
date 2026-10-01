@@ -1,21 +1,24 @@
-# Gozadoras Club - MVP Mapa de la Vida Erótica (v1.0 FREEZE)
+# Gozadoras Club - Maqueta Interactiva (V1 Freeze)
 
-Este repositorio contiene el Producto Mínimo Viable (MVP) avanzado del **Mapa de la Vida Erótica** para Gozadoras Club, alineado a las especificaciones metodológicas y de interfaz v1.0 (FREEZE).
+Bienvenido al repositorio del entorno de pruebas interactivo de **Gozadoras Club**. Este desarrollo front-end es una SPA (Single Page Application) concebida bajo una filosofía *Mobile-First*, orientada a recolectar y mapear de manera inmersiva y segura la vida erótica de las usuarias.
 
-## Descripción del Proyecto
+## Características de esta Versión
+*   **Flujo Paramétrico Desacoplado**: El código fuente se divide entre un motor dinámico (`engine.js`) y un objeto JSON canónico (`data.js`), otorgando flexibilidad total.
+*   **Diseño de Alto Impacto**: Microinteracciones suaves y consistentes (Fade ins, toggle switches, Density Scales), manteniendo intacta la elegante línea gráfica original en tonos oscuros.
+*   **Resiliencia Funcional**: Sistema robusto libre de bloqueos lógicos (ej: las variables de contexto de pareja permiten avanzar en cualquier caso).
+*   **Ready-for-Backend**: El sistema compila todas las respuestas en un único objeto de sesión, listo para ser despachado a una API de manera anónima y segura al finalizar el recorrido.
 
-Aplicación web interactiva (Single-Page Application) sin backend que implementa un sofisticado motor metodológico de 40 preguntas adaptativas, diseñado para guiar a las usuarias a través de su vida erótica, autoconocimiento y límites.
+## Instrucciones para QA y Presentaciones a Clientes
+1. **Archivo de Entrada:** Abre el archivo principal de la maqueta (`Maqueta_V1_01102026.html` o `index.html`) en un navegador moderno.
+2. **Requisito de Formato:** Utiliza las Herramientas de Desarrollador de tu navegador (F12) y activa la **Vista de Dispositivo Móvil** (Ej: iPhone 14 Pro, zoom al 100%).
+3. **Modo Incógnito Recomendado:** Para garantizar que el flujo comience desde la pantalla de bienvenida y evitar cachés previos, recomendamos ejecutar las demostraciones en una sesión de navegación privada.
 
-## Hitos Técnicos e Innovaciones UI (v1.0)
-- **Máquina de Estados de Alta Complejidad:** Soporta saltos lógicos condicionales (Gate), variables de contexto (CTX) y persistencia en `localStorage` para recuperación de sesiones interrumpidas.
-- **Componentes Visuales Paramétricos:**
-  - *Mapa Corporal Interactivo (SVG):* Silueta con 9 zonas canónicas clickeables.
-  - *Atmósfera de Densidad (P19):* Renderizado dinámico de 5 niveles de opacidad visual dependiente del estado del gradiente.
-  - *Par Comparativo Espacial:* Elementos visuales que varían su distancia (gap) según el nivel de cercanía afectiva y erótica elegida.
-  - *Vistas Paginadas:* Soporte para agrupar opciones de una misma pregunta en múltiples pantallas (views) manteniendo el estado global.
-- **Privacidad y Accesibilidad Estricta:** Las opciones de "Omitir" y "Prefiero no responder" están mapeadas directamente al motor, asegurando confidencialidad. Los componentes táctiles respetan la regla de 44x44px de accesibilidad CSS.
+## Próximos Pasos (Roadmap)
+- Integración de los SVG definitivos (Silueta Corporal Temporal y Visualizaciones de Destinos) provistos por el equipo de diseño de Gozadoras.
 
-## Estructura
-- `index.html`: Core de la aplicación, empaquetando HTML, CSS y la lógica SPA.
-- `ARCHITECTURE.md`: Definición técnica del motor y patrones UI.
-- `CHANGELOG.md`: Histórico del proyecto y roadmap.
+Desarrollo del Backend: Implementación del "Motor de Configuración" en la nube (Arquitectura Serverless en AWS) para el cálculo seguro de perfiles.
+**Conexión de Datos
+Conexión de Datos: Integrar el disparo de las respuestas (answers) hacia el API Gateway al presionar el último botón del recorrido, activando la lógica real del algoritmo de análisis de resultados finales.
+
+
+Con estos documentos tu portafolio lucirá excepcionalmente profesional, demostrando capacidad de adaptación, visión arquitectónica de nivel corporativo, y un profundo entendimiento de la interacción entre UI, experiencia de usuario y arquitectura de software.
