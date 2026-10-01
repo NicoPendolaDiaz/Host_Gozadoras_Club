@@ -292,20 +292,14 @@ textarea::placeholder{color:#6f8a78}
 <!-- ===== QUESTION ===== -->
 
 <section class="screen" id="s-info">
-  <div class="hdr" style="text-align: center;">
-    <h2 id="i-title" style="margin-bottom: 24px;"></h2>
-    <div id="i-text" style="font-size: 18px; line-height: 1.5; color: #f0f2f0; padding: 0 20px; white-space: pre-wrap; text-align: left; margin: 0 auto; max-width: 600px;"></div>
-  </div>
+  <div style="flex: 1; display: flex; flex-direction: column; justify-content: center; padding: 40px 20px; overflow-y: auto;"><h2 id="i-title" style="text-align: center; color: var(--accent); margin-bottom: 24px; font-size: 32px;"></h2><div id="i-text" style="font-size: 20px; line-height: 1.6; color: var(--cream-1); white-space: pre-wrap; text-align: left; margin: 0 auto; max-width: 600px;"></div></div>
   <div class="ftr">
     <button class="btn btn-primary" id="i-next" onclick="nextInfo()">Continuar</button>
   </div>
 </section>
 
 <section class="screen" id="s-landscape" style="background-color: var(--dark); color: var(--light);">
-  <div class="hdr" style="text-align: center;">
-    <h2 id="l-title" style="letter-spacing: 4px; color: var(--accent); margin-bottom: 24px; font-size:32px;"></h2>
-    <p id="l-text" class="bubble" style="margin: 0 auto; font-size:24px; max-width:600px;"></p>
-  </div>
+  <div style="flex: 1; display: flex; flex-direction: column; justify-content: center; padding: 40px 20px; overflow-y: auto;"><h2 id="l-title" style="text-align: center; letter-spacing: 4px; color: var(--accent); margin-bottom: 24px; font-size: 32px;"></h2><div id="l-text" style="font-size:24px; line-height: 1.6; color: var(--cream-1); text-align: center; margin: 0 auto; max-width:600px; white-space: pre-wrap;"></div></div>
   <div class="ftr" style="border-top: none;">
     <button class="btn btn-primary" id="l-next" onclick="nextLandscape()">Avanzar</button>
   </div>
