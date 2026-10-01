@@ -377,6 +377,8 @@ function summary() {
 }
 
 function startApp() {
+document.querySelectorAll('.sw-toggle').forEach(el=>el.addEventListener('click',()=>el.classList.toggle('on')));
+
     // Check if the original event listeners exist, we are hijacking them via HTML inline onclick mostly
     document.getElementById('startbtn')?.addEventListener('click', () => {
         renderQuestion('PRE01');
