@@ -311,69 +311,33 @@ window.nextLandscape = function() {
 function summary() {
   const s = document.getElementById('sum'); 
   s.innerHTML = '';
-  const h = el('h2','', 'Tu cuerpo-territorio (v1.0)'); 
+  
+  const h = el('h2','', 'Registro Completado'); 
   s.appendChild(h);
   
-  const m = el('div','bmap'); 
-  m.innerHTML = silhouette();
-  
-  const hits = new Set(getAns('P11'));
-  
-  Object.keys(ZONES).forEach(z => {
-      const d = el('div','hot');
-      d.style.left = ZONES[z].x + '%';
-      d.style.top = ZONES[z].y + '%';
-      d.innerHTML = '<span></span>';
-      if(hits.has(z)) d.classList.add('on');
-      else d.classList.add('dim');
-      m.appendChild(d);
-  });
-  s.appendChild(m);
-  
-  const tg = el('div','tags'); 
-  [...hits].forEach(z => {
-      const t = el('span','hi', ZONES[z].l);
-      tg.appendChild(t);
-  }); 
-  if(!tg.children.length) tg.appendChild(el('span','','Sin zonas marcadas aún')); 
-  s.appendChild(tg);
-  
-  const kv = document.createElement('dl');
-  kv.className = 'kv';
-  
-  const getOptText = (qId, ansId) => {
-      let q = QUESTIONS.find(x => x.id === qId);
-      if(!q) return ansId;
-      let opts = q.options;
-      if(q.type === 'views') opts = q.views.flatMap(v => v.options);
-      if(!opts) return ansId;
-      let opt = opts.find(o => o.id === ansId);
-      return opt ? opt.text : ansId;
-  };
-  
-  let p02_ans = getAns('P02')[0];
-  let p15_ans = getAns('P15')[0];
-  let p22_ans = getAns('P22').map(a => getOptText('P22', a)).join(', ');
-  
-  const rows = [
-      ["Cercanía al deseo", p02_ans ? getOptText('P02', p02_ans) : '-'],
-      ["Protagonismo de placer", p15_ans ? getOptText('P15', p15_ans) : '-'],
-      ["Lo más valioso", p22_ans || '-']
-  ];
-  
-  rows.filter(r => r[1]).forEach(([k,v]) => {
-      const dt = document.createElement('dt'); dt.textContent = k;
-      const dd = document.createElement('dd'); dd.textContent = v;
-      kv.append(dt,dd);
-  });
-  s.appendChild(kv);
-  
-  const done = Object.keys(answers).length; 
-  s.appendChild(el('p','lead',`${done} dimensiones respondidas.`));
-  
   const tn = el('div','terr-note');
-  tn.innerHTML = 'Lo que marcaste no es un diagnóstico: es un <em>mapa situado</em> de tu territorio en tu estación actual. Guarda una captura de pantalla de esta hoja.';
+  tn.innerHTML = '<strong>Cierre Técnico Neutro (Motor V12):</strong><br>Tus respuestas han sido capturadas y empaquetadas en un <em>Configuration Object</em>. El Motor de Configuración procesará este snapshot en segundo plano. No se emite lectura personalizada preliminar.';
+  tn.style.borderColor = '#4fae7b';
+  tn.style.background = 'rgba(79, 174, 123, 0.1)';
   s.appendChild(tn);
+
+  // Construcción del Snapshot (Configuration Object) según V12
+  const configurationObject = {
+      timestamp: new Date().toISOString(),
+      version: "12",
+      answers: answers
+  };
+
+  const pre = el('pre', 'kv');
+  pre.style.whiteSpace = 'pre-wrap';
+  pre.style.fontSize = '12px';
+  pre.style.textAlign = 'left';
+  pre.style.padding = '15px';
+  pre.style.marginTop = '20px';
+  pre.textContent = JSON.stringify(configurationObject, null, 2);
+  s.appendChild(pre);
+  
+  console.log("Configuration Object Snapshot:", configurationObject);
 }
 
 function startApp() {
