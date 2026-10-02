@@ -1,0 +1,71 @@
+{
+  "version": "composition-controlled-12-contract-freeze",
+  "status": "BOUNDED_COMPOSITION_CONTRACT_FREEZE",
+  "review_type": "Author editorial closure of finite references and tested common patterns; no participant approval",
+  "user_approval": "Prior named references and direction only; no claim of approval of every regenerated output",
+  "test_results": {
+    "composer": 69,
+    "editorial_contract": 8,
+    "contract_closure": 6,
+    "applicability": 28,
+    "self_review": 16,
+    "deepening": 7,
+    "remaining_options": 12,
+    "freeze_crossings": 7,
+    "preuse_review": 5
+  },
+  "files": {
+    "LEEME.txt": "5a2a2bb1a6bddd198ea54d6a21539db34ba4ee198423363919e67a4bb525e283",
+    "applicability_outputs.json": "6e4026848c21d509d9ae26a5e60f99fccce6e145c55dde854fae5b9a7662dcd9",
+    "composer.py": "4474d1c088be738ab8bf93f91862bc91089685057bbbcfab2c4e63d0dfd43786",
+    "composer_contract.json": "35e1c6d41276d958eb60c5c11d75a02d8f6caaec5380de980fbf1c77efcb5942",
+    "composition_catalog.json": "1b1fad347f2a8f04ecb8b0add712ba83be72f68c34bc4d2a39f42d913fcfc689",
+    "editorial_reference_outputs.json": "28914fee278b668969764dcb043f611a8d5ba507d731c7e167b40b0641f8e414",
+    "freeze_crossing_results.json": "4ff85b1033f82da01ced9f0c50930519ef0b88706d8244f2b9abf6a5a1f8e0e5",
+    "freeze_readiness.json": "868a0a5dab967085236e810a30802e24a88c61a0de91abfd2167510b9f433bc8",
+    "generated_outputs.json": "b6af6ac1dfe743bf4bdae34c3ec0cee6f0a9f7f631a37b69a2f05afa681583c6",
+    "novel_snapshots.json": "26ff6cd59db73fb671a72465c93f0ba6358e006785a7b2d5e9f0ff1f214910ce",
+    "option_coverage_results.json": "844de29cd8292c51da3d5a91110e29dfdf62c47acb3044002757260cc8908802",
+    "remaining_options_results.json": "018534f22e190a6c0978f6d041470a8cdc0f1f8b002ed258de75c47964e36df7",
+    "rule_coverage_results.json": "ead3fa37f112bea608b3630843a3b9f315f88c4917fe004dd3e6cbb44c5a3b7e",
+    "test_applicability.py": "37aafd9c483e3a6fe4ce419cc38d5e5d302b6bd8cb99b8fed09b93be36e7ea2e",
+    "test_composer.py": "49df117afb42e1cf67122edc8d5d5cd83627a770a692224a9858f1e66fdb46a5",
+    "test_contract_closure.py": "8e4c5112ff5d108d4ab87e4faf859b84ae03338fa750482cbdd20e4f0ec02971",
+    "test_deepening_coverage.py": "c6965bf0812f8f2ed021e277c757e444a41cd97d0f16647152a64a9c765546b4",
+    "test_editorial_contract.py": "2d5dea6e02066cce79c01fc1c221d2446ecb787b339f9fbb2751e413729fe102",
+    "test_freeze_crossings.py": "e6588ae7bfd1b105c0feeb31c22fe9a01bf24ea210a3a33dc51b7926051d4b9d",
+    "test_remaining_options.py": "8482785e26078b382df719ae92e02c95252f4482ec03f3318ed27550145856b6",
+    "test_self_review.py": "d5a3d848f2a98b60dbaaab034b9aeee9888b93887db71b003df4a4c503ac7ff5",
+    "run_acceptance.py": "62137a4ec69e9a9bc01bf3c4d83ee584a5c1f673f3beca14447b8ad64d1739e3",
+    "test_preuse_review.py": "b7f969914a87ac40b3ebdf4784cb239482ac3cc6374ceb6e6e1020ba0bebf47c",
+    "preuse_sample_results.json": "8b995736f9e1dc18388b663e15a13e0f9739549d363bc26564b8194619573b9f",
+    "acceptance_run.json": "b1b8ef47c4957da45cd304eb8a7d8d279262f13850f2efb231946c5f16102d4b"
+  },
+  "option_sweep": 252,
+  "coverage_dispositions": {
+    "CONTENT_MAPPING": 214,
+    "LITERAL_ELICITATION_ONLY": 7,
+    "CONTEXT_HISTORY_ONLY": 16,
+    "UNCERTAINTY_ONLY": 5,
+    "PRIVACY_ONLY": 10
+  },
+  "critical_matrix": 30,
+  "catalogue_rules_exercised": 34,
+  "undefined_option_treatments": [],
+  "remaining": null,
+  "all_suites_passed": true,
+  "final_author_checks": "Pleasure versus choice, retained enjoyment, local scope precedence, source-bound titles, repetition, density and authorized fourth sentence.",
+  "new_crossing_matrix": 80,
+  "preuse_review_12": {
+    "version": "composition-controlled-12-contract-freeze",
+    "corrections": [
+      "P06_O02 remains a possible body impact in the Object; P06_O01 remains confirmed.",
+      "Unit-test reports and acceptance runner cannot certify failing or empty execution.",
+      "Eight fixed editorial name/summary/selected-relation references are checked exactly."
+    ],
+    "unchanged": "Eight reference paragraphs, Freeze A/B, target population, scoped precedence and draft-only delivery.",
+    "additional_structural_sample": 1200,
+    "sample_limit": "Finite structural/source checks; no exhaustive prose or participant validation."
+  },
+  "acceptance_record": "acceptance_run.json"
+}

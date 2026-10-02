@@ -1,0 +1,7 @@
+{
+  "status": "TECHNICAL_PASS_NOT_PRODUCTION_APPROVAL",
+  "tests": 8,
+  "failures": 0,
+  "errors": 0,
+  "scope": "Specific source/meaning revisions and selected-parent connector checks; not real-user validation"
+}

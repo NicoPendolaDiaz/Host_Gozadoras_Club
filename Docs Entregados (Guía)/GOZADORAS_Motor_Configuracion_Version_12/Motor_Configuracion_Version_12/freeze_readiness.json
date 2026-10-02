@@ -1,0 +1,62 @@
+{
+  "status": "BOUNDED_COMPOSITION_CONTRACT_FREEZE",
+  "scope": "Bounded composition contract and eight editorial references only; A/B unchanged; no automatic production release, Outcome or Destinations.",
+  "contract_freeze_blockers": [
+    {
+      "id": "F01",
+      "condition": "Editorial approval of final name/summary references, including current 05 and new generic body titles; coherent synthesis instead of merely source-correct lists",
+      "status": "CLOSED_AUTHOR_EDITORIAL_REVIEW",
+      "remaining": null,
+      "progress": "Eight reference paragraphs and dense source-based narrative patterns reviewed and corrected. Preserved approved 06 closing and whole-map distinctions; generated readings remain drafts pending their own use-stage review."
+    },
+    {
+      "id": "F02",
+      "condition": "Explicit option and critical-crossing coverage with expected outputs, plus a full audit of name and summary sharing selected relationships and scoped guard precedence",
+      "status": "CLOSED_BOUNDED_ACCEPTANCE",
+      "progress": "252 explicitly treated canonical options, witnesses for all 34 selected rules, 109 care combinations, 30 exploration/context/care cases and 80 additional distinct multi-scope cases pass. Enjoyment omission and title eligibility issues fixed. No exhaustive coverage claim.",
+      "remaining": null
+    },
+    {
+      "id": "F04",
+      "condition": "Finalize delivery contract, version compatibility and internal recomposition/exception behavior; no catalogue-gap no-result screen, no unsupported draft delivered",
+      "status": "CLOSED_FROZEN_DRAFT_INTERFACE",
+      "progress": "Composition version, snapshot schema, canonical instrument fingerprint and release hashes fixed. COMPLETE remains separate from delivery; all automatic outputs remain internal drafts. Actual deployment is M01, not claimed complete.",
+      "remaining": null
+    }
+  ],
+  "before_integrated_mvp_use": [
+    {
+      "id": "M01",
+      "condition": "Verify Nicolás integration end-to-end with actual snapshots, branches, session association, source IDs, rendering and exports",
+      "status": "NOT_EXECUTED"
+    },
+    {
+      "id": "M02",
+      "condition": "Run participant comprehension/personal-recognition testing; report findings separately from technical contract passing",
+      "status": "NOT_EXECUTED"
+    }
+  ],
+  "distinction": "A composition-contract Freeze can precede integration and participant validation, but it does not establish a usable/validated MVP or clinical measurement validity.",
+  "review_version": "composition-controlled-12-contract-freeze",
+  "closed_scope_decisions": [
+    {
+      "id": "F03",
+      "condition": "The instrument and supported configuration target women in a couple; access by other women does not expand the design population.",
+      "status": "CLOSED_SCOPE_DECISION",
+      "progress": "Same composer permits complete No-context snapshots outside the target scope. Preserve records and care cues without inventing a current partner. Existing branches and required answers remain unchanged.",
+      "remaining": null,
+      "decision": "Mónica: women without a partner may enter and take what serves them. Do not adapt the instrument to both populations. No new relational referent, questionnaire or separate reading is required for Freeze."
+    }
+  ],
+  "preuse_review_12": {
+    "version": "composition-controlled-12-contract-freeze",
+    "corrections": [
+      "P06_O02 remains a possible body impact in the Object; P06_O01 remains confirmed.",
+      "Unit-test reports and acceptance runner cannot certify failing or empty execution.",
+      "Eight fixed editorial name/summary/selected-relation references are checked exactly."
+    ],
+    "unchanged": "Eight reference paragraphs, Freeze A/B, target population, scoped precedence and draft-only delivery.",
+    "additional_structural_sample": 1200,
+    "sample_limit": "Finite structural/source checks; no exhaustive prose or participant validation."
+  }
+}

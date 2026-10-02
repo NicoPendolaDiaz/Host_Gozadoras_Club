@@ -1,0 +1,662 @@
+{
+  "date": "2026-10-01",
+  "status": "PRELIMINARY_NO_FREEZE",
+  "scope": "Executable reference audit: identifiers, branches, guards, relation selection and annotated editorial fixtures. No production renderer or Nicolas integration tested.",
+  "cases": [
+    {
+      "case_id": "01",
+      "input_errors": [],
+      "instrument_status": "COMPLETE",
+      "composition_status": "REFERENCE_CONTRACT_PASS",
+      "delivery": "REFERENCE_ONLY_NOT_PRODUCTION",
+      "qa_flag": false,
+      "reasons": [],
+      "active_guards": [],
+      "selected_relations": [
+        "R_EXPLORATION_WELL",
+        "R_RESPONSIVE",
+        "R_TIME"
+      ],
+      "evidence_trace": {
+        "R_EXPLORATION_WELL": [
+          "P01_O01",
+          "P24_O11"
+        ],
+        "R_RESPONSIVE": [
+          "P08_O04",
+          "P09_O02"
+        ],
+        "R_TIME": [
+          "P20_O07",
+          "P24_O11"
+        ]
+      },
+      "P28_P29_P32": {
+        "P28": "necessary",
+        "P29": "not_shown",
+        "P32": "not_shown"
+      },
+      "sentence_count": 3
+    },
+    {
+      "case_id": "02",
+      "input_errors": [],
+      "instrument_status": "COMPLETE",
+      "composition_status": "REVIEW_REQUIRED",
+      "delivery": "BLOCK_PERSONALIZED_OUTPUT",
+      "qa_flag": true,
+      "reasons": [
+        "FOURTH_SENTENCE_WITHOUT_AUTHORIZED_DISTINCTION"
+      ],
+      "active_guards": [],
+      "selected_relations": [
+        "R_MORE_DESIRE",
+        "R_RESPONSIVE",
+        "R_TIME"
+      ],
+      "evidence_trace": {
+        "R_MORE_DESIRE": [
+          "P10_O01",
+          "P24_O01"
+        ],
+        "R_RESPONSIVE": [
+          "P08_O04",
+          "P09_O02"
+        ],
+        "R_TIME": [
+          "P20_O07",
+          "P24_O01",
+          "P24_O12"
+        ]
+      },
+      "P28_P29_P32": {
+        "P28": "not_shown",
+        "P29": "optional",
+        "P32": "necessary"
+      },
+      "sentence_count": 4
+    },
+    {
+      "case_id": "03",
+      "input_errors": [],
+      "instrument_status": "COMPLETE",
+      "composition_status": "REVIEW_REQUIRED",
+      "delivery": "BLOCK_PERSONALIZED_OUTPUT",
+      "qa_flag": true,
+      "reasons": [
+        "TEXT_EXCEEDS_SELECTED_RELATIONS: R_TIME"
+      ],
+      "active_guards": [
+        "G_LIMIT_DIFFICULT"
+      ],
+      "selected_relations": [
+        "R_CLOSENESS_SPLIT",
+        "R_EXPRESSION_RESPECT",
+        "R_RECIPROCITY_GAP"
+      ],
+      "evidence_trace": {
+        "R_CLOSENESS_SPLIT": [
+          "P13_O02",
+          "P14_O04"
+        ],
+        "R_EXPRESSION_RESPECT": [
+          "P16_O04",
+          "P17_O02"
+        ],
+        "R_RECIPROCITY_GAP": [
+          "P15_O04",
+          "P24_O09"
+        ]
+      },
+      "P28_P29_P32": {
+        "P28": "not_shown",
+        "P29": "not_shown",
+        "P32": "not_shown"
+      },
+      "sentence_count": 3
+    },
+    {
+      "case_id": "04",
+      "input_errors": [],
+      "instrument_status": "COMPLETE",
+      "composition_status": "REFERENCE_CONTRACT_PASS",
+      "delivery": "REFERENCE_ONLY_NOT_PRODUCTION",
+      "qa_flag": false,
+      "reasons": [],
+      "active_guards": [],
+      "selected_relations": [
+        "R_BODY_MIXED",
+        "R_BODY_WISH",
+        "R_RECOVER_EXPLORE"
+      ],
+      "evidence_trace": {
+        "R_BODY_MIXED": [
+          "P06_O01",
+          "P10_O02"
+        ],
+        "R_BODY_WISH": [
+          "P24_O05",
+          "P24_O06",
+          "P26_O04",
+          "P27_O04"
+        ],
+        "R_RECOVER_EXPLORE": [
+          "P01_O02",
+          "P28_O03"
+        ]
+      },
+      "P28_P29_P32": {
+        "P28": "necessary",
+        "P29": "not_shown",
+        "P32": "not_shown"
+      },
+      "sentence_count": 3
+    },
+    {
+      "case_id": "05",
+      "input_errors": [],
+      "instrument_status": "COMPLETE",
+      "composition_status": "REFERENCE_CONTRACT_PASS",
+      "delivery": "REFERENCE_ONLY_NOT_PRODUCTION",
+      "qa_flag": false,
+      "reasons": [],
+      "active_guards": [],
+      "selected_relations": [
+        "R_NO_CHANGE_GAP",
+        "R_CLOSENESS_SPLIT",
+        "R_CHOICE_RESOURCE"
+      ],
+      "evidence_trace": {
+        "R_NO_CHANGE_GAP": [
+          "P02_O04",
+          "P10_O02",
+          "P24_O15"
+        ],
+        "R_CLOSENESS_SPLIT": [
+          "P13_O02",
+          "P14_O04"
+        ],
+        "R_CHOICE_RESOURCE": [
+          "P21_O01",
+          "P24_O15"
+        ]
+      },
+      "P28_P29_P32": {
+        "P28": "not_shown",
+        "P29": "optional",
+        "P32": "not_shown"
+      },
+      "sentence_count": 3
+    },
+    {
+      "case_id": "06",
+      "input_errors": [],
+      "instrument_status": "COMPLETE",
+      "composition_status": "REFERENCE_CONTRACT_PASS",
+      "delivery": "REFERENCE_ONLY_NOT_PRODUCTION",
+      "qa_flag": false,
+      "reasons": [],
+      "active_guards": [
+        "G_RECIPROCITY_UNOBSERVED"
+      ],
+      "selected_relations": [
+        "R_UNCERTAINTY_SCOPES",
+        "R_RECENT_ABSENCE",
+        "R_CURIOUS_UNCLEAR"
+      ],
+      "evidence_trace": {
+        "R_UNCERTAINTY_SCOPES": [
+          "P02_O07",
+          "P11_O02",
+          "P21_O06"
+        ],
+        "R_RECENT_ABSENCE": [
+          "P10_O08",
+          "P15_O07"
+        ],
+        "R_CURIOUS_UNCLEAR": [
+          "P01_O05",
+          "P22_O06",
+          "P22_O08",
+          "P24_O17"
+        ]
+      },
+      "P28_P29_P32": {
+        "P28": "optional",
+        "P29": "not_shown",
+        "P32": "not_shown"
+      },
+      "sentence_count": 4
+    },
+    {
+      "case_id": "07",
+      "input_errors": [],
+      "instrument_status": "COMPLETE",
+      "composition_status": "REFERENCE_CONTRACT_PASS",
+      "delivery": "REFERENCE_ONLY_NOT_PRODUCTION",
+      "qa_flag": false,
+      "reasons": [],
+      "active_guards": [
+        "G_INTERNAL_RECOGNITION",
+        "G_PRIVACY_LIMITED"
+      ],
+      "selected_relations": [
+        "R_MATERIAL_PRIVACY",
+        "R_INTERNAL_FREEDOM",
+        "R_EXPANSION_RESOURCES"
+      ],
+      "evidence_trace": {
+        "R_MATERIAL_PRIVACY": [
+          "P20_O09",
+          "P24_O11",
+          "P24_O13",
+          "P32_O04"
+        ],
+        "R_INTERNAL_FREEDOM": [
+          "P24_O13",
+          "P29_O01"
+        ],
+        "R_EXPANSION_RESOURCES": [
+          "P08_O02",
+          "P10_O02",
+          "P16_O01",
+          "P21_O02",
+          "P24_O11"
+        ]
+      },
+      "P28_P29_P32": {
+        "P28": "necessary",
+        "P29": "necessary",
+        "P32": "necessary"
+      },
+      "sentence_count": 3
+    },
+    {
+      "case_id": "08",
+      "input_errors": [],
+      "instrument_status": "COMPLETE",
+      "composition_status": "REFERENCE_CONTRACT_PASS",
+      "delivery": "REFERENCE_ONLY_NOT_PRODUCTION",
+      "qa_flag": false,
+      "reasons": [],
+      "active_guards": [
+        "G_LIMIT_CANNOT",
+        "G_PARTNER_INSISTS",
+        "G_SAFETY_NO",
+        "G_AGENCY_LOW"
+      ],
+      "selected_relations": [
+        "R_CARE_DESIRED",
+        "R_RECIPROCITY_GAP",
+        "R_DESIRE_VARIABLE_PLEASURE"
+      ],
+      "evidence_trace": {
+        "R_CARE_DESIRED": [
+          "P16_O05",
+          "P17_O04",
+          "P18_O04",
+          "P24_O10",
+          "P24_O13"
+        ],
+        "R_RECIPROCITY_GAP": [
+          "P15_O04",
+          "P24_O09"
+        ],
+        "R_DESIRE_VARIABLE_PLEASURE": [
+          "P08_O02",
+          "P10_O06"
+        ]
+      },
+      "P28_P29_P32": {
+        "P28": "optional",
+        "P29": "necessary",
+        "P32": "not_shown"
+      },
+      "sentence_count": 4
+    },
+    {
+      "case_id": "01_RECIPROCITY_PRIVATE",
+      "input_errors": [],
+      "instrument_status": "COMPLETE",
+      "composition_status": "REFERENCE_CONTRACT_PASS",
+      "delivery": "REFERENCE_ONLY_NOT_PRODUCTION",
+      "qa_flag": false,
+      "reasons": [],
+      "active_guards": [
+        "G_RECIPROCITY_PRIVATE"
+      ],
+      "selected_relations": [
+        "R_EXPLORATION_WELL",
+        "R_RESPONSIVE",
+        "R_TIME"
+      ],
+      "evidence_trace": {
+        "R_EXPLORATION_WELL": [
+          "P01_O01",
+          "P24_O11"
+        ],
+        "R_RESPONSIVE": [
+          "P08_O04",
+          "P09_O02"
+        ],
+        "R_TIME": [
+          "P20_O07",
+          "P24_O11"
+        ]
+      },
+      "P28_P29_P32": {
+        "P28": "necessary",
+        "P29": "not_shown",
+        "P32": "not_shown"
+      },
+      "sentence_count": 3
+    },
+    {
+      "case_id": "07_PRIVACY_SOMETIMES",
+      "input_errors": [],
+      "instrument_status": "COMPLETE",
+      "composition_status": "REFERENCE_CONTRACT_PASS",
+      "delivery": "REFERENCE_ONLY_NOT_PRODUCTION",
+      "qa_flag": false,
+      "reasons": [],
+      "active_guards": [
+        "G_INTERNAL_RECOGNITION"
+      ],
+      "selected_relations": [
+        "R_MATERIAL_PRIVACY",
+        "R_INTERNAL_FREEDOM",
+        "R_EXPANSION_RESOURCES"
+      ],
+      "evidence_trace": {
+        "R_MATERIAL_PRIVACY": [
+          "P20_O09",
+          "P24_O11",
+          "P24_O13",
+          "P32_O03"
+        ],
+        "R_INTERNAL_FREEDOM": [
+          "P24_O13",
+          "P29_O01"
+        ],
+        "R_EXPANSION_RESOURCES": [
+          "P08_O02",
+          "P10_O02",
+          "P16_O01",
+          "P21_O02",
+          "P24_O11"
+        ]
+      },
+      "P28_P29_P32": {
+        "P28": "necessary",
+        "P29": "necessary",
+        "P32": "necessary"
+      },
+      "sentence_count": 3
+    },
+    {
+      "case_id": "08_SAFETY_YES",
+      "input_errors": [],
+      "instrument_status": "COMPLETE",
+      "composition_status": "REFERENCE_CONTRACT_PASS",
+      "delivery": "REFERENCE_ONLY_NOT_PRODUCTION",
+      "qa_flag": false,
+      "reasons": [],
+      "active_guards": [
+        "G_LIMIT_CANNOT",
+        "G_PARTNER_INSISTS",
+        "G_AGENCY_LOW"
+      ],
+      "selected_relations": [
+        "R_CARE_DESIRED",
+        "R_RECIPROCITY_GAP",
+        "R_DESIRE_VARIABLE_PLEASURE"
+      ],
+      "evidence_trace": {
+        "R_CARE_DESIRED": [
+          "P16_O05",
+          "P17_O04",
+          "P24_O10",
+          "P24_O13"
+        ],
+        "R_RECIPROCITY_GAP": [
+          "P15_O04",
+          "P24_O09"
+        ],
+        "R_DESIRE_VARIABLE_PLEASURE": [
+          "P08_O02",
+          "P10_O06"
+        ]
+      },
+      "P28_P29_P32": {
+        "P28": "optional",
+        "P29": "necessary",
+        "P32": "not_shown"
+      },
+      "sentence_count": 4
+    },
+    {
+      "case_id": "08_RESPECT",
+      "input_errors": [],
+      "instrument_status": "COMPLETE",
+      "composition_status": "REFERENCE_CONTRACT_PASS",
+      "delivery": "REFERENCE_ONLY_NOT_PRODUCTION",
+      "qa_flag": false,
+      "reasons": [],
+      "active_guards": [
+        "G_LIMIT_CANNOT",
+        "G_SAFETY_NO",
+        "G_AGENCY_LOW"
+      ],
+      "selected_relations": [
+        "R_CARE_DESIRED",
+        "R_RECIPROCITY_GAP",
+        "R_DESIRE_VARIABLE_PLEASURE"
+      ],
+      "evidence_trace": {
+        "R_CARE_DESIRED": [
+          "P16_O05",
+          "P18_O04",
+          "P24_O10",
+          "P24_O13"
+        ],
+        "R_RECIPROCITY_GAP": [
+          "P15_O04",
+          "P24_O09"
+        ],
+        "R_DESIRE_VARIABLE_PLEASURE": [
+          "P08_O02",
+          "P10_O06"
+        ]
+      },
+      "P28_P29_P32": {
+        "P28": "optional",
+        "P29": "necessary",
+        "P32": "not_shown"
+      },
+      "sentence_count": 4
+    }
+  ],
+  "checks": [
+    {
+      "check": "All 12 fixtures have valid instrument inputs",
+      "pass": true
+    },
+    {
+      "check": "Every selected relation count <= 3",
+      "pass": true
+    },
+    {
+      "check": "Golden case 02 detects fourth-sentence contract mismatch",
+      "pass": true
+    },
+    {
+      "check": "Golden case 03 detects time as fourth relation",
+      "pass": true
+    },
+    {
+      "check": "01: click order invariance",
+      "pass": true
+    },
+    {
+      "check": "02: click order invariance",
+      "pass": true
+    },
+    {
+      "check": "03: click order invariance",
+      "pass": true
+    },
+    {
+      "check": "04: click order invariance",
+      "pass": true
+    },
+    {
+      "check": "05: click order invariance",
+      "pass": true
+    },
+    {
+      "check": "06: click order invariance",
+      "pass": true
+    },
+    {
+      "check": "07: click order invariance",
+      "pass": true
+    },
+    {
+      "check": "08: click order invariance",
+      "pass": true
+    },
+    {
+      "check": "01_RECIPROCITY_PRIVATE: click order invariance",
+      "pass": true
+    },
+    {
+      "check": "07_PRIVACY_SOMETIMES: click order invariance",
+      "pass": true
+    },
+    {
+      "check": "08_SAFETY_YES: click order invariance",
+      "pass": true
+    },
+    {
+      "check": "08_RESPECT: click order invariance",
+      "pass": true
+    },
+    {
+      "check": "Changing P18 removes only felt-safety guard",
+      "pass": true
+    },
+    {
+      "check": "P16 and P17 care remain independent of P18",
+      "pass": true
+    },
+    {
+      "check": "P18 remains active via P16 even when P17 respects",
+      "pass": true
+    },
+    {
+      "check": "Privacy decision != low reciprocity",
+      "pass": true
+    },
+    {
+      "check": "Material privacy variant keeps internal-permission guard",
+      "pass": true
+    },
+    {
+      "check": "Reject favorable global name in constrained case",
+      "pass": true
+    },
+    {
+      "check": "Reject answer to inactive branch",
+      "pass": true
+    },
+    {
+      "check": "Reject omission on necessary P32",
+      "pass": true
+    },
+    {
+      "check": "Free text creates no new relations/guards",
+      "pass": true
+    },
+    {
+      "check": "Reject privacy state collapsed to answered",
+      "pass": true
+    },
+    {
+      "check": "Unresolved partner applicability blocks personalized output, not COMPLETE",
+      "pass": true
+    },
+    {
+      "check": "Four indispensable relations block personalized output while preserving COMPLETE",
+      "pass": true
+    },
+    {
+      "check": "P07 uncertainty preserved despite emoji in label",
+      "pass": true
+    },
+    {
+      "check": "P24 uncertainty preserved despite emoji in label",
+      "pass": true
+    },
+    {
+      "check": "Values are not inferred to be present resources",
+      "pass": true
+    },
+    {
+      "check": "Desires are not inferred to be present resources",
+      "pass": true
+    },
+    {
+      "check": "Privacy is not converted to an uncertainty",
+      "pass": true
+    }
+  ],
+  "overflow_control": {
+    "case_id": "03",
+    "input_errors": [],
+    "instrument_status": "COMPLETE",
+    "composition_status": "REVIEW_REQUIRED",
+    "delivery": "BLOCK_PERSONALIZED_OUTPUT",
+    "qa_flag": true,
+    "reasons": [
+      "UNREPRESENTABLE_ESSENTIAL_RELATION: R_INTERNAL_FREEDOM"
+    ],
+    "active_guards": [
+      "G_LIMIT_DIFFICULT",
+      "G_INTERNAL_RECOGNITION"
+    ],
+    "selected_relations": [
+      "R_CLOSENESS_SPLIT",
+      "R_EXPRESSION_RESPECT",
+      "R_BODY_MIXED"
+    ],
+    "evidence_trace": {
+      "R_CLOSENESS_SPLIT": [
+        "P13_O02",
+        "P14_O04"
+      ],
+      "R_EXPRESSION_RESPECT": [
+        "P16_O04",
+        "P17_O02"
+      ],
+      "R_BODY_MIXED": [
+        "P06_O01",
+        "P10_O02"
+      ]
+    },
+    "P28_P29_P32": {
+      "P28": "not_shown",
+      "P29": "necessary",
+      "P32": "not_shown"
+    },
+    "sentence_count": 0
+  },
+  "checks_passed": 33,
+  "checks_total": 33,
+  "limitations": [
+    "No automatic semantic verification of every Spanish clause",
+    "Catalog coverage limited to eight fictional cases and four variants",
+    "No full branch-combination coverage",
+    "Name/summary fixtures are pre-reviewed test expectations, never production dispatch by case_id",
+    "Two approved drafts need composition-contract reconciliation before freeze"
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "status": "TECHNICAL_PASS_NOT_PRODUCTION_APPROVAL",
+  "tests": 6,
+  "failures": 0,
+  "errors": 0,
+  "scope": "Shared emitted title sources, selected relation anchors and unresolved partner referent; structural checks only"
+}

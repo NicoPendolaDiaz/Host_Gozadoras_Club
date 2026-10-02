@@ -1,0 +1,8 @@
+{
+  "version": "0.4.2 before fixes",
+  "tests": 12,
+  "failed_assertions": 10,
+  "errors": 1,
+  "passed": 1,
+  "note": "Failures reproduced before correction; current run is stored separately in self_review_results.json."
+}

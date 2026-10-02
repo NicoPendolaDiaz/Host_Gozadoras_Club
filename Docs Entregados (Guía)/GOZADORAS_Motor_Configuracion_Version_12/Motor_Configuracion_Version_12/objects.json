@@ -1,0 +1,2959 @@
+[
+  {
+    "case_id": "01",
+    "object": {
+      "state": {
+        "P01": {
+          "option_ids": [
+            "P01_O01"
+          ],
+          "zone_ids": [],
+          "state_code": "answered",
+          "text": null
+        },
+        "P02": {
+          "option_ids": [
+            "P02_O02"
+          ],
+          "zone_ids": [],
+          "state_code": "answered",
+          "text": null
+        }
+      },
+      "values": {
+        "option_ids": [
+          "P22_O01",
+          "P22_O12",
+          "P22_O08"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "desired_changes": {
+        "option_ids": [
+          "P24_O11"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "present_resources": [
+        {
+          "kind": "pleasure",
+          "question_id": "P10",
+          "evidence_ids": [
+            "P10_O01"
+          ]
+        },
+        {
+          "kind": "body_sensations",
+          "question_id": "P11",
+          "evidence_ids": [
+            "Z02",
+            "Z04"
+          ]
+        },
+        {
+          "kind": "affective_closeness",
+          "question_id": "P13",
+          "evidence_ids": [
+            "P13_O02"
+          ]
+        },
+        {
+          "kind": "erotic_closeness",
+          "question_id": "P14",
+          "evidence_ids": [
+            "P14_O02"
+          ]
+        },
+        {
+          "kind": "reciprocity",
+          "question_id": "P15",
+          "evidence_ids": [
+            "P15_O01"
+          ]
+        },
+        {
+          "kind": "express_limits",
+          "question_id": "P16",
+          "evidence_ids": [
+            "P16_O01"
+          ]
+        },
+        {
+          "kind": "agency",
+          "question_id": "P21",
+          "evidence_ids": [
+            "P21_O02"
+          ]
+        },
+        {
+          "kind": "desire_during",
+          "question_id": "P09",
+          "evidence_ids": [
+            "P09_O02"
+          ]
+        }
+      ],
+      "uncertainty": [],
+      "signal_constraints": [],
+      "evidence_trace": {
+        "R_EXPLORATION_WELL": [
+          "P01_O01",
+          "P24_O11"
+        ],
+        "R_RESPONSIVE": [
+          "P08_O04",
+          "P09_O02"
+        ],
+        "R_TIME": [
+          "P20_O07",
+          "P24_O11"
+        ]
+      },
+      "literal_text": {},
+      "relations": [
+        {
+          "rule_id": "R_EXPLORATION_WELL",
+          "stable_order": 1,
+          "type": "coexistencia",
+          "priority": 2,
+          "aspects": [
+            "desired_change",
+            "current_state"
+          ],
+          "when": {
+            "all": [
+              {
+                "option_ids": [
+                  "P01_O01"
+                ]
+              },
+              {
+                "option_ids": [
+                  "P24_O11"
+                ]
+              }
+            ]
+          },
+          "permitted": "Interés por novedad desde bienestar actual; valores y recursos presentes pueden precisar ese punto de partida",
+          "prohibited": "No afirmar que explorar implica insatisfacción ni que P22 prueba recursos",
+          "merge_policy": "only_identical_relation_with_same_scope; preserve_every_evidence_id",
+          "evidence_trace": [
+            "P01_O01",
+            "P24_O11"
+          ]
+        },
+        {
+          "rule_id": "R_RESPONSIVE",
+          "stable_order": 2,
+          "type": "coexistencia",
+          "priority": 3,
+          "aspects": [
+            "desire_before",
+            "desire_during"
+          ],
+          "when": {
+            "all": [
+              {
+                "option_ids": [
+                  "P08_O04"
+                ]
+              },
+              {
+                "option_ids": [
+                  "P09_O02"
+                ]
+              }
+            ]
+          },
+          "permitted": "Las ganas rara vez aparecen antes de empezar y muchas veces aumentan durante una oportunidad elegida",
+          "prohibited": "No inferir baja satisfacción ni recomendar empezar sin querer",
+          "merge_policy": "only_identical_relation_with_same_scope; preserve_every_evidence_id",
+          "evidence_trace": [
+            "P08_O04",
+            "P09_O02"
+          ]
+        },
+        {
+          "rule_id": "R_TIME",
+          "stable_order": 3,
+          "type": "constraint",
+          "priority": 4,
+          "aspects": [
+            "daily_conditions",
+            "desired_change"
+          ],
+          "when": {
+            "all": [
+              {
+                "option_ids": [
+                  "P20_O07"
+                ]
+              },
+              {
+                "any": [
+                  {
+                    "option_ids": [
+                      "P24_O01",
+                      "P24_O11",
+                      "P24_O12"
+                    ]
+                  },
+                  {
+                    "option_ids": [
+                      "P01_O04",
+                      "P01_O05"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "permitted": "Tiempo como dificultad declarada que sitúa un deseo actual; no causa de otros aspectos",
+          "prohibited": "No cierre obligatorio ni convertir el tiempo en explicación global",
+          "merge_policy": "only_identical_relation_with_same_scope; preserve_every_evidence_id",
+          "evidence_trace": [
+            "P20_O07",
+            "P24_O11"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "case_id": "02",
+    "object": {
+      "state": {
+        "P01": {
+          "option_ids": [
+            "P01_O01"
+          ],
+          "zone_ids": [],
+          "state_code": "answered",
+          "text": null
+        },
+        "P02": {
+          "option_ids": [
+            "P02_O02"
+          ],
+          "zone_ids": [],
+          "state_code": "answered",
+          "text": null
+        }
+      },
+      "values": {
+        "option_ids": [
+          "P22_O02",
+          "P22_O09"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "desired_changes": {
+        "option_ids": [
+          "P24_O01",
+          "P24_O12"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "present_resources": [
+        {
+          "kind": "pleasure",
+          "question_id": "P10",
+          "evidence_ids": [
+            "P10_O01"
+          ]
+        },
+        {
+          "kind": "body_sensations",
+          "question_id": "P11",
+          "evidence_ids": [
+            "Z02",
+            "Z04"
+          ]
+        },
+        {
+          "kind": "affective_closeness",
+          "question_id": "P13",
+          "evidence_ids": [
+            "P13_O02"
+          ]
+        },
+        {
+          "kind": "erotic_closeness",
+          "question_id": "P14",
+          "evidence_ids": [
+            "P14_O02"
+          ]
+        },
+        {
+          "kind": "reciprocity",
+          "question_id": "P15",
+          "evidence_ids": [
+            "P15_O01"
+          ]
+        },
+        {
+          "kind": "express_limits",
+          "question_id": "P16",
+          "evidence_ids": [
+            "P16_O01"
+          ]
+        },
+        {
+          "kind": "agency",
+          "question_id": "P21",
+          "evidence_ids": [
+            "P21_O02"
+          ]
+        },
+        {
+          "kind": "desire_during",
+          "question_id": "P09",
+          "evidence_ids": [
+            "P09_O02"
+          ]
+        }
+      ],
+      "uncertainty": [],
+      "signal_constraints": [],
+      "evidence_trace": {
+        "R_MORE_DESIRE": [
+          "P10_O01",
+          "P24_O01"
+        ],
+        "R_RESPONSIVE": [
+          "P08_O04",
+          "P09_O02"
+        ],
+        "R_TIME": [
+          "P20_O07",
+          "P24_O01",
+          "P24_O12"
+        ]
+      },
+      "literal_text": {},
+      "relations": [
+        {
+          "rule_id": "R_MORE_DESIRE",
+          "stable_order": 4,
+          "type": "coexistencia",
+          "priority": 2,
+          "aspects": [
+            "desired_change",
+            "pleasure"
+          ],
+          "when": {
+            "all": [
+              {
+                "option_ids": [
+                  "P24_O01"
+                ]
+              },
+              {
+                "option_ids": [
+                  "P10_O01",
+                  "P10_O02"
+                ]
+              }
+            ]
+          },
+          "permitted": "Querer más ganas junto a disfrutar encuentros elegidos; precisar recursos favorables solo con respuestas directas",
+          "prohibited": "No equiparar disfrute con deseo espontáneo",
+          "merge_policy": "only_identical_relation_with_same_scope; preserve_every_evidence_id",
+          "evidence_trace": [
+            "P10_O01",
+            "P24_O01"
+          ]
+        },
+        {
+          "rule_id": "R_RESPONSIVE",
+          "stable_order": 2,
+          "type": "coexistencia",
+          "priority": 3,
+          "aspects": [
+            "desire_before",
+            "desire_during"
+          ],
+          "when": {
+            "all": [
+              {
+                "option_ids": [
+                  "P08_O04"
+                ]
+              },
+              {
+                "option_ids": [
+                  "P09_O02"
+                ]
+              }
+            ]
+          },
+          "permitted": "Las ganas rara vez aparecen antes de empezar y muchas veces aumentan durante una oportunidad elegida",
+          "prohibited": "No inferir baja satisfacción ni recomendar empezar sin querer",
+          "merge_policy": "only_identical_relation_with_same_scope; preserve_every_evidence_id",
+          "evidence_trace": [
+            "P08_O04",
+            "P09_O02"
+          ]
+        },
+        {
+          "rule_id": "R_TIME",
+          "stable_order": 3,
+          "type": "constraint",
+          "priority": 4,
+          "aspects": [
+            "daily_conditions",
+            "desired_change"
+          ],
+          "when": {
+            "all": [
+              {
+                "option_ids": [
+                  "P20_O07"
+                ]
+              },
+              {
+                "any": [
+                  {
+                    "option_ids": [
+                      "P24_O01",
+                      "P24_O11",
+                      "P24_O12"
+                    ]
+                  },
+                  {
+                    "option_ids": [
+                      "P01_O04",
+                      "P01_O05"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "permitted": "Tiempo como dificultad declarada que sitúa un deseo actual; no causa de otros aspectos",
+          "prohibited": "No cierre obligatorio ni convertir el tiempo en explicación global",
+          "merge_policy": "only_identical_relation_with_same_scope; preserve_every_evidence_id",
+          "evidence_trace": [
+            "P20_O07",
+            "P24_O01",
+            "P24_O12"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "case_id": "03",
+    "object": {
+      "state": {
+        "P01": {
+          "option_ids": [
+            "P01_O04"
+          ],
+          "zone_ids": [],
+          "state_code": "answered",
+          "text": null
+        },
+        "P02": {
+          "option_ids": [
+            "P02_O04"
+          ],
+          "zone_ids": [],
+          "state_code": "answered",
+          "text": null
+        }
+      },
+      "values": {
+        "option_ids": [
+          "P22_O13",
+          "P22_O01",
+          "P22_O07"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "desired_changes": {
+        "option_ids": [
+          "P24_O08",
+          "P24_O09",
+          "P24_O10"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "present_resources": [
+        {
+          "kind": "body_sensations",
+          "question_id": "P11",
+          "evidence_ids": [
+            "Z02",
+            "Z04"
+          ]
+        },
+        {
+          "kind": "affective_closeness",
+          "question_id": "P13",
+          "evidence_ids": [
+            "P13_O02"
+          ]
+        },
+        {
+          "kind": "partner_respect",
+          "question_id": "P17",
+          "evidence_ids": [
+            "P17_O02"
+          ]
+        },
+        {
+          "kind": "agency",
+          "question_id": "P21",
+          "evidence_ids": [
+            "P21_O02"
+          ]
+        },
+        {
+          "kind": "retry_interest",
+          "question_id": "P12",
+          "evidence_ids": [
+            "P12_O06"
+          ]
+        }
+      ],
+      "uncertainty": [],
+      "signal_constraints": [
+        {
+          "rule_id": "G_LIMIT_DIFFICULT",
+          "stable_order": 4,
+          "type": "constraint",
+          "scope": "express_limits",
+          "when": {
+            "option_ids": [
+              "P16_O03",
+              "P16_O04"
+            ]
+          },
+          "permitted": "Distinguir dificultad propia de respuesta de la pareja",
+          "forbidden_phrases": [
+            "te resulta fácil expresar tus límites"
+          ],
+          "application": "always_before_relation_selection; does_not_consume_narrative_slot"
+        }
+      ],
+      "evidence_trace": {
+        "R_CLOSENESS_SPLIT": [
+          "P13_O02",
+          "P14_O04"
+        ],
+        "R_EXPRESSION_RESPECT": [
+          "P16_O04",
+          "P17_O02"
+        ],
+        "R_RECIPROCITY_GAP": [
+          "P15_O04",
+          "P24_O09"
+        ]
+      },
+      "literal_text": {},
+      "relations": [
+        {
+          "rule_id": "R_CLOSENESS_SPLIT",
+          "stable_order": 6,
+          "type": "coexistencia",
+          "priority": 1,
+          "aspects": [
+            "affective_closeness",
+            "erotic_closeness"
+          ],
+          "when": {
+            "all": [
+              {
+                "option_ids": [
+                  "P13_O01",
+                  "P13_O02"
+                ]
+              },
+              {
+                "option_ids": [
+                  "P14_O04",
+                  "P14_O05"
+                ]
+              }
+            ]
+          },
+          "permitted": "Afecto cercano y distancia erótica como experiencias distintas",
+          "prohibited": "No llamar contradicción obligatoria ni inferir desconexión afectiva",
+          "merge_policy": "only_identical_relation_with_same_scope; preserve_every_evidence_id",
+          "evidence_trace": [
+            "P13_O02",
+            "P14_O04"
+          ]
+        },
+        {
+          "rule_id": "R_EXPRESSION_RESPECT",
+          "stable_order": 7,
+          "type": "tensión",
+          "priority": 1,
+          "aspects": [
+            "express_limits",
+            "partner_response"
+          ],
+          "when": {
+            "all": [
+              {
+                "option_ids": [
+                  "P16_O04"
+                ]
+              },
+              {
+                "option_ids": [
+                  "P17_O01",
+                  "P17_O02"
+                ]
+              }
+            ]
+          },
+          "permitted": "Dificultad para decir límites junto a respeto declarado de la pareja",
+          "prohibited": "No afirmar que el respeto elimina la dificultad ni que existe inseguridad si no fue declarada",
+          "merge_policy": "only_identical_relation_with_same_scope; preserve_every_evidence_id",
+          "evidence_trace": [
+            "P16_O04",
+            "P17_O02"
+          ]
+        },
+        {
+          "rule_id": "R_RECIPROCITY_GAP",
+          "stable_order": 5,
+          "type": "tensión",
+          "priority": 2,
+          "aspects": [
+            "desired_change",
+            "reciprocity"
+          ],
+          "when": {
+            "all": [
+              {
+                "option_ids": [
+                  "P24_O09"
+                ]
+              },
+              {
+                "option_ids": [
+                  "P15_O04",
+                  "P15_O05"
+                ]
+              }
+            ]
+          },
+          "permitted": "Querer igual lugar para el placer y reconocer poca reciprocidad; mantener frecuencia literal",
+          "prohibited": "No asumir falta total de placer ni diagnóstico relacional",
+          "merge_policy": "only_identical_relation_with_same_scope; preserve_every_evidence_id",
+          "evidence_trace": [
+            "P15_O04",
+            "P24_O09"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "case_id": "04",
+    "object": {
+      "state": {
+        "P01": {
+          "option_ids": [
+            "P01_O02",
+            "P01_O05"
+          ],
+          "zone_ids": [],
+          "state_code": "answered",
+          "text": null
+        },
+        "P02": {
+          "option_ids": [
+            "P02_O03"
+          ],
+          "zone_ids": [],
+          "state_code": "answered",
+          "text": null
+        }
+      },
+      "values": {
+        "option_ids": [
+          "P22_O04",
+          "P22_O01",
+          "P22_O06"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "desired_changes": {
+        "option_ids": [
+          "P24_O05",
+          "P24_O06",
+          "P24_O11"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "present_resources": [
+        {
+          "kind": "pleasure",
+          "question_id": "P10",
+          "evidence_ids": [
+            "P10_O02"
+          ]
+        },
+        {
+          "kind": "body_sensations",
+          "question_id": "P11",
+          "evidence_ids": [
+            "Z02",
+            "Z04"
+          ]
+        },
+        {
+          "kind": "affective_closeness",
+          "question_id": "P13",
+          "evidence_ids": [
+            "P13_O02"
+          ]
+        },
+        {
+          "kind": "reciprocity",
+          "question_id": "P15",
+          "evidence_ids": [
+            "P15_O02"
+          ]
+        },
+        {
+          "kind": "express_limits",
+          "question_id": "P16",
+          "evidence_ids": [
+            "P16_O01"
+          ]
+        },
+        {
+          "kind": "agency",
+          "question_id": "P21",
+          "evidence_ids": [
+            "P21_O02"
+          ]
+        },
+        {
+          "kind": "desire_during",
+          "question_id": "P09",
+          "evidence_ids": [
+            "P09_O02"
+          ]
+        }
+      ],
+      "uncertainty": [],
+      "signal_constraints": [],
+      "evidence_trace": {
+        "R_BODY_MIXED": [
+          "P06_O01",
+          "P10_O02"
+        ],
+        "R_BODY_WISH": [
+          "P24_O05",
+          "P24_O06",
+          "P26_O04",
+          "P27_O04"
+        ],
+        "R_RECOVER_EXPLORE": [
+          "P01_O02",
+          "P28_O03"
+        ]
+      },
+      "literal_text": {},
+      "relations": [
+        {
+          "rule_id": "R_BODY_MIXED",
+          "stable_order": 8,
+          "type": "coexistencia",
+          "priority": 1,
+          "aspects": [
+            "body_conditions",
+            "pleasure"
+          ],
+          "when": {
+            "all": [
+              {
+                "option_ids": [
+                  "P06_O01",
+                  "P06_O02"
+                ]
+              },
+              {
+                "option_ids": [
+                  "P10_O01",
+                  "P10_O02"
+                ]
+              }
+            ]
+          },
+          "permitted": "Condiciones que afectan y disfrute presente; zonas agradables pueden precisar recursos si P11 tiene zonas",
+          "prohibited": "No condición corporal = ausencia de placer ni causalidad entre molestias y disfrute",
+          "merge_policy": "only_identical_relation_with_same_scope; preserve_every_evidence_id",
+          "evidence_trace": [
+            "P06_O01",
+            "P10_O02"
+          ]
+        },
+        {
+          "rule_id": "R_BODY_WISH",
+          "stable_order": 9,
+          "type": "tensión",
+          "priority": 2,
+          "aspects": [
+            "desired_change",
+            "body_registration",
+            "body_comfort"
+          ],
+          "when": {
+            "all": [
+              {
+                "option_ids": [
+                  "P24_O05",
+                  "P24_O06"
+                ]
+              },
+              {
+                "any": [
+                  {
+                    "option_ids": [
+                      "P26_O04",
+                      "P26_O05"
+                    ]
+                  },
+                  {
+                    "option_ids": [
+                      "P27_O04",
+                      "P27_O05"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "permitted": "Deseos corporales frente a dificultad de reconocimiento/comodidad, cada ámbito con evidencia propia",
+          "prohibited": "No derivar incomodidad de dificultad de reconocimiento, ni viceversa",
+          "merge_policy": "only_identical_relation_with_same_scope; preserve_every_evidence_id",
+          "evidence_trace": [
+            "P24_O05",
+            "P24_O06",
+            "P26_O04",
+            "P27_O04"
+          ]
+        },
+        {
+          "rule_id": "R_RECOVER_EXPLORE",
+          "stable_order": 10,
+          "type": "coexistencia",
+          "priority": 2,
+          "aspects": [
+            "trajectory",
+            "exploration"
+          ],
+          "when": {
+            "all": [
+              {
+                "option_ids": [
+                  "P01_O02"
+                ]
+              },
+              {
+                "option_ids": [
+                  "P28_O03"
+                ]
+              }
+            ]
+          },
+          "permitted": "Extrañar algo de antes junto a querer novedad y más de lo existente",
+          "prohibited": "No promesa de regreso al pasado",
+          "merge_policy": "only_identical_relation_with_same_scope; preserve_every_evidence_id",
+          "evidence_trace": [
+            "P01_O02",
+            "P28_O03"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "case_id": "05",
+    "object": {
+      "state": {
+        "P01": {
+          "option_ids": [
+            "P01_O07"
+          ],
+          "zone_ids": [],
+          "state_code": "answered",
+          "text": null
+        },
+        "P02": {
+          "option_ids": [
+            "P02_O04"
+          ],
+          "zone_ids": [],
+          "state_code": "answered",
+          "text": null
+        }
+      },
+      "values": {
+        "option_ids": [
+          "P22_O09",
+          "P22_O01",
+          "P22_O10"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "desired_changes": {
+        "option_ids": [
+          "P24_O15"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "present_resources": [
+        {
+          "kind": "pleasure",
+          "question_id": "P10",
+          "evidence_ids": [
+            "P10_O02"
+          ]
+        },
+        {
+          "kind": "body_sensations",
+          "question_id": "P11",
+          "evidence_ids": [
+            "Z02",
+            "Z04"
+          ]
+        },
+        {
+          "kind": "affective_closeness",
+          "question_id": "P13",
+          "evidence_ids": [
+            "P13_O02"
+          ]
+        },
+        {
+          "kind": "reciprocity",
+          "question_id": "P15",
+          "evidence_ids": [
+            "P15_O02"
+          ]
+        },
+        {
+          "kind": "express_limits",
+          "question_id": "P16",
+          "evidence_ids": [
+            "P16_O02"
+          ]
+        },
+        {
+          "kind": "agency",
+          "question_id": "P21",
+          "evidence_ids": [
+            "P21_O01"
+          ]
+        },
+        {
+          "kind": "desire_during",
+          "question_id": "P09",
+          "evidence_ids": [
+            "P09_O02"
+          ]
+        }
+      ],
+      "uncertainty": [],
+      "signal_constraints": [],
+      "evidence_trace": {
+        "R_NO_CHANGE_GAP": [
+          "P02_O04",
+          "P10_O02",
+          "P24_O15"
+        ],
+        "R_CLOSENESS_SPLIT": [
+          "P13_O02",
+          "P14_O04"
+        ],
+        "R_CHOICE_RESOURCE": [
+          "P21_O01",
+          "P24_O15"
+        ]
+      },
+      "literal_text": {},
+      "relations": [
+        {
+          "rule_id": "R_NO_CHANGE_GAP",
+          "stable_order": 11,
+          "type": "coexistencia",
+          "priority": 1,
+          "aspects": [
+            "desired_change",
+            "current_gap",
+            "pleasure"
+          ],
+          "when": {
+            "all": [
+              {
+                "option_ids": [
+                  "P24_O15"
+                ]
+              },
+              {
+                "option_ids": [
+                  "P02_O04",
+                  "P02_O05"
+                ]
+              },
+              {
+                "option_ids": [
+                  "P10_O01",
+                  "P10_O02"
+                ]
+              }
+            ]
+          },
+          "permitted": "No mover nada ahora junto a distancia importante y disfrute; distinguir deseo de vida y decisión actual",
+          "prohibited": "No no-change = bienestar, desinterés o ausencia de distancia",
+          "merge_policy": "only_identical_relation_with_same_scope; preserve_every_evidence_id",
+          "evidence_trace": [
+            "P02_O04",
+            "P10_O02",
+            "P24_O15"
+          ]
+        },
+        {
+          "rule_id": "R_CLOSENESS_SPLIT",
+          "stable_order": 6,
+          "type": "coexistencia",
+          "priority": 1,
+          "aspects": [
+            "affective_closeness",
+            "erotic_closeness"
+          ],
+          "when": {
+            "all": [
+              {
+                "option_ids": [
+                  "P13_O01",
+                  "P13_O02"
+                ]
+              },
+              {
+                "option_ids": [
+                  "P14_O04",
+                  "P14_O05"
+                ]
+              }
+            ]
+          },
+          "permitted": "Afecto cercano y distancia erótica como experiencias distintas",
+          "prohibited": "No llamar contradicción obligatoria ni inferir desconexión afectiva",
+          "merge_policy": "only_identical_relation_with_same_scope; preserve_every_evidence_id",
+          "evidence_trace": [
+            "P13_O02",
+            "P14_O04"
+          ]
+        },
+        {
+          "rule_id": "R_CHOICE_RESOURCE",
+          "stable_order": 12,
+          "type": "convergencia",
+          "priority": 3,
+          "aspects": [
+            "desired_change",
+            "agency"
+          ],
+          "when": {
+            "all": [
+              {
+                "option_ids": [
+                  "P24_O15"
+                ]
+              },
+              {
+                "option_ids": [
+                  "P21_O01",
+                  "P21_O02"
+                ]
+              }
+            ]
+          },
+          "permitted": "Decisión actual de no mover nada y margen declarado para decidir",
+          "prohibited": "No inferir libertad total, seguridad o causa de la decisión",
+          "merge_policy": "only_identical_relation_with_same_scope; preserve_every_evidence_id",
+          "evidence_trace": [
+            "P21_O01",
+            "P24_O15"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "case_id": "06",
+    "object": {
+      "state": {
+        "P01": {
+          "option_ids": [
+            "P01_O06",
+            "P01_O05"
+          ],
+          "zone_ids": [],
+          "state_code": "answered",
+          "text": null
+        },
+        "P02": {
+          "option_ids": [
+            "P02_O07"
+          ],
+          "zone_ids": [],
+          "state_code": "dont_know",
+          "text": null
+        }
+      },
+      "values": {
+        "option_ids": [
+          "P22_O06",
+          "P22_O08"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "desired_changes": {
+        "option_ids": [
+          "P24_O17"
+        ],
+        "zone_ids": [],
+        "state_code": "dont_know",
+        "text": null
+      },
+      "present_resources": [],
+      "uncertainty": [
+        {
+          "question_id": "P02",
+          "option_ids": [
+            "P02_O07"
+          ]
+        },
+        {
+          "question_id": "P03",
+          "option_ids": [
+            "P03_O16"
+          ]
+        },
+        {
+          "question_id": "P04",
+          "option_ids": [
+            "P04_O03"
+          ]
+        },
+        {
+          "question_id": "P07",
+          "option_ids": [
+            "P07_O15"
+          ]
+        },
+        {
+          "question_id": "P11",
+          "option_ids": [
+            "P11_O02"
+          ]
+        },
+        {
+          "question_id": "P14",
+          "option_ids": [
+            "P14_O07"
+          ]
+        },
+        {
+          "question_id": "P19",
+          "option_ids": [
+            "P19_O07"
+          ]
+        },
+        {
+          "question_id": "P21",
+          "option_ids": [
+            "P21_O06"
+          ]
+        },
+        {
+          "question_id": "P24",
+          "option_ids": [
+            "P24_O17"
+          ]
+        },
+        {
+          "question_id": "P28",
+          "option_ids": [
+            "P28_O05"
+          ]
+        }
+      ],
+      "signal_constraints": [
+        {
+          "rule_id": "G_RECIPROCITY_UNOBSERVED",
+          "stable_order": 8,
+          "type": "constraint",
+          "scope": "perceived_reciprocity",
+          "when": {
+            "option_ids": [
+              "P15_O07",
+              "P15_O08"
+            ]
+          },
+          "permitted": "No encounters != unclear; keep exact local state",
+          "forbidden_phrases": [
+            "sientes que tu placer importa tanto como el de tu pareja"
+          ],
+          "application": "always_before_relation_selection; does_not_consume_narrative_slot"
+        }
+      ],
+      "evidence_trace": {
+        "R_UNCERTAINTY_SCOPES": [
+          "P02_O07",
+          "P11_O02",
+          "P21_O06"
+        ],
+        "R_RECENT_ABSENCE": [
+          "P10_O08",
+          "P15_O07"
+        ],
+        "R_CURIOUS_UNCLEAR": [
+          "P01_O05",
+          "P22_O06",
+          "P22_O08",
+          "P24_O17"
+        ]
+      },
+      "literal_text": {},
+      "relations": [
+        {
+          "rule_id": "R_UNCERTAINTY_SCOPES",
+          "stable_order": 14,
+          "type": "convergencia",
+          "priority": 1,
+          "aspects": [
+            "body_registration",
+            "agency",
+            "current_gap"
+          ],
+          "when": {
+            "all": [
+              {
+                "option_ids": [
+                  "P11_O02"
+                ]
+              },
+              {
+                "option_ids": [
+                  "P21_O06"
+                ]
+              },
+              {
+                "option_ids": [
+                  "P02_O07"
+                ]
+              }
+            ]
+          },
+          "permitted": "Conservar por separado incertidumbres corporales, de agencia y distancia; convergencia de estados, no índice",
+          "prohibited": "No resumir como incapacidad ni generalizar a todos los aspectos",
+          "merge_policy": "only_identical_relation_with_same_scope; preserve_every_evidence_id",
+          "evidence_trace": [
+            "P02_O07",
+            "P11_O02",
+            "P21_O06"
+          ]
+        },
+        {
+          "rule_id": "R_RECENT_ABSENCE",
+          "stable_order": 15,
+          "type": "constraint",
+          "priority": 1,
+          "aspects": [
+            "recent_encounters",
+            "reciprocity"
+          ],
+          "when": {
+            "all": [
+              {
+                "option_ids": [
+                  "P10_O08"
+                ]
+              },
+              {
+                "option_ids": [
+                  "P15_O07"
+                ]
+              }
+            ]
+          },
+          "permitted": "Ausencia reciente de encuentros restringe afirmaciones de disfrute/reciprocidad observados",
+          "prohibited": "No ausencia = no disfrute, mala relación o rechazo permanente",
+          "merge_policy": "only_identical_relation_with_same_scope; preserve_every_evidence_id",
+          "evidence_trace": [
+            "P10_O08",
+            "P15_O07"
+          ]
+        },
+        {
+          "rule_id": "R_CURIOUS_UNCLEAR",
+          "stable_order": 13,
+          "type": "coexistencia",
+          "priority": 2,
+          "aspects": [
+            "values",
+            "exploration",
+            "desired_change"
+          ],
+          "when": {
+            "all": [
+              {
+                "option_ids": [
+                  "P01_O05"
+                ]
+              },
+              {
+                "option_ids": [
+                  "P22_O06",
+                  "P22_O08"
+                ]
+              },
+              {
+                "option_ids": [
+                  "P24_O17"
+                ]
+              }
+            ]
+          },
+          "permitted": "Interés/valor de explorar junto a no saber todavía qué mover",
+          "prohibited": "No convertir curiosidad/valor en recurso corporal o elección de trabajo",
+          "merge_policy": "only_identical_relation_with_same_scope; preserve_every_evidence_id",
+          "evidence_trace": [
+            "P01_O05",
+            "P22_O06",
+            "P22_O08",
+            "P24_O17"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "case_id": "07",
+    "object": {
+      "state": {
+        "P01": {
+          "option_ids": [
+            "P01_O01",
+            "P01_O05"
+          ],
+          "zone_ids": [],
+          "state_code": "answered",
+          "text": null
+        },
+        "P02": {
+          "option_ids": [
+            "P02_O02"
+          ],
+          "zone_ids": [],
+          "state_code": "answered",
+          "text": null
+        }
+      },
+      "values": {
+        "option_ids": [
+          "P22_O09",
+          "P22_O03",
+          "P22_O06"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "desired_changes": {
+        "option_ids": [
+          "P24_O11",
+          "P24_O13"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "present_resources": [
+        {
+          "kind": "pleasure",
+          "question_id": "P10",
+          "evidence_ids": [
+            "P10_O02"
+          ]
+        },
+        {
+          "kind": "body_sensations",
+          "question_id": "P11",
+          "evidence_ids": [
+            "Z02",
+            "Z04"
+          ]
+        },
+        {
+          "kind": "affective_closeness",
+          "question_id": "P13",
+          "evidence_ids": [
+            "P13_O02"
+          ]
+        },
+        {
+          "kind": "reciprocity",
+          "question_id": "P15",
+          "evidence_ids": [
+            "P15_O02"
+          ]
+        },
+        {
+          "kind": "express_limits",
+          "question_id": "P16",
+          "evidence_ids": [
+            "P16_O01"
+          ]
+        },
+        {
+          "kind": "agency",
+          "question_id": "P21",
+          "evidence_ids": [
+            "P21_O02"
+          ]
+        },
+        {
+          "kind": "desire_before",
+          "question_id": "P08",
+          "evidence_ids": [
+            "P08_O02"
+          ]
+        }
+      ],
+      "uncertainty": [],
+      "signal_constraints": [
+        {
+          "rule_id": "G_INTERNAL_RECOGNITION",
+          "stable_order": 5,
+          "type": "constraint",
+          "scope": "internal_permission",
+          "when": {
+            "option_ids": [
+              "P29_O01",
+              "P29_O02"
+            ]
+          },
+          "permitted": "Cuesta reconocer intereses incluso para sí; no inferir pareja/control",
+          "forbidden_phrases": [
+            "reconoces sin dificultad todo lo que deseas"
+          ],
+          "application": "always_before_relation_selection; does_not_consume_narrative_slot"
+        },
+        {
+          "rule_id": "G_PRIVACY_LIMITED",
+          "stable_order": 6,
+          "type": "constraint",
+          "scope": "material_privacy",
+          "when": {
+            "option_ids": [
+              "P32_O04",
+              "P32_O05"
+            ]
+          },
+          "permitted": "Privacidad poco disponible según frecuencia; no inferir permiso interno",
+          "forbidden_phrases": [
+            "cuentas con toda la privacidad que necesitas"
+          ],
+          "application": "always_before_relation_selection; does_not_consume_narrative_slot"
+        }
+      ],
+      "evidence_trace": {
+        "R_MATERIAL_PRIVACY": [
+          "P20_O09",
+          "P24_O11",
+          "P24_O13",
+          "P32_O04"
+        ],
+        "R_INTERNAL_FREEDOM": [
+          "P24_O13",
+          "P29_O01"
+        ],
+        "R_EXPANSION_RESOURCES": [
+          "P08_O02",
+          "P10_O02",
+          "P16_O01",
+          "P21_O02",
+          "P24_O11"
+        ]
+      },
+      "literal_text": {},
+      "relations": [
+        {
+          "rule_id": "R_MATERIAL_PRIVACY",
+          "stable_order": 17,
+          "type": "constraint",
+          "priority": 1,
+          "aspects": [
+            "daily_conditions",
+            "material_privacy",
+            "exploration"
+          ],
+          "when": {
+            "all": [
+              {
+                "option_ids": [
+                  "P20_O09"
+                ]
+              },
+              {
+                "option_ids": [
+                  "P32_O01",
+                  "P32_O02",
+                  "P32_O03",
+                  "P32_O04",
+                  "P32_O05",
+                  "P32_O06",
+                  "P32_O07"
+                ]
+              },
+              {
+                "option_ids": [
+                  "P24_O11",
+                  "P24_O13"
+                ]
+              }
+            ]
+          },
+          "permitted": "Relacionar privacidad material declarada con interés actual, conservando exacta respuesta P32 incluso si matiza P20",
+          "prohibited": "No privacidad = permiso interno ni borrar un dato por discrepancia",
+          "merge_policy": "only_identical_relation_with_same_scope; preserve_every_evidence_id",
+          "evidence_trace": [
+            "P20_O09",
+            "P24_O11",
+            "P24_O13",
+            "P32_O04"
+          ]
+        },
+        {
+          "rule_id": "R_INTERNAL_FREEDOM",
+          "stable_order": 16,
+          "type": "tensión",
+          "priority": 1,
+          "aspects": [
+            "desired_change",
+            "internal_permission"
+          ],
+          "when": {
+            "all": [
+              {
+                "option_ids": [
+                  "P24_O13"
+                ]
+              },
+              {
+                "option_ids": [
+                  "P29_O01",
+                  "P29_O02"
+                ]
+              }
+            ]
+          },
+          "permitted": "Libertad deseada y dificultad interna para reconocer intereses; nombre puede expresar deseo, no logro",
+          "prohibited": "No atribuir esta dificultad a pareja ni diagnosticar vergüenza",
+          "merge_policy": "only_identical_relation_with_same_scope; preserve_every_evidence_id",
+          "evidence_trace": [
+            "P24_O13",
+            "P29_O01"
+          ]
+        },
+        {
+          "rule_id": "R_EXPANSION_RESOURCES",
+          "stable_order": 18,
+          "type": "convergencia",
+          "priority": 2,
+          "aspects": [
+            "desired_change",
+            "desire",
+            "pleasure",
+            "express_limits",
+            "agency"
+          ],
+          "when": {
+            "all": [
+              {
+                "option_ids": [
+                  "P24_O11"
+                ]
+              },
+              {
+                "option_ids": [
+                  "P08_O01",
+                  "P08_O02"
+                ]
+              },
+              {
+                "option_ids": [
+                  "P10_O01",
+                  "P10_O02"
+                ]
+              },
+              {
+                "option_ids": [
+                  "P16_O01",
+                  "P16_O02"
+                ]
+              },
+              {
+                "option_ids": [
+                  "P21_O01",
+                  "P21_O02"
+                ]
+              }
+            ]
+          },
+          "permitted": "Convergencia de recursos presentes diferentes que sitúan interés por explorar, sin sumar puntos; cada recurso con fuente propia",
+          "prohibited": "No convergencia = libertad o seguridad global",
+          "merge_policy": "only_identical_relation_with_same_scope; preserve_every_evidence_id",
+          "evidence_trace": [
+            "P08_O02",
+            "P10_O02",
+            "P16_O01",
+            "P21_O02",
+            "P24_O11"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "case_id": "08",
+    "object": {
+      "state": {
+        "P01": {
+          "option_ids": [
+            "P01_O04",
+            "P01_O05"
+          ],
+          "zone_ids": [],
+          "state_code": "answered",
+          "text": null
+        },
+        "P02": {
+          "option_ids": [
+            "P02_O05"
+          ],
+          "zone_ids": [],
+          "state_code": "answered",
+          "text": null
+        }
+      },
+      "values": {
+        "option_ids": [
+          "P22_O09",
+          "P22_O10",
+          "P22_O01"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "desired_changes": {
+        "option_ids": [
+          "P24_O09",
+          "P24_O10",
+          "P24_O13"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "present_resources": [
+        {
+          "kind": "body_sensations",
+          "question_id": "P11",
+          "evidence_ids": [
+            "Z02",
+            "Z04"
+          ]
+        },
+        {
+          "kind": "affective_closeness",
+          "question_id": "P13",
+          "evidence_ids": [
+            "P13_O02"
+          ]
+        },
+        {
+          "kind": "desire_before",
+          "question_id": "P08",
+          "evidence_ids": [
+            "P08_O02"
+          ]
+        },
+        {
+          "kind": "desire_during",
+          "question_id": "P09",
+          "evidence_ids": [
+            "P09_O02"
+          ]
+        }
+      ],
+      "uncertainty": [
+        {
+          "question_id": "P28",
+          "option_ids": [
+            "P28_O05"
+          ]
+        }
+      ],
+      "signal_constraints": [
+        {
+          "rule_id": "G_LIMIT_CANNOT",
+          "stable_order": 1,
+          "type": "constraint",
+          "scope": "express_limits",
+          "when": {
+            "option_ids": [
+              "P16_O05"
+            ]
+          },
+          "permitted": "Siente que no puede decir no o parar; no generalizar a ausencia de deseo",
+          "forbidden_phrases": [
+            "puedes expresar tus límites con libertad",
+            "te resulta fácil decir que no"
+          ],
+          "application": "always_before_relation_selection; does_not_consume_narrative_slot"
+        },
+        {
+          "rule_id": "G_PARTNER_INSISTS",
+          "stable_order": 2,
+          "type": "constraint",
+          "scope": "partner_response",
+          "when": {
+            "option_ids": [
+              "P17_O03",
+              "P17_O04"
+            ]
+          },
+          "permitted": "Conservar frecuencia exacta de insistencia/molestia; no diagnóstico automático",
+          "forbidden_phrases": [
+            "tu pareja siempre respeta tus límites",
+            "tus límites son siempre respetados"
+          ],
+          "application": "always_before_relation_selection; does_not_consume_narrative_slot"
+        },
+        {
+          "rule_id": "G_SAFETY_NO",
+          "stable_order": 3,
+          "type": "constraint",
+          "scope": "felt_safety",
+          "when": {
+            "option_ids": [
+              "P18_O04"
+            ]
+          },
+          "permitted": "No se siente segura para decir no/parar; no borrar otras experiencias",
+          "forbidden_phrases": [
+            "te sientes segura para decir que no"
+          ],
+          "application": "always_before_relation_selection; does_not_consume_narrative_slot"
+        },
+        {
+          "rule_id": "G_AGENCY_LOW",
+          "stable_order": 9,
+          "type": "constraint",
+          "scope": "perceived_agency",
+          "when": {
+            "option_ids": [
+              "P21_O04",
+              "P21_O05"
+            ]
+          },
+          "permitted": "Poco/muy poco margen; no borrar deseo o cercanía",
+          "forbidden_phrases": [
+            "cuentas con amplio margen para decidir",
+            "libertad plena"
+          ],
+          "application": "always_before_relation_selection; does_not_consume_narrative_slot"
+        }
+      ],
+      "evidence_trace": {
+        "R_CARE_DESIRED": [
+          "P16_O05",
+          "P17_O04",
+          "P18_O04",
+          "P24_O10",
+          "P24_O13"
+        ],
+        "R_RECIPROCITY_GAP": [
+          "P15_O04",
+          "P24_O09"
+        ],
+        "R_DESIRE_VARIABLE_PLEASURE": [
+          "P08_O02",
+          "P10_O06"
+        ]
+      },
+      "literal_text": {},
+      "relations": [
+        {
+          "rule_id": "R_CARE_DESIRED",
+          "stable_order": 19,
+          "type": "constraint",
+          "priority": 1,
+          "aspects": [
+            "desired_change",
+            "express_limits",
+            "partner_response",
+            "felt_safety"
+          ],
+          "when": {
+            "all": [
+              {
+                "option_ids": [
+                  "P24_O10",
+                  "P24_O13"
+                ]
+              },
+              {
+                "guards": [
+                  "G_LIMIT_CANNOT",
+                  "G_PARTNER_INSISTS",
+                  "G_SAFETY_NO"
+                ]
+              }
+            ]
+          },
+          "permitted": "Una relación entre libertad/expresión deseadas y experiencia de límites; tres guardas independientes preservan ámbitos distintos, sin triplicar una misma relación",
+          "prohibited": "No suprimir deseo/cercanía ni afirmar expresión libre, respeto constante o seguridad contra evidencia",
+          "merge_policy": "only_identical_relation_with_same_scope; preserve_every_evidence_id",
+          "evidence_trace": [
+            "P16_O05",
+            "P17_O04",
+            "P18_O04",
+            "P24_O10",
+            "P24_O13"
+          ]
+        },
+        {
+          "rule_id": "R_RECIPROCITY_GAP",
+          "stable_order": 5,
+          "type": "tensión",
+          "priority": 2,
+          "aspects": [
+            "desired_change",
+            "reciprocity"
+          ],
+          "when": {
+            "all": [
+              {
+                "option_ids": [
+                  "P24_O09"
+                ]
+              },
+              {
+                "option_ids": [
+                  "P15_O04",
+                  "P15_O05"
+                ]
+              }
+            ]
+          },
+          "permitted": "Querer igual lugar para el placer y reconocer poca reciprocidad; mantener frecuencia literal",
+          "prohibited": "No asumir falta total de placer ni diagnóstico relacional",
+          "merge_policy": "only_identical_relation_with_same_scope; preserve_every_evidence_id",
+          "evidence_trace": [
+            "P15_O04",
+            "P24_O09"
+          ]
+        },
+        {
+          "rule_id": "R_DESIRE_VARIABLE_PLEASURE",
+          "stable_order": 20,
+          "type": "coexistencia",
+          "priority": 3,
+          "aspects": [
+            "desire",
+            "pleasure"
+          ],
+          "when": {
+            "all": [
+              {
+                "option_ids": [
+                  "P08_O01",
+                  "P08_O02"
+                ]
+              },
+              {
+                "option_ids": [
+                  "P10_O06"
+                ]
+              }
+            ]
+          },
+          "permitted": "Ganas presentes y disfrute variable; closeness/agency claims need own evidence",
+          "prohibited": "No deseo = disfrute ni cercanía = seguridad",
+          "merge_policy": "only_identical_relation_with_same_scope; preserve_every_evidence_id",
+          "evidence_trace": [
+            "P08_O02",
+            "P10_O06"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "case_id": "01_RECIPROCITY_PRIVATE",
+    "object": {
+      "state": {
+        "P01": {
+          "option_ids": [
+            "P01_O01"
+          ],
+          "zone_ids": [],
+          "state_code": "answered",
+          "text": null
+        },
+        "P02": {
+          "option_ids": [
+            "P02_O02"
+          ],
+          "zone_ids": [],
+          "state_code": "answered",
+          "text": null
+        }
+      },
+      "values": {
+        "option_ids": [
+          "P22_O01",
+          "P22_O12",
+          "P22_O08"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "desired_changes": {
+        "option_ids": [
+          "P24_O11"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "present_resources": [
+        {
+          "kind": "pleasure",
+          "question_id": "P10",
+          "evidence_ids": [
+            "P10_O01"
+          ]
+        },
+        {
+          "kind": "body_sensations",
+          "question_id": "P11",
+          "evidence_ids": [
+            "Z02",
+            "Z04"
+          ]
+        },
+        {
+          "kind": "affective_closeness",
+          "question_id": "P13",
+          "evidence_ids": [
+            "P13_O02"
+          ]
+        },
+        {
+          "kind": "erotic_closeness",
+          "question_id": "P14",
+          "evidence_ids": [
+            "P14_O02"
+          ]
+        },
+        {
+          "kind": "express_limits",
+          "question_id": "P16",
+          "evidence_ids": [
+            "P16_O01"
+          ]
+        },
+        {
+          "kind": "agency",
+          "question_id": "P21",
+          "evidence_ids": [
+            "P21_O02"
+          ]
+        },
+        {
+          "kind": "desire_during",
+          "question_id": "P09",
+          "evidence_ids": [
+            "P09_O02"
+          ]
+        }
+      ],
+      "uncertainty": [],
+      "signal_constraints": [
+        {
+          "rule_id": "G_RECIPROCITY_PRIVATE",
+          "stable_order": 7,
+          "type": "constraint",
+          "scope": "perceived_reciprocity",
+          "when": {
+            "option_ids": [
+              "P15_O09"
+            ]
+          },
+          "permitted": "Privacidad elegida; no presentar reciprocidad como positiva/negativa/incierta",
+          "forbidden_phrases": [
+            "sientes que tu placer importa tanto como el de tu pareja",
+            "tu placer no importa"
+          ],
+          "application": "always_before_relation_selection; does_not_consume_narrative_slot"
+        }
+      ],
+      "evidence_trace": {
+        "R_EXPLORATION_WELL": [
+          "P01_O01",
+          "P24_O11"
+        ],
+        "R_RESPONSIVE": [
+          "P08_O04",
+          "P09_O02"
+        ],
+        "R_TIME": [
+          "P20_O07",
+          "P24_O11"
+        ]
+      },
+      "literal_text": {},
+      "relations": [
+        {
+          "rule_id": "R_EXPLORATION_WELL",
+          "stable_order": 1,
+          "type": "coexistencia",
+          "priority": 2,
+          "aspects": [
+            "desired_change",
+            "current_state"
+          ],
+          "when": {
+            "all": [
+              {
+                "option_ids": [
+                  "P01_O01"
+                ]
+              },
+              {
+                "option_ids": [
+                  "P24_O11"
+                ]
+              }
+            ]
+          },
+          "permitted": "Interés por novedad desde bienestar actual; valores y recursos presentes pueden precisar ese punto de partida",
+          "prohibited": "No afirmar que explorar implica insatisfacción ni que P22 prueba recursos",
+          "merge_policy": "only_identical_relation_with_same_scope; preserve_every_evidence_id",
+          "evidence_trace": [
+            "P01_O01",
+            "P24_O11"
+          ]
+        },
+        {
+          "rule_id": "R_RESPONSIVE",
+          "stable_order": 2,
+          "type": "coexistencia",
+          "priority": 3,
+          "aspects": [
+            "desire_before",
+            "desire_during"
+          ],
+          "when": {
+            "all": [
+              {
+                "option_ids": [
+                  "P08_O04"
+                ]
+              },
+              {
+                "option_ids": [
+                  "P09_O02"
+                ]
+              }
+            ]
+          },
+          "permitted": "Las ganas rara vez aparecen antes de empezar y muchas veces aumentan durante una oportunidad elegida",
+          "prohibited": "No inferir baja satisfacción ni recomendar empezar sin querer",
+          "merge_policy": "only_identical_relation_with_same_scope; preserve_every_evidence_id",
+          "evidence_trace": [
+            "P08_O04",
+            "P09_O02"
+          ]
+        },
+        {
+          "rule_id": "R_TIME",
+          "stable_order": 3,
+          "type": "constraint",
+          "priority": 4,
+          "aspects": [
+            "daily_conditions",
+            "desired_change"
+          ],
+          "when": {
+            "all": [
+              {
+                "option_ids": [
+                  "P20_O07"
+                ]
+              },
+              {
+                "any": [
+                  {
+                    "option_ids": [
+                      "P24_O01",
+                      "P24_O11",
+                      "P24_O12"
+                    ]
+                  },
+                  {
+                    "option_ids": [
+                      "P01_O04",
+                      "P01_O05"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "permitted": "Tiempo como dificultad declarada que sitúa un deseo actual; no causa de otros aspectos",
+          "prohibited": "No cierre obligatorio ni convertir el tiempo en explicación global",
+          "merge_policy": "only_identical_relation_with_same_scope; preserve_every_evidence_id",
+          "evidence_trace": [
+            "P20_O07",
+            "P24_O11"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "case_id": "07_PRIVACY_SOMETIMES",
+    "object": {
+      "state": {
+        "P01": {
+          "option_ids": [
+            "P01_O01",
+            "P01_O05"
+          ],
+          "zone_ids": [],
+          "state_code": "answered",
+          "text": null
+        },
+        "P02": {
+          "option_ids": [
+            "P02_O02"
+          ],
+          "zone_ids": [],
+          "state_code": "answered",
+          "text": null
+        }
+      },
+      "values": {
+        "option_ids": [
+          "P22_O09",
+          "P22_O03",
+          "P22_O06"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "desired_changes": {
+        "option_ids": [
+          "P24_O11",
+          "P24_O13"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "present_resources": [
+        {
+          "kind": "pleasure",
+          "question_id": "P10",
+          "evidence_ids": [
+            "P10_O02"
+          ]
+        },
+        {
+          "kind": "body_sensations",
+          "question_id": "P11",
+          "evidence_ids": [
+            "Z02",
+            "Z04"
+          ]
+        },
+        {
+          "kind": "affective_closeness",
+          "question_id": "P13",
+          "evidence_ids": [
+            "P13_O02"
+          ]
+        },
+        {
+          "kind": "reciprocity",
+          "question_id": "P15",
+          "evidence_ids": [
+            "P15_O02"
+          ]
+        },
+        {
+          "kind": "express_limits",
+          "question_id": "P16",
+          "evidence_ids": [
+            "P16_O01"
+          ]
+        },
+        {
+          "kind": "agency",
+          "question_id": "P21",
+          "evidence_ids": [
+            "P21_O02"
+          ]
+        },
+        {
+          "kind": "desire_before",
+          "question_id": "P08",
+          "evidence_ids": [
+            "P08_O02"
+          ]
+        }
+      ],
+      "uncertainty": [],
+      "signal_constraints": [
+        {
+          "rule_id": "G_INTERNAL_RECOGNITION",
+          "stable_order": 5,
+          "type": "constraint",
+          "scope": "internal_permission",
+          "when": {
+            "option_ids": [
+              "P29_O01",
+              "P29_O02"
+            ]
+          },
+          "permitted": "Cuesta reconocer intereses incluso para sí; no inferir pareja/control",
+          "forbidden_phrases": [
+            "reconoces sin dificultad todo lo que deseas"
+          ],
+          "application": "always_before_relation_selection; does_not_consume_narrative_slot"
+        }
+      ],
+      "evidence_trace": {
+        "R_MATERIAL_PRIVACY": [
+          "P20_O09",
+          "P24_O11",
+          "P24_O13",
+          "P32_O03"
+        ],
+        "R_INTERNAL_FREEDOM": [
+          "P24_O13",
+          "P29_O01"
+        ],
+        "R_EXPANSION_RESOURCES": [
+          "P08_O02",
+          "P10_O02",
+          "P16_O01",
+          "P21_O02",
+          "P24_O11"
+        ]
+      },
+      "literal_text": {},
+      "relations": [
+        {
+          "rule_id": "R_MATERIAL_PRIVACY",
+          "stable_order": 17,
+          "type": "constraint",
+          "priority": 1,
+          "aspects": [
+            "daily_conditions",
+            "material_privacy",
+            "exploration"
+          ],
+          "when": {
+            "all": [
+              {
+                "option_ids": [
+                  "P20_O09"
+                ]
+              },
+              {
+                "option_ids": [
+                  "P32_O01",
+                  "P32_O02",
+                  "P32_O03",
+                  "P32_O04",
+                  "P32_O05",
+                  "P32_O06",
+                  "P32_O07"
+                ]
+              },
+              {
+                "option_ids": [
+                  "P24_O11",
+                  "P24_O13"
+                ]
+              }
+            ]
+          },
+          "permitted": "Relacionar privacidad material declarada con interés actual, conservando exacta respuesta P32 incluso si matiza P20",
+          "prohibited": "No privacidad = permiso interno ni borrar un dato por discrepancia",
+          "merge_policy": "only_identical_relation_with_same_scope; preserve_every_evidence_id",
+          "evidence_trace": [
+            "P20_O09",
+            "P24_O11",
+            "P24_O13",
+            "P32_O03"
+          ]
+        },
+        {
+          "rule_id": "R_INTERNAL_FREEDOM",
+          "stable_order": 16,
+          "type": "tensión",
+          "priority": 1,
+          "aspects": [
+            "desired_change",
+            "internal_permission"
+          ],
+          "when": {
+            "all": [
+              {
+                "option_ids": [
+                  "P24_O13"
+                ]
+              },
+              {
+                "option_ids": [
+                  "P29_O01",
+                  "P29_O02"
+                ]
+              }
+            ]
+          },
+          "permitted": "Libertad deseada y dificultad interna para reconocer intereses; nombre puede expresar deseo, no logro",
+          "prohibited": "No atribuir esta dificultad a pareja ni diagnosticar vergüenza",
+          "merge_policy": "only_identical_relation_with_same_scope; preserve_every_evidence_id",
+          "evidence_trace": [
+            "P24_O13",
+            "P29_O01"
+          ]
+        },
+        {
+          "rule_id": "R_EXPANSION_RESOURCES",
+          "stable_order": 18,
+          "type": "convergencia",
+          "priority": 2,
+          "aspects": [
+            "desired_change",
+            "desire",
+            "pleasure",
+            "express_limits",
+            "agency"
+          ],
+          "when": {
+            "all": [
+              {
+                "option_ids": [
+                  "P24_O11"
+                ]
+              },
+              {
+                "option_ids": [
+                  "P08_O01",
+                  "P08_O02"
+                ]
+              },
+              {
+                "option_ids": [
+                  "P10_O01",
+                  "P10_O02"
+                ]
+              },
+              {
+                "option_ids": [
+                  "P16_O01",
+                  "P16_O02"
+                ]
+              },
+              {
+                "option_ids": [
+                  "P21_O01",
+                  "P21_O02"
+                ]
+              }
+            ]
+          },
+          "permitted": "Convergencia de recursos presentes diferentes que sitúan interés por explorar, sin sumar puntos; cada recurso con fuente propia",
+          "prohibited": "No convergencia = libertad o seguridad global",
+          "merge_policy": "only_identical_relation_with_same_scope; preserve_every_evidence_id",
+          "evidence_trace": [
+            "P08_O02",
+            "P10_O02",
+            "P16_O01",
+            "P21_O02",
+            "P24_O11"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "case_id": "08_SAFETY_YES",
+    "object": {
+      "state": {
+        "P01": {
+          "option_ids": [
+            "P01_O04",
+            "P01_O05"
+          ],
+          "zone_ids": [],
+          "state_code": "answered",
+          "text": null
+        },
+        "P02": {
+          "option_ids": [
+            "P02_O05"
+          ],
+          "zone_ids": [],
+          "state_code": "answered",
+          "text": null
+        }
+      },
+      "values": {
+        "option_ids": [
+          "P22_O09",
+          "P22_O10",
+          "P22_O01"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "desired_changes": {
+        "option_ids": [
+          "P24_O09",
+          "P24_O10",
+          "P24_O13"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "present_resources": [
+        {
+          "kind": "body_sensations",
+          "question_id": "P11",
+          "evidence_ids": [
+            "Z02",
+            "Z04"
+          ]
+        },
+        {
+          "kind": "affective_closeness",
+          "question_id": "P13",
+          "evidence_ids": [
+            "P13_O02"
+          ]
+        },
+        {
+          "kind": "desire_before",
+          "question_id": "P08",
+          "evidence_ids": [
+            "P08_O02"
+          ]
+        },
+        {
+          "kind": "desire_during",
+          "question_id": "P09",
+          "evidence_ids": [
+            "P09_O02"
+          ]
+        }
+      ],
+      "uncertainty": [
+        {
+          "question_id": "P28",
+          "option_ids": [
+            "P28_O05"
+          ]
+        }
+      ],
+      "signal_constraints": [
+        {
+          "rule_id": "G_LIMIT_CANNOT",
+          "stable_order": 1,
+          "type": "constraint",
+          "scope": "express_limits",
+          "when": {
+            "option_ids": [
+              "P16_O05"
+            ]
+          },
+          "permitted": "Siente que no puede decir no o parar; no generalizar a ausencia de deseo",
+          "forbidden_phrases": [
+            "puedes expresar tus límites con libertad",
+            "te resulta fácil decir que no"
+          ],
+          "application": "always_before_relation_selection; does_not_consume_narrative_slot"
+        },
+        {
+          "rule_id": "G_PARTNER_INSISTS",
+          "stable_order": 2,
+          "type": "constraint",
+          "scope": "partner_response",
+          "when": {
+            "option_ids": [
+              "P17_O03",
+              "P17_O04"
+            ]
+          },
+          "permitted": "Conservar frecuencia exacta de insistencia/molestia; no diagnóstico automático",
+          "forbidden_phrases": [
+            "tu pareja siempre respeta tus límites",
+            "tus límites son siempre respetados"
+          ],
+          "application": "always_before_relation_selection; does_not_consume_narrative_slot"
+        },
+        {
+          "rule_id": "G_AGENCY_LOW",
+          "stable_order": 9,
+          "type": "constraint",
+          "scope": "perceived_agency",
+          "when": {
+            "option_ids": [
+              "P21_O04",
+              "P21_O05"
+            ]
+          },
+          "permitted": "Poco/muy poco margen; no borrar deseo o cercanía",
+          "forbidden_phrases": [
+            "cuentas con amplio margen para decidir",
+            "libertad plena"
+          ],
+          "application": "always_before_relation_selection; does_not_consume_narrative_slot"
+        }
+      ],
+      "evidence_trace": {
+        "R_CARE_DESIRED": [
+          "P16_O05",
+          "P17_O04",
+          "P24_O10",
+          "P24_O13"
+        ],
+        "R_RECIPROCITY_GAP": [
+          "P15_O04",
+          "P24_O09"
+        ],
+        "R_DESIRE_VARIABLE_PLEASURE": [
+          "P08_O02",
+          "P10_O06"
+        ]
+      },
+      "literal_text": {},
+      "relations": [
+        {
+          "rule_id": "R_CARE_DESIRED",
+          "stable_order": 19,
+          "type": "constraint",
+          "priority": 1,
+          "aspects": [
+            "desired_change",
+            "express_limits",
+            "partner_response",
+            "felt_safety"
+          ],
+          "when": {
+            "all": [
+              {
+                "option_ids": [
+                  "P24_O10",
+                  "P24_O13"
+                ]
+              },
+              {
+                "guards": [
+                  "G_LIMIT_CANNOT",
+                  "G_PARTNER_INSISTS",
+                  "G_SAFETY_NO"
+                ]
+              }
+            ]
+          },
+          "permitted": "Una relación entre libertad/expresión deseadas y experiencia de límites; tres guardas independientes preservan ámbitos distintos, sin triplicar una misma relación",
+          "prohibited": "No suprimir deseo/cercanía ni afirmar expresión libre, respeto constante o seguridad contra evidencia",
+          "merge_policy": "only_identical_relation_with_same_scope; preserve_every_evidence_id",
+          "evidence_trace": [
+            "P16_O05",
+            "P17_O04",
+            "P24_O10",
+            "P24_O13"
+          ]
+        },
+        {
+          "rule_id": "R_RECIPROCITY_GAP",
+          "stable_order": 5,
+          "type": "tensión",
+          "priority": 2,
+          "aspects": [
+            "desired_change",
+            "reciprocity"
+          ],
+          "when": {
+            "all": [
+              {
+                "option_ids": [
+                  "P24_O09"
+                ]
+              },
+              {
+                "option_ids": [
+                  "P15_O04",
+                  "P15_O05"
+                ]
+              }
+            ]
+          },
+          "permitted": "Querer igual lugar para el placer y reconocer poca reciprocidad; mantener frecuencia literal",
+          "prohibited": "No asumir falta total de placer ni diagnóstico relacional",
+          "merge_policy": "only_identical_relation_with_same_scope; preserve_every_evidence_id",
+          "evidence_trace": [
+            "P15_O04",
+            "P24_O09"
+          ]
+        },
+        {
+          "rule_id": "R_DESIRE_VARIABLE_PLEASURE",
+          "stable_order": 20,
+          "type": "coexistencia",
+          "priority": 3,
+          "aspects": [
+            "desire",
+            "pleasure"
+          ],
+          "when": {
+            "all": [
+              {
+                "option_ids": [
+                  "P08_O01",
+                  "P08_O02"
+                ]
+              },
+              {
+                "option_ids": [
+                  "P10_O06"
+                ]
+              }
+            ]
+          },
+          "permitted": "Ganas presentes y disfrute variable; closeness/agency claims need own evidence",
+          "prohibited": "No deseo = disfrute ni cercanía = seguridad",
+          "merge_policy": "only_identical_relation_with_same_scope; preserve_every_evidence_id",
+          "evidence_trace": [
+            "P08_O02",
+            "P10_O06"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "case_id": "08_RESPECT",
+    "object": {
+      "state": {
+        "P01": {
+          "option_ids": [
+            "P01_O04",
+            "P01_O05"
+          ],
+          "zone_ids": [],
+          "state_code": "answered",
+          "text": null
+        },
+        "P02": {
+          "option_ids": [
+            "P02_O05"
+          ],
+          "zone_ids": [],
+          "state_code": "answered",
+          "text": null
+        }
+      },
+      "values": {
+        "option_ids": [
+          "P22_O09",
+          "P22_O10",
+          "P22_O01"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "desired_changes": {
+        "option_ids": [
+          "P24_O09",
+          "P24_O10",
+          "P24_O13"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "present_resources": [
+        {
+          "kind": "body_sensations",
+          "question_id": "P11",
+          "evidence_ids": [
+            "Z02",
+            "Z04"
+          ]
+        },
+        {
+          "kind": "affective_closeness",
+          "question_id": "P13",
+          "evidence_ids": [
+            "P13_O02"
+          ]
+        },
+        {
+          "kind": "partner_respect",
+          "question_id": "P17",
+          "evidence_ids": [
+            "P17_O02"
+          ]
+        },
+        {
+          "kind": "desire_before",
+          "question_id": "P08",
+          "evidence_ids": [
+            "P08_O02"
+          ]
+        },
+        {
+          "kind": "desire_during",
+          "question_id": "P09",
+          "evidence_ids": [
+            "P09_O02"
+          ]
+        }
+      ],
+      "uncertainty": [
+        {
+          "question_id": "P28",
+          "option_ids": [
+            "P28_O05"
+          ]
+        }
+      ],
+      "signal_constraints": [
+        {
+          "rule_id": "G_LIMIT_CANNOT",
+          "stable_order": 1,
+          "type": "constraint",
+          "scope": "express_limits",
+          "when": {
+            "option_ids": [
+              "P16_O05"
+            ]
+          },
+          "permitted": "Siente que no puede decir no o parar; no generalizar a ausencia de deseo",
+          "forbidden_phrases": [
+            "puedes expresar tus límites con libertad",
+            "te resulta fácil decir que no"
+          ],
+          "application": "always_before_relation_selection; does_not_consume_narrative_slot"
+        },
+        {
+          "rule_id": "G_SAFETY_NO",
+          "stable_order": 3,
+          "type": "constraint",
+          "scope": "felt_safety",
+          "when": {
+            "option_ids": [
+              "P18_O04"
+            ]
+          },
+          "permitted": "No se siente segura para decir no/parar; no borrar otras experiencias",
+          "forbidden_phrases": [
+            "te sientes segura para decir que no"
+          ],
+          "application": "always_before_relation_selection; does_not_consume_narrative_slot"
+        },
+        {
+          "rule_id": "G_AGENCY_LOW",
+          "stable_order": 9,
+          "type": "constraint",
+          "scope": "perceived_agency",
+          "when": {
+            "option_ids": [
+              "P21_O04",
+              "P21_O05"
+            ]
+          },
+          "permitted": "Poco/muy poco margen; no borrar deseo o cercanía",
+          "forbidden_phrases": [
+            "cuentas con amplio margen para decidir",
+            "libertad plena"
+          ],
+          "application": "always_before_relation_selection; does_not_consume_narrative_slot"
+        }
+      ],
+      "evidence_trace": {
+        "R_CARE_DESIRED": [
+          "P16_O05",
+          "P18_O04",
+          "P24_O10",
+          "P24_O13"
+        ],
+        "R_RECIPROCITY_GAP": [
+          "P15_O04",
+          "P24_O09"
+        ],
+        "R_DESIRE_VARIABLE_PLEASURE": [
+          "P08_O02",
+          "P10_O06"
+        ]
+      },
+      "literal_text": {},
+      "relations": [
+        {
+          "rule_id": "R_CARE_DESIRED",
+          "stable_order": 19,
+          "type": "constraint",
+          "priority": 1,
+          "aspects": [
+            "desired_change",
+            "express_limits",
+            "partner_response",
+            "felt_safety"
+          ],
+          "when": {
+            "all": [
+              {
+                "option_ids": [
+                  "P24_O10",
+                  "P24_O13"
+                ]
+              },
+              {
+                "guards": [
+                  "G_LIMIT_CANNOT",
+                  "G_PARTNER_INSISTS",
+                  "G_SAFETY_NO"
+                ]
+              }
+            ]
+          },
+          "permitted": "Una relación entre libertad/expresión deseadas y experiencia de límites; tres guardas independientes preservan ámbitos distintos, sin triplicar una misma relación",
+          "prohibited": "No suprimir deseo/cercanía ni afirmar expresión libre, respeto constante o seguridad contra evidencia",
+          "merge_policy": "only_identical_relation_with_same_scope; preserve_every_evidence_id",
+          "evidence_trace": [
+            "P16_O05",
+            "P18_O04",
+            "P24_O10",
+            "P24_O13"
+          ]
+        },
+        {
+          "rule_id": "R_RECIPROCITY_GAP",
+          "stable_order": 5,
+          "type": "tensión",
+          "priority": 2,
+          "aspects": [
+            "desired_change",
+            "reciprocity"
+          ],
+          "when": {
+            "all": [
+              {
+                "option_ids": [
+                  "P24_O09"
+                ]
+              },
+              {
+                "option_ids": [
+                  "P15_O04",
+                  "P15_O05"
+                ]
+              }
+            ]
+          },
+          "permitted": "Querer igual lugar para el placer y reconocer poca reciprocidad; mantener frecuencia literal",
+          "prohibited": "No asumir falta total de placer ni diagnóstico relacional",
+          "merge_policy": "only_identical_relation_with_same_scope; preserve_every_evidence_id",
+          "evidence_trace": [
+            "P15_O04",
+            "P24_O09"
+          ]
+        },
+        {
+          "rule_id": "R_DESIRE_VARIABLE_PLEASURE",
+          "stable_order": 20,
+          "type": "coexistencia",
+          "priority": 3,
+          "aspects": [
+            "desire",
+            "pleasure"
+          ],
+          "when": {
+            "all": [
+              {
+                "option_ids": [
+                  "P08_O01",
+                  "P08_O02"
+                ]
+              },
+              {
+                "option_ids": [
+                  "P10_O06"
+                ]
+              }
+            ]
+          },
+          "permitted": "Ganas presentes y disfrute variable; closeness/agency claims need own evidence",
+          "prohibited": "No deseo = disfrute ni cercanía = seguridad",
+          "merge_policy": "only_identical_relation_with_same_scope; preserve_every_evidence_id",
+          "evidence_trace": [
+            "P08_O02",
+            "P10_O06"
+          ]
+        }
+      ]
+    }
+  }
+]

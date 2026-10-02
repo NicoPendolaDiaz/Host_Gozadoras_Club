@@ -1,0 +1,474 @@
+{
+  "status": "PRELIMINARY_CANDIDATES_NOT_EDITORIALLY_APPROVED",
+  "passed": 12,
+  "cases": [
+    {
+      "case_id": "01",
+      "input_errors": [],
+      "instrument_status": "COMPLETE",
+      "composition_status": "REFERENCE_CONTRACT_PASS",
+      "delivery": "REFERENCE_ONLY_NOT_PRODUCTION",
+      "qa_flag": false,
+      "reasons": [],
+      "active_guards": [],
+      "selected_relations": [
+        "R_EXPLORATION_WELL",
+        "R_RESPONSIVE",
+        "R_TIME"
+      ],
+      "evidence_trace": {
+        "R_EXPLORATION_WELL": [
+          "P01_O01",
+          "P24_O11"
+        ],
+        "R_RESPONSIVE": [
+          "P08_O04",
+          "P09_O02"
+        ],
+        "R_TIME": [
+          "P20_O07",
+          "P24_O11"
+        ]
+      },
+      "P28_P29_P32": {
+        "P28": "necessary",
+        "P29": "not_shown",
+        "P32": "not_shown"
+      },
+      "sentence_count": 3
+    },
+    {
+      "case_id": "02",
+      "input_errors": [],
+      "instrument_status": "COMPLETE",
+      "composition_status": "REFERENCE_CONTRACT_PASS",
+      "delivery": "REFERENCE_ONLY_NOT_PRODUCTION",
+      "qa_flag": false,
+      "reasons": [],
+      "active_guards": [],
+      "selected_relations": [
+        "R_MORE_DESIRE",
+        "R_RESPONSIVE",
+        "R_TIME"
+      ],
+      "evidence_trace": {
+        "R_MORE_DESIRE": [
+          "P10_O01",
+          "P24_O01"
+        ],
+        "R_RESPONSIVE": [
+          "P08_O04",
+          "P09_O02"
+        ],
+        "R_TIME": [
+          "P20_O07",
+          "P24_O01",
+          "P24_O12"
+        ]
+      },
+      "P28_P29_P32": {
+        "P28": "not_shown",
+        "P29": "optional",
+        "P32": "necessary"
+      },
+      "sentence_count": 3
+    },
+    {
+      "case_id": "03",
+      "input_errors": [],
+      "instrument_status": "COMPLETE",
+      "composition_status": "REFERENCE_CONTRACT_PASS",
+      "delivery": "REFERENCE_ONLY_NOT_PRODUCTION",
+      "qa_flag": false,
+      "reasons": [],
+      "active_guards": [
+        "G_LIMIT_DIFFICULT"
+      ],
+      "selected_relations": [
+        "R_CLOSENESS_SPLIT",
+        "R_EXPRESSION_RESPECT",
+        "R_RECIPROCITY_GAP"
+      ],
+      "evidence_trace": {
+        "R_CLOSENESS_SPLIT": [
+          "P13_O02",
+          "P14_O04"
+        ],
+        "R_EXPRESSION_RESPECT": [
+          "P16_O04",
+          "P17_O02"
+        ],
+        "R_RECIPROCITY_GAP": [
+          "P15_O04",
+          "P24_O09"
+        ]
+      },
+      "P28_P29_P32": {
+        "P28": "not_shown",
+        "P29": "not_shown",
+        "P32": "not_shown"
+      },
+      "sentence_count": 3
+    },
+    {
+      "case_id": "04",
+      "input_errors": [],
+      "instrument_status": "COMPLETE",
+      "composition_status": "REFERENCE_CONTRACT_PASS",
+      "delivery": "REFERENCE_ONLY_NOT_PRODUCTION",
+      "qa_flag": false,
+      "reasons": [],
+      "active_guards": [],
+      "selected_relations": [
+        "R_BODY_MIXED",
+        "R_BODY_WISH",
+        "R_RECOVER_EXPLORE"
+      ],
+      "evidence_trace": {
+        "R_BODY_MIXED": [
+          "P06_O01",
+          "P10_O02"
+        ],
+        "R_BODY_WISH": [
+          "P24_O05",
+          "P24_O06",
+          "P26_O04",
+          "P27_O04"
+        ],
+        "R_RECOVER_EXPLORE": [
+          "P01_O02",
+          "P28_O03"
+        ]
+      },
+      "P28_P29_P32": {
+        "P28": "necessary",
+        "P29": "not_shown",
+        "P32": "not_shown"
+      },
+      "sentence_count": 3
+    },
+    {
+      "case_id": "05",
+      "input_errors": [],
+      "instrument_status": "COMPLETE",
+      "composition_status": "REFERENCE_CONTRACT_PASS",
+      "delivery": "REFERENCE_ONLY_NOT_PRODUCTION",
+      "qa_flag": false,
+      "reasons": [],
+      "active_guards": [],
+      "selected_relations": [
+        "R_NO_CHANGE_GAP",
+        "R_CLOSENESS_SPLIT",
+        "R_CHOICE_RESOURCE"
+      ],
+      "evidence_trace": {
+        "R_NO_CHANGE_GAP": [
+          "P02_O04",
+          "P10_O02",
+          "P24_O15"
+        ],
+        "R_CLOSENESS_SPLIT": [
+          "P13_O02",
+          "P14_O04"
+        ],
+        "R_CHOICE_RESOURCE": [
+          "P21_O01",
+          "P24_O15"
+        ]
+      },
+      "P28_P29_P32": {
+        "P28": "not_shown",
+        "P29": "optional",
+        "P32": "not_shown"
+      },
+      "sentence_count": 3
+    },
+    {
+      "case_id": "06",
+      "input_errors": [],
+      "instrument_status": "COMPLETE",
+      "composition_status": "REFERENCE_CONTRACT_PASS",
+      "delivery": "REFERENCE_ONLY_NOT_PRODUCTION",
+      "qa_flag": false,
+      "reasons": [],
+      "active_guards": [
+        "G_RECIPROCITY_UNOBSERVED"
+      ],
+      "selected_relations": [
+        "R_UNCERTAINTY_SCOPES",
+        "R_RECENT_ABSENCE",
+        "R_CURIOUS_UNCLEAR"
+      ],
+      "evidence_trace": {
+        "R_UNCERTAINTY_SCOPES": [
+          "P02_O07",
+          "P11_O02",
+          "P21_O06"
+        ],
+        "R_RECENT_ABSENCE": [
+          "P10_O08",
+          "P15_O07"
+        ],
+        "R_CURIOUS_UNCLEAR": [
+          "P01_O05",
+          "P22_O06",
+          "P22_O08",
+          "P24_O17"
+        ]
+      },
+      "P28_P29_P32": {
+        "P28": "optional",
+        "P29": "not_shown",
+        "P32": "not_shown"
+      },
+      "sentence_count": 4
+    },
+    {
+      "case_id": "07",
+      "input_errors": [],
+      "instrument_status": "COMPLETE",
+      "composition_status": "REFERENCE_CONTRACT_PASS",
+      "delivery": "REFERENCE_ONLY_NOT_PRODUCTION",
+      "qa_flag": false,
+      "reasons": [],
+      "active_guards": [
+        "G_INTERNAL_RECOGNITION",
+        "G_PRIVACY_LIMITED"
+      ],
+      "selected_relations": [
+        "R_MATERIAL_PRIVACY",
+        "R_INTERNAL_FREEDOM",
+        "R_EXPANSION_RESOURCES"
+      ],
+      "evidence_trace": {
+        "R_MATERIAL_PRIVACY": [
+          "P20_O09",
+          "P24_O11",
+          "P24_O13",
+          "P32_O04"
+        ],
+        "R_INTERNAL_FREEDOM": [
+          "P24_O13",
+          "P29_O01"
+        ],
+        "R_EXPANSION_RESOURCES": [
+          "P08_O02",
+          "P10_O02",
+          "P16_O01",
+          "P21_O02",
+          "P24_O11"
+        ]
+      },
+      "P28_P29_P32": {
+        "P28": "necessary",
+        "P29": "necessary",
+        "P32": "necessary"
+      },
+      "sentence_count": 3
+    },
+    {
+      "case_id": "08",
+      "input_errors": [],
+      "instrument_status": "COMPLETE",
+      "composition_status": "REFERENCE_CONTRACT_PASS",
+      "delivery": "REFERENCE_ONLY_NOT_PRODUCTION",
+      "qa_flag": false,
+      "reasons": [],
+      "active_guards": [
+        "G_LIMIT_CANNOT",
+        "G_PARTNER_INSISTS",
+        "G_SAFETY_NO",
+        "G_AGENCY_LOW"
+      ],
+      "selected_relations": [
+        "R_CARE_DESIRED",
+        "R_RECIPROCITY_GAP",
+        "R_DESIRE_VARIABLE_PLEASURE"
+      ],
+      "evidence_trace": {
+        "R_CARE_DESIRED": [
+          "P16_O05",
+          "P17_O04",
+          "P18_O04",
+          "P24_O10",
+          "P24_O13"
+        ],
+        "R_RECIPROCITY_GAP": [
+          "P15_O04",
+          "P24_O09"
+        ],
+        "R_DESIRE_VARIABLE_PLEASURE": [
+          "P08_O02",
+          "P10_O06"
+        ]
+      },
+      "P28_P29_P32": {
+        "P28": "optional",
+        "P29": "necessary",
+        "P32": "not_shown"
+      },
+      "sentence_count": 4
+    },
+    {
+      "case_id": "01_RECIPROCITY_PRIVATE",
+      "input_errors": [],
+      "instrument_status": "COMPLETE",
+      "composition_status": "REFERENCE_CONTRACT_PASS",
+      "delivery": "REFERENCE_ONLY_NOT_PRODUCTION",
+      "qa_flag": false,
+      "reasons": [],
+      "active_guards": [
+        "G_RECIPROCITY_PRIVATE"
+      ],
+      "selected_relations": [
+        "R_EXPLORATION_WELL",
+        "R_RESPONSIVE",
+        "R_TIME"
+      ],
+      "evidence_trace": {
+        "R_EXPLORATION_WELL": [
+          "P01_O01",
+          "P24_O11"
+        ],
+        "R_RESPONSIVE": [
+          "P08_O04",
+          "P09_O02"
+        ],
+        "R_TIME": [
+          "P20_O07",
+          "P24_O11"
+        ]
+      },
+      "P28_P29_P32": {
+        "P28": "necessary",
+        "P29": "not_shown",
+        "P32": "not_shown"
+      },
+      "sentence_count": 3
+    },
+    {
+      "case_id": "07_PRIVACY_SOMETIMES",
+      "input_errors": [],
+      "instrument_status": "COMPLETE",
+      "composition_status": "REFERENCE_CONTRACT_PASS",
+      "delivery": "REFERENCE_ONLY_NOT_PRODUCTION",
+      "qa_flag": false,
+      "reasons": [],
+      "active_guards": [
+        "G_INTERNAL_RECOGNITION"
+      ],
+      "selected_relations": [
+        "R_MATERIAL_PRIVACY",
+        "R_INTERNAL_FREEDOM",
+        "R_EXPANSION_RESOURCES"
+      ],
+      "evidence_trace": {
+        "R_MATERIAL_PRIVACY": [
+          "P20_O09",
+          "P24_O11",
+          "P24_O13",
+          "P32_O03"
+        ],
+        "R_INTERNAL_FREEDOM": [
+          "P24_O13",
+          "P29_O01"
+        ],
+        "R_EXPANSION_RESOURCES": [
+          "P08_O02",
+          "P10_O02",
+          "P16_O01",
+          "P21_O02",
+          "P24_O11"
+        ]
+      },
+      "P28_P29_P32": {
+        "P28": "necessary",
+        "P29": "necessary",
+        "P32": "necessary"
+      },
+      "sentence_count": 3
+    },
+    {
+      "case_id": "08_SAFETY_YES",
+      "input_errors": [],
+      "instrument_status": "COMPLETE",
+      "composition_status": "REFERENCE_CONTRACT_PASS",
+      "delivery": "REFERENCE_ONLY_NOT_PRODUCTION",
+      "qa_flag": false,
+      "reasons": [],
+      "active_guards": [
+        "G_LIMIT_CANNOT",
+        "G_PARTNER_INSISTS",
+        "G_AGENCY_LOW"
+      ],
+      "selected_relations": [
+        "R_CARE_DESIRED",
+        "R_RECIPROCITY_GAP",
+        "R_DESIRE_VARIABLE_PLEASURE"
+      ],
+      "evidence_trace": {
+        "R_CARE_DESIRED": [
+          "P16_O05",
+          "P17_O04",
+          "P24_O10",
+          "P24_O13"
+        ],
+        "R_RECIPROCITY_GAP": [
+          "P15_O04",
+          "P24_O09"
+        ],
+        "R_DESIRE_VARIABLE_PLEASURE": [
+          "P08_O02",
+          "P10_O06"
+        ]
+      },
+      "P28_P29_P32": {
+        "P28": "optional",
+        "P29": "necessary",
+        "P32": "not_shown"
+      },
+      "sentence_count": 4
+    },
+    {
+      "case_id": "08_RESPECT",
+      "input_errors": [],
+      "instrument_status": "COMPLETE",
+      "composition_status": "REFERENCE_CONTRACT_PASS",
+      "delivery": "REFERENCE_ONLY_NOT_PRODUCTION",
+      "qa_flag": false,
+      "reasons": [],
+      "active_guards": [
+        "G_LIMIT_CANNOT",
+        "G_SAFETY_NO",
+        "G_AGENCY_LOW"
+      ],
+      "selected_relations": [
+        "R_CARE_DESIRED",
+        "R_RECIPROCITY_GAP",
+        "R_DESIRE_VARIABLE_PLEASURE"
+      ],
+      "evidence_trace": {
+        "R_CARE_DESIRED": [
+          "P16_O05",
+          "P18_O04",
+          "P24_O10",
+          "P24_O13"
+        ],
+        "R_RECIPROCITY_GAP": [
+          "P15_O04",
+          "P24_O09"
+        ],
+        "R_DESIRE_VARIABLE_PLEASURE": [
+          "P08_O02",
+          "P10_O06"
+        ]
+      },
+      "P28_P29_P32": {
+        "P28": "optional",
+        "P29": "necessary",
+        "P32": "not_shown"
+      },
+      "sentence_count": 4
+    }
+  ]
+}

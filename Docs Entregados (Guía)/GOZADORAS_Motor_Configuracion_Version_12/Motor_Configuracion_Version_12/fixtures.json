@@ -1,0 +1,3750 @@
+[
+  {
+    "case_id": "01",
+    "session_id": "SYNTHETIC_01",
+    "instrument_version": "Freeze A v1.0",
+    "rules_version": "composition-reference-1-preliminary",
+    "application_date": "2026-10-01",
+    "context": {
+      "current_partner": "yes"
+    },
+    "answers": {
+      "P01": {
+        "option_ids": [
+          "P01_O01"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P02": {
+        "option_ids": [
+          "P02_O02"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P03": {
+        "option_ids": [
+          "P03_O15"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P04": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P05": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P06": {
+        "option_ids": [
+          "P06_O03"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P07": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P08": {
+        "option_ids": [
+          "P08_O04"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P09": {
+        "option_ids": [
+          "P09_O02"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P10": {
+        "option_ids": [
+          "P10_O01"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P11": {
+        "option_ids": [],
+        "zone_ids": [
+          "Z02",
+          "Z04"
+        ],
+        "state_code": "answered",
+        "text": null
+      },
+      "P12": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P13": {
+        "option_ids": [
+          "P13_O02"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P14": {
+        "option_ids": [
+          "P14_O02"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P15": {
+        "option_ids": [
+          "P15_O01"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P16": {
+        "option_ids": [
+          "P16_O01"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P17": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P18": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P19": {
+        "option_ids": [
+          "P19_O03"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P20": {
+        "option_ids": [
+          "P20_O07"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P21": {
+        "option_ids": [
+          "P21_O02"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P22": {
+        "option_ids": [
+          "P22_O01",
+          "P22_O12",
+          "P22_O08"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P23": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "omitted",
+        "text": null
+      },
+      "P24": {
+        "option_ids": [
+          "P24_O11"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P25": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P26": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P27": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P28": {
+        "option_ids": [
+          "P28_O01"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P29": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P30": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P31": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P32": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P33": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P34": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P35": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P36": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P37": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P38": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P39": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P40": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      }
+    },
+    "expected": {
+      "case_id": "01",
+      "name": "Explorar desde el disfrute",
+      "summary": "Quieres experimentar cosas nuevas desde una vida erótica con la que hoy te sientes bien, donde el placer y el juego tienen un lugar importante para ti. Las ganas rara vez aparecen antes de empezar, pero muchas veces crecen durante los encuentros que eliges, en los que disfrutas y sientes que tu placer importa tanto como el de tu pareja. Ese interés por explorar convive con la cercanía que sientes y con tu margen para decidir, aunque en el día a día no siempre haya tiempo para lo erótico.",
+      "text_relation_ids": [
+        "R_EXPLORATION_WELL",
+        "R_RESPONSIVE",
+        "R_TIME"
+      ],
+      "name_relation_ids": [
+        "R_EXPLORATION_WELL"
+      ],
+      "fourth_reason": null
+    }
+  },
+  {
+    "case_id": "02",
+    "session_id": "SYNTHETIC_02",
+    "instrument_version": "Freeze A v1.0",
+    "rules_version": "composition-reference-1-preliminary",
+    "application_date": "2026-10-01",
+    "context": {
+      "current_partner": "yes"
+    },
+    "answers": {
+      "P01": {
+        "option_ids": [
+          "P01_O01"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P02": {
+        "option_ids": [
+          "P02_O02"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P03": {
+        "option_ids": [
+          "P03_O15"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P04": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P05": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P06": {
+        "option_ids": [
+          "P06_O03"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P07": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P08": {
+        "option_ids": [
+          "P08_O04"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P09": {
+        "option_ids": [
+          "P09_O02"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P10": {
+        "option_ids": [
+          "P10_O01"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P11": {
+        "option_ids": [],
+        "zone_ids": [
+          "Z02",
+          "Z04"
+        ],
+        "state_code": "answered",
+        "text": null
+      },
+      "P12": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P13": {
+        "option_ids": [
+          "P13_O02"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P14": {
+        "option_ids": [
+          "P14_O02"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P15": {
+        "option_ids": [
+          "P15_O01"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P16": {
+        "option_ids": [
+          "P16_O01"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P17": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P18": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P19": {
+        "option_ids": [
+          "P19_O03"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P20": {
+        "option_ids": [
+          "P20_O07"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P21": {
+        "option_ids": [
+          "P21_O02"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P22": {
+        "option_ids": [
+          "P22_O02",
+          "P22_O09"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P23": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "omitted",
+        "text": null
+      },
+      "P24": {
+        "option_ids": [
+          "P24_O01",
+          "P24_O12"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P25": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P26": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P27": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P28": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P29": {
+        "option_ids": [
+          "P29_O03"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P30": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P31": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P32": {
+        "option_ids": [
+          "P32_O02"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P33": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P34": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P35": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P36": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P37": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P38": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P39": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P40": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      }
+    },
+    "expected": {
+      "case_id": "02",
+      "name": "Un lugar para el deseo",
+      "summary": "Quieres sentir más ganas y dar más espacio a tu vida erótica, aunque hoy te reconoces bien con ella y disfrutas mucho los encuentros que eliges. Hay cercanía con tu pareja y sientes que tu placer tiene igual importancia; al mismo tiempo, las ganas rara vez aparecen antes de empezar y muchas veces aumentan durante la experiencia. Reconoces lo que te gusta y cuentas con margen para decidir. Aunque disfrutas lo que vives y quieres sentir más ganas, hoy la falta de tiempo es lo que más pesa en lo cotidiano cuando se trata de tu vida erótica.",
+      "text_relation_ids": [
+        "R_MORE_DESIRE",
+        "R_RESPONSIVE",
+        "R_TIME"
+      ],
+      "name_relation_ids": [
+        "R_MORE_DESIRE"
+      ],
+      "fourth_reason": null
+    }
+  },
+  {
+    "case_id": "03",
+    "session_id": "SYNTHETIC_03",
+    "instrument_version": "Freeze A v1.0",
+    "rules_version": "composition-reference-1-preliminary",
+    "application_date": "2026-10-01",
+    "context": {
+      "current_partner": "yes"
+    },
+    "answers": {
+      "P01": {
+        "option_ids": [
+          "P01_O04"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P02": {
+        "option_ids": [
+          "P02_O04"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P03": {
+        "option_ids": [
+          "P03_O15"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P04": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P05": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P06": {
+        "option_ids": [
+          "P06_O03"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P07": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P08": {
+        "option_ids": [
+          "P08_O03"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P09": {
+        "option_ids": [
+          "P09_O03"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P10": {
+        "option_ids": [
+          "P10_O06"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P11": {
+        "option_ids": [],
+        "zone_ids": [
+          "Z02",
+          "Z04"
+        ],
+        "state_code": "answered",
+        "text": null
+      },
+      "P12": {
+        "option_ids": [
+          "P12_O01",
+          "P12_O06"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P13": {
+        "option_ids": [
+          "P13_O02"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P14": {
+        "option_ids": [
+          "P14_O04"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P15": {
+        "option_ids": [
+          "P15_O04"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P16": {
+        "option_ids": [
+          "P16_O04"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P17": {
+        "option_ids": [
+          "P17_O02"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P18": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P19": {
+        "option_ids": [
+          "P19_O03"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P20": {
+        "option_ids": [
+          "P20_O07"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P21": {
+        "option_ids": [
+          "P21_O02"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P22": {
+        "option_ids": [
+          "P22_O13",
+          "P22_O01",
+          "P22_O07"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P23": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "omitted",
+        "text": null
+      },
+      "P24": {
+        "option_ids": [
+          "P24_O08",
+          "P24_O09",
+          "P24_O10"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P25": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P26": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P27": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P28": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P29": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P30": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P31": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "omitted",
+        "text": null
+      },
+      "P32": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P33": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P34": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P35": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P36": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P37": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P38": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P39": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P40": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      }
+    },
+    "expected": {
+      "case_id": "03",
+      "name": "Tu placer y tu voz",
+      "summary": "Quieres una cercanía que te haga sentido, donde tu placer tenga el mismo lugar que el de tu pareja y puedas expresar mejor lo que quieres y lo que no quieres. En lo que compartes, el afecto y la distancia erótica aparecen juntos: el disfrute varía y pocas veces sientes que tu experiencia importa tanto como la suya. Reconoces margen para decidir y ganas de volver a intentarlo, aunque expresar tus límites te cuesta incluso cuando tu pareja generalmente los respeta; la falta de tiempo también pesa en este momento.",
+      "text_relation_ids": [
+        "R_RECIPROCITY_GAP",
+        "R_CLOSENESS_SPLIT",
+        "R_EXPRESSION_RESPECT",
+        "R_TIME"
+      ],
+      "name_relation_ids": [
+        "R_RECIPROCITY_GAP",
+        "R_EXPRESSION_RESPECT"
+      ],
+      "fourth_reason": null
+    }
+  },
+  {
+    "case_id": "04",
+    "session_id": "SYNTHETIC_04",
+    "instrument_version": "Freeze A v1.0",
+    "rules_version": "composition-reference-1-preliminary",
+    "application_date": "2026-10-01",
+    "context": {
+      "current_partner": "yes"
+    },
+    "answers": {
+      "P01": {
+        "option_ids": [
+          "P01_O02",
+          "P01_O05"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P02": {
+        "option_ids": [
+          "P02_O03"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P03": {
+        "option_ids": [
+          "P03_O01"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P04": {
+        "option_ids": [
+          "P04_O01"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P05": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "omitted",
+        "text": null
+      },
+      "P06": {
+        "option_ids": [
+          "P06_O01"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P07": {
+        "option_ids": [
+          "P07_O01",
+          "P07_O02",
+          "P07_O07"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P08": {
+        "option_ids": [
+          "P08_O04"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P09": {
+        "option_ids": [
+          "P09_O02"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P10": {
+        "option_ids": [
+          "P10_O02"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P11": {
+        "option_ids": [],
+        "zone_ids": [
+          "Z02",
+          "Z04"
+        ],
+        "state_code": "answered",
+        "text": null
+      },
+      "P12": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P13": {
+        "option_ids": [
+          "P13_O02"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P14": {
+        "option_ids": [
+          "P14_O03"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P15": {
+        "option_ids": [
+          "P15_O02"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P16": {
+        "option_ids": [
+          "P16_O01"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P17": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P18": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P19": {
+        "option_ids": [
+          "P19_O02"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P20": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P21": {
+        "option_ids": [
+          "P21_O02"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P22": {
+        "option_ids": [
+          "P22_O04",
+          "P22_O01",
+          "P22_O06"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P23": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "omitted",
+        "text": null
+      },
+      "P24": {
+        "option_ids": [
+          "P24_O05",
+          "P24_O06",
+          "P24_O11"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P25": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P26": {
+        "option_ids": [
+          "P26_O04"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P27": {
+        "option_ids": [
+          "P27_O04"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P28": {
+        "option_ids": [
+          "P28_O03"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P29": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P30": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P31": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P32": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P33": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P34": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P35": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P36": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P37": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P38": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P39": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P40": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      }
+    },
+    "expected": {
+      "case_id": "04",
+      "name": "Placer entre cambios",
+      "summary": "Quieres sentirte más cómoda con tu cuerpo y reconocer mejor lo que pasa en él, junto con tu interés por experimentar cosas nuevas y hacer más algunas que ya haces. En lo que compartes aparecen cambios y molestias que afectan tu vida erótica, pero también sensaciones agradables que reconoces y encuentros que disfrutas. Extrañas algo de antes, mientras hoy encuentras placer, cercanía con tu pareja y margen para decidir: esas experiencias tienen lugar junto a la dificultad para reconocer y habitar con comodidad lo que ocurre en tu cuerpo.",
+      "text_relation_ids": [
+        "R_BODY_MIXED",
+        "R_BODY_WISH",
+        "R_RECOVER_EXPLORE"
+      ],
+      "name_relation_ids": [
+        "R_BODY_MIXED"
+      ],
+      "fourth_reason": null
+    }
+  },
+  {
+    "case_id": "05",
+    "session_id": "SYNTHETIC_05",
+    "instrument_version": "Freeze A v1.0",
+    "rules_version": "composition-reference-1-preliminary",
+    "application_date": "2026-10-01",
+    "context": {
+      "current_partner": "yes"
+    },
+    "answers": {
+      "P01": {
+        "option_ids": [
+          "P01_O07"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P02": {
+        "option_ids": [
+          "P02_O04"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P03": {
+        "option_ids": [
+          "P03_O15"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P04": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P05": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P06": {
+        "option_ids": [
+          "P06_O03"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P07": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P08": {
+        "option_ids": [
+          "P08_O03"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P09": {
+        "option_ids": [
+          "P09_O02"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P10": {
+        "option_ids": [
+          "P10_O02"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P11": {
+        "option_ids": [],
+        "zone_ids": [
+          "Z02",
+          "Z04"
+        ],
+        "state_code": "answered",
+        "text": null
+      },
+      "P12": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P13": {
+        "option_ids": [
+          "P13_O02"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P14": {
+        "option_ids": [
+          "P14_O04"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P15": {
+        "option_ids": [
+          "P15_O02"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P16": {
+        "option_ids": [
+          "P16_O02"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P17": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P18": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P19": {
+        "option_ids": [
+          "P19_O03"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P20": {
+        "option_ids": [
+          "P20_O07"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P21": {
+        "option_ids": [
+          "P21_O01"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P22": {
+        "option_ids": [
+          "P22_O09",
+          "P22_O01",
+          "P22_O10"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P23": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "omitted",
+        "text": null
+      },
+      "P24": {
+        "option_ids": [
+          "P24_O15"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P25": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P26": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P27": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P28": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P29": {
+        "option_ids": [
+          "P29_O03"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P30": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P31": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P32": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P33": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P34": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "omitted",
+        "text": null
+      },
+      "P35": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P36": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P37": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P38": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P39": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P40": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      }
+    },
+    "expected": {
+      "case_id": "05",
+      "name": "Distancia con disfrute presente",
+      "summary": "Vivir tu erotismo a tu manera es importante para ti, y hoy no quieres mover nada. Reconoces una distancia importante respecto de la vida erótica que te gustaría tener, aunque también encuentras disfrute en tus encuentros y sientes que tu placer importa: la cercanía afectiva está presente junto a la distancia erótica con tu pareja. Cuentas con margen para decidir, y tu decisión de no mover nada ahora tiene lugar junto a lo que disfrutas y a la distancia que también reconoces.",
+      "text_relation_ids": [
+        "R_NO_CHANGE_GAP",
+        "R_CLOSENESS_SPLIT",
+        "R_CHOICE_RESOURCE"
+      ],
+      "name_relation_ids": [
+        "R_NO_CHANGE_GAP"
+      ],
+      "fourth_reason": null
+    }
+  },
+  {
+    "case_id": "06",
+    "session_id": "SYNTHETIC_06",
+    "instrument_version": "Freeze A v1.0",
+    "rules_version": "composition-reference-1-preliminary",
+    "application_date": "2026-10-01",
+    "context": {
+      "current_partner": "yes"
+    },
+    "answers": {
+      "P01": {
+        "option_ids": [
+          "P01_O06",
+          "P01_O05"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P02": {
+        "option_ids": [
+          "P02_O07"
+        ],
+        "zone_ids": [],
+        "state_code": "dont_know",
+        "text": null
+      },
+      "P03": {
+        "option_ids": [
+          "P03_O16"
+        ],
+        "zone_ids": [],
+        "state_code": "dont_know",
+        "text": null
+      },
+      "P04": {
+        "option_ids": [
+          "P04_O03"
+        ],
+        "zone_ids": [],
+        "state_code": "dont_know",
+        "text": null
+      },
+      "P05": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P06": {
+        "option_ids": [
+          "P06_O02"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P07": {
+        "option_ids": [
+          "P07_O15"
+        ],
+        "zone_ids": [],
+        "state_code": "not_clear",
+        "text": null
+      },
+      "P08": {
+        "option_ids": [
+          "P08_O04"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P09": {
+        "option_ids": [
+          "P09_O07"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P10": {
+        "option_ids": [
+          "P10_O08"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P11": {
+        "option_ids": [
+          "P11_O02"
+        ],
+        "zone_ids": [],
+        "state_code": "not_clear",
+        "text": null
+      },
+      "P12": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P13": {
+        "option_ids": [
+          "P13_O06"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P14": {
+        "option_ids": [
+          "P14_O07"
+        ],
+        "zone_ids": [],
+        "state_code": "not_clear",
+        "text": null
+      },
+      "P15": {
+        "option_ids": [
+          "P15_O07"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P16": {
+        "option_ids": [
+          "P16_O06"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P17": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P18": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P19": {
+        "option_ids": [
+          "P19_O07"
+        ],
+        "zone_ids": [],
+        "state_code": "not_clear",
+        "text": null
+      },
+      "P20": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P21": {
+        "option_ids": [
+          "P21_O06"
+        ],
+        "zone_ids": [],
+        "state_code": "dont_know",
+        "text": null
+      },
+      "P22": {
+        "option_ids": [
+          "P22_O06",
+          "P22_O08"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P23": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "omitted",
+        "text": null
+      },
+      "P24": {
+        "option_ids": [
+          "P24_O17"
+        ],
+        "zone_ids": [],
+        "state_code": "dont_know",
+        "text": null
+      },
+      "P25": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P26": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P27": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P28": {
+        "option_ids": [
+          "P28_O05"
+        ],
+        "zone_ids": [],
+        "state_code": "dont_know",
+        "text": null
+      },
+      "P29": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P30": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P31": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P32": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P33": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P34": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P35": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P36": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P37": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P38": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P39": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P40": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      }
+    },
+    "expected": {
+      "case_id": "06",
+      "name": "Curiosidad en la incertidumbre",
+      "summary": "Te interesa descubrir lo que te gusta y explorar posibilidades, aunque todavía no tienes claro qué quisieras mover. En lo que compartes aparece una sensación de desconexión; no has tenido encuentros eróticos recientemente y, con tu pareja, la cercanía afectiva varía mientras la cercanía erótica resulta menos clara para ti. Ese interés por explorar está presente junto a las preguntas que hoy tienes sobre lo que reconoces en tu cuerpo. También hay incertidumbre sobre cuánto sientes que puedes decidir sobre tu propia vida erótica y cuán cerca está lo que estás viviendo de cómo te gustaría vivirla.",
+      "text_relation_ids": [
+        "R_CURIOUS_UNCLEAR",
+        "R_UNCERTAINTY_SCOPES",
+        "R_RECENT_ABSENCE"
+      ],
+      "name_relation_ids": [
+        "R_CURIOUS_UNCLEAR",
+        "R_UNCERTAINTY_SCOPES"
+      ],
+      "fourth_reason": "uncertainty_scope"
+    }
+  },
+  {
+    "case_id": "07",
+    "session_id": "SYNTHETIC_07",
+    "instrument_version": "Freeze A v1.0",
+    "rules_version": "composition-reference-1-preliminary",
+    "application_date": "2026-10-01",
+    "context": {
+      "current_partner": "yes"
+    },
+    "answers": {
+      "P01": {
+        "option_ids": [
+          "P01_O01",
+          "P01_O05"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P02": {
+        "option_ids": [
+          "P02_O02"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P03": {
+        "option_ids": [
+          "P03_O15"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P04": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P05": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P06": {
+        "option_ids": [
+          "P06_O03"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P07": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P08": {
+        "option_ids": [
+          "P08_O02"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P09": {
+        "option_ids": [
+          "P09_O03"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P10": {
+        "option_ids": [
+          "P10_O02"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P11": {
+        "option_ids": [],
+        "zone_ids": [
+          "Z02",
+          "Z04"
+        ],
+        "state_code": "answered",
+        "text": null
+      },
+      "P12": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P13": {
+        "option_ids": [
+          "P13_O02"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P14": {
+        "option_ids": [
+          "P14_O03"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P15": {
+        "option_ids": [
+          "P15_O02"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P16": {
+        "option_ids": [
+          "P16_O01"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P17": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P18": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P19": {
+        "option_ids": [
+          "P19_O04"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P20": {
+        "option_ids": [
+          "P20_O09"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P21": {
+        "option_ids": [
+          "P21_O02"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P22": {
+        "option_ids": [
+          "P22_O09",
+          "P22_O03",
+          "P22_O06"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P23": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "omitted",
+        "text": null
+      },
+      "P24": {
+        "option_ids": [
+          "P24_O11",
+          "P24_O13"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P25": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P26": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P27": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P28": {
+        "option_ids": [
+          "P28_O01"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P29": {
+        "option_ids": [
+          "P29_O01"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P30": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P31": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P32": {
+        "option_ids": [
+          "P32_O04"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P33": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P34": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P35": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P36": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P37": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P38": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P39": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P40": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      }
+    },
+    "expected": {
+      "case_id": "07",
+      "name": "Desear con libertad",
+      "summary": "Quieres experimentar cosas nuevas y sentirte más libre para vivir lo que deseas, en un momento en que las ganas y el disfrute ya están presentes. Puedes expresar tus límites y reconoces margen para decidir, aunque hay cosas que te gustan o te dan curiosidad que todavía te cuesta reconocer incluso para ti misma. La cercanía afectiva y la reciprocidad que encuentras en tus encuentros tienen lugar junto a esas preguntas más íntimas y a una dificultad concreta: los espacios donde vives pocas veces te ofrecen la privacidad que necesitas.",
+      "text_relation_ids": [
+        "R_INTERNAL_FREEDOM",
+        "R_MATERIAL_PRIVACY",
+        "R_EXPANSION_RESOURCES"
+      ],
+      "name_relation_ids": [
+        "R_INTERNAL_FREEDOM"
+      ],
+      "name_mode": "desired_not_achieved",
+      "fourth_reason": null
+    }
+  },
+  {
+    "case_id": "08",
+    "session_id": "SYNTHETIC_08",
+    "instrument_version": "Freeze A v1.0",
+    "rules_version": "composition-reference-1-preliminary",
+    "application_date": "2026-10-01",
+    "context": {
+      "current_partner": "yes"
+    },
+    "answers": {
+      "P01": {
+        "option_ids": [
+          "P01_O04",
+          "P01_O05"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P02": {
+        "option_ids": [
+          "P02_O05"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P03": {
+        "option_ids": [
+          "P03_O15"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P04": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P05": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P06": {
+        "option_ids": [
+          "P06_O03"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P07": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P08": {
+        "option_ids": [
+          "P08_O02"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P09": {
+        "option_ids": [
+          "P09_O02"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P10": {
+        "option_ids": [
+          "P10_O06"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P11": {
+        "option_ids": [],
+        "zone_ids": [
+          "Z02",
+          "Z04"
+        ],
+        "state_code": "answered",
+        "text": null
+      },
+      "P12": {
+        "option_ids": [
+          "P12_O01",
+          "P12_O04"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P13": {
+        "option_ids": [
+          "P13_O02"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P14": {
+        "option_ids": [
+          "P14_O03"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P15": {
+        "option_ids": [
+          "P15_O04"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P16": {
+        "option_ids": [
+          "P16_O05"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P17": {
+        "option_ids": [
+          "P17_O04"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P18": {
+        "option_ids": [
+          "P18_O04"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P19": {
+        "option_ids": [
+          "P19_O02"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P20": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P21": {
+        "option_ids": [
+          "P21_O04"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P22": {
+        "option_ids": [
+          "P22_O09",
+          "P22_O10",
+          "P22_O01"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P23": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "omitted",
+        "text": null
+      },
+      "P24": {
+        "option_ids": [
+          "P24_O09",
+          "P24_O10",
+          "P24_O13"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P25": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P26": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P27": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P28": {
+        "option_ids": [
+          "P28_O05"
+        ],
+        "zone_ids": [],
+        "state_code": "dont_know",
+        "text": null
+      },
+      "P29": {
+        "option_ids": [
+          "P29_O03"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P30": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P31": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "omitted",
+        "text": null
+      },
+      "P32": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P33": {
+        "option_ids": [
+          "P33_O03"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P34": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P35": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P36": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P37": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P38": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P39": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P40": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      }
+    },
+    "expected": {
+      "case_id": "08",
+      "name": "Deseo con poco margen",
+      "summary": "Quieres que tu placer tenga el mismo lugar que el de tu pareja y sentirte más libre para expresar lo que quieres y lo que no quieres. El deseo está presente y sientes cercanía afectiva, aunque el disfrute varía y pocas veces percibes esa reciprocidad en tus encuentros. Al mismo tiempo, sientes que no puedes decir que no o parar y no te sientes segura para hacerlo; señalas que tu pareja muchas veces insiste o se molesta. Tu deseo de vivir con mayor libertad aparece junto a esas experiencias y al poco margen que hoy sientes para decidir sobre tu vida erótica.",
+      "text_relation_ids": [
+        "R_CARE_DESIRED",
+        "R_RECIPROCITY_GAP",
+        "R_DESIRE_VARIABLE_PLEASURE"
+      ],
+      "name_relation_ids": [
+        "R_CARE_DESIRED"
+      ],
+      "fourth_reason": "care_scope"
+    }
+  },
+  {
+    "case_id": "01_RECIPROCITY_PRIVATE",
+    "session_id": "SYNTHETIC_01_RECIPROCITY_PRIVATE",
+    "instrument_version": "Freeze A v1.0",
+    "rules_version": "composition-reference-1-preliminary",
+    "application_date": "2026-10-01",
+    "context": {
+      "current_partner": "yes"
+    },
+    "answers": {
+      "P01": {
+        "option_ids": [
+          "P01_O01"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P02": {
+        "option_ids": [
+          "P02_O02"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P03": {
+        "option_ids": [
+          "P03_O15"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P04": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P05": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P06": {
+        "option_ids": [
+          "P06_O03"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P07": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P08": {
+        "option_ids": [
+          "P08_O04"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P09": {
+        "option_ids": [
+          "P09_O02"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P10": {
+        "option_ids": [
+          "P10_O01"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P11": {
+        "option_ids": [],
+        "zone_ids": [
+          "Z02",
+          "Z04"
+        ],
+        "state_code": "answered",
+        "text": null
+      },
+      "P12": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P13": {
+        "option_ids": [
+          "P13_O02"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P14": {
+        "option_ids": [
+          "P14_O02"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P15": {
+        "option_ids": [
+          "P15_O09"
+        ],
+        "zone_ids": [],
+        "state_code": "prefer_not_to_answer",
+        "text": null
+      },
+      "P16": {
+        "option_ids": [
+          "P16_O01"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P17": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P18": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P19": {
+        "option_ids": [
+          "P19_O03"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P20": {
+        "option_ids": [
+          "P20_O07"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P21": {
+        "option_ids": [
+          "P21_O02"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P22": {
+        "option_ids": [
+          "P22_O01",
+          "P22_O12",
+          "P22_O08"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P23": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "omitted",
+        "text": null
+      },
+      "P24": {
+        "option_ids": [
+          "P24_O11"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P25": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P26": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P27": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P28": {
+        "option_ids": [
+          "P28_O01"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P29": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P30": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P31": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P32": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P33": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P34": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P35": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P36": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P37": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P38": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P39": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P40": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      }
+    },
+    "expected": {
+      "case_id": "01",
+      "name": "Explorar desde el disfrute",
+      "summary": "Quieres experimentar cosas nuevas desde una vida erótica con la que hoy te sientes bien, donde el placer y el juego tienen un lugar importante para ti. Las ganas rara vez aparecen antes de empezar, pero muchas veces crecen durante los encuentros que eliges, en los que disfrutas. Ese interés por explorar convive con la cercanía que sientes y con tu margen para decidir, aunque en el día a día no siempre haya tiempo para lo erótico.",
+      "text_relation_ids": [
+        "R_EXPLORATION_WELL",
+        "R_RESPONSIVE",
+        "R_TIME"
+      ],
+      "name_relation_ids": [
+        "R_EXPLORATION_WELL"
+      ],
+      "fourth_reason": null
+    },
+    "variant": {
+      "parent": "01",
+      "changed_question": "P15"
+    }
+  },
+  {
+    "case_id": "07_PRIVACY_SOMETIMES",
+    "session_id": "SYNTHETIC_07_PRIVACY_SOMETIMES",
+    "instrument_version": "Freeze A v1.0",
+    "rules_version": "composition-reference-1-preliminary",
+    "application_date": "2026-10-01",
+    "context": {
+      "current_partner": "yes"
+    },
+    "answers": {
+      "P01": {
+        "option_ids": [
+          "P01_O01",
+          "P01_O05"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P02": {
+        "option_ids": [
+          "P02_O02"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P03": {
+        "option_ids": [
+          "P03_O15"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P04": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P05": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P06": {
+        "option_ids": [
+          "P06_O03"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P07": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P08": {
+        "option_ids": [
+          "P08_O02"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P09": {
+        "option_ids": [
+          "P09_O03"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P10": {
+        "option_ids": [
+          "P10_O02"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P11": {
+        "option_ids": [],
+        "zone_ids": [
+          "Z02",
+          "Z04"
+        ],
+        "state_code": "answered",
+        "text": null
+      },
+      "P12": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P13": {
+        "option_ids": [
+          "P13_O02"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P14": {
+        "option_ids": [
+          "P14_O03"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P15": {
+        "option_ids": [
+          "P15_O02"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P16": {
+        "option_ids": [
+          "P16_O01"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P17": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P18": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P19": {
+        "option_ids": [
+          "P19_O04"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P20": {
+        "option_ids": [
+          "P20_O09"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P21": {
+        "option_ids": [
+          "P21_O02"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P22": {
+        "option_ids": [
+          "P22_O09",
+          "P22_O03",
+          "P22_O06"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P23": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "omitted",
+        "text": null
+      },
+      "P24": {
+        "option_ids": [
+          "P24_O11",
+          "P24_O13"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P25": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P26": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P27": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P28": {
+        "option_ids": [
+          "P28_O01"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P29": {
+        "option_ids": [
+          "P29_O01"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P30": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P31": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P32": {
+        "option_ids": [
+          "P32_O03"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P33": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P34": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P35": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P36": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P37": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P38": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P39": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P40": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      }
+    },
+    "expected": {
+      "case_id": "07",
+      "name": "Desear con libertad",
+      "summary": "Quieres experimentar cosas nuevas y sentirte más libre para vivir lo que deseas, en un momento en que las ganas y el disfrute ya están presentes. Puedes expresar tus límites y reconoces margen para decidir, aunque hay cosas que te gustan o te dan curiosidad que todavía te cuesta reconocer incluso para ti misma. La cercanía afectiva y la reciprocidad que encuentras en tus encuentros tienen lugar junto a esas preguntas más íntimas y a una dificultad concreta: los espacios donde vives solo a veces te ofrecen la privacidad que necesitas.",
+      "text_relation_ids": [
+        "R_INTERNAL_FREEDOM",
+        "R_MATERIAL_PRIVACY",
+        "R_EXPANSION_RESOURCES"
+      ],
+      "name_relation_ids": [
+        "R_INTERNAL_FREEDOM"
+      ],
+      "name_mode": "desired_not_achieved",
+      "fourth_reason": null
+    },
+    "variant": {
+      "parent": "07",
+      "changed_question": "P32"
+    }
+  },
+  {
+    "case_id": "08_SAFETY_YES",
+    "session_id": "SYNTHETIC_08_SAFETY_YES",
+    "instrument_version": "Freeze A v1.0",
+    "rules_version": "composition-reference-1-preliminary",
+    "application_date": "2026-10-01",
+    "context": {
+      "current_partner": "yes"
+    },
+    "answers": {
+      "P01": {
+        "option_ids": [
+          "P01_O04",
+          "P01_O05"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P02": {
+        "option_ids": [
+          "P02_O05"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P03": {
+        "option_ids": [
+          "P03_O15"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P04": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P05": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P06": {
+        "option_ids": [
+          "P06_O03"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P07": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P08": {
+        "option_ids": [
+          "P08_O02"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P09": {
+        "option_ids": [
+          "P09_O02"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P10": {
+        "option_ids": [
+          "P10_O06"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P11": {
+        "option_ids": [],
+        "zone_ids": [
+          "Z02",
+          "Z04"
+        ],
+        "state_code": "answered",
+        "text": null
+      },
+      "P12": {
+        "option_ids": [
+          "P12_O01",
+          "P12_O04"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P13": {
+        "option_ids": [
+          "P13_O02"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P14": {
+        "option_ids": [
+          "P14_O03"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P15": {
+        "option_ids": [
+          "P15_O04"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P16": {
+        "option_ids": [
+          "P16_O05"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P17": {
+        "option_ids": [
+          "P17_O04"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P18": {
+        "option_ids": [
+          "P18_O01"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P19": {
+        "option_ids": [
+          "P19_O02"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P20": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P21": {
+        "option_ids": [
+          "P21_O04"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P22": {
+        "option_ids": [
+          "P22_O09",
+          "P22_O10",
+          "P22_O01"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P23": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "omitted",
+        "text": null
+      },
+      "P24": {
+        "option_ids": [
+          "P24_O09",
+          "P24_O10",
+          "P24_O13"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P25": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P26": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P27": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P28": {
+        "option_ids": [
+          "P28_O05"
+        ],
+        "zone_ids": [],
+        "state_code": "dont_know",
+        "text": null
+      },
+      "P29": {
+        "option_ids": [
+          "P29_O03"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P30": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P31": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "omitted",
+        "text": null
+      },
+      "P32": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P33": {
+        "option_ids": [
+          "P33_O03"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P34": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P35": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P36": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P37": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P38": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P39": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P40": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      }
+    },
+    "expected": {
+      "case_id": "08",
+      "name": "Deseo con poco margen",
+      "summary": "Quieres que tu placer tenga el mismo lugar que el de tu pareja y sentirte más libre para expresar lo que quieres y lo que no quieres. El deseo está presente y sientes cercanía afectiva, aunque el disfrute varía y pocas veces percibes esa reciprocidad en tus encuentros. Al mismo tiempo, sientes que no puedes decir que no o parar, aunque dices que te sientes segura para hacerlo; señalas que tu pareja muchas veces insiste o se molesta. Tu deseo de vivir con mayor libertad aparece junto a esas experiencias y al poco margen que hoy sientes para decidir sobre tu vida erótica.",
+      "text_relation_ids": [
+        "R_CARE_DESIRED",
+        "R_RECIPROCITY_GAP",
+        "R_DESIRE_VARIABLE_PLEASURE"
+      ],
+      "name_relation_ids": [
+        "R_CARE_DESIRED"
+      ],
+      "fourth_reason": "explicit_contradiction"
+    },
+    "variant": {
+      "parent": "08",
+      "changed_question": "P18"
+    }
+  },
+  {
+    "case_id": "08_RESPECT",
+    "session_id": "SYNTHETIC_08_RESPECT",
+    "instrument_version": "Freeze A v1.0",
+    "rules_version": "composition-reference-1-preliminary",
+    "application_date": "2026-10-01",
+    "context": {
+      "current_partner": "yes"
+    },
+    "answers": {
+      "P01": {
+        "option_ids": [
+          "P01_O04",
+          "P01_O05"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P02": {
+        "option_ids": [
+          "P02_O05"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P03": {
+        "option_ids": [
+          "P03_O15"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P04": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P05": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P06": {
+        "option_ids": [
+          "P06_O03"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P07": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P08": {
+        "option_ids": [
+          "P08_O02"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P09": {
+        "option_ids": [
+          "P09_O02"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P10": {
+        "option_ids": [
+          "P10_O06"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P11": {
+        "option_ids": [],
+        "zone_ids": [
+          "Z02",
+          "Z04"
+        ],
+        "state_code": "answered",
+        "text": null
+      },
+      "P12": {
+        "option_ids": [
+          "P12_O01",
+          "P12_O04"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P13": {
+        "option_ids": [
+          "P13_O02"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P14": {
+        "option_ids": [
+          "P14_O03"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P15": {
+        "option_ids": [
+          "P15_O04"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P16": {
+        "option_ids": [
+          "P16_O05"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P17": {
+        "option_ids": [
+          "P17_O02"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P18": {
+        "option_ids": [
+          "P18_O04"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P19": {
+        "option_ids": [
+          "P19_O02"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P20": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P21": {
+        "option_ids": [
+          "P21_O04"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P22": {
+        "option_ids": [
+          "P22_O09",
+          "P22_O10",
+          "P22_O01"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P23": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "omitted",
+        "text": null
+      },
+      "P24": {
+        "option_ids": [
+          "P24_O09",
+          "P24_O10",
+          "P24_O13"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P25": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P26": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P27": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P28": {
+        "option_ids": [
+          "P28_O05"
+        ],
+        "zone_ids": [],
+        "state_code": "dont_know",
+        "text": null
+      },
+      "P29": {
+        "option_ids": [
+          "P29_O03"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P30": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P31": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "omitted",
+        "text": null
+      },
+      "P32": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P33": {
+        "option_ids": [
+          "P33_O03"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P34": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P35": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P36": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P37": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P38": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P39": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P40": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      }
+    },
+    "expected": {
+      "case_id": "08",
+      "name": "Deseo con poco margen",
+      "summary": "Quieres que tu placer tenga el mismo lugar que el de tu pareja y sentirte más libre para expresar lo que quieres y lo que no quieres. El deseo está presente y sientes cercanía afectiva, aunque el disfrute varía y pocas veces percibes esa reciprocidad en tus encuentros. Al mismo tiempo, sientes que no puedes decir que no o parar y no te sientes segura para hacerlo, aunque señalas que tu pareja en general lo respeta cuando lo dices. Tu deseo de vivir con mayor libertad aparece junto a esas experiencias y al poco margen que hoy sientes para decidir sobre tu vida erótica.",
+      "text_relation_ids": [
+        "R_CARE_DESIRED",
+        "R_RECIPROCITY_GAP",
+        "R_DESIRE_VARIABLE_PLEASURE"
+      ],
+      "name_relation_ids": [
+        "R_CARE_DESIRED"
+      ],
+      "fourth_reason": "care_scope"
+    },
+    "variant": {
+      "parent": "08",
+      "changed_question": "P17"
+    }
+  }
+]

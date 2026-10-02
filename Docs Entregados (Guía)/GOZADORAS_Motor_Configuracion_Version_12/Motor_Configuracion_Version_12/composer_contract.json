@@ -1,0 +1,1560 @@
+{
+  "version": "composition-controlled-12-contract-freeze",
+  "status": "BOUNDED_COMPOSITION_CONTRACT_FREEZE",
+  "pipeline": [
+    "snapshot validation",
+    "closed semantic Object",
+    "relation selection with essential exception",
+    "grounded clause composition",
+    "trace of actually emitted claims",
+    "editorial review"
+  ],
+  "new_rules": [
+    {
+      "rule_id": "R_LOCAL_BODY_GAP_UNCERTAINTY",
+      "stable_order": 21,
+      "type": "convergencia",
+      "priority": 1,
+      "when": {
+        "all": [
+          {
+            "option_ids": [
+              "P02_O07"
+            ]
+          },
+          {
+            "option_ids": [
+              "P11_O02"
+            ]
+          },
+          {
+            "not": {
+              "option_ids": [
+                "P21_O06"
+              ]
+            }
+          }
+        ]
+      },
+      "allowed": "Body and gap uncertainty remain local when agency is known",
+      "forbidden": "General uncertainty about agency from body/gap uncertainty",
+      "aspects": [
+        "body_sensations",
+        "current_gap"
+      ]
+    },
+    {
+      "rule_id": "R_CARE_PRESENT",
+      "stable_order": 22,
+      "type": "constraint",
+      "priority": 1,
+      "when": {
+        "any": [
+          {
+            "option_ids": [
+              "P16_O05"
+            ]
+          },
+          {
+            "option_ids": [
+              "P17_O03",
+              "P17_O04"
+            ]
+          },
+          {
+            "option_ids": [
+              "P18_O04"
+            ]
+          }
+        ],
+        "unless_rule_active": "R_CARE_DESIRED"
+      },
+      "allowed": "Keep independent expressed-limit, partner-response and felt-safety scopes",
+      "forbidden": "Missing freedom wish means care not relevant",
+      "aspects": [
+        "express_limits",
+        "partner_response",
+        "felt_safety"
+      ],
+      "evidence_fact_keys": [
+        "limits",
+        "partner_response",
+        "safety"
+      ]
+    },
+    {
+      "rule_id": "R_BOUNDED_PRESENT",
+      "stable_order": 23,
+      "type": "coexistencia",
+      "priority": 3,
+      "when": {
+        "no_relations_active": true
+      },
+      "allowed": "Limited description of known present fields, with exact source trace",
+      "forbidden": "Infer mechanisms or causes from simultaneous fields",
+      "aspects": [
+        "state",
+        "desire",
+        "pleasure"
+      ],
+      "evidence_fact_keys": [
+        "well",
+        "disconnected",
+        "pleasure",
+        "desire_before"
+      ]
+    }
+  ],
+  "exception": {
+    "default_relations": 3,
+    "trigger": "Unselected priority-1 relation would lose an indispensable distinction",
+    "action": "Retain indispensable relations and record all added rule IDs and evidence",
+    "status": "EXTENDED_DRAFT_EDITORIAL_REVIEW",
+    "sentences": "Current prototype packs up to four; long/poor packing requires editorial review",
+    "no_user_failure_screen_for_missing_catalog_coverage": true
+  },
+  "name_contract": "Names may cite only sources actually emitted in the summary; one shared selected-relation budget; occurrence evidence is not added to a wish title. Mechanical audit passing is not semantic/editorial approval.",
+  "limits": [
+    "Every canonical option has an explicit treatment; material crossings remain finite, not exhaustive.",
+    "100 novel snapshots are a structural/source sample, not exhaustive coverage",
+    "New automatic summaries require editorial approval",
+    "No LLM renderer and no Nicolas integration",
+    "No user validation; A/B unchanged",
+    "Instrument and supported composition target women in a couple; allowing access by others does not expand validation or require a second instrument."
+  ],
+  "editorial_revision": {
+    "status": "HISTORICAL_0_4_1_REVIEW_RECORD",
+    "second_sentence_02": "Margin, affective/erotic closeness and pleasure reciprocity; responsive desire and time in third sentence",
+    "contrast": "Coexistence alone does not authorize although; retain independent limit, felt-safety and partner-response observations",
+    "fourth_sentence_body": "Authorized only to preserve pleasant-zone presence versus bodily registration and comfort when compression loses the distinction; same facts and relations",
+    "paraphrase_ledger": "Record body-uncertainty evidence with curiosity so anchor recovery does not repeat it",
+    "executed_checks": 61
+  },
+  "connector_rules": [
+    {
+      "connector_id": "C_LIMITS_RESOURCE_CONTRAST",
+      "scope": "closeness_split narrative; care precedence retained",
+      "when": {
+        "all": [
+          {
+            "option_ids": [
+              "P16_O04"
+            ]
+          },
+          {
+            "any": [
+              {
+                "option_ids": [
+                  "P21_O01",
+                  "P21_O02"
+                ]
+              },
+              {
+                "option_ids": [
+                  "P12_O06"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "allowed": "aunque between declared agency/retry resource and limit difficulty",
+      "otherwise": "Neutral coexistence; variable possibility is not a reported difficulty, and unselected expression relationships do not authorize a contrast.",
+      "stable_order": 1,
+      "parent_relations": [
+        "R_EXPRESSION_RESPECT"
+      ],
+      "allowed_phrases": [
+        "aunque"
+      ]
+    },
+    {
+      "connector_id": "C_LIMITS_RESPECT_CONTRAST",
+      "scope": "closeness_split narrative; partner response must be active",
+      "when": {
+        "all": [
+          {
+            "option_ids": [
+              "P16_O04"
+            ]
+          },
+          {
+            "option_ids": [
+              "P17_O01",
+              "P17_O02"
+            ]
+          }
+        ]
+      },
+      "allowed": "incluso cuando with explicit respect; retain difficulty independently",
+      "otherwise": "Neutral coexistence; variable possibility is not a reported difficulty, and unselected expression relationships do not authorize a contrast.",
+      "stable_order": 2,
+      "parent_relations": [
+        "R_EXPRESSION_RESPECT"
+      ],
+      "allowed_phrases": [
+        "incluso cuando"
+      ]
+    },
+    {
+      "connector_id": "C_INABILITY_SAFETY_CONTRAST",
+      "scope": "care narrative",
+      "when": {
+        "all": [
+          {
+            "option_ids": [
+              "P16_O05"
+            ]
+          },
+          {
+            "option_ids": [
+              "P18_O01",
+              "P18_O02"
+            ]
+          }
+        ]
+      },
+      "allowed": "aunque retains inability alongside explicitly positive felt safety",
+      "otherwise": "coexistence of the separate states; private safety produces no content",
+      "stable_order": 3,
+      "parent_relations": [
+        "R_CARE_DESIRED",
+        "R_CARE_PRESENT"
+      ],
+      "allowed_phrases": [
+        "aunque"
+      ]
+    },
+    {
+      "connector_id": "C_INTERNAL_RESOURCE_CONTRAST",
+      "scope": "freedom/exploration narrative; care precedence retained",
+      "when": {
+        "all": [
+          {
+            "option_ids": [
+              "P29_O01",
+              "P29_O02"
+            ]
+          },
+          {
+            "any": [
+              {
+                "option_ids": [
+                  "P16_O01",
+                  "P16_O02"
+                ]
+              },
+              {
+                "option_ids": [
+                  "P21_O01",
+                  "P21_O02"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "allowed": "aunque between resource and internal difficulty",
+      "otherwise": "neutral coexistence of difficulties; no agency from desire",
+      "stable_order": 4,
+      "parent_relations": [
+        "R_INTERNAL_FREEDOM"
+      ],
+      "allowed_phrases": [
+        "aunque"
+      ]
+    },
+    {
+      "connector_id": "C_BODY_RESOURCE_CONTRAST",
+      "scope": "body narrative; care precedence retained",
+      "when": {
+        "all": [
+          {
+            "option_ids": [
+              "P06_O01",
+              "P06_O02"
+            ]
+          },
+          {
+            "any": [
+              {
+                "question_id": "P11",
+                "zone_ids_nonempty": true
+              },
+              {
+                "option_ids": [
+                  "P10_O01",
+                  "P10_O02"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "allowed": "pero también between bodily condition and reported present resource",
+      "otherwise": "neutral bodily/pleasure observations; no pleasant-zone claim from privacy",
+      "stable_order": 5,
+      "parent_relations": [
+        "R_BODY_MIXED",
+        "R_BODY_WISH"
+      ],
+      "allowed_phrases": [
+        "pero también"
+      ]
+    },
+    {
+      "connector_id": "C_VALUES_WITH_UNKNOWN_CHANGE",
+      "scope": "Values are declared; desired movement remains explicitly unknown",
+      "when": {
+        "all": [
+          {
+            "option_ids": [
+              "P24_O17"
+            ]
+          },
+          {
+            "option_ids": [
+              "P22_O01",
+              "P22_O02",
+              "P22_O03",
+              "P22_O04",
+              "P22_O05",
+              "P22_O06",
+              "P22_O07",
+              "P22_O08",
+              "P22_O09",
+              "P22_O10",
+              "P22_O11",
+              "P22_O12",
+              "P22_O13"
+            ]
+          }
+        ]
+      },
+      "allowed": "aunque between a stated value and unknown desired change; neither becomes absence",
+      "otherwise": "No contrast, no inference that values establish a chosen change",
+      "stable_order": 6,
+      "parent_relations": [
+        "R_CURIOUS_UNCLEAR"
+      ],
+      "allowed_phrases": [
+        "aunque"
+      ]
+    },
+    {
+      "connector_id": "C_RESPONSIVE_CONTRAST",
+      "stable_order": 7,
+      "scope": "R_RESPONSIVE selected; desire before versus during a chosen opportunity",
+      "when": {
+        "all": [
+          {
+            "option_ids": [
+              "P08_O04",
+              "P08_O05"
+            ]
+          },
+          {
+            "option_ids": [
+              "P09_O01",
+              "P09_O02"
+            ]
+          }
+        ]
+      },
+      "required_relation": "R_RESPONSIVE",
+      "allowed": "pero between rare/absent initial desire and explicitly frequent increase; no advice to start without wanting to",
+      "otherwise": "No favorable responsive interpretation",
+      "parent_relations": [
+        "R_RESPONSIVE"
+      ],
+      "allowed_phrases": [
+        "pero"
+      ]
+    }
+  ],
+  "connector_rules_note": "Renderer conditions, not added relation rules. Existing priority, stable order, care scopes and relation budget are unchanged. These rules are not exhaustive semantic validation.",
+  "editorial_revision_0_4_2": {
+    "status": "AUTOMATIC_DRAFTS_PENDING_EDITORIAL_REVIEW",
+    "case_05": "Gap moves to no-change/enjoyment synthesis in closing, with original affective/erotic split, reciprocity, agency, three sentences and gap-intensity evidence retained",
+    "checks": 69,
+    "known_inputs": 15,
+    "targeted_connector_inputs": 6,
+    "novel_inputs": 100
+  },
+  "active_catalog": {
+    "file": "composition_catalog.json",
+    "version": "composition-catalog-8-preliminary",
+    "relations": 30,
+    "guards": 9,
+    "stable_order": "Documented; bounded fallback evaluated last"
+  },
+  "self_review_0_4_3": {
+    "status": "PRELIMINARY_NO_FREEZE",
+    "fixed": [
+      "Reject unprovided states with data, malformed/incomplete snapshots, duplicate/misplaced zones and text outside designated records",
+      "Present desire uses only positive occurrence evidence; wishes/values do not establish presence",
+      "Body-change title requires a confirmed body-condition answer; erotic-distance name cites erotic-distance evidence",
+      "All 23 relationships and guards use one current catalogue; responsive condition covers declared variants and is rendered only if selected",
+      "Pleasant-zone uncertainty and bodily registration retain different semantic aspects",
+      "Object exposes separate present_resources and uncertainty collections without wish-to-resource conversion"
+    ],
+    "previous_composer_checks": 69,
+    "new_targeted_tests": 16,
+    "historical_contract_checks": 33,
+    "semantic_coverage": "Targeted only; not exhaustive prose or participant validation"
+  },
+  "applicability_candidate": {
+    "status": "OUTSIDE_TARGET_ACCESS_QA_NOT_A_SECOND_INSTRUMENT",
+    "metadata_codes": [
+      "yes",
+      "no",
+      "prefer_not_to_answer"
+    ],
+    "ctx_private": "Do not infer No or erase independent P13-P18 answers; output equals same direct-answer Yes snapshot",
+    "no": "Preview only. P13/P14/P15/P17 explicitly refer to a partner: preserve their exact records as reference-unresolved; do not rename them as past encounters or another person. Preserve unresolved P17 care guards for review without claiming a current tension. Independent P16/P18/P21 retain their own content.",
+    "no_api": "compose accepts structurally complete snapshots for No as outside-target access; compose_applicability_preview is a QA wrapper on the same composer. Wording, required answers and branches remain unchanged.",
+    "question_or_gate_changes": false,
+    "tests": 28,
+    "inputs_no": 8,
+    "inputs_ctx_private": 8,
+    "limitation": "Complete synthetic snapshots only; no participant validation outside the target audience and no separate guaranteed reading. Actual entry/required-question behavior must be checked in integration."
+  },
+  "self_review_0_4_5": {
+    "status": "SELF_REVIEW_COMPLETE_NOT_READY_FOR_FREEZE",
+    "fixed": [
+      "No inferred other-person or past-encounter referent from partner-specific answers",
+      "Name evidence must also be emitted summary evidence",
+      "Required anchors for every selected relationship, including lower priorities",
+      "Responsive desire retains a complete subject when it is recovered in another narrative",
+      "P28 recovery/exploration distinction retained in 04 without adding a fifth sentence",
+      "Version-pinned session draft interface with separate COMPLETE and delivery states"
+    ],
+    "checks": {
+      "composer": 69,
+      "self_review": 16,
+      "applicability": 28,
+      "contract_closure": 6,
+      "additional_valid_limit_response_safety_combinations": 109
+    },
+    "remaining": [
+      "Editorial synthesis and semantic relation audit of arbitrary outputs",
+      "Expanded response-space expectations; current tests are partial coverage"
+    ]
+  },
+  "draft_interface": {
+    "function": "compose_session",
+    "required": [
+      "session_id",
+      "snapshot_schema",
+      "instrument_fingerprint",
+      "composition_version",
+      "snapshot"
+    ],
+    "state_separation": "Structural snapshot validation establishes COMPLETE; a draft cannot authorize production delivery or require new participant answers. Mismatch is an integration caller error.",
+    "schema": "mapa-freeze-a-1",
+    "current_delivery_eligible": false
+  },
+  "target_population": {
+    "intended": "women currently in a couple",
+    "other_access": "Allowed; access does not establish target applicability or require an adapted instrument. Women may take what serves them.",
+    "participant_notice_candidate": "Este Mapa está pensado para mujeres en pareja. Si hoy no tienes pareja, puedes recorrerlo y tomar lo que te resulte útil.",
+    "no_new_questions_branches_or_core_policy": true,
+    "source": "Explicit scope decision by Mónica in this conversation"
+  },
+  "reflective_closings": [
+    {
+      "rule_id": "RF_CURIOSITY_CONNECTION",
+      "stable_order": 1,
+      "when": {
+        "all": [
+          {
+            "option_ids": [
+              "P01_O06"
+            ]
+          },
+          {
+            "option_ids": [
+              "P24_O17"
+            ]
+          },
+          {
+            "option_ids": [
+              "P02_O07"
+            ]
+          },
+          {
+            "option_ids": [
+              "P11_O02"
+            ]
+          },
+          {
+            "option_ids": [
+              "P21_O06"
+            ]
+          },
+          {
+            "option_ids": [
+              "P22_O06",
+              "P22_O08"
+            ]
+          }
+        ]
+      },
+      "required_relations": [
+        "R_CURIOUS_UNCLEAR",
+        "R_UNCERTAINTY_SCOPES"
+      ],
+      "text": "tu curiosidad invita a preguntarte qué significa sentirte conectada con tu vida erótica",
+      "role": "Invitation grounded in reported curiosity and disconnection; no assertion of desired change, achieved resource or cause",
+      "budget": "Realizes the selected curiosity relationship; does not add another relationship or remove factual anchors",
+      "requires_answer": false,
+      "care_scope": "Do not activate in a care narrative",
+      "approval": "Mónica: exact wording approved in this conversation; not a blanket approval of arbitrary closing questions"
+    },
+    {
+      "rule_id": "RF_WELL_WITH_MATICES",
+      "stable_order": 2,
+      "when": {
+        "all": [
+          {
+            "option_ids": [
+              "P22_O01"
+            ]
+          },
+          {
+            "option_ids": [
+              "P22_O12"
+            ]
+          },
+          {
+            "option_ids": [
+              "P10_O04",
+              "P10_O05"
+            ]
+          },
+          {
+            "option_ids": [
+              "P08_O01",
+              "P08_O02",
+              "P08_O03",
+              "P08_O04",
+              "P08_O05"
+            ]
+          },
+          {
+            "option_ids": [
+              "P02_O06"
+            ]
+          },
+          {
+            "option_ids": [
+              "P14_O04",
+              "P14_O05"
+            ]
+          },
+          {
+            "option_ids": [
+              "P24_O16"
+            ]
+          }
+        ]
+      },
+      "required_relations": [
+        "R_BOUNDED_PRESENT"
+      ],
+      "text": "esta combinación invita a preguntarte qué sostiene hoy esa sensación de bienestar",
+      "requires_answer": false,
+      "role": "Question about the reported well-being, not an assertion of why it exists or a demand for change",
+      "care_scope": "Do not activate in a care narrative",
+      "approval": "Editorial reference approved by Mónica; matching complete source conditions required",
+      "activation_only_option_ids": [
+        "P24_O16"
+      ],
+      "activation_note": "The structural Other response selects the no-interpreted-wish realization. It is not an emitted semantic assertion and its free text remains literal."
+    }
+  ],
+  "editorial_revision_0_4_8": {
+    "approved": [
+      "05 separates agency from the current no-change choice",
+      "06 compact paragraph, no redundant para ti, exact reflective closing"
+    ],
+    "fourth_sentence_05": "agency_choice_distinction; existing facts and relations only",
+    "reflection_policy": "Single source-grounded reflective invitation; optional, no answer field, no new assertion or mandatory global closing pattern",
+    "tests_run_this_revision": {
+      "composer_controls": 69,
+      "editorial_contract_tests": 8
+    },
+    "remaining": "Semantic coverage and editorial synthesis of new combinations remain partial; PRELIMINARY_NO_FREEZE"
+  },
+  "approved_editorial_references_0_4_8": {
+    "05": "Vivir tu erotismo a tu manera es importante para ti, y hoy no quieres mover nada. La cercanía afectiva con tu pareja aparece junto a una distancia erótica; disfrutas bastante los encuentros que eliges y la mayor parte del tiempo percibes que tu placer importa tanto como el de tu pareja. Reconoces mucho margen para decidir sobre tu vida erótica. Tu elección de no mover nada ahora está presente junto a lo que disfrutas y a la distancia importante que también reconoces respecto de cómo te gustaría vivirla.",
+    "06": "Te importa descubrir lo que te gusta y explorar nuevas posibilidades; aún no tienes claro qué quisieras mover ni cuán cerca está tu vida erótica de cómo te gustaría vivirla. Hoy te sientes desconectada y no has tenido encuentros eróticos recientemente; con tu pareja, la cercanía afectiva varía y la erótica no está clara. Aún no sabes qué sensaciones agradables identificas en tu cuerpo ni cuánto puedes decidir sobre tu vida erótica. Tu curiosidad invita a preguntarte qué significa sentirte conectada con tu vida erótica."
+  },
+  "surface_rules": [
+    {
+      "rule_id": "S_CLOSENESS_DISTINCT",
+      "stable_order": 1,
+      "type": "coexistencia",
+      "when": {
+        "all": [
+          {
+            "option_ids": [
+              "P13_O01",
+              "P13_O02"
+            ]
+          },
+          {
+            "option_ids": [
+              "P14_O04",
+              "P14_O05"
+            ]
+          }
+        ]
+      },
+      "parent_relations": [
+        "R_CLOSENESS_SPLIT"
+      ],
+      "meaning": "Affective closeness and erotic distance have different reported scopes",
+      "partner_required": true,
+      "forbidden": "Cause, diagnosis, assumed deficiency or extra achieved agency; wishes and values remain distinct from present reports"
+    },
+    {
+      "rule_id": "S_PLEASURE_RECIPROCITY_DISTINCT",
+      "stable_order": 2,
+      "type": "coexistencia",
+      "when": {
+        "any": [
+          {
+            "all": [
+              {
+                "option_ids": [
+                  "P10_O01",
+                  "P10_O02",
+                  "P10_O06"
+                ]
+              },
+              {
+                "option_ids": [
+                  "P15_O04",
+                  "P15_O05"
+                ]
+              }
+            ]
+          },
+          {
+            "all": [
+              {
+                "option_ids": [
+                  "P10_O04",
+                  "P10_O05"
+                ]
+              },
+              {
+                "option_ids": [
+                  "P15_O01",
+                  "P15_O02"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "parent_relations": [
+        "R_BOUNDED_PRESENT",
+        "R_RECIPROCITY_GAP",
+        "R_DESIRE_VARIABLE_PLEASURE"
+      ],
+      "meaning": "Enjoyment and perceived equal importance of pleasure are different reports; neither proves the other",
+      "partner_required": true,
+      "forbidden": "Cause, diagnosis, assumed deficiency or extra achieved agency; wishes and values remain distinct from present reports"
+    },
+    {
+      "rule_id": "S_DESIRE_PLEASURE_DISTINCT",
+      "stable_order": 3,
+      "type": "coexistencia",
+      "when": {
+        "any": [
+          {
+            "all": [
+              {
+                "option_ids": [
+                  "P08_O01",
+                  "P08_O02"
+                ]
+              },
+              {
+                "option_ids": [
+                  "P10_O04",
+                  "P10_O05",
+                  "P10_O06"
+                ]
+              }
+            ]
+          },
+          {
+            "all": [
+              {
+                "option_ids": [
+                  "P08_O04",
+                  "P08_O05"
+                ]
+              },
+              {
+                "option_ids": [
+                  "P10_O01",
+                  "P10_O02"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "parent_relations": [
+        "R_BOUNDED_PRESENT",
+        "R_DESIRE_VARIABLE_PLEASURE"
+      ],
+      "meaning": "Before-encounter desire frequency is distinct from enjoyment of chosen encounters; do not infer responsive desire",
+      "partner_required": false,
+      "forbidden": "Cause, diagnosis, assumed deficiency or extra achieved agency; wishes and values remain distinct from present reports"
+    },
+    {
+      "rule_id": "S_WISH_RESOURCES",
+      "stable_order": 4,
+      "type": "coexistencia",
+      "when": {
+        "all": [
+          {
+            "option_ids": [
+              "P24_O01"
+            ]
+          },
+          {
+            "option_ids": [
+              "P10_O01",
+              "P10_O02"
+            ]
+          },
+          {
+            "any": [
+              {
+                "option_ids": [
+                  "P21_O01",
+                  "P21_O02"
+                ]
+              },
+              {
+                "option_ids": [
+                  "P13_O01",
+                  "P13_O02"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "parent_relations": [
+        "R_MORE_DESIRE"
+      ],
+      "meaning": "Wish for more desire coexists with independently reported present resources",
+      "partner_required": true,
+      "forbidden": "Cause, diagnosis, assumed deficiency or extra achieved agency; wishes and values remain distinct from present reports"
+    },
+    {
+      "rule_id": "S_BODY_REGISTERS_DISTINCT",
+      "stable_order": 5,
+      "type": "coexistencia",
+      "when": {
+        "all": [
+          {
+            "question_id": "P11",
+            "zone_ids_nonempty": true
+          },
+          {
+            "option_ids": [
+              "P10_O01",
+              "P10_O02"
+            ]
+          },
+          {
+            "any": [
+              {
+                "option_ids": [
+                  "P26_O04",
+                  "P26_O05"
+                ]
+              },
+              {
+                "option_ids": [
+                  "P27_O04",
+                  "P27_O05"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "parent_relations": [
+        "R_BODY_WISH",
+        "R_BODY_MIXED"
+      ],
+      "meaning": "Enjoyment and pleasant zones do not erase bodily recognition or comfort difficulties",
+      "partner_required": false,
+      "forbidden": "Cause, diagnosis, assumed deficiency or extra achieved agency; wishes and values remain distinct from present reports"
+    },
+    {
+      "rule_id": "S_WELL_WITH_MATICES",
+      "stable_order": 6,
+      "type": "coexistencia",
+      "when": {
+        "all": [
+          {
+            "option_ids": [
+              "P22_O01"
+            ]
+          },
+          {
+            "option_ids": [
+              "P22_O12"
+            ]
+          },
+          {
+            "option_ids": [
+              "P10_O04",
+              "P10_O05"
+            ]
+          },
+          {
+            "option_ids": [
+              "P08_O01",
+              "P08_O02",
+              "P08_O03",
+              "P08_O04",
+              "P08_O05"
+            ]
+          },
+          {
+            "option_ids": [
+              "P02_O06"
+            ]
+          },
+          {
+            "option_ids": [
+              "P14_O04",
+              "P14_O05"
+            ]
+          },
+          {
+            "option_ids": [
+              "P24_O16"
+            ]
+          }
+        ]
+      },
+      "parent_relations": [
+        "R_BOUNDED_PRESENT"
+      ],
+      "meaning": "Valued pleasure/play, low enjoyment and erotic distance coexist with the reported positive global self-assessment",
+      "partner_required": true,
+      "forbidden": "Cause, diagnosis, assumed deficiency or extra achieved agency; wishes and values remain distinct from present reports",
+      "activation_only_option_ids": [
+        "P24_O16"
+      ],
+      "activation_note": "The structural Other response selects the no-interpreted-wish realization. It is not an emitted semantic assertion and its free text remains literal."
+    },
+    {
+      "rule_id": "S_INTERNAL_SCOPES_DISTINCT",
+      "stable_order": 7,
+      "type": "coexistencia",
+      "when": {
+        "all": [
+          {
+            "option_ids": [
+              "P24_O13"
+            ]
+          },
+          {
+            "option_ids": [
+              "P29_O01",
+              "P29_O02"
+            ]
+          },
+          {
+            "any": [
+              {
+                "option_ids": [
+                  "P16_O01",
+                  "P16_O02"
+                ]
+              },
+              {
+                "option_ids": [
+                  "P21_O01",
+                  "P21_O02"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "parent_relations": [
+        "R_INTERNAL_FREEDOM"
+      ],
+      "meaning": "Reported resources for expressing limits or deciding do not establish ease of acknowledging interests privately",
+      "partner_required": false,
+      "forbidden": "No achieved global freedom, assumed shame, cause or lack of desire"
+    },
+    {
+      "rule_id": "S_AGENCY_LIMIT_SCOPES",
+      "stable_order": 8,
+      "type": "constraint",
+      "when": {
+        "all": [
+          {
+            "option_ids": [
+              "P21_O01",
+              "P21_O02"
+            ]
+          },
+          {
+            "any": [
+              {
+                "option_ids": [
+                  "P16_O05"
+                ]
+              },
+              {
+                "option_ids": [
+                  "P17_O03",
+                  "P17_O04"
+                ]
+              },
+              {
+                "option_ids": [
+                  "P18_O04"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "parent_relations": [
+        "R_CARE_DESIRED",
+        "R_CARE_PRESENT"
+      ],
+      "meaning": "General decision margin and a specific limit/safety/response report retain independent scopes",
+      "partner_required": true,
+      "forbidden": "Positive agency cancels care, or care removes all reported decision margin"
+    },
+    {
+      "rule_id": "S_EXPRESSION_RESPECT_SCOPES",
+      "stable_order": 9,
+      "type": "coexistencia",
+      "when": {
+        "all": [
+          {
+            "option_ids": [
+              "P16_O04"
+            ]
+          },
+          {
+            "option_ids": [
+              "P17_O01",
+              "P17_O02"
+            ]
+          }
+        ]
+      },
+      "parent_relations": [
+        "R_EXPRESSION_RESPECT"
+      ],
+      "meaning": "A partner response of respect and ease of expressing a limit remain different reports",
+      "partner_required": true,
+      "forbidden": "Respect proves ease, or difficulty proves lack of partner respect"
+    }
+  ],
+  "editorial_revision_0_4_9": {
+    "scope": "Shared rendering rules and existing synthetic corpus; name/summary only",
+    "status": "AUTHOR_REVIEWED_AND_REVISED_NOT_PARTICIPANT_VALIDATED",
+    "changes": [
+      "Source-bound synthesis of closeness, pleasure/reciprocity, desire/pleasure, body registers and agency/limits scopes",
+      "Conditional single-focus reflective invitation with no requested answer",
+      "Preserve disconnection and stated uncertainty alongside explicit wishes",
+      "Remove duplicate wellbeing, bodily wording and repeated local uncertainty",
+      "Preserve prior approved curiosity closing and distinguish no-change choice from agency"
+    ],
+    "limits": [
+      "Finite author review is not approval of every arbitrary combination",
+      "Some extended outputs remain dense; final editorial closure remains open",
+      "All outputs remain drafts and delivery_eligible stays false"
+    ],
+    "test_suites": {
+      "composer": 69,
+      "editorial_contract": 8,
+      "contract_closure": 6,
+      "applicability": 28,
+      "self_review": 16
+    }
+  },
+  "editorial_revision_0_4_10": {
+    "status": "AUTHOR_REVISED_FINITE_CORPUS_NOT_FREEZE",
+    "changes": [
+      "Priority for declared encounter pause and specific autonomy restrictions",
+      "Independent orgasm and feeling-desired scopes, retaining privacy and local meanings",
+      "Confirmed bodily impacts or possible impacts with identified details are represented; body details are preserved beside pleasure",
+      "Optional daily conditions are selected by shared budget, never a mandatory time footer",
+      "Whole-clause rebalancing without adding sentences, relations or assertions; protect limit/safety/partner and responsive-desire clauses",
+      "All input records retained; literal text never activates assertions"
+    ],
+    "catalogue_added_rules": [
+      {
+        "rule_id": "R_ENCOUNTER_PAUSE",
+        "stable_order": 24,
+        "type": "constraint",
+        "priority": 1,
+        "when": {
+          "option_ids": [
+            "P12_O04",
+            "P12_O05"
+          ]
+        },
+        "aspects": [
+          "encounter_response",
+          "present_willingness"
+        ],
+        "evidence_fact_keys": [
+          "encounter_response"
+        ],
+        "permitted": "Preserve avoidance or current pause alongside wishes; no readiness from exploration interest",
+        "forbidden": "Recommend initiating encounters or turn a general wish into current willingness"
+      },
+      {
+        "rule_id": "R_ENCOUNTER_RESPONSE",
+        "stable_order": 25,
+        "type": "coexistencia",
+        "priority": 2,
+        "when": {
+          "option_ids": [
+            "P12_O01",
+            "P12_O02",
+            "P12_O03"
+          ]
+        },
+        "aspects": [
+          "encounter_response",
+          "pleasure"
+        ],
+        "evidence_fact_keys": [
+          "encounter_response"
+        ],
+        "permitted": "Preserve declared aftermath of encounters without attributing its cause",
+        "forbidden": "Interpret concern/frustration as absence of desire"
+      },
+      {
+        "rule_id": "R_AUTONOMY_SOURCES",
+        "stable_order": 26,
+        "type": "constraint",
+        "priority": 1,
+        "when": {
+          "all": [
+            {
+              "option_ids": [
+                "P21_O04",
+                "P21_O05"
+              ]
+            },
+            {
+              "option_ids": [
+                "P33_O01",
+                "P33_O02",
+                "P33_O03",
+                "P33_O04"
+              ]
+            }
+          ]
+        },
+        "aspects": [
+          "agency",
+          "autonomy_sources"
+        ],
+        "evidence_fact_keys": [
+          "agency",
+          "autonomy_sources"
+        ],
+        "permitted": "Specific declared autonomy restrictions; preserve money, time, freedom and dependence separately",
+        "forbidden": "Infer coercion, partner control, or a sole cause from dependence"
+      },
+      {
+        "rule_id": "R_ORGASM_SCOPE",
+        "stable_order": 27,
+        "type": "coexistencia",
+        "priority": 2,
+        "when": {
+          "all": [
+            {
+              "option_ids": [
+                "P24_O04"
+              ]
+            },
+            {
+              "option_ids": [
+                "P25_O01",
+                "P25_O02",
+                "P25_O03",
+                "P25_O04",
+                "P25_O05",
+                "P25_O06",
+                "P25_O07",
+                "P25_O08",
+                "P25_O09",
+                "P25_O10"
+              ]
+            }
+          ]
+        },
+        "aspects": [
+          "desired_change",
+          "orgasm_experience"
+        ],
+        "evidence_fact_keys": [
+          "orgasm_experience"
+        ],
+        "permitted": "Interest in exploring orgasm alongside the declared present experience and personal importance",
+        "forbidden": "Conflate orgasm, pleasure, desirability, lifetime absence and current absence"
+      },
+      {
+        "rule_id": "R_FEELING_DESIRED",
+        "stable_order": 28,
+        "type": "coexistencia",
+        "priority": 2,
+        "when": {
+          "all": [
+            {
+              "option_ids": [
+                "P24_O07"
+              ]
+            },
+            {
+              "option_ids": [
+                "P30_O01",
+                "P30_O02",
+                "P30_O03",
+                "P30_O04",
+                "P30_O05",
+                "P30_O06",
+                "P30_O07"
+              ]
+            }
+          ]
+        },
+        "aspects": [
+          "desired_change",
+          "feeling_desired"
+        ],
+        "evidence_fact_keys": [
+          "feeling_desired"
+        ],
+        "permitted": "Wish to feel more desired alongside the declared perception of being desired",
+        "forbidden": "Feeling desired proves desire, pleasure or partner willingness"
+      },
+      {
+        "rule_id": "R_BODY_CONDITION_PRESENT",
+        "stable_order": 29,
+        "type": "constraint",
+        "priority": 1,
+        "when": {
+          "all": [
+            {
+              "option_ids": [
+                "P06_O01",
+                "P06_O02"
+              ]
+            },
+            {
+              "any": [
+                {
+                  "option_ids": [
+                    "P06_O01"
+                  ]
+                },
+                {
+                  "option_ids": [
+                    "P07_O01",
+                    "P07_O02",
+                    "P07_O03",
+                    "P07_O04",
+                    "P07_O05",
+                    "P07_O06",
+                    "P07_O07",
+                    "P07_O08",
+                    "P07_O09",
+                    "P07_O10",
+                    "P07_O11",
+                    "P07_O12",
+                    "P07_O13"
+                  ]
+                }
+              ]
+            }
+          ],
+          "unless_rule_active": "R_BODY_MIXED"
+        },
+        "aspects": [
+          "body_conditions",
+          "body_condition_details"
+        ],
+        "evidence_fact_keys": [
+          "body_condition",
+          "body_details"
+        ],
+        "allowed": "Preserve confirmed body/wellbeing impact, or possible impact with concrete selected details. Mere possible impact without identified details stays in the Object; no cause attribution.",
+        "forbidden": "Attribute lack of desire/pleasure to the condition, or interpret medication as its cause"
+      },
+      {
+        "rule_id": "R_DAILY_CONDITIONS",
+        "stable_order": 30,
+        "type": "coexistencia",
+        "priority": 4,
+        "when": {
+          "all": [
+            {
+              "option_ids": [
+                "P24_O12"
+              ]
+            },
+            {
+              "option_ids": [
+                "P19_O03",
+                "P19_O04",
+                "P19_O05"
+              ]
+            },
+            {
+              "option_ids": [
+                "P20_O01",
+                "P20_O02",
+                "P20_O03",
+                "P20_O04",
+                "P20_O05",
+                "P20_O06",
+                "P20_O07",
+                "P20_O08",
+                "P20_O09"
+              ]
+            }
+          ],
+          "unless_rule_active": "R_TIME"
+        },
+        "aspects": [
+          "daily_conditions",
+          "desired_change"
+        ],
+        "evidence_fact_keys": [
+          "daily_impact",
+          "daily_burdens"
+        ],
+        "allowed": "Concrete declared daily conditions with the wish for more time/space, when selected by the shared budget",
+        "forbidden": "Mandatory daily-life footer, count a context change twice, or infer lack of internal permission from material conditions"
+      }
+    ],
+    "executed_checks": {
+      "composer": 69,
+      "editorial_contract": 8,
+      "contract_closure": 6,
+      "applicability": 28,
+      "self_review": 16,
+      "deepening": 7
+    },
+    "one_option_sweep": {
+      "canonical_options": 252,
+      "valid_input_and_source_audit": "PASS",
+      "scope": "One valid synthetic context per option; not exhaustive crossings"
+    },
+    "coverage_dispositions": {
+      "CONTENT_MAPPING": 205,
+      "RETAINED_WITHOUT_CONTENT_MAPPING": 31,
+      "UNCERTAINTY_ONLY": 6,
+      "PRIVACY_ONLY": 10
+    },
+    "remaining_content_mapping_options": [
+      "P01_O07",
+      "P03_O01",
+      "P03_O02",
+      "P03_O03",
+      "P03_O04",
+      "P03_O05",
+      "P03_O06",
+      "P03_O07",
+      "P03_O08",
+      "P03_O09",
+      "P03_O10",
+      "P03_O11",
+      "P03_O12",
+      "P03_O13",
+      "P03_O14",
+      "P03_O15",
+      "P04_O01",
+      "P04_O02",
+      "P07_O14",
+      "P20_O10",
+      "P22_O14",
+      "P22_O15",
+      "P22_O16",
+      "P24_O16",
+      "P28_O01",
+      "P28_O02",
+      "P28_O04",
+      "P29_O03",
+      "P33_O05",
+      "P33_O06",
+      "P33_O07"
+    ],
+    "limits": [
+      "Option execution does not certify prose or all material crossings",
+      "Context/history and remaining exploration/state nuances still need an explicit prose-selection treatment",
+      "No deployed integration or participant recognition testing; delivery remains false"
+    ],
+    "historical_record": true
+  },
+  "option_treatment_policy": {
+    "version": "option-treatment-0.4.11",
+    "scope": "All selected P01-P33 canonical option IDs; omitted/not_shown remain record states, free text remains literal",
+    "context_history_only": {
+      "question_ids": [
+        "P03",
+        "P04"
+      ],
+      "use": "Retain structured context/history in the Object; no automatic causal claim, no replacing the present whole-map reading with a history-only paragraph",
+      "literal_and_privacy_override": true
+    },
+    "literal_elicitation_only": {
+      "option_to_field": {
+        "P01_O07": "P34",
+        "P03_O14": "P35",
+        "P07_O14": "P38",
+        "P20_O10": "P39",
+        "P22_O14": "P36",
+        "P24_O16": "P37",
+        "P33_O05": "P40"
+      },
+      "use": "Preserve exact text and branch activation; no automatic content claim, no inferred value, wish, resource or diagnosis"
+    },
+    "local_states": "P22 nothing/not considered, P33 none/not considered and P29 No do not become positive resources or generalized uncertainty",
+    "exploration": "P28 forms remain distinct from general interest. A rejection of the offered forms never erases P01/P24 interest.",
+    "coverage_claim": "Explicit treatment of every option is not exhaustive material-crossing or voice validation"
+  },
+  "editorial_revision_0_4_11": {
+    "status": "AUTHOR_REVISED_FINITE_CORPUS_NOT_FREEZE",
+    "changes": [
+      "Formal treatment of former 31 unmapped options: history/context, literal triggers and local exploration/value/autonomy states",
+      "Four source-bound rules for familiar exploration, exploration mismatch, no internal difficulty and unspecified autonomy sources",
+      "Local No/none/not considered never restore global freedom or become resources",
+      "Explicit mismatch synthesis without inventing a cause or a third exploration form",
+      "Remove repeated freedom wish in autonomy-constrained care paragraph; grammatical autonomy clauses",
+      "Preserve retry source once when encounter-response relation already contains it",
+      "Compound body-condition clauses fulfill their detail anchors without emitting the detail twice",
+      "Remove repeated freedom-wish footer from care summaries"
+    ],
+    "catalogue_added_rules": [
+      {
+        "rule_id": "R_EXPLORE_FAMILIAR",
+        "stable_order": 31,
+        "type": "coexistencia",
+        "priority": 2,
+        "when": {
+          "all": [
+            {
+              "option_ids": [
+                "P24_O11",
+                "P01_O05"
+              ]
+            },
+            {
+              "option_ids": [
+                "P28_O02"
+              ]
+            }
+          ]
+        },
+        "aspects": [
+          "exploration",
+          "exploration_form"
+        ],
+        "evidence_fact_keys": [
+          "curiosity",
+          "exploration_style"
+        ],
+        "allowed": "Declared exploration interest beside interest in doing more existing practices",
+        "forbidden": "Assume those practices are pleasurable, or discard the general exploration wish",
+        "surface_contract": "Relate exploration interest to doing more of existing activities; no achieved enjoyment or promise of novelty."
+      },
+      {
+        "rule_id": "R_EXPLORATION_MISMATCH",
+        "stable_order": 32,
+        "type": "tensión",
+        "priority": 1,
+        "when": {
+          "all": [
+            {
+              "option_ids": [
+                "P24_O11",
+                "P01_O05"
+              ]
+            },
+            {
+              "option_ids": [
+                "P28_O04"
+              ]
+            }
+          ]
+        },
+        "aspects": [
+          "exploration",
+          "exploration_form"
+        ],
+        "evidence_fact_keys": [
+          "curiosity",
+          "exploration_style"
+        ],
+        "allowed": "Preserve interest in exploration and rejection of both specific offered forms; neither answer is silently corrected",
+        "forbidden": "Infer no curiosity, a new unstated exploration form, readiness, or certainty",
+        "surface_contract": "Name the mismatch between declared exploration interest and rejection of the offered forms; do not invent another form or explain the cause."
+      },
+      {
+        "rule_id": "R_INTERNAL_NO_DIFFICULTY",
+        "stable_order": 33,
+        "type": "coexistencia",
+        "priority": 3,
+        "when": {
+          "all": [
+            {
+              "option_ids": [
+                "P24_O13"
+              ]
+            },
+            {
+              "option_ids": [
+                "P29_O03"
+              ]
+            }
+          ]
+        },
+        "aspects": [
+          "desired_change",
+          "internal_permission"
+        ],
+        "evidence_fact_keys": [
+          "internal_permission"
+        ],
+        "allowed": "No reported difficulty acknowledging interests alongside a freedom wish and independently scoped constraints",
+        "forbidden": "No internal difficulty proves achieved relational/material freedom or global agency"
+      },
+      {
+        "rule_id": "R_AUTONOMY_UNSPECIFIED",
+        "stable_order": 34,
+        "type": "coexistencia",
+        "priority": 1,
+        "when": {
+          "all": [
+            {
+              "option_ids": [
+                "P21_O04",
+                "P21_O05"
+              ]
+            },
+            {
+              "option_ids": [
+                "P33_O06",
+                "P33_O07"
+              ]
+            }
+          ]
+        },
+        "aspects": [
+          "agency",
+          "autonomy_detail_state"
+        ],
+        "evidence_fact_keys": [
+          "agency",
+          "autonomy_detail_state"
+        ],
+        "allowed": "Low reported decision margin with no listed restriction identified or not previously considered; preserve the distinct scope",
+        "forbidden": "Nothing selected means full agency, or not previously considered means no restriction"
+      }
+    ],
+    "coverage_dispositions": {
+      "CONTENT_MAPPING": 214,
+      "LITERAL_ELICITATION_ONLY": 7,
+      "CONTEXT_HISTORY_ONLY": 16,
+      "UNCERTAINTY_ONLY": 5,
+      "PRIVACY_ONLY": 10
+    },
+    "undefined_option_treatments": [],
+    "checks": {
+      "composer": 69,
+      "editorial_contract": 8,
+      "contract_closure": 6,
+      "applicability": 28,
+      "self_review": 16,
+      "deepening": 7,
+      "remaining_options": 12
+    },
+    "additional_executions": {
+      "canonical_single_option_inputs": 252,
+      "exploration_context_care_matrix": 30,
+      "selected_catalogue_rules": 34
+    },
+    "limits": [
+      "Explicit option treatment is not exhaustive relation coverage",
+      "Finite technical passing is not prose approval",
+      "No deployed integration or participant validation; all outputs remain drafts"
+    ]
+  },
+  "freeze_1_0": {
+    "date": "2026-10-02",
+    "scope": "Configuration name/summary composition contract, stable catalogue, scoped source rules, closed title eligibility, exception handling and eight editorial references.",
+    "closed_changes": [
+      "Enjoyment does not imply free choice of encounters",
+      "Enjoyment remains represented when wishes/limits dominate the narrative",
+      "Shorter scoped care wording without conflating decision margin, limit expression, safety and partner response",
+      "Title wording and factual eligibility have independent checks; desired freedom never means achieved freedom",
+      "A fourth sentence needs a known indispensable-distinction reason"
+    ],
+    "tests": {
+      "composer": 69,
+      "editorial_contract": 8,
+      "contract_closure": 6,
+      "applicability": 28,
+      "self_review": 16,
+      "deepening": 7,
+      "remaining_options": 12,
+      "freeze_crossings": 7
+    },
+    "canonical_option_inputs": 252,
+    "new_distinct_crossing_inputs": 80,
+    "earlier_exploration_context_care_inputs": 30,
+    "author_editorial_review": "CLOSED_FOR_REFERENCE_CORPUS_AND_TESTED_PATTERNS",
+    "user_authorization": "Request to carry out pending review and fix the version; no assertion of fresh Francis or participant approval.",
+    "production_delivery": false,
+    "instrument_A_B_changes": false,
+    "outcome_destinations_included": false,
+    "limits": [
+      "Frozen rules and reference prose are not unrestricted automatic-output approval",
+      "No deployed integration or participant validation",
+      "No claim that all response combinations are covered"
+    ]
+  },
+  "preuse_review_12": {
+    "version": "composition-controlled-12-contract-freeze",
+    "corrections": [
+      "P06_O02 remains a possible body impact in the Object; P06_O01 remains confirmed.",
+      "Unit-test reports and acceptance runner cannot certify failing or empty execution.",
+      "Eight fixed editorial name/summary/selected-relation references are checked exactly."
+    ],
+    "unchanged": "Eight reference paragraphs, Freeze A/B, target population, scoped precedence and draft-only delivery.",
+    "additional_structural_sample": 1200,
+    "sample_limit": "Finite structural/source checks; no exhaustive prose or participant validation."
+  },
+  "instrument_fingerprint_scope": "Canonical option IDs and display labels only; full wording, branches and Gate are governed separately by Freeze A/B.",
+  "version_number": 12,
+  "versioning_policy": "Consecutive whole numbers only. The public filename, package header and active contract use the same number."
+}

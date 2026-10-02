@@ -1,0 +1,2806 @@
+{
+  "version": "composition-controlled-12-contract-freeze",
+  "status": "BOUNDED_CONTRACT_ACCEPTANCE_PASS",
+  "scope": "Witness counts across finite executed collections; collections may overlap and counts are not users or exhaustive coverage.",
+  "source_files": [
+    "generated_outputs.json",
+    "novel_snapshots.json",
+    "applicability_outputs.json",
+    "option_coverage_results.json",
+    "remaining_options_results.json",
+    "freeze_crossing_results.json",
+    "preuse_sample_results.json"
+  ],
+  "source_sha256": {
+    "generated_outputs.json": "b6af6ac1dfe743bf4bdae34c3ec0cee6f0a9f7f631a37b69a2f05afa681583c6",
+    "novel_snapshots.json": "26ff6cd59db73fb671a72465c93f0ba6358e006785a7b2d5e9f0ff1f214910ce",
+    "applicability_outputs.json": "6e4026848c21d509d9ae26a5e60f99fccce6e145c55dde854fae5b9a7662dcd9",
+    "option_coverage_results.json": "844de29cd8292c51da3d5a91110e29dfdf62c47acb3044002757260cc8908802",
+    "remaining_options_results.json": "018534f22e190a6c0978f6d041470a8cdc0f1f8b002ed258de75c47964e36df7",
+    "freeze_crossing_results.json": "4ff85b1033f82da01ced9f0c50930519ef0b88706d8244f2b9abf6a5a1f8e0e5",
+    "preuse_sample_results.json": "8b995736f9e1dc18388b663e15a13e0f9739549d363bc26564b8194619573b9f"
+  },
+  "selected_relation_counts": {
+    "R_EXPLORATION_WELL": 159,
+    "R_RESPONSIVE": 289,
+    "R_TIME": 154,
+    "R_MORE_DESIRE": 52,
+    "R_CLOSENESS_SPLIT": 112,
+    "R_EXPRESSION_RESPECT": 74,
+    "R_RECIPROCITY_GAP": 97,
+    "R_BODY_MIXED": 193,
+    "R_BODY_WISH": 133,
+    "R_RECOVER_EXPLORE": 42,
+    "R_NO_CHANGE_GAP": 5,
+    "R_CHOICE_RESOURCE": 11,
+    "R_UNCERTAINTY_SCOPES": 2,
+    "R_RECENT_ABSENCE": 26,
+    "R_CURIOUS_UNCLEAR": 4,
+    "R_MATERIAL_PRIVACY": 57,
+    "R_INTERNAL_FREEDOM": 128,
+    "R_EXPANSION_RESOURCES": 18,
+    "R_CARE_DESIRED": 166,
+    "R_ENCOUNTER_PAUSE": 198,
+    "R_AUTONOMY_SOURCES": 283,
+    "R_LOCAL_BODY_GAP_UNCERTAINTY": 1,
+    "R_ENCOUNTER_RESPONSE": 180,
+    "R_BODY_CONDITION_PRESENT": 378,
+    "R_AUTONOMY_UNSPECIFIED": 107,
+    "R_EXPLORE_FAMILIAR": 20,
+    "R_ORGASM_SCOPE": 151,
+    "R_CARE_PRESENT": 192,
+    "R_EXPLORATION_MISMATCH": 36,
+    "R_DESIRE_VARIABLE_PLEASURE": 38,
+    "R_FEELING_DESIRED": 147,
+    "R_BOUNDED_PRESENT": 151,
+    "R_DAILY_CONDITIONS": 35,
+    "R_INTERNAL_NO_DIFFICULTY": 34
+  },
+  "unexercised_rules": [],
+  "reference_outputs": {
+    "R_EXPLORATION_WELL": {
+      "configuration_name": "Explorar desde el disfrute",
+      "summary": "Quieres experimentar cosas nuevas, desde una vida erótica con la que hoy te sientes bien; el placer y el juego tienen un lugar importante para ti. Las ganas rara vez aparecen antes de empezar, pero muchas veces aumentan durante una oportunidad que eliges darte; disfrutas mucho tus encuentros eróticos y siempre o casi siempre percibes que tu placer importa tanto como el de tu pareja. Sientes cercanía con tu pareja tanto en lo afectivo como en lo erótico y reconoces margen para decidir sobre tu vida erótica; la falta de tiempo es una dificultad concreta en tu vida erótica cotidiana.",
+      "claim_trace": [
+        {
+          "claim": "experimentar cosas nuevas",
+          "evidence_ids": [
+            "P24_O11"
+          ]
+        },
+        {
+          "claim": "well",
+          "evidence_ids": [
+            "P01_O01"
+          ]
+        },
+        {
+          "claim": "pleasure_play_values",
+          "evidence_ids": [
+            "P22_O01",
+            "P22_O12"
+          ]
+        },
+        {
+          "claim": "desire_before",
+          "evidence_ids": [
+            "P08_O04"
+          ]
+        },
+        {
+          "claim": "desire_during",
+          "evidence_ids": [
+            "P09_O02"
+          ]
+        },
+        {
+          "claim": "pleasure",
+          "evidence_ids": [
+            "P10_O01"
+          ]
+        },
+        {
+          "claim": "reciprocity",
+          "evidence_ids": [
+            "P15_O01"
+          ]
+        },
+        {
+          "claim": "affective",
+          "evidence_ids": [
+            "P13_O02"
+          ]
+        },
+        {
+          "claim": "erotic",
+          "evidence_ids": [
+            "P14_O02"
+          ]
+        },
+        {
+          "claim": "agency",
+          "evidence_ids": [
+            "P21_O02"
+          ]
+        },
+        {
+          "claim": "time",
+          "evidence_ids": [
+            "P20_O07"
+          ]
+        }
+      ],
+      "selected_relations": [
+        "R_EXPLORATION_WELL",
+        "R_RESPONSIVE",
+        "R_TIME"
+      ]
+    },
+    "R_RESPONSIVE": {
+      "configuration_name": "Explorar desde el disfrute",
+      "summary": "Quieres experimentar cosas nuevas, desde una vida erótica con la que hoy te sientes bien; el placer y el juego tienen un lugar importante para ti. Las ganas rara vez aparecen antes de empezar, pero muchas veces aumentan durante una oportunidad que eliges darte; disfrutas mucho tus encuentros eróticos y siempre o casi siempre percibes que tu placer importa tanto como el de tu pareja. Sientes cercanía con tu pareja tanto en lo afectivo como en lo erótico y reconoces margen para decidir sobre tu vida erótica; la falta de tiempo es una dificultad concreta en tu vida erótica cotidiana.",
+      "claim_trace": [
+        {
+          "claim": "experimentar cosas nuevas",
+          "evidence_ids": [
+            "P24_O11"
+          ]
+        },
+        {
+          "claim": "well",
+          "evidence_ids": [
+            "P01_O01"
+          ]
+        },
+        {
+          "claim": "pleasure_play_values",
+          "evidence_ids": [
+            "P22_O01",
+            "P22_O12"
+          ]
+        },
+        {
+          "claim": "desire_before",
+          "evidence_ids": [
+            "P08_O04"
+          ]
+        },
+        {
+          "claim": "desire_during",
+          "evidence_ids": [
+            "P09_O02"
+          ]
+        },
+        {
+          "claim": "pleasure",
+          "evidence_ids": [
+            "P10_O01"
+          ]
+        },
+        {
+          "claim": "reciprocity",
+          "evidence_ids": [
+            "P15_O01"
+          ]
+        },
+        {
+          "claim": "affective",
+          "evidence_ids": [
+            "P13_O02"
+          ]
+        },
+        {
+          "claim": "erotic",
+          "evidence_ids": [
+            "P14_O02"
+          ]
+        },
+        {
+          "claim": "agency",
+          "evidence_ids": [
+            "P21_O02"
+          ]
+        },
+        {
+          "claim": "time",
+          "evidence_ids": [
+            "P20_O07"
+          ]
+        }
+      ],
+      "selected_relations": [
+        "R_EXPLORATION_WELL",
+        "R_RESPONSIVE",
+        "R_TIME"
+      ]
+    },
+    "R_TIME": {
+      "configuration_name": "Explorar desde el disfrute",
+      "summary": "Quieres experimentar cosas nuevas, desde una vida erótica con la que hoy te sientes bien; el placer y el juego tienen un lugar importante para ti. Las ganas rara vez aparecen antes de empezar, pero muchas veces aumentan durante una oportunidad que eliges darte; disfrutas mucho tus encuentros eróticos y siempre o casi siempre percibes que tu placer importa tanto como el de tu pareja. Sientes cercanía con tu pareja tanto en lo afectivo como en lo erótico y reconoces margen para decidir sobre tu vida erótica; la falta de tiempo es una dificultad concreta en tu vida erótica cotidiana.",
+      "claim_trace": [
+        {
+          "claim": "experimentar cosas nuevas",
+          "evidence_ids": [
+            "P24_O11"
+          ]
+        },
+        {
+          "claim": "well",
+          "evidence_ids": [
+            "P01_O01"
+          ]
+        },
+        {
+          "claim": "pleasure_play_values",
+          "evidence_ids": [
+            "P22_O01",
+            "P22_O12"
+          ]
+        },
+        {
+          "claim": "desire_before",
+          "evidence_ids": [
+            "P08_O04"
+          ]
+        },
+        {
+          "claim": "desire_during",
+          "evidence_ids": [
+            "P09_O02"
+          ]
+        },
+        {
+          "claim": "pleasure",
+          "evidence_ids": [
+            "P10_O01"
+          ]
+        },
+        {
+          "claim": "reciprocity",
+          "evidence_ids": [
+            "P15_O01"
+          ]
+        },
+        {
+          "claim": "affective",
+          "evidence_ids": [
+            "P13_O02"
+          ]
+        },
+        {
+          "claim": "erotic",
+          "evidence_ids": [
+            "P14_O02"
+          ]
+        },
+        {
+          "claim": "agency",
+          "evidence_ids": [
+            "P21_O02"
+          ]
+        },
+        {
+          "claim": "time",
+          "evidence_ids": [
+            "P20_O07"
+          ]
+        }
+      ],
+      "selected_relations": [
+        "R_EXPLORATION_WELL",
+        "R_RESPONSIVE",
+        "R_TIME"
+      ]
+    },
+    "R_MORE_DESIRE": {
+      "configuration_name": "Un lugar para el deseo",
+      "summary": "Quieres sentir más ganas y tener más tiempo o espacio para tu vida erótica, en un momento en que te sientes bien con tu vida erótica y disfrutas mucho tus encuentros eróticos. Ese deseo encuentra recursos presentes: reconoces margen para decidir sobre tu vida erótica y sientes cercanía con tu pareja tanto en lo afectivo como en lo erótico; siempre o casi siempre percibes que tu placer importa tanto como el de tu pareja. Las ganas rara vez aparecen antes de empezar, pero muchas veces aumentan durante una oportunidad que eliges darte; la falta de tiempo es una dificultad concreta en tu vida erótica cotidiana.",
+      "claim_trace": [
+        {
+          "claim": "sentir más ganas",
+          "evidence_ids": [
+            "P24_O01"
+          ]
+        },
+        {
+          "claim": "tener más tiempo o espacio para tu vida erótica",
+          "evidence_ids": [
+            "P24_O12"
+          ]
+        },
+        {
+          "claim": "well",
+          "evidence_ids": [
+            "P01_O01"
+          ]
+        },
+        {
+          "claim": "pleasure",
+          "evidence_ids": [
+            "P10_O01"
+          ]
+        },
+        {
+          "claim": "agency",
+          "evidence_ids": [
+            "P21_O02"
+          ]
+        },
+        {
+          "claim": "affective",
+          "evidence_ids": [
+            "P13_O02"
+          ]
+        },
+        {
+          "claim": "erotic",
+          "evidence_ids": [
+            "P14_O02"
+          ]
+        },
+        {
+          "claim": "reciprocity",
+          "evidence_ids": [
+            "P15_O01"
+          ]
+        },
+        {
+          "claim": "desire_before",
+          "evidence_ids": [
+            "P08_O04"
+          ]
+        },
+        {
+          "claim": "desire_during",
+          "evidence_ids": [
+            "P09_O02"
+          ]
+        },
+        {
+          "claim": "time",
+          "evidence_ids": [
+            "P20_O07"
+          ]
+        }
+      ],
+      "selected_relations": [
+        "R_MORE_DESIRE",
+        "R_RESPONSIVE",
+        "R_TIME"
+      ]
+    },
+    "R_CLOSENESS_SPLIT": {
+      "configuration_name": "Tu placer y tu voz",
+      "summary": "Quieres encontrar una forma de cercanía que te haga sentido, que tu placer importe tanto como el de tu pareja y expresar mejor lo que quieres y lo que no quieres. La cercanía afectiva con tu pareja coexiste con una distancia erótica; el disfrute y la reciprocidad tienen matices distintos: el disfrute varía en tus encuentros eróticos y pocas veces percibes que tu placer importa tanto como el de tu pareja. Reconoces margen para decidir sobre tu vida erótica y tienes ganas de volver a intentarlo, aunque te cuesta expresar lo que no quieres o cuándo quieres parar incluso cuando tu pareja generalmente lo respeta.",
+      "claim_trace": [
+        {
+          "claim": "encontrar una forma de cercanía que te haga sentido",
+          "evidence_ids": [
+            "P24_O08"
+          ]
+        },
+        {
+          "claim": "que tu placer importe tanto como el de tu pareja",
+          "evidence_ids": [
+            "P24_O09"
+          ]
+        },
+        {
+          "claim": "expresar mejor lo que quieres y lo que no quieres",
+          "evidence_ids": [
+            "P24_O10"
+          ]
+        },
+        {
+          "claim": "affective",
+          "evidence_ids": [
+            "P13_O02"
+          ]
+        },
+        {
+          "claim": "erotic",
+          "evidence_ids": [
+            "P14_O04"
+          ]
+        },
+        {
+          "claim": "pleasure",
+          "evidence_ids": [
+            "P10_O06"
+          ]
+        },
+        {
+          "claim": "reciprocity",
+          "evidence_ids": [
+            "P15_O04"
+          ]
+        },
+        {
+          "claim": "agency",
+          "evidence_ids": [
+            "P21_O02"
+          ]
+        },
+        {
+          "claim": "retry",
+          "evidence_ids": [
+            "P12_O06"
+          ]
+        },
+        {
+          "claim": "limits",
+          "evidence_ids": [
+            "P16_O04"
+          ]
+        },
+        {
+          "claim": "partner_response",
+          "evidence_ids": [
+            "P17_O02"
+          ]
+        }
+      ],
+      "selected_relations": [
+        "R_CLOSENESS_SPLIT",
+        "R_EXPRESSION_RESPECT",
+        "R_RECIPROCITY_GAP"
+      ]
+    },
+    "R_EXPRESSION_RESPECT": {
+      "configuration_name": "Tu placer y tu voz",
+      "summary": "Quieres encontrar una forma de cercanía que te haga sentido, que tu placer importe tanto como el de tu pareja y expresar mejor lo que quieres y lo que no quieres. La cercanía afectiva con tu pareja coexiste con una distancia erótica; el disfrute y la reciprocidad tienen matices distintos: el disfrute varía en tus encuentros eróticos y pocas veces percibes que tu placer importa tanto como el de tu pareja. Reconoces margen para decidir sobre tu vida erótica y tienes ganas de volver a intentarlo, aunque te cuesta expresar lo que no quieres o cuándo quieres parar incluso cuando tu pareja generalmente lo respeta.",
+      "claim_trace": [
+        {
+          "claim": "encontrar una forma de cercanía que te haga sentido",
+          "evidence_ids": [
+            "P24_O08"
+          ]
+        },
+        {
+          "claim": "que tu placer importe tanto como el de tu pareja",
+          "evidence_ids": [
+            "P24_O09"
+          ]
+        },
+        {
+          "claim": "expresar mejor lo que quieres y lo que no quieres",
+          "evidence_ids": [
+            "P24_O10"
+          ]
+        },
+        {
+          "claim": "affective",
+          "evidence_ids": [
+            "P13_O02"
+          ]
+        },
+        {
+          "claim": "erotic",
+          "evidence_ids": [
+            "P14_O04"
+          ]
+        },
+        {
+          "claim": "pleasure",
+          "evidence_ids": [
+            "P10_O06"
+          ]
+        },
+        {
+          "claim": "reciprocity",
+          "evidence_ids": [
+            "P15_O04"
+          ]
+        },
+        {
+          "claim": "agency",
+          "evidence_ids": [
+            "P21_O02"
+          ]
+        },
+        {
+          "claim": "retry",
+          "evidence_ids": [
+            "P12_O06"
+          ]
+        },
+        {
+          "claim": "limits",
+          "evidence_ids": [
+            "P16_O04"
+          ]
+        },
+        {
+          "claim": "partner_response",
+          "evidence_ids": [
+            "P17_O02"
+          ]
+        }
+      ],
+      "selected_relations": [
+        "R_CLOSENESS_SPLIT",
+        "R_EXPRESSION_RESPECT",
+        "R_RECIPROCITY_GAP"
+      ]
+    },
+    "R_RECIPROCITY_GAP": {
+      "configuration_name": "Tu placer y tu voz",
+      "summary": "Quieres encontrar una forma de cercanía que te haga sentido, que tu placer importe tanto como el de tu pareja y expresar mejor lo que quieres y lo que no quieres. La cercanía afectiva con tu pareja coexiste con una distancia erótica; el disfrute y la reciprocidad tienen matices distintos: el disfrute varía en tus encuentros eróticos y pocas veces percibes que tu placer importa tanto como el de tu pareja. Reconoces margen para decidir sobre tu vida erótica y tienes ganas de volver a intentarlo, aunque te cuesta expresar lo que no quieres o cuándo quieres parar incluso cuando tu pareja generalmente lo respeta.",
+      "claim_trace": [
+        {
+          "claim": "encontrar una forma de cercanía que te haga sentido",
+          "evidence_ids": [
+            "P24_O08"
+          ]
+        },
+        {
+          "claim": "que tu placer importe tanto como el de tu pareja",
+          "evidence_ids": [
+            "P24_O09"
+          ]
+        },
+        {
+          "claim": "expresar mejor lo que quieres y lo que no quieres",
+          "evidence_ids": [
+            "P24_O10"
+          ]
+        },
+        {
+          "claim": "affective",
+          "evidence_ids": [
+            "P13_O02"
+          ]
+        },
+        {
+          "claim": "erotic",
+          "evidence_ids": [
+            "P14_O04"
+          ]
+        },
+        {
+          "claim": "pleasure",
+          "evidence_ids": [
+            "P10_O06"
+          ]
+        },
+        {
+          "claim": "reciprocity",
+          "evidence_ids": [
+            "P15_O04"
+          ]
+        },
+        {
+          "claim": "agency",
+          "evidence_ids": [
+            "P21_O02"
+          ]
+        },
+        {
+          "claim": "retry",
+          "evidence_ids": [
+            "P12_O06"
+          ]
+        },
+        {
+          "claim": "limits",
+          "evidence_ids": [
+            "P16_O04"
+          ]
+        },
+        {
+          "claim": "partner_response",
+          "evidence_ids": [
+            "P17_O02"
+          ]
+        }
+      ],
+      "selected_relations": [
+        "R_CLOSENESS_SPLIT",
+        "R_EXPRESSION_RESPECT",
+        "R_RECIPROCITY_GAP"
+      ]
+    },
+    "R_BODY_MIXED": {
+      "configuration_name": "Placer entre cambios",
+      "summary": "Quieres reconocer mejor lo que pasa en tu cuerpo, sentirte más cómoda con tu cuerpo y experimentar cosas nuevas; también te interesa profundizar en algo que ya existe. Hay cambios o molestias en tu cuerpo o bienestar que afectan tu vida erótica (dolor, lubricación y energía), pero también reconoces sensaciones agradables en algunas zonas de tu cuerpo y disfrutas bastante tus encuentros eróticos. Extrañas algo de tu vida erótica de antes, mientras sientes bastante cercanía afectiva con tu pareja y reconoces margen para decidir sobre tu vida erótica. El disfrute y la relación con tu cuerpo muestran registros distintos: te cuesta reconocer lo que pasa en tu cuerpo y te sientes poco cómoda con tu cuerpo.",
+      "claim_trace": [
+        {
+          "claim": "reconocer mejor lo que pasa en tu cuerpo",
+          "evidence_ids": [
+            "P24_O05"
+          ]
+        },
+        {
+          "claim": "sentirte más cómoda con tu cuerpo",
+          "evidence_ids": [
+            "P24_O06"
+          ]
+        },
+        {
+          "claim": "experimentar cosas nuevas",
+          "evidence_ids": [
+            "P24_O11"
+          ]
+        },
+        {
+          "claim": "exploration_style",
+          "evidence_ids": [
+            "P28_O03"
+          ]
+        },
+        {
+          "claim": "body_details",
+          "evidence_ids": [
+            "P07_O01",
+            "P07_O02",
+            "P07_O07"
+          ]
+        },
+        {
+          "claim": "body_condition",
+          "evidence_ids": [
+            "P06_O01"
+          ]
+        },
+        {
+          "claim": "body_sensations",
+          "evidence_ids": [
+            "Z02",
+            "Z04"
+          ]
+        },
+        {
+          "claim": "pleasure",
+          "evidence_ids": [
+            "P10_O02"
+          ]
+        },
+        {
+          "claim": "affective",
+          "evidence_ids": [
+            "P13_O02"
+          ]
+        },
+        {
+          "claim": "agency",
+          "evidence_ids": [
+            "P21_O02"
+          ]
+        },
+        {
+          "claim": "body_registration",
+          "evidence_ids": [
+            "P26_O04"
+          ]
+        },
+        {
+          "claim": "body_comfort",
+          "evidence_ids": [
+            "P27_O04"
+          ]
+        },
+        {
+          "claim": "miss",
+          "evidence_ids": [
+            "P01_O02"
+          ]
+        }
+      ],
+      "selected_relations": [
+        "R_BODY_MIXED",
+        "R_BODY_WISH",
+        "R_RECOVER_EXPLORE"
+      ]
+    },
+    "R_BODY_WISH": {
+      "configuration_name": "Placer entre cambios",
+      "summary": "Quieres reconocer mejor lo que pasa en tu cuerpo, sentirte más cómoda con tu cuerpo y experimentar cosas nuevas; también te interesa profundizar en algo que ya existe. Hay cambios o molestias en tu cuerpo o bienestar que afectan tu vida erótica (dolor, lubricación y energía), pero también reconoces sensaciones agradables en algunas zonas de tu cuerpo y disfrutas bastante tus encuentros eróticos. Extrañas algo de tu vida erótica de antes, mientras sientes bastante cercanía afectiva con tu pareja y reconoces margen para decidir sobre tu vida erótica. El disfrute y la relación con tu cuerpo muestran registros distintos: te cuesta reconocer lo que pasa en tu cuerpo y te sientes poco cómoda con tu cuerpo.",
+      "claim_trace": [
+        {
+          "claim": "reconocer mejor lo que pasa en tu cuerpo",
+          "evidence_ids": [
+            "P24_O05"
+          ]
+        },
+        {
+          "claim": "sentirte más cómoda con tu cuerpo",
+          "evidence_ids": [
+            "P24_O06"
+          ]
+        },
+        {
+          "claim": "experimentar cosas nuevas",
+          "evidence_ids": [
+            "P24_O11"
+          ]
+        },
+        {
+          "claim": "exploration_style",
+          "evidence_ids": [
+            "P28_O03"
+          ]
+        },
+        {
+          "claim": "body_details",
+          "evidence_ids": [
+            "P07_O01",
+            "P07_O02",
+            "P07_O07"
+          ]
+        },
+        {
+          "claim": "body_condition",
+          "evidence_ids": [
+            "P06_O01"
+          ]
+        },
+        {
+          "claim": "body_sensations",
+          "evidence_ids": [
+            "Z02",
+            "Z04"
+          ]
+        },
+        {
+          "claim": "pleasure",
+          "evidence_ids": [
+            "P10_O02"
+          ]
+        },
+        {
+          "claim": "affective",
+          "evidence_ids": [
+            "P13_O02"
+          ]
+        },
+        {
+          "claim": "agency",
+          "evidence_ids": [
+            "P21_O02"
+          ]
+        },
+        {
+          "claim": "body_registration",
+          "evidence_ids": [
+            "P26_O04"
+          ]
+        },
+        {
+          "claim": "body_comfort",
+          "evidence_ids": [
+            "P27_O04"
+          ]
+        },
+        {
+          "claim": "miss",
+          "evidence_ids": [
+            "P01_O02"
+          ]
+        }
+      ],
+      "selected_relations": [
+        "R_BODY_MIXED",
+        "R_BODY_WISH",
+        "R_RECOVER_EXPLORE"
+      ]
+    },
+    "R_RECOVER_EXPLORE": {
+      "configuration_name": "Placer entre cambios",
+      "summary": "Quieres reconocer mejor lo que pasa en tu cuerpo, sentirte más cómoda con tu cuerpo y experimentar cosas nuevas; también te interesa profundizar en algo que ya existe. Hay cambios o molestias en tu cuerpo o bienestar que afectan tu vida erótica (dolor, lubricación y energía), pero también reconoces sensaciones agradables en algunas zonas de tu cuerpo y disfrutas bastante tus encuentros eróticos. Extrañas algo de tu vida erótica de antes, mientras sientes bastante cercanía afectiva con tu pareja y reconoces margen para decidir sobre tu vida erótica. El disfrute y la relación con tu cuerpo muestran registros distintos: te cuesta reconocer lo que pasa en tu cuerpo y te sientes poco cómoda con tu cuerpo.",
+      "claim_trace": [
+        {
+          "claim": "reconocer mejor lo que pasa en tu cuerpo",
+          "evidence_ids": [
+            "P24_O05"
+          ]
+        },
+        {
+          "claim": "sentirte más cómoda con tu cuerpo",
+          "evidence_ids": [
+            "P24_O06"
+          ]
+        },
+        {
+          "claim": "experimentar cosas nuevas",
+          "evidence_ids": [
+            "P24_O11"
+          ]
+        },
+        {
+          "claim": "exploration_style",
+          "evidence_ids": [
+            "P28_O03"
+          ]
+        },
+        {
+          "claim": "body_details",
+          "evidence_ids": [
+            "P07_O01",
+            "P07_O02",
+            "P07_O07"
+          ]
+        },
+        {
+          "claim": "body_condition",
+          "evidence_ids": [
+            "P06_O01"
+          ]
+        },
+        {
+          "claim": "body_sensations",
+          "evidence_ids": [
+            "Z02",
+            "Z04"
+          ]
+        },
+        {
+          "claim": "pleasure",
+          "evidence_ids": [
+            "P10_O02"
+          ]
+        },
+        {
+          "claim": "affective",
+          "evidence_ids": [
+            "P13_O02"
+          ]
+        },
+        {
+          "claim": "agency",
+          "evidence_ids": [
+            "P21_O02"
+          ]
+        },
+        {
+          "claim": "body_registration",
+          "evidence_ids": [
+            "P26_O04"
+          ]
+        },
+        {
+          "claim": "body_comfort",
+          "evidence_ids": [
+            "P27_O04"
+          ]
+        },
+        {
+          "claim": "miss",
+          "evidence_ids": [
+            "P01_O02"
+          ]
+        }
+      ],
+      "selected_relations": [
+        "R_BODY_MIXED",
+        "R_BODY_WISH",
+        "R_RECOVER_EXPLORE"
+      ]
+    },
+    "R_NO_CHANGE_GAP": {
+      "configuration_name": "Distancia con disfrute presente",
+      "summary": "Vivir tu erotismo a tu manera es importante para ti, y hoy no quieres mover nada. La cercanía afectiva con tu pareja coexiste con una distancia erótica; disfrutas bastante tus encuentros eróticos y la mayor parte del tiempo percibes que tu placer importa tanto como el de tu pareja. Reconoces mucho margen para decidir sobre tu vida erótica. Tu elección de no mover nada ahora está presente junto a lo que disfrutas y a la distancia importante que también reconoces respecto de cómo te gustaría vivirla.",
+      "claim_trace": [
+        {
+          "claim": "vivir tu erotismo a tu manera",
+          "evidence_ids": [
+            "P22_O09"
+          ]
+        },
+        {
+          "claim": "no_change",
+          "evidence_ids": [
+            "P24_O15"
+          ]
+        },
+        {
+          "claim": "affective",
+          "evidence_ids": [
+            "P13_O02"
+          ]
+        },
+        {
+          "claim": "erotic",
+          "evidence_ids": [
+            "P14_O04"
+          ]
+        },
+        {
+          "claim": "pleasure",
+          "evidence_ids": [
+            "P10_O02"
+          ]
+        },
+        {
+          "claim": "reciprocity",
+          "evidence_ids": [
+            "P15_O02"
+          ]
+        },
+        {
+          "claim": "agency",
+          "evidence_ids": [
+            "P21_O01"
+          ]
+        },
+        {
+          "claim": "gap",
+          "evidence_ids": [
+            "P02_O04"
+          ]
+        }
+      ],
+      "selected_relations": [
+        "R_NO_CHANGE_GAP",
+        "R_CLOSENESS_SPLIT",
+        "R_CHOICE_RESOURCE"
+      ]
+    },
+    "R_CHOICE_RESOURCE": {
+      "configuration_name": "Distancia con disfrute presente",
+      "summary": "Vivir tu erotismo a tu manera es importante para ti, y hoy no quieres mover nada. La cercanía afectiva con tu pareja coexiste con una distancia erótica; disfrutas bastante tus encuentros eróticos y la mayor parte del tiempo percibes que tu placer importa tanto como el de tu pareja. Reconoces mucho margen para decidir sobre tu vida erótica. Tu elección de no mover nada ahora está presente junto a lo que disfrutas y a la distancia importante que también reconoces respecto de cómo te gustaría vivirla.",
+      "claim_trace": [
+        {
+          "claim": "vivir tu erotismo a tu manera",
+          "evidence_ids": [
+            "P22_O09"
+          ]
+        },
+        {
+          "claim": "no_change",
+          "evidence_ids": [
+            "P24_O15"
+          ]
+        },
+        {
+          "claim": "affective",
+          "evidence_ids": [
+            "P13_O02"
+          ]
+        },
+        {
+          "claim": "erotic",
+          "evidence_ids": [
+            "P14_O04"
+          ]
+        },
+        {
+          "claim": "pleasure",
+          "evidence_ids": [
+            "P10_O02"
+          ]
+        },
+        {
+          "claim": "reciprocity",
+          "evidence_ids": [
+            "P15_O02"
+          ]
+        },
+        {
+          "claim": "agency",
+          "evidence_ids": [
+            "P21_O01"
+          ]
+        },
+        {
+          "claim": "gap",
+          "evidence_ids": [
+            "P02_O04"
+          ]
+        }
+      ],
+      "selected_relations": [
+        "R_NO_CHANGE_GAP",
+        "R_CLOSENESS_SPLIT",
+        "R_CHOICE_RESOURCE"
+      ]
+    },
+    "R_UNCERTAINTY_SCOPES": {
+      "configuration_name": "Curiosidad en la incertidumbre",
+      "summary": "Te importa descubrir lo que te gusta y explorar nuevas posibilidades; aún no tienes claro qué quisieras mover ni cuán cerca está tu vida erótica de cómo te gustaría vivirla. Hoy te sientes desconectada y no has tenido encuentros eróticos recientemente; con tu pareja, la cercanía afectiva varía y la erótica no está clara. Aún no sabes qué sensaciones agradables identificas en tu cuerpo ni cuánto puedes decidir sobre tu vida erótica. Tu curiosidad invita a preguntarte qué significa sentirte conectada con tu vida erótica.",
+      "claim_trace": [
+        {
+          "claim": "descubrir lo que te gusta",
+          "evidence_ids": [
+            "P22_O06"
+          ]
+        },
+        {
+          "claim": "explorar nuevas posibilidades",
+          "evidence_ids": [
+            "P22_O08"
+          ]
+        },
+        {
+          "claim": "disconnected",
+          "evidence_ids": [
+            "P01_O06"
+          ]
+        },
+        {
+          "claim": "pleasure",
+          "evidence_ids": [
+            "P10_O08"
+          ]
+        },
+        {
+          "claim": "change_unknown",
+          "evidence_ids": [
+            "P24_O17"
+          ]
+        },
+        {
+          "claim": "gap",
+          "evidence_ids": [
+            "P02_O07"
+          ]
+        },
+        {
+          "claim": "body_sensations_uncertain",
+          "evidence_ids": [
+            "P11_O02"
+          ]
+        },
+        {
+          "claim": "agency",
+          "evidence_ids": [
+            "P21_O06"
+          ]
+        },
+        {
+          "claim": "affective",
+          "evidence_ids": [
+            "P13_O06"
+          ]
+        },
+        {
+          "claim": "erotic",
+          "evidence_ids": [
+            "P14_O07"
+          ]
+        },
+        {
+          "claim": "curiosity",
+          "evidence_ids": [
+            "P01_O05",
+            "P22_O06",
+            "P22_O08"
+          ]
+        }
+      ],
+      "selected_relations": [
+        "R_UNCERTAINTY_SCOPES",
+        "R_RECENT_ABSENCE",
+        "R_CURIOUS_UNCLEAR"
+      ]
+    },
+    "R_RECENT_ABSENCE": {
+      "configuration_name": "Curiosidad en la incertidumbre",
+      "summary": "Te importa descubrir lo que te gusta y explorar nuevas posibilidades; aún no tienes claro qué quisieras mover ni cuán cerca está tu vida erótica de cómo te gustaría vivirla. Hoy te sientes desconectada y no has tenido encuentros eróticos recientemente; con tu pareja, la cercanía afectiva varía y la erótica no está clara. Aún no sabes qué sensaciones agradables identificas en tu cuerpo ni cuánto puedes decidir sobre tu vida erótica. Tu curiosidad invita a preguntarte qué significa sentirte conectada con tu vida erótica.",
+      "claim_trace": [
+        {
+          "claim": "descubrir lo que te gusta",
+          "evidence_ids": [
+            "P22_O06"
+          ]
+        },
+        {
+          "claim": "explorar nuevas posibilidades",
+          "evidence_ids": [
+            "P22_O08"
+          ]
+        },
+        {
+          "claim": "disconnected",
+          "evidence_ids": [
+            "P01_O06"
+          ]
+        },
+        {
+          "claim": "pleasure",
+          "evidence_ids": [
+            "P10_O08"
+          ]
+        },
+        {
+          "claim": "change_unknown",
+          "evidence_ids": [
+            "P24_O17"
+          ]
+        },
+        {
+          "claim": "gap",
+          "evidence_ids": [
+            "P02_O07"
+          ]
+        },
+        {
+          "claim": "body_sensations_uncertain",
+          "evidence_ids": [
+            "P11_O02"
+          ]
+        },
+        {
+          "claim": "agency",
+          "evidence_ids": [
+            "P21_O06"
+          ]
+        },
+        {
+          "claim": "affective",
+          "evidence_ids": [
+            "P13_O06"
+          ]
+        },
+        {
+          "claim": "erotic",
+          "evidence_ids": [
+            "P14_O07"
+          ]
+        },
+        {
+          "claim": "curiosity",
+          "evidence_ids": [
+            "P01_O05",
+            "P22_O06",
+            "P22_O08"
+          ]
+        }
+      ],
+      "selected_relations": [
+        "R_UNCERTAINTY_SCOPES",
+        "R_RECENT_ABSENCE",
+        "R_CURIOUS_UNCLEAR"
+      ]
+    },
+    "R_CURIOUS_UNCLEAR": {
+      "configuration_name": "Curiosidad en la incertidumbre",
+      "summary": "Te importa descubrir lo que te gusta y explorar nuevas posibilidades; aún no tienes claro qué quisieras mover ni cuán cerca está tu vida erótica de cómo te gustaría vivirla. Hoy te sientes desconectada y no has tenido encuentros eróticos recientemente; con tu pareja, la cercanía afectiva varía y la erótica no está clara. Aún no sabes qué sensaciones agradables identificas en tu cuerpo ni cuánto puedes decidir sobre tu vida erótica. Tu curiosidad invita a preguntarte qué significa sentirte conectada con tu vida erótica.",
+      "claim_trace": [
+        {
+          "claim": "descubrir lo que te gusta",
+          "evidence_ids": [
+            "P22_O06"
+          ]
+        },
+        {
+          "claim": "explorar nuevas posibilidades",
+          "evidence_ids": [
+            "P22_O08"
+          ]
+        },
+        {
+          "claim": "disconnected",
+          "evidence_ids": [
+            "P01_O06"
+          ]
+        },
+        {
+          "claim": "pleasure",
+          "evidence_ids": [
+            "P10_O08"
+          ]
+        },
+        {
+          "claim": "change_unknown",
+          "evidence_ids": [
+            "P24_O17"
+          ]
+        },
+        {
+          "claim": "gap",
+          "evidence_ids": [
+            "P02_O07"
+          ]
+        },
+        {
+          "claim": "body_sensations_uncertain",
+          "evidence_ids": [
+            "P11_O02"
+          ]
+        },
+        {
+          "claim": "agency",
+          "evidence_ids": [
+            "P21_O06"
+          ]
+        },
+        {
+          "claim": "affective",
+          "evidence_ids": [
+            "P13_O06"
+          ]
+        },
+        {
+          "claim": "erotic",
+          "evidence_ids": [
+            "P14_O07"
+          ]
+        },
+        {
+          "claim": "curiosity",
+          "evidence_ids": [
+            "P01_O05",
+            "P22_O06",
+            "P22_O08"
+          ]
+        }
+      ],
+      "selected_relations": [
+        "R_UNCERTAINTY_SCOPES",
+        "R_RECENT_ABSENCE",
+        "R_CURIOUS_UNCLEAR"
+      ]
+    },
+    "R_MATERIAL_PRIVACY": {
+      "configuration_name": "Deseo de libertad",
+      "summary": "Quieres experimentar cosas nuevas y sentirte más libre para expresar o vivir lo que deseas, en un momento en que el deseo y el disfrute están presentes. Decidir, expresar límites y reconocer tus intereses tienen alcances distintos: te resulta fácil expresar lo que no quieres o cuándo quieres parar y reconoces margen para decidir sobre tu vida erótica; hay intereses que te cuesta reconocer incluso para ti misma. En el vínculo, sientes bastante cercanía afectiva con tu pareja y la mayor parte del tiempo percibes que tu placer importa tanto como el de tu pareja; en lo cotidiano, los espacios donde vives pocas veces te ofrecen la privacidad que necesitas.",
+      "claim_trace": [
+        {
+          "claim": "experimentar cosas nuevas",
+          "evidence_ids": [
+            "P24_O11"
+          ]
+        },
+        {
+          "claim": "sentirte más libre para expresar o vivir lo que deseas",
+          "evidence_ids": [
+            "P24_O13"
+          ]
+        },
+        {
+          "claim": "desire_present",
+          "evidence_ids": [
+            "P08_O02",
+            "P09_O03"
+          ]
+        },
+        {
+          "claim": "pleasure",
+          "evidence_ids": [
+            "P10_O02"
+          ]
+        },
+        {
+          "claim": "limits",
+          "evidence_ids": [
+            "P16_O01"
+          ]
+        },
+        {
+          "claim": "agency",
+          "evidence_ids": [
+            "P21_O02"
+          ]
+        },
+        {
+          "claim": "internal_permission",
+          "evidence_ids": [
+            "P29_O01"
+          ]
+        },
+        {
+          "claim": "affective",
+          "evidence_ids": [
+            "P13_O02"
+          ]
+        },
+        {
+          "claim": "reciprocity",
+          "evidence_ids": [
+            "P15_O02"
+          ]
+        },
+        {
+          "claim": "material_privacy",
+          "evidence_ids": [
+            "P32_O04"
+          ]
+        }
+      ],
+      "selected_relations": [
+        "R_MATERIAL_PRIVACY",
+        "R_INTERNAL_FREEDOM",
+        "R_EXPANSION_RESOURCES"
+      ]
+    },
+    "R_INTERNAL_FREEDOM": {
+      "configuration_name": "Deseo de libertad",
+      "summary": "Quieres experimentar cosas nuevas y sentirte más libre para expresar o vivir lo que deseas, en un momento en que el deseo y el disfrute están presentes. Decidir, expresar límites y reconocer tus intereses tienen alcances distintos: te resulta fácil expresar lo que no quieres o cuándo quieres parar y reconoces margen para decidir sobre tu vida erótica; hay intereses que te cuesta reconocer incluso para ti misma. En el vínculo, sientes bastante cercanía afectiva con tu pareja y la mayor parte del tiempo percibes que tu placer importa tanto como el de tu pareja; en lo cotidiano, los espacios donde vives pocas veces te ofrecen la privacidad que necesitas.",
+      "claim_trace": [
+        {
+          "claim": "experimentar cosas nuevas",
+          "evidence_ids": [
+            "P24_O11"
+          ]
+        },
+        {
+          "claim": "sentirte más libre para expresar o vivir lo que deseas",
+          "evidence_ids": [
+            "P24_O13"
+          ]
+        },
+        {
+          "claim": "desire_present",
+          "evidence_ids": [
+            "P08_O02",
+            "P09_O03"
+          ]
+        },
+        {
+          "claim": "pleasure",
+          "evidence_ids": [
+            "P10_O02"
+          ]
+        },
+        {
+          "claim": "limits",
+          "evidence_ids": [
+            "P16_O01"
+          ]
+        },
+        {
+          "claim": "agency",
+          "evidence_ids": [
+            "P21_O02"
+          ]
+        },
+        {
+          "claim": "internal_permission",
+          "evidence_ids": [
+            "P29_O01"
+          ]
+        },
+        {
+          "claim": "affective",
+          "evidence_ids": [
+            "P13_O02"
+          ]
+        },
+        {
+          "claim": "reciprocity",
+          "evidence_ids": [
+            "P15_O02"
+          ]
+        },
+        {
+          "claim": "material_privacy",
+          "evidence_ids": [
+            "P32_O04"
+          ]
+        }
+      ],
+      "selected_relations": [
+        "R_MATERIAL_PRIVACY",
+        "R_INTERNAL_FREEDOM",
+        "R_EXPANSION_RESOURCES"
+      ]
+    },
+    "R_EXPANSION_RESOURCES": {
+      "configuration_name": "Deseo de libertad",
+      "summary": "Quieres experimentar cosas nuevas y sentirte más libre para expresar o vivir lo que deseas, en un momento en que el deseo y el disfrute están presentes. Decidir, expresar límites y reconocer tus intereses tienen alcances distintos: te resulta fácil expresar lo que no quieres o cuándo quieres parar y reconoces margen para decidir sobre tu vida erótica; hay intereses que te cuesta reconocer incluso para ti misma. En el vínculo, sientes bastante cercanía afectiva con tu pareja y la mayor parte del tiempo percibes que tu placer importa tanto como el de tu pareja; en lo cotidiano, los espacios donde vives pocas veces te ofrecen la privacidad que necesitas.",
+      "claim_trace": [
+        {
+          "claim": "experimentar cosas nuevas",
+          "evidence_ids": [
+            "P24_O11"
+          ]
+        },
+        {
+          "claim": "sentirte más libre para expresar o vivir lo que deseas",
+          "evidence_ids": [
+            "P24_O13"
+          ]
+        },
+        {
+          "claim": "desire_present",
+          "evidence_ids": [
+            "P08_O02",
+            "P09_O03"
+          ]
+        },
+        {
+          "claim": "pleasure",
+          "evidence_ids": [
+            "P10_O02"
+          ]
+        },
+        {
+          "claim": "limits",
+          "evidence_ids": [
+            "P16_O01"
+          ]
+        },
+        {
+          "claim": "agency",
+          "evidence_ids": [
+            "P21_O02"
+          ]
+        },
+        {
+          "claim": "internal_permission",
+          "evidence_ids": [
+            "P29_O01"
+          ]
+        },
+        {
+          "claim": "affective",
+          "evidence_ids": [
+            "P13_O02"
+          ]
+        },
+        {
+          "claim": "reciprocity",
+          "evidence_ids": [
+            "P15_O02"
+          ]
+        },
+        {
+          "claim": "material_privacy",
+          "evidence_ids": [
+            "P32_O04"
+          ]
+        }
+      ],
+      "selected_relations": [
+        "R_MATERIAL_PRIVACY",
+        "R_INTERNAL_FREEDOM",
+        "R_EXPANSION_RESOURCES"
+      ]
+    },
+    "R_CARE_DESIRED": {
+      "configuration_name": "Deseo con poco margen",
+      "summary": "Quieres que tu placer importe tanto como el de tu pareja, expresar mejor lo que quieres y lo que no quieres y sentirte más libre para expresar o vivir lo que deseas; tu interés por explorar está presente. Las ganas aparecen seguido antes de empezar y sientes bastante cercanía afectiva con tu pareja; el disfrute varía en tus encuentros eróticos y pocas veces percibes que tu placer importa tanto como el de tu pareja. Cuando quieres decir que no o parar, sientes que no puedes hacerlo y no te sientes segura para expresarlo; tu pareja muchas veces insiste o se molesta. Ante encuentros que no disfrutas, te frustras o desanimas y prefieres evitar otro encuentro para que no vuelva a pasar; tu libertad para tomar algunas decisiones aparece como una restricción de tu autonomía; reconoces poco margen para decidir sobre tu vida erótica.",
+      "claim_trace": [
+        {
+          "claim": "que tu placer importe tanto como el de tu pareja",
+          "evidence_ids": [
+            "P24_O09"
+          ]
+        },
+        {
+          "claim": "expresar mejor lo que quieres y lo que no quieres",
+          "evidence_ids": [
+            "P24_O10"
+          ]
+        },
+        {
+          "claim": "sentirte más libre para expresar o vivir lo que deseas",
+          "evidence_ids": [
+            "P24_O13"
+          ]
+        },
+        {
+          "claim": "curiosity",
+          "evidence_ids": [
+            "P01_O05"
+          ]
+        },
+        {
+          "claim": "desire_before",
+          "evidence_ids": [
+            "P08_O02"
+          ]
+        },
+        {
+          "claim": "affective",
+          "evidence_ids": [
+            "P13_O02"
+          ]
+        },
+        {
+          "claim": "pleasure",
+          "evidence_ids": [
+            "P10_O06"
+          ]
+        },
+        {
+          "claim": "reciprocity",
+          "evidence_ids": [
+            "P15_O04"
+          ]
+        },
+        {
+          "claim": "partner_response",
+          "evidence_ids": [
+            "P17_O04"
+          ]
+        },
+        {
+          "claim": "limits",
+          "evidence_ids": [
+            "P16_O05"
+          ]
+        },
+        {
+          "claim": "safety",
+          "evidence_ids": [
+            "P18_O04"
+          ]
+        },
+        {
+          "claim": "agency",
+          "evidence_ids": [
+            "P21_O04"
+          ]
+        },
+        {
+          "claim": "encounter_response",
+          "evidence_ids": [
+            "P12_O01",
+            "P12_O04"
+          ]
+        },
+        {
+          "claim": "autonomy_sources",
+          "evidence_ids": [
+            "P33_O03"
+          ]
+        }
+      ],
+      "selected_relations": [
+        "R_CARE_DESIRED",
+        "R_ENCOUNTER_PAUSE",
+        "R_AUTONOMY_SOURCES"
+      ]
+    },
+    "R_ENCOUNTER_PAUSE": {
+      "configuration_name": "Deseo con poco margen",
+      "summary": "Quieres que tu placer importe tanto como el de tu pareja, expresar mejor lo que quieres y lo que no quieres y sentirte más libre para expresar o vivir lo que deseas; tu interés por explorar está presente. Las ganas aparecen seguido antes de empezar y sientes bastante cercanía afectiva con tu pareja; el disfrute varía en tus encuentros eróticos y pocas veces percibes que tu placer importa tanto como el de tu pareja. Cuando quieres decir que no o parar, sientes que no puedes hacerlo y no te sientes segura para expresarlo; tu pareja muchas veces insiste o se molesta. Ante encuentros que no disfrutas, te frustras o desanimas y prefieres evitar otro encuentro para que no vuelva a pasar; tu libertad para tomar algunas decisiones aparece como una restricción de tu autonomía; reconoces poco margen para decidir sobre tu vida erótica.",
+      "claim_trace": [
+        {
+          "claim": "que tu placer importe tanto como el de tu pareja",
+          "evidence_ids": [
+            "P24_O09"
+          ]
+        },
+        {
+          "claim": "expresar mejor lo que quieres y lo que no quieres",
+          "evidence_ids": [
+            "P24_O10"
+          ]
+        },
+        {
+          "claim": "sentirte más libre para expresar o vivir lo que deseas",
+          "evidence_ids": [
+            "P24_O13"
+          ]
+        },
+        {
+          "claim": "curiosity",
+          "evidence_ids": [
+            "P01_O05"
+          ]
+        },
+        {
+          "claim": "desire_before",
+          "evidence_ids": [
+            "P08_O02"
+          ]
+        },
+        {
+          "claim": "affective",
+          "evidence_ids": [
+            "P13_O02"
+          ]
+        },
+        {
+          "claim": "pleasure",
+          "evidence_ids": [
+            "P10_O06"
+          ]
+        },
+        {
+          "claim": "reciprocity",
+          "evidence_ids": [
+            "P15_O04"
+          ]
+        },
+        {
+          "claim": "partner_response",
+          "evidence_ids": [
+            "P17_O04"
+          ]
+        },
+        {
+          "claim": "limits",
+          "evidence_ids": [
+            "P16_O05"
+          ]
+        },
+        {
+          "claim": "safety",
+          "evidence_ids": [
+            "P18_O04"
+          ]
+        },
+        {
+          "claim": "agency",
+          "evidence_ids": [
+            "P21_O04"
+          ]
+        },
+        {
+          "claim": "encounter_response",
+          "evidence_ids": [
+            "P12_O01",
+            "P12_O04"
+          ]
+        },
+        {
+          "claim": "autonomy_sources",
+          "evidence_ids": [
+            "P33_O03"
+          ]
+        }
+      ],
+      "selected_relations": [
+        "R_CARE_DESIRED",
+        "R_ENCOUNTER_PAUSE",
+        "R_AUTONOMY_SOURCES"
+      ]
+    },
+    "R_AUTONOMY_SOURCES": {
+      "configuration_name": "Deseo con poco margen",
+      "summary": "Quieres que tu placer importe tanto como el de tu pareja, expresar mejor lo que quieres y lo que no quieres y sentirte más libre para expresar o vivir lo que deseas; tu interés por explorar está presente. Las ganas aparecen seguido antes de empezar y sientes bastante cercanía afectiva con tu pareja; el disfrute varía en tus encuentros eróticos y pocas veces percibes que tu placer importa tanto como el de tu pareja. Cuando quieres decir que no o parar, sientes que no puedes hacerlo y no te sientes segura para expresarlo; tu pareja muchas veces insiste o se molesta. Ante encuentros que no disfrutas, te frustras o desanimas y prefieres evitar otro encuentro para que no vuelva a pasar; tu libertad para tomar algunas decisiones aparece como una restricción de tu autonomía; reconoces poco margen para decidir sobre tu vida erótica.",
+      "claim_trace": [
+        {
+          "claim": "que tu placer importe tanto como el de tu pareja",
+          "evidence_ids": [
+            "P24_O09"
+          ]
+        },
+        {
+          "claim": "expresar mejor lo que quieres y lo que no quieres",
+          "evidence_ids": [
+            "P24_O10"
+          ]
+        },
+        {
+          "claim": "sentirte más libre para expresar o vivir lo que deseas",
+          "evidence_ids": [
+            "P24_O13"
+          ]
+        },
+        {
+          "claim": "curiosity",
+          "evidence_ids": [
+            "P01_O05"
+          ]
+        },
+        {
+          "claim": "desire_before",
+          "evidence_ids": [
+            "P08_O02"
+          ]
+        },
+        {
+          "claim": "affective",
+          "evidence_ids": [
+            "P13_O02"
+          ]
+        },
+        {
+          "claim": "pleasure",
+          "evidence_ids": [
+            "P10_O06"
+          ]
+        },
+        {
+          "claim": "reciprocity",
+          "evidence_ids": [
+            "P15_O04"
+          ]
+        },
+        {
+          "claim": "partner_response",
+          "evidence_ids": [
+            "P17_O04"
+          ]
+        },
+        {
+          "claim": "limits",
+          "evidence_ids": [
+            "P16_O05"
+          ]
+        },
+        {
+          "claim": "safety",
+          "evidence_ids": [
+            "P18_O04"
+          ]
+        },
+        {
+          "claim": "agency",
+          "evidence_ids": [
+            "P21_O04"
+          ]
+        },
+        {
+          "claim": "encounter_response",
+          "evidence_ids": [
+            "P12_O01",
+            "P12_O04"
+          ]
+        },
+        {
+          "claim": "autonomy_sources",
+          "evidence_ids": [
+            "P33_O03"
+          ]
+        }
+      ],
+      "selected_relations": [
+        "R_CARE_DESIRED",
+        "R_ENCOUNTER_PAUSE",
+        "R_AUTONOMY_SOURCES"
+      ]
+    },
+    "R_LOCAL_BODY_GAP_UNCERTAINTY": {
+      "configuration_name": "Curiosidad con margen propio",
+      "summary": "Descubrir lo que te gusta y explorar nuevas posibilidades te importa, aunque todavía no sabes qué quisieras mover de tu vida erótica. Hoy te sientes desconectada y no has tenido encuentros eróticos recientemente; la cercanía afectiva con tu pareja varía, y la cercanía erótica con tu pareja no está clara. Reconoces margen para decidir sobre tu vida erótica, y tu curiosidad está presente junto a las preguntas que hoy tienes sobre qué sensaciones agradables identificas en tu cuerpo. La cercanía entre lo que vives hoy y la vida erótica que te gustaría tener también es una pregunta abierta.",
+      "claim_trace": [
+        {
+          "claim": "descubrir lo que te gusta",
+          "evidence_ids": [
+            "P22_O06"
+          ]
+        },
+        {
+          "claim": "explorar nuevas posibilidades",
+          "evidence_ids": [
+            "P22_O08"
+          ]
+        },
+        {
+          "claim": "change_unknown",
+          "evidence_ids": [
+            "P24_O17"
+          ]
+        },
+        {
+          "claim": "disconnected",
+          "evidence_ids": [
+            "P01_O06"
+          ]
+        },
+        {
+          "claim": "pleasure",
+          "evidence_ids": [
+            "P10_O08"
+          ]
+        },
+        {
+          "claim": "affective",
+          "evidence_ids": [
+            "P13_O06"
+          ]
+        },
+        {
+          "claim": "erotic",
+          "evidence_ids": [
+            "P14_O07"
+          ]
+        },
+        {
+          "claim": "agency",
+          "evidence_ids": [
+            "P21_O02"
+          ]
+        },
+        {
+          "claim": "curiosity",
+          "evidence_ids": [
+            "P01_O05",
+            "P22_O06",
+            "P22_O08"
+          ]
+        },
+        {
+          "claim": "body_sensations_uncertain",
+          "evidence_ids": [
+            "P11_O02"
+          ]
+        },
+        {
+          "claim": "gap",
+          "evidence_ids": [
+            "P02_O07"
+          ]
+        }
+      ],
+      "selected_relations": [
+        "R_RECENT_ABSENCE",
+        "R_LOCAL_BODY_GAP_UNCERTAINTY",
+        "R_CURIOUS_UNCLEAR"
+      ]
+    },
+    "R_ENCOUNTER_RESPONSE": {
+      "configuration_name": "Tu placer y tu voz",
+      "summary": "Quieres encontrar una forma de cercanía que te haga sentido, que tu placer importe tanto como el de tu pareja y expresar mejor lo que quieres y lo que no quieres. La cercanía afectiva con tu pareja coexiste con una distancia erótica; el disfrute y la reciprocidad tienen matices distintos: el disfrute varía en tus encuentros eróticos y pocas veces percibes que tu placer importa tanto como el de tu pareja. Reconoces margen para decidir sobre tu vida erótica; te resulta fácil expresar lo que no quieres o cuándo quieres parar; ante encuentros que no disfrutas, te frustras o desanimas y tienes ganas de volver a intentarlo.",
+      "claim_trace": [
+        {
+          "claim": "encontrar una forma de cercanía que te haga sentido",
+          "evidence_ids": [
+            "P24_O08"
+          ]
+        },
+        {
+          "claim": "que tu placer importe tanto como el de tu pareja",
+          "evidence_ids": [
+            "P24_O09"
+          ]
+        },
+        {
+          "claim": "expresar mejor lo que quieres y lo que no quieres",
+          "evidence_ids": [
+            "P24_O10"
+          ]
+        },
+        {
+          "claim": "affective",
+          "evidence_ids": [
+            "P13_O02"
+          ]
+        },
+        {
+          "claim": "erotic",
+          "evidence_ids": [
+            "P14_O04"
+          ]
+        },
+        {
+          "claim": "pleasure",
+          "evidence_ids": [
+            "P10_O06"
+          ]
+        },
+        {
+          "claim": "reciprocity",
+          "evidence_ids": [
+            "P15_O04"
+          ]
+        },
+        {
+          "claim": "agency",
+          "evidence_ids": [
+            "P21_O02"
+          ]
+        },
+        {
+          "claim": "limits",
+          "evidence_ids": [
+            "P16_O01"
+          ]
+        },
+        {
+          "claim": "encounter_response",
+          "evidence_ids": [
+            "P12_O01",
+            "P12_O06"
+          ]
+        },
+        {
+          "claim": "retry",
+          "evidence_ids": [
+            "P12_O06"
+          ]
+        }
+      ],
+      "selected_relations": [
+        "R_CLOSENESS_SPLIT",
+        "R_RECIPROCITY_GAP",
+        "R_ENCOUNTER_RESPONSE"
+      ]
+    },
+    "R_BODY_CONDITION_PRESENT": {
+      "configuration_name": "El cuerpo en tu mirada",
+      "summary": "Quieres reconocer mejor lo que pasa en tu cuerpo, sentirte más cómoda con tu cuerpo y experimentar cosas nuevas; también te interesa profundizar en algo que ya existe. Hay cambios o molestias en tu cuerpo o bienestar que afectan tu vida erótica (dolor, lubricación y energía); encuentras poco disfrute en tus encuentros eróticos. Extrañas algo de tu vida erótica de antes, mientras sientes bastante cercanía afectiva con tu pareja y reconoces margen para decidir sobre tu vida erótica. Te cuesta reconocer lo que pasa en tu cuerpo y te sientes poco cómoda con tu cuerpo.",
+      "claim_trace": [
+        {
+          "claim": "reconocer mejor lo que pasa en tu cuerpo",
+          "evidence_ids": [
+            "P24_O05"
+          ]
+        },
+        {
+          "claim": "sentirte más cómoda con tu cuerpo",
+          "evidence_ids": [
+            "P24_O06"
+          ]
+        },
+        {
+          "claim": "experimentar cosas nuevas",
+          "evidence_ids": [
+            "P24_O11"
+          ]
+        },
+        {
+          "claim": "exploration_style",
+          "evidence_ids": [
+            "P28_O03"
+          ]
+        },
+        {
+          "claim": "body_details",
+          "evidence_ids": [
+            "P07_O01",
+            "P07_O02",
+            "P07_O07"
+          ]
+        },
+        {
+          "claim": "body_condition",
+          "evidence_ids": [
+            "P06_O01"
+          ]
+        },
+        {
+          "claim": "pleasure",
+          "evidence_ids": [
+            "P10_O04"
+          ]
+        },
+        {
+          "claim": "affective",
+          "evidence_ids": [
+            "P13_O02"
+          ]
+        },
+        {
+          "claim": "agency",
+          "evidence_ids": [
+            "P21_O02"
+          ]
+        },
+        {
+          "claim": "body_registration",
+          "evidence_ids": [
+            "P26_O04"
+          ]
+        },
+        {
+          "claim": "body_comfort",
+          "evidence_ids": [
+            "P27_O04"
+          ]
+        },
+        {
+          "claim": "miss",
+          "evidence_ids": [
+            "P01_O02"
+          ]
+        }
+      ],
+      "selected_relations": [
+        "R_BODY_CONDITION_PRESENT",
+        "R_BODY_WISH",
+        "R_RECOVER_EXPLORE"
+      ]
+    },
+    "R_AUTONOMY_UNSPECIFIED": {
+      "configuration_name": "Lo que hoy deseas",
+      "summary": "Quieres que tu placer importe tanto como el de tu pareja; tu interés por explorar está presente; a la vez, te sientes desconectada y aún no sabes bien qué quieres. Encuentras algo de disfrute en tus encuentros eróticos y a veces percibes que tu placer importa tanto como el de tu pareja; te sientes bastante distante de tu pareja afectivamente, y sientes bastante cercanía erótica con tu pareja. Reconoces poco margen para decidir sobre tu vida erótica; te sientes bien con tu vida erótica tal como está; no habías considerado qué aspectos de tu autonomía podrían limitar tu vida erótica.",
+      "claim_trace": [
+        {
+          "claim": "que tu placer importe tanto como el de tu pareja",
+          "evidence_ids": [
+            "P24_O09"
+          ]
+        },
+        {
+          "claim": "curiosity",
+          "evidence_ids": [
+            "P01_O05"
+          ]
+        },
+        {
+          "claim": "pleasure",
+          "evidence_ids": [
+            "P10_O03"
+          ]
+        },
+        {
+          "claim": "reciprocity",
+          "evidence_ids": [
+            "P15_O03"
+          ]
+        },
+        {
+          "claim": "affective",
+          "evidence_ids": [
+            "P13_O04"
+          ]
+        },
+        {
+          "claim": "erotic",
+          "evidence_ids": [
+            "P14_O02"
+          ]
+        },
+        {
+          "claim": "agency",
+          "evidence_ids": [
+            "P21_O04"
+          ]
+        },
+        {
+          "claim": "gap",
+          "evidence_ids": [
+            "P02_O06"
+          ]
+        },
+        {
+          "claim": "autonomy_detail_state",
+          "evidence_ids": [
+            "P33_O07"
+          ]
+        },
+        {
+          "claim": "disconnected",
+          "evidence_ids": [
+            "P01_O06"
+          ]
+        }
+      ],
+      "selected_relations": [
+        "R_AUTONOMY_UNSPECIFIED"
+      ]
+    },
+    "R_EXPLORE_FAMILIAR": {
+      "configuration_name": "Lo que hoy deseas",
+      "summary": "Quieres sentir más placer, encontrar una forma de cercanía que te haga sentido, experimentar cosas nuevas y recuperar algo que antes tenías; el placer y el juego tienen un lugar importante para ti. Encuentras poco disfrute en tus encuentros eróticos y todavía no tienes clara esa reciprocidad en tus encuentros; te sientes bastante distante de tu pareja afectivamente, y te sientes muy distante de tu pareja eróticamente. Reconoces algo de margen para decidir sobre tu vida erótica; tu vida erótica está bastante cerca de cómo te gustaría vivirla; en ese interés por explorar también aparece lo conocido: te interesa hacer más algunas cosas que ya haces.",
+      "claim_trace": [
+        {
+          "claim": "sentir más placer",
+          "evidence_ids": [
+            "P24_O02"
+          ]
+        },
+        {
+          "claim": "encontrar una forma de cercanía que te haga sentido",
+          "evidence_ids": [
+            "P24_O08"
+          ]
+        },
+        {
+          "claim": "experimentar cosas nuevas",
+          "evidence_ids": [
+            "P24_O11"
+          ]
+        },
+        {
+          "claim": "recuperar algo que antes tenías",
+          "evidence_ids": [
+            "P24_O14"
+          ]
+        },
+        {
+          "claim": "pleasure_play_values",
+          "evidence_ids": [
+            "P22_O01",
+            "P22_O12"
+          ]
+        },
+        {
+          "claim": "pleasure",
+          "evidence_ids": [
+            "P10_O04"
+          ]
+        },
+        {
+          "claim": "reciprocity",
+          "evidence_ids": [
+            "P15_O08"
+          ]
+        },
+        {
+          "claim": "affective",
+          "evidence_ids": [
+            "P13_O04"
+          ]
+        },
+        {
+          "claim": "erotic",
+          "evidence_ids": [
+            "P14_O05"
+          ]
+        },
+        {
+          "claim": "agency",
+          "evidence_ids": [
+            "P21_O03"
+          ]
+        },
+        {
+          "claim": "gap",
+          "evidence_ids": [
+            "P02_O02"
+          ]
+        },
+        {
+          "claim": "exploration_style",
+          "evidence_ids": [
+            "P28_O02"
+          ]
+        },
+        {
+          "claim": "curiosity",
+          "evidence_ids": [
+            "P24_O11"
+          ]
+        }
+      ],
+      "selected_relations": [
+        "R_EXPLORE_FAMILIAR"
+      ]
+    },
+    "R_ORGASM_SCOPE": {
+      "configuration_name": "Deseo de libertad",
+      "summary": "Quieres explorar tu orgasmo, expresar mejor lo que quieres y lo que no quieres y sentirte más libre para expresar o vivir lo que deseas; a la vez, te sientes desconectada y aún no sabes bien qué quieres. No has tenido encuentros eróticos recientemente y pocas veces percibes que tu placer importa tanto como el de tu pareja; la cercanía afectiva con tu pareja no es algo que te importe, y te sientes muy cerca de tu pareja eróticamente. Reconoces muy poco margen para decidir sobre tu vida erótica; te sientes bien con tu vida erótica tal como está; depender de tu pareja para algunas decisiones o recursos aparece como una restricción de tu autonomía. En esa exploración, llegas al orgasmo y te cuesta más que antes; a veces hay intereses que te cuesta reconocer incluso para ti misma.",
+      "claim_trace": [
+        {
+          "claim": "explorar tu orgasmo",
+          "evidence_ids": [
+            "P24_O04"
+          ]
+        },
+        {
+          "claim": "expresar mejor lo que quieres y lo que no quieres",
+          "evidence_ids": [
+            "P24_O10"
+          ]
+        },
+        {
+          "claim": "sentirte más libre para expresar o vivir lo que deseas",
+          "evidence_ids": [
+            "P24_O13"
+          ]
+        },
+        {
+          "claim": "pleasure",
+          "evidence_ids": [
+            "P10_O08"
+          ]
+        },
+        {
+          "claim": "reciprocity",
+          "evidence_ids": [
+            "P15_O04"
+          ]
+        },
+        {
+          "claim": "affective",
+          "evidence_ids": [
+            "P13_O08"
+          ]
+        },
+        {
+          "claim": "erotic",
+          "evidence_ids": [
+            "P14_O01"
+          ]
+        },
+        {
+          "claim": "agency",
+          "evidence_ids": [
+            "P21_O05"
+          ]
+        },
+        {
+          "claim": "gap",
+          "evidence_ids": [
+            "P02_O06"
+          ]
+        },
+        {
+          "claim": "autonomy_sources",
+          "evidence_ids": [
+            "P33_O04"
+          ]
+        },
+        {
+          "claim": "orgasm_experience",
+          "evidence_ids": [
+            "P25_O02"
+          ]
+        },
+        {
+          "claim": "internal_permission",
+          "evidence_ids": [
+            "P29_O02"
+          ]
+        },
+        {
+          "claim": "disconnected",
+          "evidence_ids": [
+            "P01_O06"
+          ]
+        }
+      ],
+      "selected_relations": [
+        "R_INTERNAL_FREEDOM",
+        "R_AUTONOMY_SOURCES",
+        "R_ORGASM_SCOPE"
+      ]
+    },
+    "R_CARE_PRESENT": {
+      "configuration_name": "Deseo entre tensiones",
+      "summary": "Quieres disfrutar más los encuentros y que tu placer importe tanto como el de tu pareja; tu interés por explorar está presente. Te sientes bastante distante de tu pareja afectivamente; disfrutas bastante tus encuentros eróticos y todavía no tienes clara esa reciprocidad en tus encuentros. Sientes que no puedes decir que no o parar, aunque dices que generalmente te sientes segura al expresarlo; la respuesta de tu pareja depende de la situación; reconoces margen para decidir sobre tu vida erótica. Ese margen para decidir y lo que ocurre al poner límites son distintos; las ganas rara vez aparecen antes de empezar, pero muchas veces aumentan durante una oportunidad que eliges darte.",
+      "claim_trace": [
+        {
+          "claim": "disfrutar más los encuentros",
+          "evidence_ids": [
+            "P24_O03"
+          ]
+        },
+        {
+          "claim": "que tu placer importe tanto como el de tu pareja",
+          "evidence_ids": [
+            "P24_O09"
+          ]
+        },
+        {
+          "claim": "curiosity",
+          "evidence_ids": [
+            "P01_O05",
+            "P22_O06"
+          ]
+        },
+        {
+          "claim": "affective",
+          "evidence_ids": [
+            "P13_O04"
+          ]
+        },
+        {
+          "claim": "pleasure",
+          "evidence_ids": [
+            "P10_O02"
+          ]
+        },
+        {
+          "claim": "reciprocity",
+          "evidence_ids": [
+            "P15_O08"
+          ]
+        },
+        {
+          "claim": "limits",
+          "evidence_ids": [
+            "P16_O05"
+          ]
+        },
+        {
+          "claim": "partner_response",
+          "evidence_ids": [
+            "P17_O05"
+          ]
+        },
+        {
+          "claim": "safety",
+          "evidence_ids": [
+            "P18_O02"
+          ]
+        },
+        {
+          "claim": "agency",
+          "evidence_ids": [
+            "P21_O02"
+          ]
+        },
+        {
+          "claim": "desire_before",
+          "evidence_ids": [
+            "P08_O04"
+          ]
+        },
+        {
+          "claim": "desire_during",
+          "evidence_ids": [
+            "P09_O02"
+          ]
+        }
+      ],
+      "selected_relations": [
+        "R_CARE_PRESENT",
+        "R_RESPONSIVE"
+      ]
+    },
+    "R_EXPLORATION_MISMATCH": {
+      "configuration_name": "Curiosidad y matices",
+      "summary": "Quieres sentir más ganas, explorar tu orgasmo, expresar mejor lo que quieres y lo que no quieres y experimentar cosas nuevas. Encuentras algo de disfrute en tus encuentros eróticos y no percibes que tu placer importe tanto como el de tu pareja; la cercanía afectiva con tu pareja varía, y la cercanía erótica con tu pareja no está clara. Reconoces muy poco margen para decidir sobre tu vida erótica; tu libertad para tomar algunas decisiones aparece como una restricción de tu autonomía. Tu interés por explorar no coincide con las formas de exploración que se te ofrecieron: no te interesa probar cosas nuevas ni hacer más algunas cosas que ya haces; consideras posible que algún cambio o molestia en tu cuerpo o bienestar esté afectando tu vida erótica (bochornos).",
+      "claim_trace": [
+        {
+          "claim": "sentir más ganas",
+          "evidence_ids": [
+            "P24_O01"
+          ]
+        },
+        {
+          "claim": "explorar tu orgasmo",
+          "evidence_ids": [
+            "P24_O04"
+          ]
+        },
+        {
+          "claim": "expresar mejor lo que quieres y lo que no quieres",
+          "evidence_ids": [
+            "P24_O10"
+          ]
+        },
+        {
+          "claim": "experimentar cosas nuevas",
+          "evidence_ids": [
+            "P24_O11"
+          ]
+        },
+        {
+          "claim": "pleasure",
+          "evidence_ids": [
+            "P10_O03"
+          ]
+        },
+        {
+          "claim": "reciprocity",
+          "evidence_ids": [
+            "P15_O05"
+          ]
+        },
+        {
+          "claim": "affective",
+          "evidence_ids": [
+            "P13_O06"
+          ]
+        },
+        {
+          "claim": "erotic",
+          "evidence_ids": [
+            "P14_O07"
+          ]
+        },
+        {
+          "claim": "agency",
+          "evidence_ids": [
+            "P21_O05"
+          ]
+        },
+        {
+          "claim": "autonomy_sources",
+          "evidence_ids": [
+            "P33_O03"
+          ]
+        },
+        {
+          "claim": "exploration_style",
+          "evidence_ids": [
+            "P28_O04"
+          ]
+        },
+        {
+          "claim": "curiosity",
+          "evidence_ids": [
+            "P22_O08",
+            "P24_O11"
+          ]
+        },
+        {
+          "claim": "body_details",
+          "evidence_ids": [
+            "P07_O09"
+          ]
+        },
+        {
+          "claim": "body_condition",
+          "evidence_ids": [
+            "P06_O02"
+          ]
+        }
+      ],
+      "selected_relations": [
+        "R_AUTONOMY_SOURCES",
+        "R_BODY_CONDITION_PRESENT",
+        "R_EXPLORATION_MISMATCH"
+      ]
+    },
+    "R_DESIRE_VARIABLE_PLEASURE": {
+      "configuration_name": "Lo que hoy deseas",
+      "summary": "Quieres reconocer mejor lo que pasa en tu cuerpo. Tener ganas y disfrutar tienen matices distintos: las ganas aparecen seguido antes de empezar y el disfrute varía en tus encuentros eróticos; a veces percibes que tu placer importa tanto como el de tu pareja. La cercanía afectiva con tu pareja varía, y eróticamente no te sientes ni cerca ni distante de tu pareja; reconoces muy poco margen para decidir sobre tu vida erótica; sientes tu vida erótica muy lejos de cómo te gustaría vivirla; ante encuentros que no disfrutas, te preocupa que vuelva a pasar. No identificas una restricción de autonomía entre las opciones de tiempo, dinero, libertad de decisión o dependencia de tu pareja; en esa relación con tu cuerpo también hay algo que ya está presente: te resulta bastante fácil reconocer lo que pasa en tu cuerpo.",
+      "claim_trace": [
+        {
+          "claim": "reconocer mejor lo que pasa en tu cuerpo",
+          "evidence_ids": [
+            "P24_O05"
+          ]
+        },
+        {
+          "claim": "pleasure",
+          "evidence_ids": [
+            "P10_O06"
+          ]
+        },
+        {
+          "claim": "reciprocity",
+          "evidence_ids": [
+            "P15_O03"
+          ]
+        },
+        {
+          "claim": "desire_before",
+          "evidence_ids": [
+            "P08_O02"
+          ]
+        },
+        {
+          "claim": "affective",
+          "evidence_ids": [
+            "P13_O06"
+          ]
+        },
+        {
+          "claim": "erotic",
+          "evidence_ids": [
+            "P14_O03"
+          ]
+        },
+        {
+          "claim": "agency",
+          "evidence_ids": [
+            "P21_O05"
+          ]
+        },
+        {
+          "claim": "gap",
+          "evidence_ids": [
+            "P02_O05"
+          ]
+        },
+        {
+          "claim": "encounter_response",
+          "evidence_ids": [
+            "P12_O02"
+          ]
+        },
+        {
+          "claim": "autonomy_detail_state",
+          "evidence_ids": [
+            "P33_O06"
+          ]
+        },
+        {
+          "claim": "body_registration",
+          "evidence_ids": [
+            "P26_O02"
+          ]
+        }
+      ],
+      "selected_relations": [
+        "R_AUTONOMY_UNSPECIFIED",
+        "R_ENCOUNTER_RESPONSE",
+        "R_DESIRE_VARIABLE_PLEASURE"
+      ]
+    },
+    "R_FEELING_DESIRED": {
+      "configuration_name": "Deseo entre tensiones",
+      "summary": "Quieres sentirte más deseada, tener más tiempo o espacio para tu vida erótica y sentirte más libre para expresar o vivir lo que deseas; a la vez, te sientes desconectada y aún no sabes bien qué quieres. Las ganas rara vez aparecen antes de empezar y afectivamente no te sientes ni cerca ni distante de tu pareja; disfrutas bastante tus encuentros eróticos y esa reciprocidad varía en tus encuentros. Sientes que no puedes decir que no o parar; tu pareja lo respeta sin problema cuando lo expresas; ese deseo de sentirte más deseada aparece junto a lo que hoy reconoces: te sientes bastante deseada por tu pareja. Reconoces mucho margen para decidir sobre tu vida erótica; ese margen para decidir y lo que ocurre al poner límites son distintos, mientras a veces hay intereses que te cuesta reconocer incluso para ti misma.",
+      "claim_trace": [
+        {
+          "claim": "sentirte más deseada",
+          "evidence_ids": [
+            "P24_O07"
+          ]
+        },
+        {
+          "claim": "tener más tiempo o espacio para tu vida erótica",
+          "evidence_ids": [
+            "P24_O12"
+          ]
+        },
+        {
+          "claim": "sentirte más libre para expresar o vivir lo que deseas",
+          "evidence_ids": [
+            "P24_O13"
+          ]
+        },
+        {
+          "claim": "desire_before",
+          "evidence_ids": [
+            "P08_O04"
+          ]
+        },
+        {
+          "claim": "affective",
+          "evidence_ids": [
+            "P13_O03"
+          ]
+        },
+        {
+          "claim": "pleasure",
+          "evidence_ids": [
+            "P10_O02"
+          ]
+        },
+        {
+          "claim": "reciprocity",
+          "evidence_ids": [
+            "P15_O06"
+          ]
+        },
+        {
+          "claim": "limits",
+          "evidence_ids": [
+            "P16_O05"
+          ]
+        },
+        {
+          "claim": "partner_response",
+          "evidence_ids": [
+            "P17_O01"
+          ]
+        },
+        {
+          "claim": "agency",
+          "evidence_ids": [
+            "P21_O01"
+          ]
+        },
+        {
+          "claim": "feeling_desired",
+          "evidence_ids": [
+            "P30_O02"
+          ]
+        },
+        {
+          "claim": "internal_permission",
+          "evidence_ids": [
+            "P29_O02"
+          ]
+        },
+        {
+          "claim": "disconnected",
+          "evidence_ids": [
+            "P01_O06"
+          ]
+        }
+      ],
+      "selected_relations": [
+        "R_CARE_DESIRED",
+        "R_INTERNAL_FREEDOM",
+        "R_FEELING_DESIRED"
+      ]
+    },
+    "R_BOUNDED_PRESENT": {
+      "configuration_name": "Lo que hoy deseas",
+      "summary": "Quieres encontrar una forma de cercanía que te haga sentido. Las ganas aparecen seguido antes de empezar, y no has tenido encuentros eróticos recientemente y a veces percibes que tu placer importa tanto como el de tu pareja. Afectivamente no te sientes ni cerca ni distante de tu pareja, y sientes bastante cercanía erótica con tu pareja; reconoces mucho margen para decidir sobre tu vida erótica; te sientes bien con tu vida erótica tal como está.",
+      "claim_trace": [
+        {
+          "claim": "encontrar una forma de cercanía que te haga sentido",
+          "evidence_ids": [
+            "P24_O08"
+          ]
+        },
+        {
+          "claim": "pleasure",
+          "evidence_ids": [
+            "P10_O08"
+          ]
+        },
+        {
+          "claim": "reciprocity",
+          "evidence_ids": [
+            "P15_O03"
+          ]
+        },
+        {
+          "claim": "desire_before",
+          "evidence_ids": [
+            "P08_O02"
+          ]
+        },
+        {
+          "claim": "affective",
+          "evidence_ids": [
+            "P13_O03"
+          ]
+        },
+        {
+          "claim": "erotic",
+          "evidence_ids": [
+            "P14_O02"
+          ]
+        },
+        {
+          "claim": "agency",
+          "evidence_ids": [
+            "P21_O01"
+          ]
+        },
+        {
+          "claim": "gap",
+          "evidence_ids": [
+            "P02_O06"
+          ]
+        }
+      ],
+      "selected_relations": [
+        "R_BOUNDED_PRESENT"
+      ]
+    },
+    "R_DAILY_CONDITIONS": {
+      "configuration_name": "El cuerpo en tu mirada",
+      "summary": "Quieres sentir más placer, sentirte más cómoda con tu cuerpo, encontrar una forma de cercanía que te haga sentido y tener más tiempo o espacio para tu vida erótica; tu interés por explorar está presente. Consideras posible que algún cambio o molestia en tu cuerpo o bienestar esté afectando tu vida erótica (molestias genitales); encuentras algo de disfrute en tus encuentros eróticos. Extrañas algo de tu vida erótica de antes, mientras te sientes bastante distante de tu pareja afectivamente y reconoces poco margen para decidir sobre tu vida erótica; tu vida cotidiana dificulta mucho tu vida erótica y entre lo que más pesa hoy, señalas la carga mental. Todavía no tienes clara esa comodidad con tu cuerpo.",
+      "claim_trace": [
+        {
+          "claim": "sentir más placer",
+          "evidence_ids": [
+            "P24_O02"
+          ]
+        },
+        {
+          "claim": "sentirte más cómoda con tu cuerpo",
+          "evidence_ids": [
+            "P24_O06"
+          ]
+        },
+        {
+          "claim": "encontrar una forma de cercanía que te haga sentido",
+          "evidence_ids": [
+            "P24_O08"
+          ]
+        },
+        {
+          "claim": "tener más tiempo o espacio para tu vida erótica",
+          "evidence_ids": [
+            "P24_O12"
+          ]
+        },
+        {
+          "claim": "curiosity",
+          "evidence_ids": [
+            "P01_O05",
+            "P22_O06"
+          ]
+        },
+        {
+          "claim": "body_details",
+          "evidence_ids": [
+            "P07_O03"
+          ]
+        },
+        {
+          "claim": "body_condition",
+          "evidence_ids": [
+            "P06_O02"
+          ]
+        },
+        {
+          "claim": "pleasure",
+          "evidence_ids": [
+            "P10_O03"
+          ]
+        },
+        {
+          "claim": "affective",
+          "evidence_ids": [
+            "P13_O04"
+          ]
+        },
+        {
+          "claim": "agency",
+          "evidence_ids": [
+            "P21_O04"
+          ]
+        },
+        {
+          "claim": "body_comfort",
+          "evidence_ids": [
+            "P27_O06"
+          ]
+        },
+        {
+          "claim": "miss",
+          "evidence_ids": [
+            "P01_O02"
+          ]
+        },
+        {
+          "claim": "daily_impact",
+          "evidence_ids": [
+            "P19_O05"
+          ]
+        },
+        {
+          "claim": "daily_burdens",
+          "evidence_ids": [
+            "P20_O03"
+          ]
+        }
+      ],
+      "selected_relations": [
+        "R_BODY_CONDITION_PRESENT",
+        "R_DAILY_CONDITIONS"
+      ]
+    },
+    "R_INTERNAL_NO_DIFFICULTY": {
+      "configuration_name": "Deseo de libertad",
+      "summary": "Quieres sentir más placer, explorar tu orgasmo y sentirte más libre para expresar o vivir lo que deseas, desde una vida erótica con la que hoy te sientes bien. Disfrutas mucho tus encuentros eróticos y siempre o casi siempre percibes que tu placer importa tanto como el de tu pareja; la cercanía afectiva con tu pareja varía, y la cercanía erótica con tu pareja no está clara; reconoces algo de margen para decidir sobre tu vida erótica. Tu vida erótica no está ni muy cerca ni muy lejos de cómo te gustaría vivirla; en esa exploración, hace tanto que no llegas al orgasmo que no recuerdas cuándo fue; no señalas intereses que te cueste reconocer para ti misma.",
+      "claim_trace": [
+        {
+          "claim": "sentir más placer",
+          "evidence_ids": [
+            "P24_O02"
+          ]
+        },
+        {
+          "claim": "explorar tu orgasmo",
+          "evidence_ids": [
+            "P24_O04"
+          ]
+        },
+        {
+          "claim": "sentirte más libre para expresar o vivir lo que deseas",
+          "evidence_ids": [
+            "P24_O13"
+          ]
+        },
+        {
+          "claim": "well",
+          "evidence_ids": [
+            "P01_O01"
+          ]
+        },
+        {
+          "claim": "pleasure",
+          "evidence_ids": [
+            "P10_O01"
+          ]
+        },
+        {
+          "claim": "reciprocity",
+          "evidence_ids": [
+            "P15_O01"
+          ]
+        },
+        {
+          "claim": "affective",
+          "evidence_ids": [
+            "P13_O06"
+          ]
+        },
+        {
+          "claim": "erotic",
+          "evidence_ids": [
+            "P14_O07"
+          ]
+        },
+        {
+          "claim": "agency",
+          "evidence_ids": [
+            "P21_O03"
+          ]
+        },
+        {
+          "claim": "gap",
+          "evidence_ids": [
+            "P02_O03"
+          ]
+        },
+        {
+          "claim": "orgasm_experience",
+          "evidence_ids": [
+            "P25_O08"
+          ]
+        },
+        {
+          "claim": "internal_permission",
+          "evidence_ids": [
+            "P29_O03"
+          ]
+        }
+      ],
+      "selected_relations": [
+        "R_ORGASM_SCOPE",
+        "R_INTERNAL_NO_DIFFICULTY"
+      ]
+    }
+  }
+}

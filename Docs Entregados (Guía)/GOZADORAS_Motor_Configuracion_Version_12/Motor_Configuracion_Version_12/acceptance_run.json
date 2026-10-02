@@ -1,0 +1,73 @@
+{
+  "status": "ACCEPTANCE_PASS",
+  "all_passed": true,
+  "production_delivery": false,
+  "suites": [
+    {
+      "suite": "test_composer.py",
+      "returncode": 0,
+      "stdout": "{\"known_inputs\": 15, \"targeted_connector_inputs\": 6, \"novel_inputs\": 100, \"passed\": 69}\n",
+      "stderr": "",
+      "source_sha256": "49df117afb42e1cf67122edc8d5d5cd83627a770a692224a9858f1e66fdb46a5"
+    },
+    {
+      "suite": "test_editorial_contract.py",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "........\n----------------------------------------------------------------------\nRan 8 tests in 0.164s\n\nOK\n",
+      "source_sha256": "2d5dea6e02066cce79c01fc1c221d2446ecb787b339f9fbb2751e413729fe102"
+    },
+    {
+      "suite": "test_contract_closure.py",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "......\n----------------------------------------------------------------------\nRan 6 tests in 0.344s\n\nOK\n",
+      "source_sha256": "8e4c5112ff5d108d4ab87e4faf859b84ae03338fa750482cbdd20e4f0ec02971"
+    },
+    {
+      "suite": "test_applicability.py",
+      "returncode": 0,
+      "stdout": "{\"passed\": 28, \"cases_no\": 8, \"cases_ctx_private\": 8}\n",
+      "stderr": "",
+      "source_sha256": "37aafd9c483e3a6fe4ce419cc38d5e5d302b6bd8cb99b8fed09b93be36e7ea2e"
+    },
+    {
+      "suite": "test_self_review.py",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "................\n----------------------------------------------------------------------\nRan 16 tests in 0.023s\n\nOK\n",
+      "source_sha256": "d5a3d848f2a98b60dbaaab034b9aeee9888b93887db71b003df4a4c503ac7ff5"
+    },
+    {
+      "suite": "test_deepening_coverage.py",
+      "returncode": 0,
+      "stdout": "{\"version\": \"composition-controlled-12-contract-freeze\", \"status\": \"TECHNICAL_PASS_NOT_PRODUCTION_APPROVAL\", \"scope\": \"Each canonical option executed in one valid synthetic context; no exhaustive crossing guarantee\", \"canonical_options\": 252, \"dispositions\": {\"CONTENT_MAPPING\": 214, \"LITERAL_ELICITATION_ONLY\": 7, \"CONTEXT_HISTORY_ONLY\": 16, \"UNCERTAINTY_ONLY\": 5, \"PRIVACY_ONLY\": 10}}\n",
+      "stderr": ".......\n----------------------------------------------------------------------\nRan 7 tests in 0.031s\n\nOK\n",
+      "source_sha256": "c6965bf0812f8f2ed021e277c757e444a41cd97d0f16647152a64a9c765546b4"
+    },
+    {
+      "suite": "test_remaining_options.py",
+      "returncode": 0,
+      "stdout": "{\"critical_matrix_passed\": 30}\n",
+      "stderr": "............\n----------------------------------------------------------------------\nRan 12 tests in 0.076s\n\nOK\n",
+      "source_sha256": "8482785e26078b382df719ae92e02c95252f4482ec03f3318ed27550145856b6"
+    },
+    {
+      "suite": "test_freeze_crossings.py",
+      "returncode": 0,
+      "stdout": "{\"distinct_crossing_inputs\": 80}\n",
+      "stderr": ".......\n----------------------------------------------------------------------\nRan 7 tests in 0.037s\n\nOK\n",
+      "source_sha256": "e6588ae7bfd1b105c0feeb31c22fe9a01bf24ea210a3a33dc51b7926051d4b9d"
+    },
+    {
+      "suite": "test_preuse_review.py",
+      "returncode": 0,
+      "stdout": "{\"additional_sample_passed\": 1200}\n",
+      "stderr": ".....\n----------------------------------------------------------------------\nRan 5 tests in 0.019s\n\nOK\n",
+      "source_sha256": "b7f969914a87ac40b3ebdf4784cb239482ac3cc6374ceb6e6e1020ba0bebf47c"
+    }
+  ],
+  "executed_at_utc": "2026-10-02T11:59:58.162295+00:00",
+  "version": "composition-controlled-12-contract-freeze",
+  "version_number": 12
+}

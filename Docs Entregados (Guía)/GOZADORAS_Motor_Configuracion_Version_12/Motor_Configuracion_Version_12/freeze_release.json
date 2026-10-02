@@ -1,0 +1,59 @@
+{
+  "version": "composition-controlled-12-contract-freeze",
+  "date": "2026-10-02",
+  "status": "BOUNDED_COMPOSITION_CONTRACT_FREEZE",
+  "frozen_scope": "Configuration name/summary composition contract, stable catalogue, scoped source rules, closed title eligibility, exception handling and eight editorial references.",
+  "snapshot_schema": "mapa-freeze-a-1",
+  "instrument_fingerprint": "95b6f24e4eeca80220ae6133f9eeaea707537c3cfd06ad0cd8840535515d1b31",
+  "source_sha256": {
+    "composer.py": "4474d1c088be738ab8bf93f91862bc91089685057bbbcfab2c4e63d0dfd43786",
+    "qa.py": "74ee893743c82ea4c2a89dc23a27c94552f014257f5ec3c17ffb3a844979af29",
+    "canonical_options.json": "7b6dccd57407a1672a8cdce4c7d6ae9df7a83e42594ca5efc9b7ea42000f1a1f",
+    "composition_catalog.json": "1b1fad347f2a8f04ecb8b0add712ba83be72f68c34bc4d2a39f42d913fcfc689",
+    "composer_contract.json": "35e1c6d41276d958eb60c5c11d75a02d8f6caaec5380de980fbf1c77efcb5942",
+    "editorial_reference_outputs.json": "28914fee278b668969764dcb043f611a8d5ba507d731c7e167b40b0641f8e414",
+    "freeze_readiness.json": "868a0a5dab967085236e810a30802e24a88c61a0de91abfd2167510b9f433bc8",
+    "run_acceptance.py": "62137a4ec69e9a9bc01bf3c4d83ee584a5c1f673f3beca14447b8ad64d1739e3",
+    "test_preuse_review.py": "b7f969914a87ac40b3ebdf4784cb239482ac3cc6374ceb6e6e1020ba0bebf47c"
+  },
+  "acceptance_suites": {
+    "test_composer.py": 69,
+    "test_editorial_contract.py": 8,
+    "test_contract_closure.py": 6,
+    "test_applicability.py": 28,
+    "test_self_review.py": 16,
+    "test_deepening_coverage.py": 7,
+    "test_remaining_options.py": 12,
+    "test_freeze_crossings.py": 7,
+    "test_preuse_review.py": 5
+  },
+  "all_passed": true,
+  "production_delivery": false,
+  "next_use_gates": [
+    "Actual integration and rendering/export/session checks",
+    "Participant comprehension and recognition validation"
+  ],
+  "change_policy": "Changes to frozen source files or editorial references require a new composition version and acceptance rerun. Freeze A/B remain separate.",
+  "not_claimed": [
+    "Exhaustive response-space coverage",
+    "Automatic approval of all generated prose",
+    "User comprehension or participant validation",
+    "Actual Nicolas deployment"
+  ],
+  "preuse_review_12": {
+    "version": "composition-controlled-12-contract-freeze",
+    "corrections": [
+      "P06_O02 remains a possible body impact in the Object; P06_O01 remains confirmed.",
+      "Unit-test reports and acceptance runner cannot certify failing or empty execution.",
+      "Eight fixed editorial name/summary/selected-relation references are checked exactly."
+    ],
+    "unchanged": "Eight reference paragraphs, Freeze A/B, target population, scoped precedence and draft-only delivery.",
+    "additional_structural_sample": 1200,
+    "sample_limit": "Finite structural/source checks; no exhaustive prose or participant validation."
+  },
+  "instrument_fingerprint_scope": "Canonical option IDs and display labels only; question wording, branches and Gate remain governed by separate Freeze A/B.",
+  "acceptance_record_sha256": "b1b8ef47c4957da45cd304eb8a7d8d279262f13850f2efb231946c5f16102d4b",
+  "version_number": 12,
+  "package_filename": "GOZADORAS_Motor_Configuracion_Version_12.zip",
+  "versioning_policy": "Consecutive whole numbers; one shared current number for filename, contract and content."
+}

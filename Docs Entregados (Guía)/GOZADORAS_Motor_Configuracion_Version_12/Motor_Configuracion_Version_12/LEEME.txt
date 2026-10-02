@@ -1,0 +1,426 @@
+GOZADORAS CLUB — MOTOR DE CONFIGURACIÓN — VERSIÓN 12
+Regla vigente: versiones enteras consecutivas; archivo y contenido con el mismo número.
+
+ESTADO VIGENTE — FREEZE DE COMPOSICIÓN ACOTADO V12 · 02/10/2026
+=================================================================
+Autorrevisión previa al uso: el Object distingue impacto corporal posible
+(P06_O02) de impacto confirmado (P06_O01). Los informes y el ejecutor de
+aceptación no pueden declarar aprobado un conjunto fallido o vacío.
+Se comprueban exactamente los ocho nombres/párrafos/relaciones fijados,
+sin regenerar el esperado durante la prueba. Esos ocho textos no cambian.
+
+Nueve conjuntos de controles pasan: 69 + 8 + 6 + 28 + 16 + 7 + 12 + 7 + 5.
+Se agregan 1.200 entradas sintéticas para controles de fuentes y ámbitos.
+Son comprobaciones técnicas finitas, no validación editorial de cada salida,
+no usuarias y no cobertura exhaustiva. La corrida real y sus códigos de
+salida están en acceptance_run.json. Reproducir: python3 run_acceptance.py.
+
+El fingerprint comprueba IDs y etiquetas canónicas de opciones; no comprueba
+por sí solo wording completo, branches ni Gate, que siguen bajo Freeze A/B.
+El Freeze acotado del contrato permanece; no habilita producción. Todas las
+salidas automáticas siguen como borradores internos. Antes del MVP integrado
+faltan integración real con Nicolás y comprensión/reconocimiento con usuarias.
+
+El archivo y su contenido comparten una única versión entera: 12.
+Lo inferior es registro histórico, con numeración entera.
+
+REGISTRO HISTÓRICO — V10
+ESTADO VIGENTE — FREEZE DE COMPOSICIÓN ACOTADO V10 · 02/10/2026
+================================================================
+Se cierra el contrato de composición de name/summary: reglas y prioridades,
+tratamiento de opciones, precedencia de cuidado, títulos, cuarta frase,
+excepciones y ocho textos de referencia revisados editorialmente.
+El nombre histórico del archivo ZIP se conserva; esta cabecera, el contrato
+y freeze_release.json describen el estado vigente. Lo inferior es historial.
+
+Correcciones finales: disfrutar no atribuye elección libre de encuentros;
+el disfrute no desaparece al componer deseos/límites; se acortan cláusulas de
+cuidado conservando ámbitos distintos; nombres con condiciones de significado
+y fuentes emitidas; una cuarta frase requiere una razón autorizada.
+Cierre aprobado de 06 intacto. Instrumento A/B, branches y Gate intactos.
+
+Ocho conjuntos de controles pasan: 69 + 8 + 6 + 28 + 16 + 7 + 12 + 7.
+Se revisan 252 entradas de una opción, testigos de las 34 reglas y los cruces
+registrados: 109 de cuidado, 30 de exploración/contexto/cuidado y 80 nuevos
+cruces distintos de límites/respuesta/seguridad/privacidad/margen/disfrute/cuerpo.
+Estos conteos no se suman como usuarias ni como cobertura exhaustiva.
+
+Freeze del contrato no habilita el MVP. El compositor sigue entregando
+borradores internos (delivery_eligible=false). Integración real con Nicolás y
+comprensión/reconocimiento con usuarias siguen pendientes, en etapas distintas.
+No se interpreta texto libre, no se solicitan respuestas nuevas por limitación
+del catálogo, no se incluyen Outcome/Destinos ni un segundo instrumento.
+
+Reproducir los ocho conjuntos test_*.py detallados en freeze_release.json.
+
+REGISTRO HISTÓRICO — V9 PRELIMINAR · NO FREEZE · 02/10/2026
+===========================================================
+Se cierra el tratamiento explícito de las 31 opciones antes pendientes.
+El inventario completo queda en: 214 mapeos de contenido, 16 registros de
+historia/contexto, 7 activadores de texto literal, 5 estados de incertidumbre
+y 10 de privacidad. No se fuerza toda respuesta a entrar en el párrafo.
+Historia/contexto no se convierten en causas; texto libre no activa señales.
+
+Cuatro relaciones nuevas conservan exploración conocida, contradicción entre
+explorar y rechazar formas ofrecidas, ausencia local de dificultad interna y
+restricciones de autonomía no identificadas. Ninguna otorga libertad global.
+Se expresa el contraste de exploración y se retiran repeticiones del deseo de
+libertad, del intento de volver a un encuentro y de detalles corporales.
+
+Siete conjuntos de controles pasan: 69 + 8 + 6 + 28 + 16 + 7 + 12.
+Se ejecutan 252 entradas de una opción y 30 cruces de contexto/exploración/
+cuidado; las 34 reglas tienen una salida testigo. No es cobertura exhaustiva.
+Queda revisión final editorial/de cruces acotados y fijación de versión antes
+del Freeze del contrato. Integración y pruebas con usuarias son etapas distintas.
+Ningún borrador se entrega automáticamente. Freeze A/B siguen intactos.
+
+Reproducir: python3 test_remaining_options.py, además de los seis comandos
+de prueba registrados en composer_contract.json. Las notas inferiores son
+históricas; esta cabecera y los contratos vigentes prevalecen.
+
+REGISTRO HISTÓRICO — V8 PRELIMINAR · NO FREEZE · 02/10/2026
+===========================================================
+Esta cabecera y composer_contract.json / freeze_readiness.json prevalecen
+sobre las notas históricas inferiores. El archivo mantiene su nombre inicial.
+
+Se corrigieron omisiones de las profundizaciones: pausa/evitación tras un
+encuentro no disfrutado, restricciones concretas de autonomía, orgasmo y
+sentirse deseada. Los ámbitos siguen separados; dependencia no diagnostica
+control, iniciativa no sustituye reciprocidad y explorar no prueba disposición
+actual a un encuentro. No se modifica el instrumento ni sus branches/Gate.
+Se incorpora impacto corporal confirmado o posible con detalles identificados,
+sin atribuir causas a deseo/disfrute. Condiciones cotidianas siguen siendo
+selectivas. Se acortaron introducciones y se equilibraron cláusulas completas
+sin añadir frases ni relaciones, protegiendo los ámbitos de cuidado.
+
+Los seis conjuntos de controles pasan: 69 + 8 + 6 + 28 + 16 + 7.
+Además, 252 opciones canónicas se ejecutaron cada una en una entrada válida
+con auditoría de fuentes. 205 tienen un mapeo de contenido, 6 conservan solo
+incertidumbre, 10 solo privacidad y 31 se conservan sin mapeo de contenido.
+Estos conteos NO prueban cobertura completa de relaciones ni calidad de voz.
+La revisión de las 31 restantes debe decidir su función en historia/contexto,
+estados especiales y exploración. No entregar los borradores automáticamente.
+
+Prueba adicional reproducible: python3 test_deepening_coverage.py
+option_coverage_results.json conserva todas las entradas, sus salidas y las
+opciones pendientes. editorial_reference_outputs.json fija los ocho textos
+actuales como referencias revisadas por la autora del compositor, sin atribuir
+aprobación nueva a Mónica, Francis o usuarias. Todos siguen PRELIMINARES.
+
+REGISTRO HISTÓRICO — V7 PRELIMINAR · NO FREEZE · 02/10/2026
+==========================================================
+Esta cabecera y composer_contract.json / freeze_readiness.json describen
+el estado vigente. Las notas inferiores conservan el historial.
+
+Se revisó el corpus existente y se corrigió la composición común para
+elaborar relaciones respaldadas, conservar matices y reducir repeticiones.
+Nueve realizaciones de síntesis dependen de relaciones seleccionadas y sus
+fuentes. Dos cierres reflexivos son condicionales, de un solo foco y no
+solicitan otra respuesta. No se añaden relaciones ni se interpreta texto libre.
+Se conserva el cierre aprobado de 06. Name y summary mantienen sus guardas.
+
+Corrida final: compositor 69/69; editorial 8/8; cierre de contrato 6/6;
+aplicabilidad 28/28; autorrevisión 16/16. Los seis controles de cierre
+incluyen 109 combinaciones válidas de límites, respuesta y seguridad.
+Son pruebas del prototipo con casos sintéticos; no validación con usuarias.
+
+Persisten pendientes: cierre editorial de patrones densos, cobertura
+semántica completa, liberación de la versión final, integración con Nicolás
+y comprensión/reconocimiento con usuarias. No todas esas etapas son un
+mismo Freeze: el contrato puede cerrarse antes de la integración, sin que
+eso habilite el MVP. Todas las salidas siguen siendo borradores no entregables.
+
+Reproducir estado vigente:
+python3 test_composer.py
+python3 test_editorial_contract.py
+python3 test_contract_closure.py
+python3 test_applicability.py
+python3 test_self_review.py
+
+REGISTRO VIGENTE · 01/10/2026
+Contiene el contrato de referencia v1 (con corrección de estados 0.3.1)
+y la composición automática controlada v2, con ajustes hasta v0.4.4.
+PRELIMINAR / NO FREEZE.
+El nombre histórico del ZIP se conserva para mantener continuidad.
+
+V2 — QUÉ SE EJECUTÓ
+composer.py valida el snapshot, construye un Object cerrado y compone
+name/summary mediante cláusulas y relaciones respaldadas. No consulta
+case_id ni los párrafos esperados. No usa un modelo generativo externo.
+Se ejecutaron 15 entradas conocidas (8 bases + 7 variantes) y 100 snapshots
+sintéticos nuevos, reproducibles con semilla 20261001. Se añaden seis casos
+dirigidos de conectores; 69 controles pasan.
+Los controles comprueban fuentes de las cláusulas realmente emitidas,
+privacidad por ámbito, conservación de anclas indispensables, invariancia
+al orden, independencia de case_id/expected, texto libre sin nuevas señales,
+nombres conocidos y excepción justificada de relaciones. No prueban
+validez psicométrica, comprensión de usuarias ni fidelidad semántica completa.
+
+V6 — APLICABILIDAD CANDIDATA DE CONTEXTO
+CTX «Prefiero no responder» no se interpreta como ausencia de pareja ni
+borra respuestas directas. Los ocho casos con ese contexto producen la misma
+lectura que sus respuestas equivalentes: no se inventa cercanía, seguridad
+ni libertad para compensar lo reservado.
+CTX «No» tiene una lectura de PREVIEW, aún candidata. P13/P14 se conservan
+completas en applicability.unresolved_reference_answers, sin trasladar sus
+opciones a una pareja actual no confirmada ni convertirlas en distancia,
+soledad o incertidumbre global. No se ocultan preguntas ni se fabrican estados.
+P15/P17 reciben redacción candidata de encuentros y reacciones reportadas,
+con sus mismos IDs/frecuencias; no se afirma una relación de pareja actual.
+P16/P18/P21 conservan sus señales propias. Las señales de cuidado de P17
+tampoco se pierden por declarar ausencia de pareja. P24 sobre reciprocidad
+sigue siendo deseo, nunca evidencia de reciprocidad disponible.
+
+compose_applicability_preview ejecuta la candidata No; compose mantiene
+No fuera del contrato por defecto hasta resolver referente y elegibilidad.
+Esta separación es interna de implementación, no una pantalla de rechazo
+propuesta para la participante. Nada se envió a Nicolás ni se desplegó.
+applicability_outputs.json conserva ocho snapshots completos y sus previews;
+test_applicability.py comprueba 28 comportamientos, incluida privacidad P18
+y texto libre sin referencia inventada. Los 69 y 16 controles previos pasan.
+
+LÍMITE IMPORTANTE: A/B fijan entrada solo con CTX00 «Sí» y núcleo P13-P16.
+La dirección posterior de admitir No/privacidad no cambia por sí sola esos
+archivos. Antes de uso debe documentarse la alineación de entrada y resolver
+cómo responde quien no tiene referente para esas preguntas. Estas pruebas
+no cubren preguntas relacionales sin responder, no fuerzan «No lo tengo claro»
+y no cambian el Gate. El bloqueo F03 avanza a OPEN_WITH_TESTED_CANDIDATE.
+No declarar Freeze ni validación con mujeres sin pareja a partir de esta prueba.
+
+V5 — AUTORREVISIÓN ANTES DE USO
+Se reprodujeron fallas no cubiertas por comprobar únicamente la pertenencia
+de IDs: respuestas omitidas con contenido, zonas duplicadas o en otra pregunta,
+estados no canónicos, entrada incompleta y atribuciones inadecuadas en nombres
+y en la evidencia del deseo presente. El primer conjunto de 12 pruebas dio
+10 fallas y 1 error antes de corregir; el registro se conserva por separado.
+Las 16 pruebas dirigidas finales pasan junto a los 69 controles del compositor
+y los 33 del auditor histórico. No se suman como una medida de validez.
+
+Correcciones: la validación rechaza datos incompatibles con el estado y la
+estructura; una entrada incompleta genera un error de validación controlado.
+«Deseo presente» cita solo señales positivas de ocurrencia, nunca la respuesta
+negativa del otro momento. Desear/valorar no se convierte en recurso presente.
+«Placer entre cambios» requiere P06_O01; la mera posibilidad o un deseo corporal
+recibe el nombre candidato «El cuerpo en tu mirada». El nombre de distancia
+erótica usa P14, sin atribuir esa distancia a una P02 cercana.
+
+composition_catalog.json es ahora el único catálogo vigente de 23 relaciones
+y sus guardas; rules.json queda como referencia del auditor histórico v0.3.
+Incluye las tres reglas antes dispersas en código y extiende R_RESPONSIVE a
+P08_O04/O05 con P09_O01/O02. Se detectaron siete salidas de la muestra que
+expresaban esa relación sin tenerla seleccionada; se unificaron condición y
+redacción. La relación responsiva no se emite si otras relaciones prioritarias
+la dejan fuera. P11/zonas tiene su propio ámbito de sensaciones; no usa el
+ámbito de registro corporal de P26. El Object separa recursos presentes e
+incertidumbre, con evidencia propia.
+
+freeze_readiness.json distingue cuatro pendientes para Freeze del contrato
+de composición y dos verificaciones para uso del MVP integrado. No confunde
+Freeze de reglas con validación con usuarias, ni obliga a esperar la integración
+para poder cerrar un contrato de composición. La revisión completa de voz,
+cobertura y presupuesto semántico de nombre/summary sigue pendiente.
+Todas las salidas continúan siendo borradores; no se habilita entrega pública.
+
+Se detectó y corrigió en la muestra nueva una pérdida de distancia erótica
+cuando coincidía con una lectura de límites. También se evitó presentar
+disfrute o distancia deseada en cierres donde no existía esa evidencia.
+P11 (zonas agradables) y P26 (reconocer lo que pasa en el cuerpo) conservan
+sus ámbitos distintos, conforme a la pregunta exacta de Freeze A.
+
+V3 — AJUSTE DE COMPOSICIÓN Y VOZ
+02 agrupa margen, cercanía y reciprocidad en su segunda frase; el deseo
+responsivo y la dificultad de tiempo quedan en la tercera. Conserva tres
+frases, disfrute/bienestar en la primera y el nombre aprobado.
+03 mantiene el tiempo fuera del summary y dentro del Object.
+Se evita introducir «aunque» entre observaciones de cuidado y disfrute
+por mera simultaneidad. La capacidad de expresar límites, la seguridad
+sentida y la respuesta de pareja conservan fuentes independientes.
+04 separa la facilidad de registro corporal y la comodidad de los recursos
+presentes en una cuarta frase justificada: la compresión confundía zonas
+agradables presentes con facilidad de registro o comodidad. No añade hechos
+ni relaciones. Esta redacción automática sigue siendo candidata editorial.
+06 con margen conocido ya no repite la incertidumbre corporal al final:
+se registra la paráfrasis junto a sus dos fuentes (curiosidad e incertidumbre
+corporal), de modo que la recuperación de anclas no vuelva a añadirla.
+Los seis nuevos controles verifican estos comportamientos. No certifican
+la voz de todo el espacio de respuestas ni la fidelidad semántica completa.
+
+V4 — CONECTORES CON CONDICIONES Y SÍNTESIS 05
+Los conectores de contraste dependen de los ámbitos respaldados: no basta
+que dos respuestas aparezcan juntas. composer_contract.json documenta cinco
+condiciones de escritura con sus option_id. No son cinco relaciones nuevas:
+modulan cómo se expresa una relación y conservan su presupuesto y precedencia.
+«Incluso cuando» acompaña una dificultad de límites y respeto declarado;
+una respuesta variable de pareja no se transforma en respeto. Poder expresar
+límites con facilidad no se convierte en dificultad. La imposibilidad de decir
+no puede contrastar con seguridad explícitamente positiva; seguridad incierta
+se conserva como incertidumbre, sin presentar una seguridad favorable.
+Las dificultades internas solo contrastan con recursos declarados; cambios
+corporales y poco disfrute no reciben un «pero también» favorable si no hay
+zonas agradables ni disfrute positivo declarado.
+05 traslada la distancia deseada al cierre junto a no querer mover nada y el
+disfrute; mantiene cercanía afectiva/distancia erótica, reciprocidad y agencia.
+Conserva tres frases y diferencia P02_O04 de P02_O05. Es una nueva candidata
+editorial: no se interpreta la revisión de Francis como aprobación de esta
+redacción posterior.
+Seis entradas dirigidas incluyen los branches que corresponde activar o
+retirar. Sus snapshots y salidas quedan en targeted_connector_cases dentro
+de generated_outputs.json. Ocho controles añadidos pasan junto a los 61
+anteriores. Las 15 entradas conocidas y las 100 sintéticas se vuelven a correr.
+Continúan DRAFT_EDITORIAL_REVIEW y las reservas de cobertura, voz, títulos,
+aplicabilidad relacional e integración. No hay validación con usuarias.
+
+GENERACIÓN Y REFERENCIAS EDITORIALES
+Los textos de scoped_readings.json conservan la aprobación editorial de
+las variantes 07/08 y del último cierre 06. generated_outputs.json contiene
+las redacciones realmente producidas por el compositor, aún para revisión
+editorial: pasar un control de fuente no aprueba automáticamente la voz.
+novel_snapshots.json conserva las 100 nuevas entradas y sus salidas.
+composer_contract.json registra las reglas nuevas y las reservas actuales.
+
+EXCEPCIÓN Y PENDIENTES
+Tres relaciones es el primer objetivo. Si deja fuera una distinción de
+prioridad 1, se conservan las indispensables y se registra rule_id/evidencia
+de la ampliación. Los borradores ampliados quedan para QA editorial.
+La implementación actual agrupa hasta cuatro frases; algunos casos nuevos
+pueden quedar densos y requieren mejorar su escritura. No hay una pantalla
+sin resultado por mera falta de cobertura del catálogo. La aplicabilidad
+para pareja No/privacidad permanece fuera del prototipo.
+No están cubiertos todos los significados de opciones ni todas las relaciones
+materiales posibles; faltan profundizaciones y auditoría de títulos en casos
+nuevos. No se integró el código de Nicolás ni se modificaron Freeze A/B.
+
+REPRODUCIR V2
+python3 build_fixtures.py
+python3 qa.py
+python3 audit_candidates.py
+python3 scoped_readings.py
+python3 test_composer.py
+python3 test_self_review.py
+python3 test_applicability.py
+
+REGISTRO HISTÓRICO DEL CONTRATO V1
+==================================
+
+GOZADORAS CLUB — Composition de Configuration Output
+Referencia ejecutable 0.3 PRELIMINAR · NO FREEZE · 01/10/2026
+
+ALCANCE
+Auditoría del contrato de composición sobre ocho casos ficticios y cuatro
+variantes de una respuesta. No es el generador de prosa de producción y no
+se ha conectado ni probado el código de Nicolás. Las salidas esperadas son
+referencias editoriales; nunca deben usarse como un dispatch por case_id.
+No incluye Outcome, Destinos, ranking, elección de trabajo ni Puente.
+Freeze A/B no se modificaron.
+
+FUENTE
+MVP Mapa_Instrumento_v1_FREEZE.docx, Freeze A v10, 01/10/2026.
+Los 252 option_id/etiquetas se extrajeron de su tabla canónica. P11 conserva
+los zone_id y estados externos por separado. Las ocho entradas completas
+se reconstruyeron como fixtures explícitos a partir de los casos de trabajo;
+no son snapshots reales de usuarias ni pruebas de una implementación previa.
+
+ARCHIVOS
+rules.json: catálogo cerrado candidato de 20 relaciones y 9 guardas, con
+rule_id, stable_order, condiciones, ámbitos, permitido/prohibido y prioridad.
+canonical_options.json: etiquetas exactas de la fuente.
+fixture_inputs.json: redacciones aprobadas como prosa y respuestas sintéticas.
+fixtures.json: 40 registros por caso, estado canónico, IDs, branches y variantes.
+objects.json: valores, deseos, recursos presentes, incertidumbre y evidencia
+separados; texto libre almacenado sin activación semántica automática.
+results.json: corrida de originales y controles negativos/operativos.
+candidate_fixtures.json / candidate_results.json: ajustes mínimos propuestos
+para 02/03, aún no aprobados editorialmente.
+qa.py / build_fixtures.py / audit_candidates.py: comprobación reproducible.
+
+EJECUTAR
+python3 build_fixtures.py
+python3 qa.py
+python3 audit_candidates.py
+Sin dependencias de terceros ni servicios externos.
+
+REGLAS FORMALES
+Una condición option_ids significa cualquiera de esos IDs. all / any
+componen conjunciones/disyunciones explícitas; guards referencia guardas
+independientes, que siempre se evalúan antes de elegir relaciones.
+Prioridad ascendente, cobertura de aspectos nuevos y luego stable_order.
+El orden de clic no influye. stable_order de este catálogo queda documentado;
+cualquier cambio de precedencia exige versión nueva, nunca reordenación tácita.
+Máximo tres relaciones compartidas por name y summary. Convergencia significa
+recursos/estados diferentes que apuntan a una relación común, sin puntos ni
+conteo repetido. No agrupar relaciones distintas para esconder un exceso.
+Los detalles descriptivos de una relación requieren sus propias respuestas;
+una selección en P22/P24 nunca demuestra un recurso presente.
+Name solo puede nombrar relaciones seleccionadas y está sometido a todas
+las guardas. No adquiere un presupuesto extra. Un deseo de libertad no debe
+presentarse como libertad lograda; Desear con libertad (07) se mantiene como
+referencia de deseo, pendiente de confirmar esa comprensión en QA editorial.
+Cuarta frase: solo distinción indispensable de cuidado, contradicción
+explícita o incertidumbre por ámbito. No añade relación ni hecho.
+
+RESULTADO
+12 entradas válidas según los controles de IDs, estados, cardinalidad y
+branches ejecutados. P28/P29/P32 comprobados en cada una.
+33/33 controles del auditor pasan, incluidos controles que DEBEN rechazar
+redacciones incompatibles. Esto NO significa 31 pruebas de un motor final.
+Originales: seis de ocho referencias pasan este contrato; 02 y 03 detectan
+desajustes. Cuatro variantes pasan sus comprobaciones.
+02: cuatro frases sin motivo autorizado registrado.
+03: tiempo agregado como cuarta relación, de menor prioridad que sus tres
+relaciones centrales. Puede retirarse del summary sin borrar la respuesta
+ni eliminar el tiempo del Object.
+Ajustes candidatos: 02 redistribuye el mismo contenido en tres frases;
+03 retira el cierre sobre tiempo. Las 12 referencias candidatas pasan los
+controles ejecutados, pero esos ajustes requieren revisión editorial.
+
+VARIANTES
+01 P15_O01 -> P15_O09: privacidad de respuesta; retirar afirmación positiva
+de reciprocidad sin afirmar que sea baja ni incierta.
+07 P32_O04 -> P32_O03: privacidad material solo a veces; no borrar P20_O09
+ni la dificultad interna declarada en P29.
+08 P18_O04 -> P18_O01: cambiar únicamente seguridad declarada; conservar
+P16_O05 y P17_O04 y el contraste entre esos ámbitos.
+08 P17_O04 -> P17_O02: cambiar respuesta de pareja; conservar imposibilidad
+propia y falta de seguridad. P18 sigue activa por P16_O05.
+
+ESTADO OPERATIVO
+Si tres relaciones no cubren una distinción indispensable, o si el texto
+contradice guardas, composición = REVIEW_REQUIRED; qa_flag = true;
+name/summary personalizados no se entregan. Gate no se reabre: el instrumento
+puede estar COMPLETE. Se conserva el cierre técnico neutro ya acordado;
+su copy y contrato de pantalla deben especificarse en la integración.
+No emitir una plantilla neutra que simule una lectura personalizada.
+
+RESERVAS QUE CONTINÚAN ABIERTAS
+Este catálogo cubre los casos de referencia, no todo el espacio de respuestas.
+No hay auditoría semántica automática completa de cada frase en español.
+No se ejecutó un renderer ni se probó generación de name/summary desde
+respuestas arbitrarias; por ello los goldens no prueban esa capacidad.
+No se agotaron todas las combinaciones de branches, privacidad y cuidado.
+Las doce fixtures tienen pareja actual = Sí. La instrucción posterior de
+permitir continuar con No/privacidad no está reflejada todavía en el supuesto
+de Freeze A: resolver aplicabilidad relacional en Motor sin inventar cambios
+a P13–P18. Se incluye control para bloquear lectura personalizada cuando
+esa aplicabilidad está pendiente, manteniendo COMPLETE si corresponde.
+QA editorial de los cambios 02/03 y del nombre 07 sigue pendiente.
+No promover a Freeze ni presentar estas corridas como validación de usuarias.
+
+CONTINUIDAD 01/10/2026 · LECTURAS ACOTADAS
+Corrección 0.3.1 del auditor: los estados se asignan por option_id, nunca por
+la etiqueta visual (los emojis impedían reconocer dos incertidumbres). Se
+regeneraron fixtures/Objects y se añadieron dos controles; 33/33 pasan.
+scoped_readings.py/json contienen tres variantes nuevas de una respuesta
+y propuestas editoriales con fuentes por cláusula. Verificadas las entradas
+y la presencia de cada ID; no se ejecutó un generador ni una auditoría
+semántica automática de las nuevas redacciones.
+Nueva dirección autorizada: la falta de cobertura del catálogo requiere
+desarrollar una lectura fiel, acotada si corresponde. Incertidumbre y privacidad
+no justifican por sí solas entregar un cierre sin resultado. La pantalla
+propuesta sin resultado por falta de cobertura queda retirada como solución.
+El auditor v1 conserva sus checks históricos y no implementa todavía esa
+composición alternativa: REVIEW_REQUIRED bloquea un borrador no sustentado,
+pero el diseño nuevo exige resolver/recomponer la lectura antes de entregar.
+Tres relaciones siguen como primer objetivo; la posible excepción por una
+distinción indispensable necesita especificación y prueba antes de producción.
+No se promete revisión posterior a la participante ni se reabre el Gate.
+Continúa PRELIMINAR / NO FREEZE.

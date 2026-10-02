@@ -1,0 +1,87 @@
+{
+  "version": "composition-controlled-12-contract-freeze",
+  "status": "AUTHOR_EDITORIAL_REFERENCE_REVIEW_CLOSED",
+  "note": "Eight fixed references reviewed in context under the authorized editorial criteria. No new Francis or participant approval is claimed. The renderer never looks up reference paragraphs.",
+  "cases": [
+    {
+      "case_id": "01",
+      "configuration_name": "Explorar desde el disfrute",
+      "summary": "Quieres experimentar cosas nuevas, desde una vida erótica con la que hoy te sientes bien; el placer y el juego tienen un lugar importante para ti. Las ganas rara vez aparecen antes de empezar, pero muchas veces aumentan durante una oportunidad que eliges darte; disfrutas mucho tus encuentros eróticos y siempre o casi siempre percibes que tu placer importa tanto como el de tu pareja. Sientes cercanía con tu pareja tanto en lo afectivo como en lo erótico y reconoces margen para decidir sobre tu vida erótica; la falta de tiempo es una dificultad concreta en tu vida erótica cotidiana.",
+      "selected_relations": [
+        "R_EXPLORATION_WELL",
+        "R_RESPONSIVE",
+        "R_TIME"
+      ]
+    },
+    {
+      "case_id": "02",
+      "configuration_name": "Un lugar para el deseo",
+      "summary": "Quieres sentir más ganas y tener más tiempo o espacio para tu vida erótica, en un momento en que te sientes bien con tu vida erótica y disfrutas mucho tus encuentros eróticos. Ese deseo encuentra recursos presentes: reconoces margen para decidir sobre tu vida erótica y sientes cercanía con tu pareja tanto en lo afectivo como en lo erótico; siempre o casi siempre percibes que tu placer importa tanto como el de tu pareja. Las ganas rara vez aparecen antes de empezar, pero muchas veces aumentan durante una oportunidad que eliges darte; la falta de tiempo es una dificultad concreta en tu vida erótica cotidiana.",
+      "selected_relations": [
+        "R_MORE_DESIRE",
+        "R_RESPONSIVE",
+        "R_TIME"
+      ]
+    },
+    {
+      "case_id": "03",
+      "configuration_name": "Tu placer y tu voz",
+      "summary": "Quieres encontrar una forma de cercanía que te haga sentido, que tu placer importe tanto como el de tu pareja y expresar mejor lo que quieres y lo que no quieres. La cercanía afectiva con tu pareja coexiste con una distancia erótica; el disfrute y la reciprocidad tienen matices distintos: el disfrute varía en tus encuentros eróticos y pocas veces percibes que tu placer importa tanto como el de tu pareja. Reconoces margen para decidir sobre tu vida erótica y tienes ganas de volver a intentarlo, aunque te cuesta expresar lo que no quieres o cuándo quieres parar incluso cuando tu pareja generalmente lo respeta.",
+      "selected_relations": [
+        "R_CLOSENESS_SPLIT",
+        "R_EXPRESSION_RESPECT",
+        "R_RECIPROCITY_GAP"
+      ]
+    },
+    {
+      "case_id": "04",
+      "configuration_name": "Placer entre cambios",
+      "summary": "Quieres reconocer mejor lo que pasa en tu cuerpo, sentirte más cómoda con tu cuerpo y experimentar cosas nuevas; también te interesa profundizar en algo que ya existe. Hay cambios o molestias en tu cuerpo o bienestar que afectan tu vida erótica (dolor, lubricación y energía), pero también reconoces sensaciones agradables en algunas zonas de tu cuerpo y disfrutas bastante tus encuentros eróticos. Extrañas algo de tu vida erótica de antes, mientras sientes bastante cercanía afectiva con tu pareja y reconoces margen para decidir sobre tu vida erótica. El disfrute y la relación con tu cuerpo muestran registros distintos: te cuesta reconocer lo que pasa en tu cuerpo y te sientes poco cómoda con tu cuerpo.",
+      "selected_relations": [
+        "R_BODY_MIXED",
+        "R_BODY_WISH",
+        "R_RECOVER_EXPLORE"
+      ]
+    },
+    {
+      "case_id": "05",
+      "configuration_name": "Distancia con disfrute presente",
+      "summary": "Vivir tu erotismo a tu manera es importante para ti, y hoy no quieres mover nada. La cercanía afectiva con tu pareja coexiste con una distancia erótica; disfrutas bastante tus encuentros eróticos y la mayor parte del tiempo percibes que tu placer importa tanto como el de tu pareja. Reconoces mucho margen para decidir sobre tu vida erótica. Tu elección de no mover nada ahora está presente junto a lo que disfrutas y a la distancia importante que también reconoces respecto de cómo te gustaría vivirla.",
+      "selected_relations": [
+        "R_NO_CHANGE_GAP",
+        "R_CLOSENESS_SPLIT",
+        "R_CHOICE_RESOURCE"
+      ]
+    },
+    {
+      "case_id": "06",
+      "configuration_name": "Curiosidad en la incertidumbre",
+      "summary": "Te importa descubrir lo que te gusta y explorar nuevas posibilidades; aún no tienes claro qué quisieras mover ni cuán cerca está tu vida erótica de cómo te gustaría vivirla. Hoy te sientes desconectada y no has tenido encuentros eróticos recientemente; con tu pareja, la cercanía afectiva varía y la erótica no está clara. Aún no sabes qué sensaciones agradables identificas en tu cuerpo ni cuánto puedes decidir sobre tu vida erótica. Tu curiosidad invita a preguntarte qué significa sentirte conectada con tu vida erótica.",
+      "selected_relations": [
+        "R_UNCERTAINTY_SCOPES",
+        "R_RECENT_ABSENCE",
+        "R_CURIOUS_UNCLEAR"
+      ]
+    },
+    {
+      "case_id": "07",
+      "configuration_name": "Deseo de libertad",
+      "summary": "Quieres experimentar cosas nuevas y sentirte más libre para expresar o vivir lo que deseas, en un momento en que el deseo y el disfrute están presentes. Decidir, expresar límites y reconocer tus intereses tienen alcances distintos: te resulta fácil expresar lo que no quieres o cuándo quieres parar y reconoces margen para decidir sobre tu vida erótica; hay intereses que te cuesta reconocer incluso para ti misma. En el vínculo, sientes bastante cercanía afectiva con tu pareja y la mayor parte del tiempo percibes que tu placer importa tanto como el de tu pareja; en lo cotidiano, los espacios donde vives pocas veces te ofrecen la privacidad que necesitas.",
+      "selected_relations": [
+        "R_MATERIAL_PRIVACY",
+        "R_INTERNAL_FREEDOM",
+        "R_EXPANSION_RESOURCES"
+      ]
+    },
+    {
+      "case_id": "08",
+      "configuration_name": "Deseo con poco margen",
+      "summary": "Quieres que tu placer importe tanto como el de tu pareja, expresar mejor lo que quieres y lo que no quieres y sentirte más libre para expresar o vivir lo que deseas; tu interés por explorar está presente. Las ganas aparecen seguido antes de empezar y sientes bastante cercanía afectiva con tu pareja; el disfrute varía en tus encuentros eróticos y pocas veces percibes que tu placer importa tanto como el de tu pareja. Cuando quieres decir que no o parar, sientes que no puedes hacerlo y no te sientes segura para expresarlo; tu pareja muchas veces insiste o se molesta. Ante encuentros que no disfrutas, te frustras o desanimas y prefieres evitar otro encuentro para que no vuelva a pasar; tu libertad para tomar algunas decisiones aparece como una restricción de tu autonomía; reconoces poco margen para decidir sobre tu vida erótica.",
+      "selected_relations": [
+        "R_CARE_DESIRED",
+        "R_ENCOUNTER_PAUSE",
+        "R_AUTONOMY_SOURCES"
+      ]
+    }
+  ]
+}
