@@ -42,8 +42,8 @@ function silhouette(){return `<svg viewBox="0 0 200 400" aria-hidden="true" styl
       <path d="M100 20 C115 20 125 35 125 50 C125 70 115 80 115 85 C130 90 145 95 150 110 C155 125 155 160 145 180 C135 200 145 220 150 240 C155 260 160 300 155 350 L145 380 C140 395 120 395 115 380 L105 280 L95 280 L85 380 C80 395 60 395 55 380 L45 350 C40 300 45 260 50 240 C55 220 65 200 55 180 C45 160 45 125 50 110 C55 95 70 90 85 85 C85 80 75 70 75 50 C75 35 85 20 100 20 Z"/>
     </clipPath>
   </defs>
-  <path d="M100 20 C115 20 125 35 125 50 C125 70 115 80 115 85 C130 90 145 95 150 110 C155 125 155 160 145 180 C135 200 145 220 150 240 C155 260 160 300 155 350 L145 380 C140 395 120 395 115 380 L105 280 L95 280 L85 380 C80 395 60 395 55 380 L45 350 C40 300 45 260 50 240 C55 220 65 200 55 180 C45 160 45 125 50 110 C55 95 70 90 85 85 C85 80 75 70 75 50 C75 35 85 20 100 20 Z" fill="#14291f" stroke="#254333" stroke-width="1.2"/>
-  <g clip-path="url(#bodyclip)" fill="none" stroke="#4fae7b" stroke-width=".8" opacity=".35">
+  <path d="M100 20 C115 20 125 35 125 50 C125 70 115 80 115 85 C130 90 145 95 150 110 C155 125 155 160 145 180 C135 200 145 220 150 240 C155 260 160 300 155 350 L145 380 C140 395 120 395 115 380 L105 280 L95 280 L85 380 C80 395 60 395 55 380 L45 350 C40 300 45 260 50 240 C55 220 65 200 55 180 C45 160 45 125 50 110 C55 95 70 90 85 85 C85 80 75 70 75 50 C75 35 85 20 100 20 Z" fill="#501d22" stroke="#6e2a31" stroke-width="1.2"/>
+  <g clip-path="url(#bodyclip)" fill="none" stroke="#e04a1e" stroke-width=".8" opacity=".35">
     <!-- Contour lines for breasts, belly, hips -->
     <path d="M65 120 C80 110 90 140 100 140 C110 140 120 110 135 120" />
     <path d="M55 140 C80 160 120 160 145 140" />
@@ -140,7 +140,33 @@ function renderQuestion(id, viewIdx = 0) {
     } else if (q.type === 'text') {
         bubble.innerText = q.text;
         pcap.innerText = '';
-        qbody.innerHTML = `<textarea id="txt-ans" placeholder="${q.placeholder || 'Escribe aquí...'}" oninput="updateTextAns()" style="width:100%; height:120px; border-radius:8px; padding:12px; font-size:16px; font-family:inherit; border:1px solid #4fae7b; background:transparent; color:#f0f2f0;">${ans[0] || ''}</textarea>`;
+        const munayImg = (q.id === 'P23') ? `<img class="munay-sentada" src="${(document.getElementById('asset-sentada') || {}).src || ''}" alt="Munay, atenta a tu respuesta">` : '';
+        qbody.innerHTML = munayImg + `<textarea id="txt-ans" placeholder="${q.placeholder || 'Escribe aquí...'}" oninput="updateTextAns()" style="width:100%; height:120px; border-radius:8px; padding:12px; font-size:16px; font-family:inherit; border:1px solid #e04a1e; background:transparent; color:#f6ebe4;">${ans[0] || ''}</textarea>`;
+    } else if (q.type === 'density_scale') {
+        bubble.innerText = q.text;
+        pcap.innerText = 'Elige la densidad que mejor la describe';
+        const DENSITIES = [20, 35, 50, 65, 80];
+        const scaleOpts = q.options.filter(o => !o.out_of_scale).slice(0, 5);
+        let html = '<div class="dscale" style="display:flex; flex-direction:column; gap:10px; margin-bottom:16px;">';
+        scaleOpts.forEach((opt, i) => {
+            const d = DENSITIES[i];
+            const gap = Math.round(40 * Math.sqrt(0.2 / (d / 100)));
+            const sel = ans.includes(opt.id);
+            // Mismo color, opacidad, grosor y motivo en las cinco: solo cambia el espaciado (densidad)
+            const swatch = `background-image:radial-gradient(circle, #e04a1e 1.6px, transparent 2px); background-size:${gap}px ${gap}px; background-color:rgba(80,29,34,.55);`;
+            html += `<button class="dscale-item ${sel ? 'on' : ''}" onclick="toggleOpt('${opt.id}', false, false, 1)" aria-pressed="${sel}" style="display:flex; align-items:center; gap:12px; width:100%; text-align:left; padding:8px 12px; border-radius:12px; cursor:pointer; font-family:inherit; color:#f6ebe4; background:transparent; border:1px solid ${sel ? '#e04a1e' : '#6e2a31'}; box-shadow:${sel ? '0 0 0 2px rgba(224,74,30,.35)' : 'none'};">` +
+                `<span aria-hidden="true" style="flex:0 0 96px; height:52px; border-radius:8px; border:1px solid #6e2a31; ${swatch}"></span>` +
+                `<span style="flex:1; font-size:15px; line-height:1.3; font-weight:${sel ? '700' : '400'}; color:${sel ? '#ffffff' : '#e3cfc9'};">${opt.text}</span>` +
+                `<span aria-hidden="true" style="flex:0 0 14px; width:14px; height:14px; border-radius:50%; border:2px solid #e04a1e; background:${sel ? '#e04a1e' : 'transparent'};"></span>` +
+                `</button>`;
+        });
+        html += '</div><div class="chips">';
+        q.options.filter(o => o.out_of_scale).forEach(opt => {
+            let sel = ans.includes(opt.id) ? 'on' : '';
+            html += `<button class="chip ${sel} out-scale" onclick="toggleOpt('${opt.id}', false, false, 1)">${opt.text}</button>`;
+        });
+        html += '</div>';
+        qbody.innerHTML = html;
     } else if (q.type === 'density_field') {
         bubble.innerText = q.text;
         pcap.innerText = 'Selecciona el nivel';
@@ -153,7 +179,7 @@ function renderQuestion(id, viewIdx = 0) {
         }
         let opacities = {1:0.1, 2:0.3, 3:0.5, 4:0.7, 5:0.9};
         
-        let html = `<div style="position:absolute; top:0;left:0;right:0;bottom:0; background:rgba(79, 174, 123, ${opacities[level]}); pointer-events:none; transition: opacity 0.5s; z-index:-1;"></div>`;
+        let html = `<div style="position:absolute; top:0;left:0;right:0;bottom:0; background:rgba(224, 74, 30, ${opacities[level]}); pointer-events:none; transition: opacity 0.5s; z-index:-1;"></div>`;
         html += '<div class="chips" style="margin-top:20px;">';
         q.options.forEach(opt => {
             let sel = ans.includes(opt.id) ? 'on' : '';
@@ -317,8 +343,8 @@ function summary() {
   
   const tn = el('div','terr-note');
   tn.innerHTML = '<strong>Cierre Técnico Neutro (Motor V12):</strong><br>Tus respuestas han sido capturadas y empaquetadas en un <em>Configuration Object</em>. El Motor de Configuración procesará este snapshot en segundo plano. No se emite lectura personalizada preliminar.';
-  tn.style.borderColor = '#4fae7b';
-  tn.style.background = 'rgba(79, 174, 123, 0.1)';
+  tn.style.borderColor = '#e04a1e';
+  tn.style.background = 'rgba(224, 74, 30, 0.1)';
   s.appendChild(tn);
 
   // Construcción del Snapshot (Configuration Object) según V12
@@ -361,7 +387,7 @@ window.onload = startApp;
 let AC=null, ambOn=false, ambNodes=[];
 window.toggleAmbient = function(){
   const btn=document.getElementById('ambbtn');
-  if(ambOn){ ambNodes.forEach(n=>{try{n.stop&&n.stop();n.disconnect&&n.disconnect();}catch(e){}}); ambNodes=[]; ambOn=false; btn.classList.remove('on'); return; }
+  if(ambOn){ ambNodes.forEach(n=>{try{n.stop&&n.stop();n.disconnect&&n.disconnect();}catch(e){}}); ambNodes=[]; ambOn=false; if(btn) btn.classList.remove('on'); return; }
   try{
     AC=AC||new (window.AudioContext||window.webkitAudioContext)();
     const master=AC.createGain(); master.gain.value=0.0001; master.connect(AC.destination);
@@ -377,7 +403,7 @@ window.toggleAmbient = function(){
     const am=AC.createOscillator(); am.frequency.value=38; const amG=AC.createGain(); amG.gain.value=0.012; am.connect(amG); amG.connect(cg.gain); am.start();
     const bp=AC.createBiquadFilter(); bp.type='highpass'; bp.frequency.value=3500;
     ambNodes=[src,lfo,chirp,am,master];
-    ambOn=true; btn.classList.add('on');
+    ambOn=true; if(btn) btn.classList.add('on');
   }catch(e){ console.warn('audio no disponible',e); }
 };
 window.openSheet = function(){document.getElementById('sheet').classList.add('on');document.getElementById('scrim').classList.add('on');};
