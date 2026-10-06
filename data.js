@@ -25,7 +25,7 @@ const QUESTIONS = [
         "text": "Prefiero no responder"
       }
     ],
-    "next_logic": "return ans.includes('CTX00_O01') ? 'CTX01' : 'END_NO_ELIGIBLE';"
+    "next_logic": "return 'CTX01';"
   },
   {
     "id": "CTX01",
@@ -569,6 +569,11 @@ const QUESTIONS = [
       {
         "id": "P08_O05",
         "text": "Nunca"
+      },
+      {
+        "id": "P08_O06",
+        "text": "No he tenido encuentros últimamente",
+        "out_of_scale": true
       }
     ],
     "next_logic": "return 'P09';"
@@ -1022,7 +1027,7 @@ const QUESTIONS = [
   },
   {
     "id": "P19",
-    "type": "density_field",
+    "type": "density_scale",
     "text": "¿Cómo influye tu vida cotidiana en tu vida erótica?",
     "options": [
       {
