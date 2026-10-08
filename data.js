@@ -231,7 +231,7 @@ const QUESTIONS = [
         "options": [
           {
             "id": "P03_O01",
-            "text": "🪞 Cambios en el cuerpo"
+            "text": "🌸 Cambios en el cuerpo"
           },
           {
             "id": "P03_O02",
@@ -505,7 +505,7 @@ const QUESTIONS = [
           },
           {
             "id": "P07_O10",
-            "text": "🪫 Cansancio físico"
+            "text": "🔋 Cansancio físico"
           }
         ]
       },
@@ -1263,7 +1263,7 @@ const QUESTIONS = [
         "options": [
           {
             "id": "P22_O05",
-            "text": "🪞 Conocerme más"
+            "text": "💡 Conocerme más"
           },
           {
             "id": "P22_O06",
@@ -1279,7 +1279,7 @@ const QUESTIONS = [
           },
           {
             "id": "P22_O09",
-            "text": "🪽 Vivir a mi manera"
+            "text": "🦋 Vivir a mi manera"
           }
         ]
       },
@@ -1288,7 +1288,7 @@ const QUESTIONS = [
         "options": [
           {
             "id": "P22_O10",
-            "text": "🫂 Compartir intimidad"
+            "text": "💞 Compartir intimidad"
           },
           {
             "id": "P22_O11",
@@ -1300,7 +1300,7 @@ const QUESTIONS = [
           },
           {
             "id": "P22_O13",
-            "text": "🫶 Sentir conexión profunda"
+            "text": "💖 Sentir conexión profunda"
           }
         ]
       },
@@ -1389,11 +1389,11 @@ const QUESTIONS = [
         "options": [
           {
             "id": "P24_O08",
-            "text": "🫂 Encontrar una forma de cercanía que me haga sentido"
+            "text": "💞 Encontrar una forma de cercanía que me haga sentido"
           },
           {
             "id": "P24_O09",
-            "text": "🤝 Sentir que mi placer importa tanto como el de mi pareja"
+            "text": "🧡 Sentir que mi placer importa tanto como el de mi pareja"
           },
           {
             "id": "P24_O10",
@@ -1414,7 +1414,7 @@ const QUESTIONS = [
           },
           {
             "id": "P24_O13",
-            "text": "🪽 Sentirme más libre para expresar o vivir lo que deseo"
+            "text": "🦋 Sentirme más libre para expresar o vivir lo que deseo"
           }
         ]
       },
