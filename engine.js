@@ -31,26 +31,21 @@ function el(tag, cls, text) {
 }
 
 const ZONES = {
-  Z01:{x:50,y:10,l:"Rostro y labios"}, Z02:{x:50,y:20,l:"Orejas y cuello"}, Z03:{x:50,y:32,l:"Pecho"},
-  Z04:{x:15,y:50,l:"Manos"}, Z05:{x:50,y:48,l:"Abdomen y espalda"}, Z06:{x:50,y:60,l:"Pelvis"}, 
-  Z07:{x:50,y:68,l:"Vulva"}, Z08:{x:35,y:72,l:"Glúteos y muslos"}, Z09:{x:35,y:90,l:"Piernas y pies"}
+  Z01:{x:50,y:9.5,l:"Rostro y labios"},
+  Z02:{x:50,y:16.5,l:"Orejas y cuello"},
+  Z03:{x:50,y:25.5,l:"Pecho"},
+  Z04:{x:30,y:47,l:"Manos"},
+  Z05:{x:50,y:34.5,l:"Abdomen y espalda"},
+  Z06:{x:50,y:41,l:"Pelvis"}, 
+  Z07:{x:50,y:48.5,l:"Vulva"},
+  Z08:{x:40,y:63,l:"Glúteos y muslos"},
+  Z09:{x:48,y:85,l:"Piernas y pies"}
 };
 
-function silhouette(){return `<svg viewBox="0 0 200 400" aria-hidden="true" style="max-width:200px; display:block; margin: 0 auto;">
-  <defs>
-    <clipPath id="bodyclip">
-      <path d="M100 20 C115 20 125 35 125 50 C125 70 115 80 115 85 C130 90 145 95 150 110 C155 125 155 160 145 180 C135 200 145 220 150 240 C155 260 160 300 155 350 L145 380 C140 395 120 395 115 380 L105 280 L95 280 L85 380 C80 395 60 395 55 380 L45 350 C40 300 45 260 50 240 C55 220 65 200 55 180 C45 160 45 125 50 110 C55 95 70 90 85 85 C85 80 75 70 75 50 C75 35 85 20 100 20 Z"/>
-    </clipPath>
-  </defs>
-  <path d="M100 20 C115 20 125 35 125 50 C125 70 115 80 115 85 C130 90 145 95 150 110 C155 125 155 160 145 180 C135 200 145 220 150 240 C155 260 160 300 155 350 L145 380 C140 395 120 395 115 380 L105 280 L95 280 L85 380 C80 395 60 395 55 380 L45 350 C40 300 45 260 50 240 C55 220 65 200 55 180 C45 160 45 125 50 110 C55 95 70 90 85 85 C85 80 75 70 75 50 C75 35 85 20 100 20 Z" fill="#501d22" stroke="#6e2a31" stroke-width="1.2"/>
-  <g clip-path="url(#bodyclip)" fill="none" stroke="#e04a1e" stroke-width=".8" opacity=".35">
-    <!-- Contour lines for breasts, belly, hips -->
-    <path d="M65 120 C80 110 90 140 100 140 C110 140 120 110 135 120" />
-    <path d="M55 140 C80 160 120 160 145 140" />
-    <path d="M65 190 C80 200 120 200 135 190" />
-    <path d="M50 230 C80 250 120 250 150 230" />
-  </g>
-</svg>`;}
+function silhouette(){
+  return `<img src="silueta.png" alt="Silueta corporal femenina" class="silueta-img" style="width:100%; height:100%; object-fit:contain; display:block; margin:0 auto; pointer-events:none; filter:drop-shadow(0 6px 20px rgba(0,0,0,0.45));">`;
+}
+
 
 function go(screenId) {
     document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
