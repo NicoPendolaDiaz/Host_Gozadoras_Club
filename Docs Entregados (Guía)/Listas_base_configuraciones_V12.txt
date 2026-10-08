@@ -1,0 +1,1066 @@
+Variables y listas base de las configuraciones V12
+GOZADORAS CLUB  Versión 12  6 de octubre de 2026
+Este catálogo reúne 192 componentes en 22 variables de los cinco paisajes. Cada entrada muestra su título base, las respuestas de origen y lo que permite leer. Los componentes pueden coexistir y alimentan las filas de cada entrada.
+191 lecturas son automáticas; la 5.2.03 requiere revisión humana. Una lectura del catálogo no es una Configuración completa. Las preguntas no presentadas no generan filas de respuesta.
+0 Índice de variables
+Nº
+Variable
+Preguntas
+Entradas
+1.1
+Situación actual y distancia respecto de lo deseado
+1, 2, 34
+13
+1.2
+Cambios recientes e historia de la experiencia
+3, 4, 5, 35
+10
+2.1
+Medicamentos declarados como contexto
+3, Micro 3
+7
+2.2
+Cambios y molestias del cuerpo o bienestar
+6, 7, 38
+11
+2.3
+Ganas antes del encuentro, aumento del deseo y disfrute
+8, 9, 10
+10
+2.4
+Qué sucede después de un encuentro que no disfruta
+10, 12
+9
+2.5
+Sensaciones agradables que reconoce en su cuerpo
+11
+5
+2.6
+Cómo vive el orgasmo
+25
+11
+2.7
+Facilidad para reconocer lo que pasa en su cuerpo
+26
+5
+2.8
+Comodidad con su cuerpo
+27
+5
+3.1
+Cercanía afectiva y cercanía erótica
+13, 14
+8
+3.2
+Importancia de su placer y respuesta a su iniciativa
+15, 31
+13
+3.3
+Expresión de límites y seguridad con la pareja
+16, 17, 18
+12
+3.4
+Sentirse deseada por su pareja
+30
+6
+4.1
+Influencia cotidiana y condiciones que pesan
+19, 20, 39
+10
+4.2
+Margen de decisión y restricciones de autonomía
+21, 33, 40
+9
+4.3
+Privacidad disponible para su vida erótica
+32
+6
+5.1
+Lo que valora de su vida erótica
+22, 36
+8
+5.2
+Cómo desea vivir su erotismo en sus palabras
+23
+3
+5.3
+Lo que quiere mover, recuperar o explorar
+24, 37
+17
+5.4
+Qué tipo de exploración le interesa
+28
+7
+5.5
+Reconocer sus gustos e intereses para sí misma
+29
+7
+1 Mirador
+1.1 Situación actual y distancia respecto de lo deseado
+Pregunta 1  Pensando en tu vida erótica, ¿cuáles de estas frases se parecen más a lo que estás viviendo hoy?
+Pregunta 2  ¿Qué tan cerca está la vida erótica que tienes hoy de la que te gustaría tener?
+Pregunta 34  ¿Cómo lo estás viviendo tú?
+Distinguir cómo describe su presente de cuán cerca lo siente de la vida que le gustaría vivir. Se pueden conservar dos situaciones de la pregunta 1; no se fuerza una ganadora.
+Nº
+Título base
+Respuestas de origen
+Lectura
+1.1.01
+Bienestar y cercanía a lo deseado
+En la pregunta 1 está bien actualmente; en la pregunta 2 muy cerca o bastante cerca.
+Se siente bien y cercana a lo que desea, conservando el grado de cercanía.
+1.1.02
+Bienestar y conformidad con el presente
+En la pregunta 1 está bien actualmente; en la pregunta 2 estoy bien tal como está.
+Reconoce bienestar y conformidad. La conformidad no se convierte en una distancia numérica.
+1.1.03
+Curiosidad desde un presente cercano
+En la pregunta 1 quiere explorar cosas nuevas; en la pregunta 2 muy cerca o bastante cerca.
+Quiere ampliar una experiencia que siente cercana a lo deseado.
+1.1.04
+Curiosidad y presente por situar
+En la pregunta 1 quiere explorar; en la pregunta 2 más o menos, bastante lejos, muy lejos o no sé.
+Conservar qué distancia elige o que no puede precisarla. La curiosidad puede convivir con esa respuesta.
+1.1.05
+Algo que extraña
+En la pregunta 1 extraña algo y quiere recuperarlo.
+Quiere recuperar algo. Qué extraña solo se nombra si ella lo aporta; 2 sitúa la distancia actual.
+1.1.06
+Cambio que quiere comprender
+En la pregunta 1 algo cambió y no entiende bien qué ocurre.
+Reconoce un cambio y una pregunta abierta sobre su experiencia.
+1.1.07
+Descontento con el presente
+En la pregunta 1 no le gusta cómo está y quisiera hacer algo.
+Quiere mover su situación. En 2 se conserva la distancia que declara.
+1.1.08
+Desconexión y dirección abierta
+En la pregunta 1 está bastante desconectada y todavía no sabe qué quiere.
+Conservar la desconexión y la falta de dirección actual, sin atribuirles una causa.
+1.1.09
+Dos situaciones a la vez
+En la pregunta 1 elige dos frases, respetando el máximo de dos.
+Conservar ambas. El instrumento solo hace excluyente ninguna de las anteriores; no se descarta una segunda frase por parecer contradictoria.
+1.1.10
+Ninguna frase la representa
+En la pregunta 1 ninguna de las anteriores.
+Su situación no queda representada por esas frases. Se abre 34 y se conserva su texto si lo escribe.
+1.1.11
+Posición intermedia respecto de lo deseado
+En la pregunta 2 más o menos.
+La distancia queda en la posición intermedia que eligió.
+1.1.12
+Lejanía respecto de lo deseado
+En la pregunta 2 bastante lejos o muy lejos.
+Se siente lejos de la vida que desea. Se conserva cuál de los dos grados eligió.
+1.1.13
+No puede precisar la distancia
+En la pregunta 2 no sé.
+La distancia está abierta; no se registra como cercana ni lejana.
+La pregunta 34 aparece solo cuando en 1 elige ninguna de las anteriores y puede omitirse. Las dos frases de 1 y la respuesta de 2 se conservan por separado; las lecturas de esta tabla pueden coexistir.
+1.2 Cambios recientes e historia de la experiencia
+Pregunta 3  En el último tiempo, ¿ha habido algún cambio importante en tu vida que pueda relacionarse con tu vida erótica?
+Pregunta 4  ¿Sientes que hubo algún momento importante en que tu vida erótica cambió, aunque haya sido hace tiempo?
+Pregunta 5  ¿Qué cambió en ese momento?
+Pregunta 35  ¿Qué cambió?
+Situar los cambios recientes y los momentos que ella reconoce en su historia. No explicar su presente a partir de un acontecimiento por el solo hecho de coexistir.
+Nº
+Título base
+Respuestas de origen
+Lectura
+1.2.01
+Cambios recientes nombrados
+En la pregunta 3 selecciona cambios en cuerpo, salud, tratamiento, relación, pareja, trabajo, economía, cuidados, hogar, mudanza, enfermedad o duelo.
+Conservar todos los cambios elegidos. Medicamento se desarrolla también en 2.1.
+1.2.02
+No reconoce cambios recientes
+En la pregunta 3 ningún cambio.
+No reconoce cambios recientes dentro de lo preguntado; no borra su historia.
+1.2.03
+No sabe si hubo cambios relevantes
+En la pregunta 3 no sé.
+Mantener la incertidumbre sobre los cambios recientes.
+1.2.04
+Omite los cambios recientes
+Omite 3 por ahora.
+No hay respuesta a esa pregunta; no se interpreta como ningún cambio.
+1.2.05
+Reconoce un momento de cambio
+En la pregunta 4 sí.
+Reconoce un momento importante. En 5 puede contar qué cambió.
+1.2.06
+No reconoce un momento puntual
+En la pregunta 4 no.
+No identifica un momento puntual, aunque pueda haber nombrado cambios recientes en 3.
+1.2.07
+No sabe si hubo ese momento
+En la pregunta 4 no sé.
+La respuesta histórica permanece abierta.
+1.2.08
+Reserva su historia
+En la pregunta 4 prefiero no responder.
+Conservar la decisión de privacidad.
+1.2.09
+No hay respuesta histórica
+4 no se presentó o se omitió, conservando cuál de los dos estados ocurrió.
+No hay información sobre ese momento; la ausencia de la pregunta no prueba ausencia de historia.
+1.2.10
+Otro cambio en sus palabras
+En la pregunta 3 otro; 35 puede aportar el detalle.
+Conservar el cambio con sus palabras si las escribe.
+4 aparece si en 1 extraña algo, reconoce un cambio que no comprende o está desconectada sin saber qué quiere. 5 aparece solo ante sí en 4. 35 aparece solo ante otro en 3. Las tres pueden omitirse. Los cambios recientes y el relato histórico pueden convivir sin que uno explique automáticamente al otro.
+2 Manantial
+2.1 Medicamentos declarados como contexto
+Pregunta 3  En el último tiempo, ¿ha habido algún cambio importante en tu vida que pueda relacionarse con tu vida erótica?
+Pregunta adicional de medicamentos  ¿Estás tomando actualmente alguno de estos tipos de medicamentos? Puedes marcar más de uno.
+Conservar la declaración de uso de medicamentos sin convertirla en una explicación del deseo, el placer o las sensaciones.
+Nº
+Título base
+Respuestas de origen
+Lectura
+2.1.01
+Medicamento entre los cambios recientes
+En la pregunta 3 medicamento.
+Hay una referencia a medicamentos entre los cambios recientes. Se abre la pregunta adicional.
+2.1.02
+Familias de medicamentos declaradas
+En la pregunta adicional selecciona una o varias familias de medicamentos.
+Conservar cuáles declara. No se deduce efecto sobre el deseo, el placer o las sensaciones.
+2.1.03
+Otro medicamento
+En la pregunta adicional otro medicamento.
+Puede coexistir con otras familias. Se conserva el nombre si lo aporta.
+2.1.04
+No sabe qué tipo de medicamento
+En la pregunta adicional no sé.
+No dispone de esa precisión; se conserva la selección de medicamento en 3.
+2.1.05
+Reserva la información adicional
+En la pregunta adicional prefiero no responder.
+Conservar la reserva y la selección previa de medicamento, sin completar el detalle.
+2.1.06
+No selecciona medicamento
+Responde 3 con otras opciones y no elige medicamento.
+Solo consta que no lo seleccionó entre los cambios recientes. No equivale a no tomar medicamentos.
+2.1.07
+Omite la pregunta de cambios
+Omite 3 por ahora.
+No hay información de esa pregunta sobre medicamentos.
+La pregunta adicional se abre solo ante medicamento en 3. El listado comprende antidepresivos, antipsicóticos, antiepilépticos o anticonvulsivantes, medicamentos para el dolor de uso prolongado, para la presión arterial o el corazón, anticonceptivos hormonales y tratamiento hormonal. Se conservan como contexto declarado. No sé y Prefiero no responder son excluyentes entre sí y respecto de las familias y Otro medicamento.
+2.2 Cambios y molestias del cuerpo o bienestar
+Pregunta 6  En el último tiempo, ¿hay algún cambio o molestia en tu cuerpo o bienestar que esté afectando tu vida erótica?
+Pregunta 7  De estas posibilidades, ¿cuáles están afectando más tu vida erótica hoy?
+Pregunta 38  ¿Qué otro cambio o molestia está afectando tu vida erótica?
+Distinguir si ella reconoce una influencia, la considera posible o no puede precisarla; después conservar cuáles cambios o molestias nombra.
+Nº
+Título base
+Respuestas de origen
+Lectura
+2.2.01
+Influencia reconocida
+En la pregunta 6 responde sí.
+Reconoce algún cambio o molestia que afecta su vida erótica. La pregunta 7 precisa cuáles.
+2.2.02
+Influencia posible
+En la pregunta 6 responde puede ser.
+Considera posible esa influencia. No se redacta como confirmada.
+2.2.03
+No reconoce esa influencia
+En la pregunta 6 responde no.
+No señala una influencia actual en el sentido de la pregunta. No certifica un cuerpo libre de molestias.
+2.2.04
+No sabe si hay influencia
+En la pregunta 6 no sé.
+La influencia permanece incierta.
+2.2.05
+Reserva la información
+En la pregunta 6 prefiero no responder.
+No se interpreta qué condiciones podría tener.
+2.2.06
+Molestias físicas nombradas
+En la pregunta 7 elige dolor, lubricación, molestias genitales, urinarias, musculoesqueléticas o sensibilidad.
+Nombrar las molestias que selecciona, sin atribuirles una causa.
+2.2.07
+Energía y ritmos nombrados
+En la pregunta 7 elige energía, sueño, bochornos o cansancio físico.
+Conservar qué ritmos o aspectos de energía señala.
+2.2.08
+Ánimo y carga mental nombrados
+En la pregunta 7 elige ánimo, ansiedad o cansancio mental.
+Conservar si señala ánimo, ansiedad o cansancio mental.
+2.2.09
+Varios aspectos a la vez
+En la pregunta 7 selecciona más de un aspecto, respetando el máximo del instrumento.
+Pueden coexistir. El número de elecciones no establece gravedad.
+2.2.10
+Otra condición nombrada
+En la pregunta 7 otra; puede responder 38.
+Conservar el detalle que escribe, junto a las otras opciones seleccionadas.
+2.2.11
+No puede precisar cuáles condiciones
+En la pregunta 7 no lo tengo claro.
+No puede elegir cuáles pesan más. Se conserva si en 6 reconoció una influencia o la consideró posible.
+2.3 Ganas antes del encuentro, aumento del deseo y disfrute
+Pregunta 8  En el último tiempo, ¿con qué frecuencia aparecen ganas de tener un encuentro erótico o sexual antes de que empiece algo?
+Pregunta 9  Cuando al principio no tienes ganas, pero quieres darte una oportunidad, ¿sientes que el deseo puede aumentar a medida que avanza el encuentro?
+Pregunta 10  Cuando tienes un encuentro erótico que elegiste, ¿cuánto lo disfrutas?
+Mantener tres experiencias diferentes: cuándo aparecen las ganas, qué pasa durante una oportunidad que elige darse y cuánto disfruta los encuentros elegidos.
+Nº
+Título base
+Respuestas de origen
+Lectura
+2.3.01
+Ganas poco frecuentes antes y deseo que aumenta durante
+En la pregunta 8 rara vez o nunca; en la pregunta 9 sí casi siempre o muchas veces; en la pregunta 10 mucho o bastante.
+Las ganas pueden crecer durante un encuentro elegido que disfruta. No equivale a falta general de deseo.
+2.3.02
+Ganas frecuentes antes y disfrute presente
+En la pregunta 8 muy seguido o seguido; en la pregunta 10 mucho o bastante.
+Hay ganas previas frecuentes y disfrute declarado. La respuesta de 9 se conserva si aporta un matiz.
+2.3.03
+Ganas previas con poco aumento del deseo y poco disfrute
+En la pregunta 8 muy seguido, seguido o a veces; en la pregunta 9 rara vez o nunca; en la pregunta 10 poco o nada.
+Las ganas previas no garantizan aumento del deseo ni disfrute. No se atribuye cumplimiento, bloqueo ni causa corporal.
+2.3.04
+Pocas ganas previas y poco aumento con poco disfrute
+En la pregunta 8 rara vez o nunca; en la pregunta 9 rara vez o nunca; en la pregunta 10 poco o nada.
+Las ganas previas son poco frecuentes, el deseo aumenta rara vez o nunca y el disfrute es escaso. Se conserva cada respuesta; 9 no mide la intensidad total del deseo durante.
+2.3.05
+Frecuencias intermedias o disfrute variable
+En la pregunta 8 a veces, en la pregunta 9 a veces o en la pregunta 10 depende; puede aparecer una o varias de estas respuestas.
+A veces conserva una frecuencia intermedia. Depende conserva un disfrute variable. Se indica a qué pregunta corresponde cada una.
+2.3.06
+No suele darse esa oportunidad
+En la pregunta 9 elige no suelo darme esa oportunidad.
+No hay información suficiente sobre aumento del deseo en esa situación. El disfrute declarado en 10 se conserva por separado.
+2.3.07
+La situación no le ha ocurrido
+En la pregunta 9 responde no me ha pasado.
+No deducir deseo durante a partir de una experiencia que no ocurrió.
+2.3.08
+Sin encuentros recientes
+En la pregunta 8 o en la 10 responde No he tenido últimamente.
+Conservar en qué pregunta declara ausencia reciente. No equivale a falta de deseo ni a disfrute bajo.
+2.3.09
+No sabe cuánto disfruta
+En la pregunta 10 no sé.
+No puede precisar el disfrute. Las respuestas de 8 y 9 permanecen.
+2.3.10
+Otras combinaciones
+Una combinación válida de 8, 9 y 10 diferente de las anteriores.
+Conservar las respuestas del bloque cuando no corresponde otra lectura específica. Algo en 10 siempre mantiene su literal y no anula otras lecturas de 8 y 9.
+Las preguntas 8, 9 y 10 siempre se presentan. 9 pregunta si el deseo aumenta cuando elige darse una oportunidad; no mide todo su deseo durante. Las lecturas pueden coexistir y no forman una escala global. Toda combinación válida conserva sus tres respuestas. En 8, 10 y 15 la ausencia reciente usa No he tenido últimamente. La nueva opción de 8 no altera la numeración de las cinco frecuencias anteriores.
+2.4 Qué sucede después de un encuentro que no disfruta
+Pregunta 10  Cuando tienes un encuentro erótico que elegiste, ¿cuánto lo disfrutas?
+Pregunta 12  Cuando un encuentro erótico no resulta como esperabas o no lo disfrutas, ¿qué suele pasarte después?
+Reconocer su respuesta posterior sin atribuirle una función psicológica que no expresó. Las elecciones pueden coexistir.
+Nº
+Título base
+Respuestas de origen
+Lectura
+2.4.01
+Frustración o desánimo
+En la pregunta 12 me frustro o desanimo.
+Reconoce esa reacción después del encuentro.
+2.4.02
+Preocupación por la repetición
+En la pregunta 12 me preocupa que vuelva a pasar.
+Reconoce preocupación por que se repita la experiencia.
+2.4.03
+Quiere volver pero le cuesta
+En la pregunta 12 me gustaría volver a intentarlo pero me cuesta.
+Conservar el deseo de volver y la dificultad.
+2.4.04
+Prefiere evitar otro encuentro
+En la pregunta 12 prefiere evitarlo para que no vuelva a pasar.
+Se conserva la razón que ella da; no se añade una explicación de defensa o protección.
+2.4.05
+No quiere otro encuentro por ahora
+En la pregunta 12 no quiere volver a tener otro encuentro por ahora.
+Conservar el alcance temporal de su elección.
+2.4.06
+Quiere volver a intentarlo
+En la pregunta 12 tiene ganas de volver a intentarlo.
+Existe esa disposición, aunque pueda coexistir con preocupación o frustración.
+2.4.07
+Experiencia mixta
+En la pregunta 12 combina respuestas compatibles.
+Mostrar lo que convive; no convertirla en un estado exclusivamente de retirada o de apertura.
+2.4.08
+No le ha ocurrido
+En la pregunta 12 no me ha pasado.
+No reconoce la experiencia preguntada.
+2.4.09
+Respuesta posterior por precisar
+En la pregunta 12 no lo tengo claro.
+No puede precisar su respuesta posterior.
+12 aparece ante poco, nada o depende en 10 y permite hasta tres opciones. No me ha pasado y no lo tengo claro son excluyentes. Si no se presenta, no se deduce una respuesta posterior.
+2.5 Sensaciones agradables que reconoce en su cuerpo
+Pregunta 11  ¿En qué zonas de tu cuerpo reconoces sensaciones agradables o eróticas?
+Conservar las zonas que ella reconoce sin convertir su cantidad en nivel de capacidad o salud.
+Nº
+Título base
+Respuestas de origen
+Lectura
+2.5.01
+Una o varias zonas reconocidas
+Selecciona zonas del mapa corporal.
+Conservar cuáles: rostro y labios, orejas y cuello, pecho, manos, abdomen y espalda, pelvis, vulva, glúteos y muslos, piernas y pies.
+2.5.02
+No identifica zonas en este momento
+Responde no identifico ninguna en este momento.
+No identifica zonas con esas sensaciones en este momento.
+2.5.03
+Zonas agradables por precisar
+Responde no lo tengo claro.
+La identificación está abierta; no significa ausencia de sensaciones.
+2.5.04
+Reserva la respuesta sobre zonas agradables
+Elige esa respuesta.
+Conservar la reserva sin evaluar su capacidad corporal.
+2.5.05
+Omite la pregunta
+Utiliza omitir por ahora, cuando está permitido.
+No hay una respuesta registrada. Es distinto de las opciones anteriores.
+Cada zona elegida se conserva por su nombre. La cantidad no establece un nivel de vitalidad ni de capacidad. Esta información puede combinarse con 26 y 27 si se presentan, sin sustituirlas.
+2.6 Cómo vive el orgasmo
+Pregunta 25  ¿Cómo estás viviendo el orgasmo?
+Describir la experiencia y qué importancia tiene para ella. Esta profundización aparece si quiere explorar su orgasmo.
+Nº
+Título base
+Respuestas de origen
+Lectura
+2.6.01
+Llega con facilidad y está bien así
+Llego con facilidad y estoy bien así.
+Conservar su satisfacción con esta experiencia.
+2.6.02
+Llega con más dificultad que antes
+Llego pero me cuesta más que antes.
+Hay una comparación con su experiencia anterior, sin causa inferida.
+2.6.03
+Llega algunas veces y quiere llegar más
+Llego algunas veces y me gustaría llegar más.
+Conservar frecuencia y deseo de ampliar la experiencia.
+2.6.04
+Rara vez llega y eso le importa
+Rara vez llego y eso me importa.
+La poca frecuencia tiene importancia para ella.
+2.6.05
+Rara vez llega y no le preocupa
+Rara vez llego y no me preocupa.
+La poca frecuencia no se convierte automáticamente en un problema.
+2.6.06
+No llega al orgasmo
+En la pregunta 25 nunca llego.
+Describe que no llega al orgasmo; no afirma que nunca haya tenido uno.
+2.6.07
+Nunca ha tenido un orgasmo
+En la pregunta 25 nunca he tenido un orgasmo.
+Declara esa experiencia histórica específica.
+2.6.08
+Hace mucho que no llega
+Hace tanto que no llego que ni me acuerdo.
+Conservar cómo describe ese tiempo; no inventar duración.
+2.6.09
+No es importante para ella
+El orgasmo no es importante para mí.
+No imponerlo como meta. Si antes eligió explorarlo, conservar ambas respuestas para precisar qué quiso decir.
+2.6.10
+No sabe cómo describirlo
+En la pregunta 25 no sé.
+Su experiencia permanece por precisar.
+2.6.11
+Reserva su respuesta
+En la pregunta 25 prefiero no responder.
+Conservar la decisión de privacidad.
+25 aparece solo si en 24 elige explorar mi orgasmo. El deseo de explorarlo y la vivencia actual se conservan juntos. Esta pregunta no establece por sí sola una exigencia de rendimiento ni una falta de placer.
+2.7 Facilidad para reconocer lo que pasa en su cuerpo
+Pregunta 26  En tu vida erótica, ¿qué tan fácil te resulta reconocer lo que pasa en tu cuerpo?
+Observar qué tan fácil le resulta reconocer lo que pasa en su cuerpo en su vida erótica. Se distingue de reconocer zonas agradables y de sentirse cómoda con el cuerpo.
+Nº
+Título base
+Respuestas de origen
+Lectura
+2.7.01
+Reconocer lo que pasa en su cuerpo le resulta fácil
+En la pregunta 26 muy fácil o bastante fácil.
+Conservar la facilidad y cuál de los dos grados eligió.
+2.7.02
+A veces reconoce lo que pasa y a veces no
+En la pregunta 26 a veces sí, a veces no.
+La facilidad de registro no es constante.
+2.7.03
+Le cuesta reconocer lo que pasa
+En la pregunta 26 me cuesta o me cuesta mucho.
+Conservar la dificultad y su grado.
+2.7.04
+No puede precisar la facilidad
+En la pregunta 26 no lo tengo claro.
+La facilidad de registro permanece abierta.
+2.7.05
+Registro no preguntado
+No eligió reconocer mejor lo que pasa en mi cuerpo En la pregunta 24.
+26 no se presenta. El mapa de zonas de 11 no permite sustituir esta respuesta.
+26 aparece solo ante reconocer mejor lo que pasa en mi cuerpo en 24. Puede combinarse con disfrute de 10, zonas de 11 y comodidad de 27 si existe esa respuesta. Ninguna de esas preguntas reemplaza esta facilidad.
+2.8 Comodidad con su cuerpo
+Pregunta 27  En tu vida erótica, ¿qué tan cómoda te sientes con tu cuerpo?
+Observar cómo se siente con su cuerpo en su vida erótica, conservando su grado de comodidad.
+Nº
+Título base
+Respuestas de origen
+Lectura
+2.8.01
+Se siente cómoda
+En la pregunta 27 muy cómoda o bastante cómoda.
+Conservar la comodidad y el grado elegido.
+2.8.02
+Comodidad intermedia
+En la pregunta 27 más o menos.
+Conservar la posición intermedia.
+2.8.03
+Se siente poco o nada cómoda
+En la pregunta 27 poco cómoda o nada cómoda.
+Conservar la diferencia entre poca y ninguna comodidad; no atribuir una causa.
+2.8.04
+No puede precisar la comodidad
+En la pregunta 27 no lo tengo claro.
+La comodidad permanece abierta.
+2.8.05
+Comodidad no preguntada
+No eligió sentirme más cómoda con mi cuerpo En la pregunta 24.
+27 no se presenta. El disfrute no permite inferir cómo se siente con su cuerpo.
+27 aparece solo ante sentirme más cómoda con mi cuerpo en 24. Puede disfrutar encuentros y sentirse poco cómoda, o sentirse cómoda y tener dificultad para reconocer sensaciones. Son aspectos diferentes.
+3 Sendero
+3.1 Cercanía afectiva y cercanía erótica
+Pregunta 13  Hoy, en términos afectivos, ¿qué tan cerca te sientes de tu pareja?
+Pregunta 14  Y, eróticamente, ¿qué tan cerca te sientes de tu pareja?
+Mantener dos medidas de cercanía diferentes. No convertir distancia erótica en falta de afecto ni cercanía en prueba de deseo.
+Nº
+Título base
+Respuestas de origen
+Lectura
+3.1.01
+Cercanía en ambas experiencias
+En la pregunta 13 y 14 muy cerca o bastante cerca.
+Reconoce cercanía afectiva y erótica, con los grados que eligió.
+3.1.02
+Cercanía afectiva y distancia erótica
+En la pregunta 13 muy cerca o bastante cerca; en la pregunta 14 bastante distante o muy distante.
+Ambas experiencias coexisten. No se clasifica la pareja como amistad ni se da por perdido el deseo.
+3.1.03
+Distancia en ambas experiencias
+En la pregunta 13 y 14 bastante distante o muy distante.
+Reconoce distancia en ambas; no se determina la causa ni el futuro de la relación.
+3.1.04
+Distancia afectiva y cercanía erótica
+En la pregunta 13 bastante distante o muy distante; en la pregunta 14 muy cerca o bastante cerca.
+La experiencia afectiva y la erótica tienen registros distintos. No se supone fragmentación de confianza.
+3.1.05
+Posición intermedia
+En una o ambas ni cerca ni distante.
+Conservar esa posición y la respuesta de la otra pregunta.
+3.1.06
+Cercanía que depende
+En una o ambas depende.
+Es variable según su respuesta. No se inventa de qué depende.
+3.1.07
+Cercanía incierta
+En una o ambas no lo tengo claro.
+No se completa la dimensión incierta a partir de la otra.
+3.1.08
+No le importa esa medida de cercanía
+En una o ambas no me importa.
+No equivale a distancia ni prueba ausencia de malestar en otros aspectos.
+13 y 14 siempre se presentan y conservan cada grado por separado. Una respuesta abierta en una no elimina la lectura de la otra. Este paisaje corresponde a mujeres actualmente en pareja.
+3.2 Importancia de su placer y respuesta a su iniciativa
+Pregunta 15  En tus encuentros eróticos, ¿con qué frecuencia sientes que tu experiencia y tu placer importan tanto como los de tu pareja?
+Pregunta 31  Cuando tú buscas sexo o un encuentro erótico, ¿qué suele pasar?
+Distinguir cuánto siente que importa su placer de qué sucede cuando ella toma la iniciativa. La pregunta 31 solo aparece ante el deseo correspondiente en 24.
+Nº
+Título base
+Respuestas de origen
+Lectura
+3.2.01
+Su placer suele importar tanto
+En la pregunta 15 siempre o casi siempre, o la mayor parte del tiempo.
+Conservar el grado percibido. No afirmar equidad plena fuera de lo preguntado.
+3.2.02
+Su placer importa con menor frecuencia
+En la pregunta 15 a veces, pocas veces o nunca.
+Conservar la frecuencia exacta; nunca no equivale a a veces.
+3.2.03
+Reciprocidad variable
+En la pregunta 15 depende.
+Conservar la variabilidad sin inventar su razón.
+3.2.04
+La pareja suele tener ganas ante su iniciativa
+En la pregunta 31 casi siempre o muchas veces tiene ganas.
+Describe la respuesta ante su iniciativa; no sustituye la importancia de su placer.
+3.2.05
+La pareja tiene ganas pocas veces o casi nunca
+En la pregunta 31 una de esas opciones.
+Conservar la frecuencia. No diagnosticar una diferencia de libido.
+3.2.06
+Ella no suele o nunca toma la iniciativa
+En la pregunta 31 una de esas dos respuestas.
+No atribuir protección frente al rechazo ni causa por falta de reciprocidad.
+3.2.07
+Su placer importa pero la iniciativa no encuentra respuesta frecuente
+En la pregunta 15 siempre o la mayor parte; en la pregunta 31 pocas veces o casi nunca.
+Son aspectos diferentes que pueden coexistir. No se convierte su primera respuesta en una equidad solo teórica.
+3.2.08
+No tuvo encuentros recientes
+En la pregunta 15 responde No he tenido últimamente.
+No hay una experiencia reciente sobre la que valorar la importancia compartida del placer.
+3.2.09
+No puede precisar la importancia de su placer
+En la pregunta 15 no lo tengo claro.
+La reciprocidad percibida permanece abierta.
+3.2.10
+Reserva su respuesta sobre el placer
+En la pregunta 15 prefiero no responder.
+Conservar la reserva, sin atribuir una falta de reciprocidad.
+3.2.11
+Respuesta variable ante su iniciativa
+En la pregunta 31 depende.
+Conservar que la respuesta de la pareja varía, sin inventar de qué depende.
+3.2.12
+No puede precisar qué pasa ante su iniciativa
+En la pregunta 31 no lo tengo claro.
+La respuesta ante la iniciativa permanece abierta.
+3.2.13
+No hay respuesta sobre la iniciativa
+31 se omitió o no se presentó, conservando el estado concreto.
+La respuesta de 15 sigue siendo válida por sí misma.
+15 siempre se presenta. 31 aparece solo ante sentir que mi placer importa tanto como el de mi pareja en 24 y puede omitirse. No se exige 31 para reconocer la reciprocidad percibida en 15.
+3.3 Expresión de límites y seguridad con la pareja
+Pregunta 16  Cuando algo no te gusta, no quieres hacerlo o quieres parar, ¿qué tan posible te resulta decirlo?
+Pregunta 17  Cuando dices que no, quieres parar o cambias de idea, ¿cómo suele reaccionar tu pareja?
+Pregunta 18  ¿Te sientes segura para decir que no o parar cuando lo necesitas?
+Separar poder decir que no o parar, cómo reacciona la pareja y sentirse segura para hacerlo. Se refiere a los encuentros eróticos.
+Nº
+Título base
+Respuestas de origen
+Lectura
+3.3.01
+Puede expresar sus límites
+En la pregunta 16 me resulta fácil o en general puedo decirlo.
+Declara que puede expresarlos con facilidad o en general. En esta situación no se presentan 17 ni 18; no se infiere una reacción de la pareja ni seguridad no preguntada.
+3.3.02
+La pareja respeta los límites aunque expresarlos no siempre es fácil
+En la pregunta 16 depende o me cuesta; en la pregunta 17 lo respeta sin problema o en general lo respeta.
+La dificultad propia y la respuesta de la pareja son distintas. Conservar ambas.
+3.3.03
+Límites con insistencia o molestia
+En la pregunta 17 a veces o muchas veces insiste o se molesta.
+Conservar la frecuencia declarada y considerar el cuidado. No se minimiza porque exista afecto o deseo.
+3.3.04
+Siente que no puede decirlo
+En la pregunta 16 siento que no puedo hacerlo.
+Debe quedar visible esa dificultad y abrirse la pregunta de seguridad. No se deduce la causa.
+3.3.05
+No se siente segura
+En la pregunta 18 no.
+Priorizar el cuidado de sus límites y su seguridad en cualquier dirección que se considere.
+3.3.06
+Se siente segura para decir no o parar
+En la pregunta 18 sí.
+Declara seguridad para poner ese límite. Se conserva junto a la dificultad o reacción que activó la pregunta.
+3.3.07
+Seguridad habitual
+En la pregunta 18 generalmente sí.
+Suele sentirse segura; se conserva ese matiz.
+3.3.08
+Seguridad que depende de la situación
+En la pregunta 18 depende.
+La seguridad no es constante; no se precisa de qué depende sin su respuesta.
+3.3.09
+La situación no ocurrió
+En la pregunta 16 o 17 no se ha dado esta situación.
+No hay una experiencia observada para esa pregunta; no se confirma respeto ni dificultad.
+3.3.10
+No puede precisar un aspecto
+En la pregunta 16, 17 o 18 no lo tengo claro, según la pregunta efectivamente presentada.
+La incertidumbre corresponde a esa pregunta. Se mantienen las otras respuestas.
+3.3.11
+Reserva un aspecto
+En la pregunta 16, 17 o 18 prefiero no responder, según la pregunta efectivamente presentada.
+Se conserva la reserva en esa pregunta y las demás respuestas; no se infiere seguridad ni inseguridad a partir de la reserva.
+3.3.12
+Respuesta de la pareja que depende
+En la pregunta 17 depende.
+Conservar la variabilidad de la reacción y abrir 18 para preguntar por la seguridad.
+17 se abre cuando en 16 responde depende, me cuesta o siento que no puedo. 18 se abre si en 16 dice que no puede, o si en 17 responde a veces o muchas veces insiste o se molesta, depende o no lo tengo claro. No exigir respuestas de preguntas que no se presentaron.
+3.4 Sentirse deseada por su pareja
+Pregunta 30  ¿Qué tan deseada te sientes por tu pareja?
+Precisar esta percepción cuando en 24 expresa que quisiera sentirse más deseada.
+Nº
+Título base
+Respuestas de origen
+Lectura
+3.4.01
+Se siente deseada
+Mucho o bastante.
+Conservar el grado, junto a lo que desea ampliar.
+3.4.02
+Percepción intermedia
+Más o menos.
+Mantener esa posición.
+3.4.03
+Se siente poco o nada deseada
+Poco o nada.
+Conservar la diferencia sin asumir desinterés real de la pareja.
+3.4.04
+Sentirse deseada por precisar
+No lo tengo claro.
+Mantener la incertidumbre sobre su percepción.
+3.4.05
+No le importa
+No me importa.
+No convertirlo en ausencia de deseo ni decidir por ella qué necesita trabajar.
+3.4.06
+No se preguntó cómo se siente deseada
+No eligió sentirme más deseada En la pregunta 24.
+30 no se presenta; la cercanía no reemplaza esta percepción.
+Sentirse deseada no se deduce de la frecuencia de encuentros, la iniciativa ni la cercanía. La pregunta tiene su propia fuente.
+4 Clima
+4.1 Influencia cotidiana y condiciones que pesan
+Pregunta 19  ¿Cómo influye tu vida cotidiana en tu vida erótica?
+Pregunta 20  ¿Qué es lo que más pesa hoy en tu vida cotidiana cuando se trata de tu vida erótica?
+Pregunta 39  ¿Qué otra cosa está pesando hoy?
+Distinguir cómo siente la influencia cotidiana de cuáles condiciones nombra. Pueden coexistir tiempo, responsabilidades, trabajo y recursos.
+Nº
+Título base
+Respuestas de origen
+Lectura
+4.1.01
+Lo cotidiano favorece
+En la pregunta 19 la favorece mucho o algo.
+Conservar esa influencia percibida y su grado. No afirmar que no existen responsabilidades.
+4.1.02
+Influencia mixta
+En la pregunta 19 a veces favorece y a veces dificulta.
+Mantener ambas partes. La pregunta 20 puede precisar qué pesa.
+4.1.03
+Lo cotidiano dificulta
+En la pregunta 19 la dificulta algo o mucho.
+Conservar el grado y las condiciones seleccionadas en 20.
+4.1.04
+No siente influencia
+En la pregunta 19 no influye.
+No atribuir al entorno efectos que ella no reconoce.
+4.1.05
+Influencia incierta
+En la pregunta 19 no lo tengo claro.
+No resolverla como influencia neutra.
+4.1.06
+Responsabilidades y carga mental
+En la pregunta 20 nombra carga mental, cuidados, hogar u otras responsabilidades.
+Conservar cada condición elegida sin duplicar un supuesto peso por el número de elecciones.
+4.1.07
+Trabajo dinero tiempo o espacio
+En la pregunta 20 selecciona una o varias de esas condiciones.
+Nombrarlas por separado. No todas equivalen a falta de privacidad.
+4.1.08
+Falta de privacidad nombrada
+En la pregunta 20 falta de privacidad.
+Se conserva esa condición y se abre 32 para precisar la privacidad disponible.
+4.1.09
+Otra condición cotidiana
+En la pregunta 20 otra cosa; 39 puede aportar sus palabras.
+Conservar lo que nombra si escribe la aclaración.
+4.1.10
+No puede precisar qué pesa
+En la pregunta 20 no lo tengo claro.
+No puede elegir qué condición pesa más; se mantiene la influencia declarada en 19.
+20 aparece solo ante influencia mixta, la dificulta algo o la dificulta mucho en 19; admite hasta tres opciones. 39 aparece solo ante otra cosa en 20 y puede omitirse. Trabajo, dinero, falta de tiempo y falta de espacio se mantienen como condiciones distintas.
+4.2 Margen de decisión y restricciones de autonomía
+Pregunta 21  En general, ¿sientes que tienes margen real para tomar decisiones sobre tu propia vida erótica?
+Pregunta 33  ¿Hay algo de tu autonomía —como tu tiempo, tu dinero o tu libertad para decidir— que limite tu vida erótica?
+Pregunta 40  ¿Qué otra cosa limita tu margen de decisión?
+Distinguir querer algo de sentir que puede decidir sobre ello. Las restricciones se preguntan cuando declara poco o muy poco margen.
+Nº
+Título base
+Respuestas de origen
+Lectura
+4.2.01
+Mucho o bastante margen
+En la pregunta 21 mucho o bastante.
+Reconoce margen de decisión. Como 33 no se abre en esta combinación, no se exige confirmar nada de esto.
+4.2.02
+Algo de margen
+En la pregunta 21 algo.
+Conservar esa respuesta intermedia sin rebajarla a poco.
+4.2.03
+Poco o muy poco margen
+En la pregunta 21 poco o muy poco.
+Conservar el grado y abrir las restricciones en 33.
+4.2.04
+Restricciones nombradas
+En la pregunta 33 tiempo, dinero, libertad para ciertas decisiones o dependencia de la pareja para decisiones o recursos.
+Mantener cuáles nombra. No se atribuyen automáticamente mandatos culturales ni se supone una causa única.
+4.2.05
+No identifica esas restricciones
+En la pregunta 33 nada de esto.
+No identifica las restricciones listadas, aunque haya declarado poco margen. Ambas respuestas se conservan.
+4.2.06
+Otra restricción
+En la pregunta 33 otra cosa; puede responder 40.
+Conservar sus palabras sin anticipar qué restricción es.
+4.2.07
+No sabe cuánto margen tiene
+En la pregunta 21 no sé.
+El margen permanece abierto. 33 no se presenta en esta situación.
+4.2.08
+No había considerado las restricciones
+En la pregunta 33 no lo había pensado.
+No había considerado esas posibles restricciones; se conserva el poco o muy poco margen que declaró en 21.
+4.2.09
+Reserva las restricciones
+En la pregunta 33 prefiero no responder.
+Conservar la reserva y el margen declarado en 21.
+33 aparece solo ante poco o muy poco en 21. Permite todas las restricciones que correspondan; nada de esto, no lo había pensado y prefiero no responder son excluyentes. 40 aparece solo ante otra cosa en 33 y puede omitirse. No se exige 33 para las demás respuestas de 21.
+4.3 Privacidad disponible para su vida erótica
+Pregunta 32  ¿Los espacios y condiciones en que vives te dan la privacidad que necesitas para tu vida erótica?
+Precisar la privacidad cuando en 20 la señala o cuando en 24 quiere más tiempo o espacio.
+Nº
+Título base
+Respuestas de origen
+Lectura
+4.3.01
+Privacidad suficiente según su respuesta
+Sí completamente o la mayor parte del tiempo.
+Conservar la diferencia entre ambas; no borrar otros deseos de tiempo o espacio.
+4.3.02
+Privacidad a veces
+A veces.
+Reconoce disponibilidad intermitente. No se iguala a no tener privacidad.
+4.3.03
+Privacidad escasa o ausente según su percepción
+Pocas veces o no.
+Reconoce esa limitación, con el grado que eligió. No se deduce con quién vive ni cuál es la solución.
+4.3.04
+Privacidad variable
+Depende.
+Su respuesta varía; no se inventa de qué depende.
+4.3.05
+Privacidad incierta
+No lo tengo claro.
+No confirma una limitación ni una disponibilidad suficiente.
+4.3.06
+Pregunta no presentada
+No se activó por 20 ni por 24.
+No hay una medida de privacidad. No se registra como privacidad resuelta.
+Tiempo, espacio y privacidad son condiciones relacionadas pero distintas. Desear más tiempo o espacio no identifica por sí solo un problema de privacidad. Pocas veces o No en 32 registran una restricción de privacidad para la lectura de cargas; las demás respuestas no la confirman.
+5 Horizonte
+5.1 Lo que valora de su vida erótica
+Pregunta 22  ¿Qué es lo más valioso para ti de tu vida erótica?
+Pregunta 36  ¿Qué es lo más valioso para ti?
+Organizar sus valores sin convertirlos en recursos ya presentes ni elegir una familia ganadora por cantidad.
+Nº
+Título base
+Respuestas de origen
+Lectura
+5.1.01
+Placer deseo fantasía y conexión corporal
+En la pregunta 22 elige uno o varios de esos valores.
+Conservar cuáles le importan. No afirmar que ya los experimente.
+5.1.02
+Conocimiento expresión exploración y manera propia
+En la pregunta 22 elige conocerse, descubrir lo que le gusta, expresar lo que quiere, explorar o vivir a su manera.
+Conservar cada orientación; no deducir déficits o bloqueos.
+5.1.03
+Intimidad sentirse deseada y conexión profunda
+En la pregunta 22 elige uno o varios de esos valores.
+Conservar la importancia que les da sin afirmar cercanía actual.
+5.1.04
+Juego y diversión
+En la pregunta 22 jugar y divertirme.
+Puede ser un valor propio o compartido. No se asigna obligatoriamente a la pareja.
+5.1.05
+Valores de varios grupos
+Elige hasta tres valores de diferentes grupos.
+Todos permanecen. Un grupo más numeroso no elimina los otros.
+5.1.06
+Otro valor
+En la pregunta 22 otra; puede escribirlo En la pregunta 36.
+Conservar el valor en sus palabras sin obligarla a encajar en una familia.
+5.1.07
+No identifica un valor particular
+En la pregunta 22 nada en particular.
+No identifica un valor particular al responder esta pregunta.
+5.1.08
+No lo había pensado
+En la pregunta 22 no lo había pensado.
+No había considerado antes qué valora; no se concluye que nada le importe.
+22 permite hasta tres elecciones. Nada en particular y no lo había pensado son excluyentes. 36 aparece solo ante otra y puede omitirse. Los grupos ordenan los valores elegidos sin convertirlos en experiencias ya presentes; un valor y un deseo conservan ambos orígenes.
+5.2 Cómo desea vivir su erotismo en sus palabras
+Pregunta 23  Si quieres contarnos, ¿cómo te gustaría que fuera tu vida erótica en esta etapa de tu vida?
+Conservar la descripción de cómo le gustaría vivir su erotismo sin hacer que un texto libre decida por sí solo la Configuración.
+Nº
+Título base
+Respuestas de origen
+Lectura
+5.2.01
+Describe lo que desea
+Escribe En la pregunta 23.
+Conservar sus palabras junto a los valores y deseos seleccionados. No inventar un significado adicional.
+5.2.02
+No escribe una respuesta
+Omite el campo opcional.
+No hay una descripción escrita; las otras respuestas siguen teniendo valor.
+5.2.03
+Sus palabras aportan un matiz diferente
+Al revisar 23 junto a otras respuestas, sus palabras aportan un matiz distinto.
+Conservar ese matiz para la revisión editorial; no es una interpretación automática del texto.
+La omisión de este campo no bloquea el resultado. Su texto no se reemplaza por una interpretación automática.
+5.3 Lo que quiere mover, recuperar o explorar
+Pregunta 24  Por último, en esta etapa de tu vida, ¿hay algo de tu vida erótica que te gustaría mover, recuperar o explorar?
+Pregunta 37  ¿Qué te gustaría mover, recuperar o explorar?
+Mantener todas las direcciones declaradas, hasta cuatro. Estas orientaciones temáticas todavía no son las tarjetas finales de Destino.
+Nº
+Título base
+Respuestas de origen
+Lectura
+5.3.01
+Tener más ganas
+Elige tener más ganas.
+Leer 8 y 9 para situar cómo aparece el deseo; 10 conserva el disfrute como aspecto diferente.
+5.3.02
+Sentir más placer
+Elige sentir más placer.
+Situar con 10 y 11. Querer más no significa que no disfrute.
+5.3.03
+Disfrutar más los encuentros
+Elige disfrutar más los encuentros.
+Situar con 10 y, si aparece, 12. Se distingue de registrar sensaciones en el cuerpo.
+5.3.04
+Explorar su orgasmo
+Elige explorar mi orgasmo.
+Abre 25. No supone que el orgasmo sea la única meta ni que exista exigencia de rendimiento.
+5.3.05
+Reconocer mejor lo que pasa en su cuerpo
+Elige esa respuesta.
+Abre 26. El registro se distingue de la comodidad de 27.
+5.3.06
+Sentirse más cómoda con su cuerpo
+Elige esa respuesta.
+Abre 27 para precisar su comodidad actual. Querer más comodidad no demuestra que se sienta incómoda.
+5.3.07
+Sentirse más deseada
+Elige esa respuesta.
+Abre 30. No se sustituye por cercanía ni iniciativa.
+5.3.08
+Encontrar una cercanía que le haga sentido
+Elige esa respuesta.
+Leer 13 y 14 sin asumir que desea aumentar cualquier forma de cercanía.
+5.3.09
+Que su placer importe tanto como el de su pareja
+Elige esa respuesta.
+Leer 15 y puede aparecer 31. La importancia de su placer no se mide con la iniciativa.
+5.3.10
+Expresar mejor lo que quiere y lo que no quiere
+Elige esa respuesta.
+Situar con 16–18 cuando correspondan, conservando límites y cuidado.
+5.3.11
+Experimentar cosas nuevas
+Elige esa respuesta.
+Abre 28 para distinguir novedad, ampliar lo conocido, ambas o ninguna.
+5.3.12
+Tener más tiempo o espacio
+Elige esa respuesta.
+Abre 32; leer también 19–21. No reducir la dirección a arreglar un espacio físico.
+5.3.13
+Sentirse más libre para expresar o vivir lo que desea
+Elige esa respuesta.
+Abre 29. Leer margen de decisión y límites por separado. No suponer culpa ni una causa externa.
+5.3.14
+Recuperar algo que antes tenía
+Elige esa respuesta.
+Leer 1, 4 y 5 si existen. Conservar qué desea recuperar sin inventarlo.
+5.3.15
+No quiere mover nada ahora
+Elige esa respuesta excluyente.
+Es una elección actual. No se transforma en hibernación ni elimina posibles direcciones apoyadas en valores si ella quiere considerarlas.
+5.3.16
+Otra dirección
+Elige otra y puede responder 37.
+Conservar sus palabras. No sustituirlas por una dirección automática.
+5.3.17
+Todavía no sabe
+Elige no sé todavía, de forma excluyente.
+No hay una dirección definida. Los valores pueden sostener posibilidades abiertas, sin elegir por ella.
+24 permite hasta cuatro elecciones. No quiero mover nada ahora y no sé todavía son excluyentes. 37 aparece solo ante otra y puede omitirse. Cada deseo se sitúa con el presente y los valores; una dirección posible no equivale a una elección de Destino.
+5.4 Qué tipo de exploración le interesa
+Pregunta 28  ¿Te gustaría hacer cosas eróticas que no estás haciendo o hacer más seguido algunas que ya haces?
+Distinguir novedad de dar más lugar a experiencias conocidas. Se abre desde el interés de 1 o el deseo de 24.
+Nº
+Título base
+Respuestas de origen
+Lectura
+5.4.01
+Quiere experimentar cosas nuevas
+Sí me gustaría experimentar cosas nuevas.
+Orientación hacia novedad elegida.
+5.4.02
+Quiere hacer más algo que ya hace
+Sí me gustaría hacer más algunas cosas que ya hago.
+Orientación hacia ampliar experiencias conocidas, sin afirmar que ya las disfrute.
+5.4.03
+Le interesan ambas
+Ambas.
+Conservar novedad y ampliación de lo conocido.
+5.4.04
+No le interesa ninguna de las dos
+Ninguna de las dos.
+No ofrecer automáticamente novedad ni repetición; queda por precisar qué significa explorar para ella.
+5.4.05
+Tipo de exploración por precisar
+No sé.
+Mantener la exploración abierta.
+5.4.06
+Omite la pregunta sobre exploración
+28 fue activada solo por 1 y se omitió.
+No hay respuesta al tipo de exploración; se conserva el interés expresado en 1.
+5.4.07
+No se preguntó por exploración
+28 no se activó ni por 1 ni por 24.
+No hay respuesta a esta pregunta; no equivale a ausencia de curiosidad.
+Si la abre el deseo de 24, es necesaria. Si la abre solo 1, es complementaria y puede omitirse. Un valor de exploración en 22 no inventa una respuesta en 28.
+5.5 Reconocer sus gustos e intereses para sí misma
+Pregunta 29  ¿Hay cosas que te gustan o te dan curiosidad, pero que te cuesta reconocer incluso para ti misma?
+Precisar si hay intereses que le cuesta reconocer para ella misma, sin confundir este aspecto con poder decidir o expresarlos ante otra persona.
+Nº
+Título base
+Respuestas de origen
+Lectura
+5.5.01
+Le cuesta reconocer algunos intereses
+Sí.
+Existe esa dificultad declarada. No se supone culpa ni se identifican creencias concretas.
+5.5.02
+Le ocurre a veces
+A veces.
+Conservar la variabilidad.
+5.5.03
+No le ocurre
+No.
+No declara esta dificultad. No prueba que el freno sea externo ni que tenga libertad total para vivir lo que quiere.
+5.5.04
+Dificultad para reconocer sus intereses por precisar
+No sé.
+La respuesta está abierta.
+5.5.05
+Reserva la respuesta sobre sus intereses
+Prefiero no responder.
+Conservar privacidad sin inferir autocensura.
+5.5.06
+Omite la pregunta sobre reconocer sus intereses
+29 fue activada solo por 22 y se omitió.
+No hay respuesta sobre esta dificultad; se conserva el valor declarado.
+5.5.07
+No se preguntó por esta dificultad
+29 no se activó ni por 22 ni por 24.
+No hay respuesta sobre este aspecto.
+Se abre si en 24 desea más libertad, o si en 22 valora vivir a su manera. Cuando la abre solo 22 es complementaria y puede omitirse; si la abre 24, es necesaria.

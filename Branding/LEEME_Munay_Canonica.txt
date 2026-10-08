@@ -1,0 +1,29 @@
+MUNAY CANÓNICA — GOZADORAS CLUB
+Decisión de Mónica: 3 de octubre de 2026.
+
+REGLA OBLIGATORIA
+Munay tiene LOS OJOS CLAROS. Mantener los iris y los acentos claros que hacen legible su mirada, los dos ojos visibles en tres cuartos y el acento claro del hocico. No entregar versiones que oscurezcan esos ojos o eliminen sus claros. No usar siluetas sin manchas como representación de Munay.
+
+REFERENCIAS
+La ilustración integrada al logo de portada es la madre de la identidad. Para la pose sentada se fija la versión con ojos, contorno de ojos y hocico claros elegida por Mónica; se descarta la corrección que quitó esos claros.
+Conservar rostro de jaguar adulto, orejas redondeadas, cuello corto, proporciones naturales, rosetas y manchas, tinta coral/rust y vino. Sin cuerpo, pecho ni patas blancos. No pegar una cabeza sobre otro cuerpo. No redibujar el personaje para quitarle el fondo.
+
+TRES REPRESENTACIONES TRABAJADAS
+01 Caminando: para láminas de paisajes. Archivo nuevo con unión natural de cabeza y cuerpo, ojos claros y transparencia.
+02 Rostro circular: recorte directo del rostro de la portada. El círculo conserva su fondo vino; el exterior del círculo es transparente.
+03 Sentada y atenta: para pregunta libre final. Ambos ojos visibles, cabeza erguida y mirada hacia el texto. Se recuperó la versión de ojos claros.
+Las poses de cuerpo son adaptaciones gráficas; no son copias idénticas píxel a píxel de la portada. El rostro circular y el logo integrado conservan la fuente original.
+
+APLICACIONES INCLUIDAS
+Logo GOZADORAS CLUB integrado con Munay, PNG y SVG transparentes, con el trazo del lomo corregido.
+Encabezado Munay, PNG y SVG, como referencia de aplicación del rostro circular.
+Estas aplicaciones no son otras posturas ni otros personajes.
+
+FORMATOS
+PNG: imágenes con canal de transparencia real. Usar para montaje en pantalla.
+SVG: los archivos contienen imagen raster incrustada (y recorte o composición en el rostro, logo y encabezado); no son un dibujo de trazados vectoriales independientes.
+Vista conjunta: solo para revisión visual, tiene fondo vino.
+
+VIGENCIA
+Usar este paquete como referencia de recursos. Sustituye la caminando anterior con unión visible de cabeza y cuerpo y la sentada de ojos oscurecidos. La máscara de recorte en silueta fue un archivo técnico; no es un recurso de marca y no se incluye.
+Los cinco iconos de Mirador, Manantial, Sendero, Clima y Horizonte mantienen su aprobación y no se modifican aquí.
