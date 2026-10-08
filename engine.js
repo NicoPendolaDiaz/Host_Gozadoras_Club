@@ -116,6 +116,129 @@ const MUNAY_GUIDES = {
     'P40': "Cierra el mapa de hoy."
 };
 
+const LANDSCAPE_DATA = {
+  'L_MIRADOR': {
+    num: 1,
+    title: 'Mirador',
+    text: 'Todo mapa comienza con una mirada. Antes de avanzar, observa desde dónde estás mirando.'
+  },
+  'L_MANANTIAL': {
+    num: 2,
+    title: 'Manantial',
+    text: 'Bajo la superficie, el agua está en movimiento. El cauce aparece cuando encuentra su rumbo.'
+  },
+  'L_SENDERO': {
+    num: 3,
+    title: 'Sendero',
+    text: 'Compartir camino cambia el paso. Entre dos, la intimidad tiene su propia geografía.'
+  },
+  'L_CLIMA': {
+    num: 4,
+    title: 'Clima',
+    text: 'Lo cotidiano se filtra en lo íntimo. Algunos días dejan aire; otros piden espacio.'
+  },
+  'L_HORIZONTE': {
+    num: 5,
+    title: 'Horizonte',
+    text: 'Una dirección puede hacerse visible antes de tener nombre. El horizonte empieza justo ahí.'
+  }
+};
+
+const LANDSCAPE_ICONS = {
+  'L_MIRADOR': `<svg viewBox="0 0 100 100" class="landscape-icon-svg" fill="none" stroke="#ff6105" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <path d="M14 50 C28 32 72 32 86 50 C72 68 28 68 14 50 Z" />
+    <circle cx="50" cy="50" r="12" />
+    <circle cx="50" cy="50" r="4.5" fill="#ff6105" />
+    <path d="M50 20 L50 12" />
+    <path d="M30 25 L25 18" />
+    <path d="M70 25 L75 18" />
+  </svg>`,
+
+  'L_MANANTIAL': `<svg viewBox="0 0 100 100" class="landscape-icon-svg" fill="none" stroke="#ff6105" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <path d="M50 18 C43 28 37 37 37 46 C37 54 43 60 50 60 C57 60 63 54 63 46 C63 37 57 28 50 18 Z" />
+    <circle cx="50" cy="46" r="3" fill="#ff6105" />
+    <path d="M24 68 C34 76 66 76 76 68" />
+    <path d="M16 80 C30 90 70 90 84 80" />
+    <path d="M28 44 C23 48 23 54 28 58" />
+    <path d="M72 44 C77 48 77 54 72 58" />
+  </svg>`,
+
+  'L_SENDERO': `<svg viewBox="0 0 100 100" class="landscape-icon-svg" fill="none" stroke="#ff6105" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <path d="M43 26 C44 33 49 37 49 43 C49 51 37 56 37 66 C37 73 41 78 44 82" />
+    <path d="M57 26 C56 33 51 37 51 43 C51 51 63 56 63 66 C63 73 59 78 56 82" />
+  </svg>`,
+
+  'L_CLIMA': `<svg viewBox="0 0 100 100" class="landscape-icon-svg" fill="none" stroke="#ff6105" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <path d="M28 56 L72 56 C79 56 80 50 78 44 C77 36 69 32 62 34 C57 26 44 26 39 34 C32 34 24 40 24 48 C24 54 28 56 28 56 Z" />
+    <path d="M20 68 L66 68" />
+    <path d="M28 76 L66 76" />
+    <path d="M38 84 L60 84" />
+  </svg>`,
+
+  'L_HORIZONTE': `<svg viewBox="0 0 100 100" class="landscape-icon-svg" fill="none" stroke="#ff6105" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <path d="M12 66 L88 66" />
+    <path d="M32 66 A 18 18 0 0 1 68 66" />
+    <path d="M22 65 A 28 28 0 0 1 78 65" />
+    <path d="M50 30 L50 18" />
+    <path d="M32 38 L25 29" />
+    <path d="M68 38 L75 29" />
+    <path d="M18 50 L10 46" />
+    <path d="M82 50 L90 46" />
+  </svg>`
+};
+
+function renderLandscapeEmbers() {
+  const container = document.getElementById('l-embers');
+  if (!container) return;
+  const colors = ['#ff6105', '#ff9933', '#ffc266', '#ffe5dc', '#fff5c8'];
+  let html = '';
+  for (let i = 0; i < 16; i++) {
+    const left = Math.round(10 + Math.random() * 80);
+    const bottom = Math.round(8 + Math.random() * 45);
+    const size = (2.2 + Math.random() * 2.8).toFixed(1);
+    const drift = Math.round(-14 + Math.random() * 28);
+    const rise = Math.round(-38 - Math.random() * 30);
+    const dur = (2.4 + Math.random() * 2.2).toFixed(2);
+    const delay = (Math.random() * 2.4).toFixed(2);
+    const col = colors[Math.floor(Math.random() * colors.length)];
+    const glow = `0 0 ${Math.round(size * 2.2)}px ${col}`;
+    html += `<span class="landscape-ember" style="left:${left}%; bottom:${bottom}%; width:${size}px; height:${size}px; background:${col}; box-shadow:${glow}; --drift-x:${drift}px; --rise-y:${rise}px; animation-duration:${dur}s; animation-delay:${delay}s;"></span>`;
+  }
+  container.innerHTML = html;
+}
+
+function showLandscape(q) {
+  go('s-landscape');
+  
+  const data = LANDSCAPE_DATA[q.id] || {
+    num: 1,
+    title: q.title || '',
+    text: q.text || ''
+  };
+  
+  const eyebrowEl = document.getElementById('l-eyebrow');
+  if (eyebrowEl) eyebrowEl.innerText = `PAISAJE ${data.num} DE 5`;
+  
+  const titleEl = document.getElementById('l-title');
+  if (titleEl) {
+    let t = data.title;
+    titleEl.innerText = t.charAt(0).toUpperCase() + t.slice(1).toLowerCase();
+  }
+  
+  const textEl = document.getElementById('l-text');
+  if (textEl) textEl.innerText = data.text;
+  
+  const iconBox = document.getElementById('l-icon-box');
+  if (iconBox && LANDSCAPE_ICONS[q.id]) {
+    iconBox.innerHTML = LANDSCAPE_ICONS[q.id];
+  }
+  
+  renderLandscapeEmbers();
+  
+  const scrollWrap = document.querySelector('.landscape-scroll-wrap');
+  if (scrollWrap) scrollWrap.scrollTop = 0;
+}
+
 function renderQuestion(id, viewIdx = 0) {
     if (id === 'END_NO_ELIGIBLE') { 
         go('s-info'); 
@@ -140,9 +263,7 @@ function renderQuestion(id, viewIdx = 0) {
     }
     
     if (q.type === 'landscape') {
-        go('s-landscape');
-        document.getElementById('l-title').innerText = q.title;
-        document.getElementById('l-text').innerText = q.text;
+        showLandscape(q);
         return;
     }
     
