@@ -2,7 +2,7 @@ name: Deploy Gozadoras Club to GitHub Pages
 
 on:
   push:
-    branches: ["main"]
+    branches: ["main", "Nico-Pendola"]
   workflow_dispatch:
 
 permissions:
