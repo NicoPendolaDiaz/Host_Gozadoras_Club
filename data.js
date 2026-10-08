@@ -1032,33 +1032,40 @@ const QUESTIONS = [
     "options": [
       {
         "id": "P19_O01",
-        "text": "La favorece mucho"
+        "text": "La favorece mucho",
+        "emoji": "☀️"
       },
       {
         "id": "P19_O02",
-        "text": "La favorece algo"
+        "text": "La favorece algo",
+        "emoji": "🌤️"
       },
       {
         "id": "P19_O03",
-        "text": "A veces la favorece y a veces la dificulta"
+        "text": "A veces la favorece y a veces la dificulta",
+        "emoji": "⛅"
       },
       {
         "id": "P19_O04",
-        "text": "La dificulta algo"
+        "text": "La dificulta algo",
+        "emoji": "☁️"
       },
       {
         "id": "P19_O05",
-        "text": "La dificulta mucho"
+        "text": "La dificulta mucho",
+        "emoji": "⛈️"
       },
       {
         "id": "P19_O06",
         "text": "No influye",
-        "out_of_scale": true
+        "out_of_scale": true,
+        "emoji": "🍃"
       },
       {
         "id": "P19_O07",
         "text": "No lo tengo claro",
-        "out_of_scale": true
+        "out_of_scale": true,
+        "emoji": "🌫️"
       }
     ],
     "next_logic": "return hasAny(['P19_O03', 'P19_O04', 'P19_O05'], ans) ? 'P20' : 'P21';"

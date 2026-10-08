@@ -305,17 +305,17 @@ function renderQuestion(id, viewIdx = 0) {
         qbody.innerHTML = html;
 
     } else if (q.type === 'density_scale') {
-        const DENSITIES = [20, 35, 50, 65, 80];
+        const fallbackEmojis = ['☀️', '🌤️', '⛅', '☁️', '⛈️'];
         const scaleOpts = q.options.filter(o => !o.out_of_scale).slice(0, 5);
         let html = headerHtml;
         html += '<div class="dscale" style="display:flex; flex-direction:column; gap:10px; margin-bottom:16px;">';
         scaleOpts.forEach((opt, i) => {
-            const d = DENSITIES[i];
-            const gap = Math.round(40 * Math.sqrt(0.2 / (d / 100)));
             const sel = ans.includes(opt.id);
-            const swatch = `background-image:radial-gradient(circle, var(--lime) 1.6px, transparent 2px); background-size:${gap}px ${gap}px; background-color:rgba(80,29,34,.55);`;
-            html += `<button class="dscale-item ${sel ? 'on' : ''}" onclick="toggleOpt('${opt.id}', false, false, 1)" aria-pressed="${sel}" style="display:flex; align-items:center; gap:12px; width:100%; text-align:left; padding:8px 12px; border-radius:12px; cursor:pointer; font-family:inherit; color:var(--cream); background:var(--panel); border:1px solid ${sel ? 'var(--lime)' : 'var(--line)'}; box-shadow:${sel ? '0 0 0 2px rgba(224,74,30,.35)' : 'none'};">` +
-                `<span aria-hidden="true" style="flex:0 0 96px; height:52px; border-radius:8px; border:1px solid var(--line); ${swatch}"></span>` +
+            const emoji = opt.emoji || fallbackEmojis[i] || '';
+            const boxBg = sel ? 'rgba(178,52,30,.28)' : 'rgba(80,29,34,.50)';
+            const boxBorder = sel ? 'var(--lime)' : 'var(--line)';
+            html += `<button class="dscale-item ${sel ? 'on' : ''}" onclick="toggleOpt('${opt.id}', false, false, 1)" aria-pressed="${sel}" style="display:flex; align-items:center; gap:14px; width:100%; text-align:left; padding:8px 12px; border-radius:12px; cursor:pointer; font-family:inherit; color:var(--cream); background:var(--panel); border:1px solid ${sel ? 'var(--lime)' : 'var(--line)'}; box-shadow:${sel ? '0 0 0 2px rgba(224,74,30,.35)' : 'none'}; transition:all 0.2s ease;">` +
+                `<span aria-hidden="true" style="flex:0 0 96px; height:52px; border-radius:8px; border:1px solid ${boxBorder}; background:${boxBg}; display:flex; align-items:center; justify-content:center; font-size:26px; line-height:1; user-select:none; transition:all 0.2s ease;">${emoji}</span>` +
                 `<span style="flex:1; font-size:15px; line-height:1.3; font-weight:${sel ? '700' : '400'}; color:${sel ? '#ffffff' : 'var(--cream-2)'};">${opt.text}</span>` +
                 `<span aria-hidden="true" style="flex:0 0 14px; width:14px; height:14px; border-radius:50%; border:2px solid var(--lime); background:${sel ? 'var(--lime)' : 'transparent'};"></span>` +
                 `</button>`;
@@ -323,7 +323,8 @@ function renderQuestion(id, viewIdx = 0) {
         html += '</div><div class="chips">';
         q.options.filter(o => o.out_of_scale).forEach(opt => {
             let sel = ans.includes(opt.id) ? 'on' : '';
-            html += `<button class="chip ${sel} out-scale" onclick="toggleOpt('${opt.id}', false, false, 1)">${opt.text}</button>`;
+            const emojiPrefix = opt.emoji ? `<span style="margin-right:8px; font-size:16px; vertical-align:middle;">${opt.emoji}</span>` : '';
+            html += `<button class="chip ${sel} out-scale" onclick="toggleOpt('${opt.id}', false, false, 1)">${emojiPrefix}${opt.text}</button>`;
         });
         html += '</div>';
         qbody.innerHTML = html;
