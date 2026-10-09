@@ -554,6 +554,47 @@ function renderQuestion(id, viewIdx = 0) {
 </div>`;
         qbody.innerHTML = html;
 
+    } else if (q.type === 'estado_relacion') {
+        let html = headerHtml;
+        html += `
+<div class="contenedor-estado-civil" style="margin-top:10px; margin-bottom:20px;">
+  <label for="selector-estado-civil" style="font-weight:600; color:var(--cream); font-size:0.95rem; margin-bottom:8px; display:block;">Estado civil:</label>
+  <select id="selector-estado-civil" name="estado_civil" onchange="updateEstadoRelacion()" style="width:100%; padding:10px 15px; font-size:1rem; color:#333; background-color:#fff; border:1px solid #ccc; border-radius:6px; cursor:pointer; appearance:none; background-image:url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23333333%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E'); background-repeat:no-repeat; background-position:right 15px top 50%; background-size:12px auto; transition:border-color 0.2s ease;">
+    <option value="" disabled ${!ans[0] ? 'selected' : ''}>Seleccione una opción...</option>
+    <option value="soltera" ${ans[0] === 'soltera' ? 'selected' : ''}>Soltera</option>
+    <option value="casada" ${ans[0] === 'casada' ? 'selected' : ''}>Casada</option>
+    <option value="union_civil" ${ans[0] === 'union_civil' ? 'selected' : ''}>Unión civil / acuerdo de convivencia</option>
+    <option value="separada" ${ans[0] === 'separada' ? 'selected' : ''}>Separada</option>
+    <option value="divorciada" ${ans[0] === 'divorciada' ? 'selected' : ''}>Divorciada</option>
+    <option value="viuda" ${ans[0] === 'viuda' ? 'selected' : ''}>Viuda</option>
+    <option value="otro" ${ans[0] === 'otro' ? 'selected' : ''}>Otro</option>
+    <option value="prefiero_no_responder" ${ans[0] === 'prefiero_no_responder' ? 'selected' : ''}>Prefiero no responder</option>
+  </select>
+</div>
+<div class="contenedor-convivencia" style="margin-top:10px; margin-bottom:20px;">
+  <label for="selector-convivencia" style="font-weight:600; color:var(--cream); font-size:0.95rem; margin-bottom:8px; display:block;">Convivencia con la pareja actual:</label>
+  <select id="selector-convivencia" name="convivencia_pareja" onchange="updateEstadoRelacion()" style="width:100%; padding:10px 15px; font-size:1rem; color:#333; background-color:#fff; border:1px solid #ccc; border-radius:6px; cursor:pointer; appearance:none; background-image:url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23333333%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E'); background-repeat:no-repeat; background-position:right 15px top 50%; background-size:12px auto; transition:border-color 0.2s ease;">
+    <option value="" disabled ${!ans[1] ? 'selected' : ''}>Seleccione una opción...</option>
+    <option value="convivimos" ${ans[1] === 'convivimos' ? 'selected' : ''}>Convivimos</option>
+    <option value="convivimos_parte_tiempo" ${ans[1] === 'convivimos_parte_tiempo' ? 'selected' : ''}>Convivimos parte del tiempo</option>
+    <option value="no_convivimos" ${ans[1] === 'no_convivimos' ? 'selected' : ''}>No convivimos</option>
+    <option value="prefiero_no_responder" ${ans[1] === 'prefiero_no_responder' ? 'selected' : ''}>Prefiero no responder</option>
+  </select>
+</div>
+<div class="contenedor-tiempo-relacion" style="margin-top:10px; margin-bottom:20px;">
+  <label for="selector-tiempo-relacion" style="font-weight:600; color:var(--cream); font-size:0.95rem; margin-bottom:8px; display:block;">Tiempo de la relación actual:</label>
+  <select id="selector-tiempo-relacion" name="tiempo_relacion" onchange="updateEstadoRelacion()" style="width:100%; padding:10px 15px; font-size:1rem; color:#333; background-color:#fff; border:1px solid #ccc; border-radius:6px; cursor:pointer; appearance:none; background-image:url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23333333%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E'); background-repeat:no-repeat; background-position:right 15px top 50%; background-size:12px auto; transition:border-color 0.2s ease;">
+    <option value="" disabled ${!ans[2] ? 'selected' : ''}>Seleccione una opción...</option>
+    <option value="menos_1_anio" ${ans[2] === 'menos_1_anio' ? 'selected' : ''}>Menos de 1 año</option>
+    <option value="1_a_5_anios" ${ans[2] === '1_a_5_anios' ? 'selected' : ''}>1 a 5 años</option>
+    <option value="6_a_10_anios" ${ans[2] === '6_a_10_anios' ? 'selected' : ''}>6 a 10 años</option>
+    <option value="11_a_20_anios" ${ans[2] === '11_a_20_anios' ? 'selected' : ''}>11 a 20 años</option>
+    <option value="mas_20_anios" ${ans[2] === 'mas_20_anios' ? 'selected' : ''}>Más de 20 años</option>
+    <option value="prefiero_no_responder" ${ans[2] === 'prefiero_no_responder' ? 'selected' : ''}>Prefiero no responder</option>
+  </select>
+</div>`;
+        qbody.innerHTML = html;
+
     } else {
         // generic spatial, single, multiple, carousel, etc.
         let html = headerHtml;
@@ -575,6 +616,7 @@ function renderQuestion(id, viewIdx = 0) {
     let canNext = ans.length > 0;
     if(q.type === 'text') canNext = ans[0] && ans[0].trim().length > 0;
     if(q.type === 'edad_pais') canNext = ans[0] && ans[1];
+    if(q.type === 'estado_relacion') canNext = ans[0] && ans[1] && ans[2];
     if(q.optional) canNext = true; 
     
     if (q.optional) skipBtn.style.display = 'inline-flex';
@@ -627,6 +669,28 @@ window.updateEdadPais = function() {
     }
     
     let valid = edad && pais;
+    let nextBtn = document.getElementById('nextbtn');
+    if(valid) {
+        nextBtn.classList.remove('disabled');
+        nextBtn.style.opacity = '1';
+        nextBtn.disabled = false;
+    } else {
+        nextBtn.classList.add('disabled');
+        nextBtn.style.opacity = '0.5';
+        nextBtn.disabled = true;
+    }
+};
+
+window.updateEstadoRelacion = function() {
+    let estado = document.getElementById('selector-estado-civil')?.value;
+    let conv = document.getElementById('selector-convivencia')?.value;
+    let tiempo = document.getElementById('selector-tiempo-relacion')?.value;
+    
+    if (estado || conv || tiempo) {
+        answers[currentQId] = [estado || '', conv || '', tiempo || ''];
+    }
+    
+    let valid = estado && conv && tiempo;
     let nextBtn = document.getElementById('nextbtn');
     if(valid) {
         nextBtn.classList.remove('disabled');
