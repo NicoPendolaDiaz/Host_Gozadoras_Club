@@ -1,94 +1,343 @@
-1. Choices.js + Lista Pública de Países (Recomendado)
-Repositorio: Choices.js (Más de 11,000 estrellas en GitHub).
-Es una biblioteca de Vanilla JavaScript muy ligera que transforma un <select> nativo en un menú desplegable estético con un buscador fijado en la fila superior. Para evitar ensuciar tu HTML con los 195+ países, el script consume un JSON público mantenido y actualizado (FlagCDN).
-
-HTML:
-<!-- 1. Cargar CSS de Choices.js vía CDN -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css" />
-
-<!-- 2. Contenedor de tu maqueta -->
-<div class="contenedor-pais">
-  <label for="selector-pais">País de residencia:</label>
-  <select id="selector-pais" name="pais">
-    <option value="">Cargando catálogo de países...</option>
-  </select>
+<!-- Componente: País de Residencia -->
+<div class="form-group">
+  <label for="pais_residencia" class="form-label">País de residencia <span class="required" aria-hidden="true">*</span></label>
+  
+  <div class="select-wrapper">
+    <select id="pais_residencia" name="pais_residencia" class="custom-select" required aria-required="true">
+      <option value="" disabled selected>Seleccione un país...</option>
+      <option value="afganistan">Afganistán</option>
+      <option value="albania">Albania</option>
+      <option value="alemania">Alemania</option>
+      <option value="andorra">Andorra</option>
+      <option value="angola">Angola</option>
+      <option value="antigua_y_barbuda">Antigua y Barbuda</option>
+      <option value="arabia_saudita">Arabia Saudita</option>
+      <option value="argelia">Argelia</option>
+      <option value="argentina">Argentina</option>
+      <option value="armenia">Armenia</option>
+      <option value="australia">Australia</option>
+      <option value="austria">Austria</option>
+      <option value="azerbaiyan">Azerbaiyán</option>
+      <option value="bahamas">Bahamas</option>
+      <option value="banglades">Bangladés</option>
+      <option value="barbados">Barbados</option>
+      <option value="barein">Baréin</option>
+      <option value="belgica">Bélgica</option>
+      <option value="belice">Belice</option>
+      <option value="benin">Benín</option>
+      <option value="bielorrusia">Bielorrusia</option>
+      <option value="birmania">Birmania</option>
+      <option value="bolivia">Bolivia</option>
+      <option value="bosnia_y_herzegovina">Bosnia y Herzegovina</option>
+      <option value="botsuana">Botsuana</option>
+      <option value="brasil">Brasil</option>
+      <option value="brunei">Brunéi</option>
+      <option value="bulgaria">Bulgaria</option>
+      <option value="burkina_faso">Burkina Faso</option>
+      <option value="burundi">Burundi</option>
+      <option value="butan">Bután</option>
+      <option value="cabo_verde">Cabo Verde</option>
+      <option value="camboya">Camboya</option>
+      <option value="camerun">Camerún</option>
+      <option value="canada">Canadá</option>
+      <option value="catar">Catar</option>
+      <option value="chad">Chad</option>
+      <option value="chile">Chile</option>
+      <option value="china">China</option>
+      <option value="chipre">Chipre</option>
+      <option value="ciudad_del_vaticano">Ciudad del Vaticano</option>
+      <option value="colombia">Colombia</option>
+      <option value="comoras">Comoras</option>
+      <option value="corea_del_norte">Corea del Norte</option>
+      <option value="corea_del_sur">Corea del Sur</option>
+      <option value="costa_de_marfil">Costa de Marfil</option>
+      <option value="costa_rica">Costa Rica</option>
+      <option value="croacia">Croacia</option>
+      <option value="cuba">Cuba</option>
+      <option value="dinamarca">Dinamarca</option>
+      <option value="dominica">Dominica</option>
+      <option value="ecuador">Ecuador</option>
+      <option value="egipto">Egipto</option>
+      <option value="el_salvador">El Salvador</option>
+      <option value="emiratos_arabes_unidos">Emiratos Árabes Unidos</option>
+      <option value="eritrea">Eritrea</option>
+      <option value="eslovaquia">Eslovaquia</option>
+      <option value="eslovenia">Eslovenia</option>
+      <option value="espana">España</option>
+      <option value="estados_unidos">Estados Unidos</option>
+      <option value="estonia">Estonia</option>
+      <option value="esuatini">Esuatini</option>
+      <option value="etiopia">Etiopía</option>
+      <option value="filipinas">Filipinas</option>
+      <option value="finlandia">Finlandia</option>
+      <option value="fiyi">Fiyi</option>
+      <option value="francia">Francia</option>
+      <option value="gabon">Gabón</option>
+      <option value="gambia">Gambia</option>
+      <option value="georgia">Georgia</option>
+      <option value="ghana">Ghana</option>
+      <option value="granada">Granada</option>
+      <option value="grecia">Grecia</option>
+      <option value="guatemala">Guatemala</option>
+      <option value="guinea">Guinea</option>
+      <option value="guinea_ecuatorial">Guinea Ecuatorial</option>
+      <option value="guinea_bisau">Guinea-Bisáu</option>
+      <option value="guyana">Guyana</option>
+      <option value="haiti">Haití</option>
+      <option value="honduras">Honduras</option>
+      <option value="hungria">Hungría</option>
+      <option value="india">India</option>
+      <option value="indonesia">Indonesia</option>
+      <option value="irak">Irak</option>
+      <option value="iran">Irán</option>
+      <option value="irlanda">Irlanda</option>
+      <option value="islandia">Islandia</option>
+      <option value="islas_marshall">Islas Marshall</option>
+      <option value="islas_salomon">Islas Salomón</option>
+      <option value="israel">Israel</option>
+      <option value="italia">Italia</option>
+      <option value="jamaica">Jamaica</option>
+      <option value="japon">Japón</option>
+      <option value="jordania">Jordania</option>
+      <option value="kazajistan">Kazajistán</option>
+      <option value="kenia">Kenia</option>
+      <option value="kirguistan">Kirguistán</option>
+      <option value="kiribati">Kiribati</option>
+      <option value="kuwait">Kuwait</option>
+      <option value="laos">Laos</option>
+      <option value="lesoto">Lesoto</option>
+      <option value="letonia">Letonia</option>
+      <option value="libano">Líbano</option>
+      <option value="liberia">Liberia</option>
+      <option value="libia">Libia</option>
+      <option value="liechtenstein">Liechtenstein</option>
+      <option value="lituania">Lituania</option>
+      <option value="luxemburgo">Luxemburgo</option>
+      <option value="madagascar">Madagascar</option>
+      <option value="malasia">Malasia</option>
+      <option value="malaui">Malaui</option>
+      <option value="maldivas">Maldivas</option>
+      <option value="mali">Malí</option>
+      <option value="malta">Malta</option>
+      <option value="marruecos">Marruecos</option>
+      <option value="mauricio">Mauricio</option>
+      <option value="mauritania">Mauritania</option>
+      <option value="mexico">México</option>
+      <option value="micronesia">Micronesia</option>
+      <option value="moldavia">Moldavia</option>
+      <option value="monaco">Mónaco</option>
+      <option value="mongolia">Mongolia</option>
+      <option value="montenegro">Montenegro</option>
+      <option value="mozambique">Mozambique</option>
+      <option value="namibia">Namibia</option>
+      <option value="nauru">Nauru</option>
+      <option value="nepal">Nepal</option>
+      <option value="nicaragua">Nicaragua</option>
+      <option value="niger">Níger</option>
+      <option value="nigeria">Nigeria</option>
+      <option value="noruega">Noruega</option>
+      <option value="nueva_zelanda">Nueva Zelanda</option>
+      <option value="oman">Omán</option>
+      <option value="paises_bajos">Países Bajos</option>
+      <option value="pakistan">Pakistán</option>
+      <option value="palaos">Palaos</option>
+      <option value="panama">Panamá</option>
+      <option value="papua_nueva_guinea">Papúa Nueva Guinea</option>
+      <option value="paraguay">Paraguay</option>
+      <option value="peru">Perú</option>
+      <option value="polonia">Polonia</option>
+      <option value="portugal">Portugal</option>
+      <option value="reino_unido">Reino Unido</option>
+      <option value="republica_centroafricana">República Centroafricana</option>
+      <option value="republica_checa">República Checa</option>
+      <option value="republica_del_congo">República del Congo</option>
+      <option value="republica_democratica_del_congo">Rep. Democrática del Congo</option>
+      <option value="republica_dominicana">República Dominicana</option>
+      <option value="ruanda">Ruanda</option>
+      <option value="rumania">Rumania</option>
+      <option value="rusia">Rusia</option>
+      <option value="samoa">Samoa</option>
+      <option value="san_cristobal_y_nieves">San Cristóbal y Nieves</option>
+      <option value="san_marino">San Marino</option>
+      <option value="san_vicente_y_las_granadinas">San Vicente y las Granadinas</option>
+      <option value="santa_lucia">Santa Lucía</option>
+      <option value="santo_tome_y_principe">Santo Tomé y Príncipe</option>
+      <option value="senegal">Senegal</option>
+      <option value="serbia">Serbia</option>
+      <option value="seychelles">Seychelles</option>
+      <option value="sierra_leona">Sierra Leona</option>
+      <option value="singapur">Singapur</option>
+      <option value="siria">Siria</option>
+      <option value="somalia">Somalia</option>
+      <option value="sri_lanka">Sri Lanka</option>
+      <option value="sudafrica">Sudáfrica</option>
+      <option value="sudan">Sudán</option>
+      <option value="sudan_del_sur">Sudán del Sur</option>
+      <option value="suecia">Suecia</option>
+      <option value="suiza">Suiza</option>
+      <option value="surinam">Surinam</option>
+      <option value="tailandia">Tailandia</option>
+      <option value="tanzania">Tanzania</option>
+      <option value="tayikistan">Tayikistán</option>
+      <option value="timor_oriental">Timor Oriental</option>
+      <option value="togo">Togo</option>
+      <option value="tonga">Tonga</option>
+      <option value="trinidad_y_tobago">Trinidad y Tobago</option>
+      <option value="tunez">Túnez</option>
+      <option value="turkmenistan">Turkmenistán</option>
+      <option value="turquia">Turquía</option>
+      <option value="tuvalu">Tuvalu</option>
+      <option value="ucrania">Ucrania</option>
+      <option value="uganda">Uganda</option>
+      <option value="uruguay">Uruguay</option>
+      <option value="uzbekistan">Uzbekistán</option>
+      <option value="vanuatu">Vanuatu</option>
+      <option value="venezuela">Venezuela</option>
+      <option value="vietnam">Vietnam</option>
+      <option value="yemen">Yemen</option>
+      <option value="yibuti">Yibuti</option>
+      <option value="zambia">Zambia</option>
+      <option value="zimbabue">Zimbabue</option>
+    </select>
+    
+    <!-- Ícono SVG unificado -->
+    <svg class="select-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="6 9 12 15 18 9"></polyline>
+    </svg>
+  </div>
+  
+  <span id="pais_residencia_feedback" class="form-feedback" aria-live="polite"></span>
 </div>
 
-<!-- 3. Cargar JavaScript de Choices.js vía CDN -->
-<script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+/* Variables CSS (Fundamento del UI) */
+:root {
+  --primary-color: #2563eb;
+  --text-primary: #1e293b;
+  --text-secondary: #64748b;
+  --border-color: #cbd5e1;
+  --border-focus: #3b82f6;
+  --bg-color: #ffffff;
+  --error-color: #ef4444;
+  --border-radius: 8px;
+  --transition-speed: 0.2s;
+}
 
-CSS (Opcional para tu maqueta):
-.contenedor-pais {
+/* Estructura del Grupo */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
   max-width: 400px;
-  margin: 20px auto;
   font-family: system-ui, -apple-system, sans-serif;
 }
 
-/* Personalizar sutilmente el campo de búsqueda de la fila superior */
-.choices__input--cloned {
-  border-bottom: 2px solid #007bff;
+.form-label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-primary);
 }
 
-JavaScript:
-document.addEventListener('DOMContentLoaded', function() {
-  const elementoSelect = document.getElementById('selector-pais');
+.required {
+  color: var(--error-color);
+}
 
-  // Inicializar la estructura del desplegable con buscador
-  const menuPaises = new Choices(elementoSelect, {
-    searchEnabled: true,
-    searchPlaceholderValue: 'Escribe para buscar un país...',
-    itemSelectText: '', // Oculta el texto "Presiona enter para seleccionar"
-    noResultsText: 'No se encontraron países',
-    shouldSort: true // Ordena la lista alfabéticamente
-  });
+.select-wrapper {
+  position: relative;
+  width: 100%;
+}
 
-  // Consumir el listado mundial actualizado en español (Códigos ISO 3166)
-  fetch('https://flagcdn.com/es/codes.json')
-    .then(respuesta => respuesta.json())
-    .then(datos => {
-      // Transformar el JSON en el formato que requiere Choices.js
-      const arrayPaises = Object.entries(datos).map(([codigo, nombre]) => ({
-        value: codigo, // Ej: "cl"
-        label: nombre  // Ej: "Chile"
-      }));
+/* El elemento Select */
+.custom-select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 100%;
+  padding: 0.75rem 2.5rem 0.75rem 1rem;
+  font-size: 1rem;
+  color: var(--text-primary);
+  background-color: var(--bg-color);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  outline: none;
+  transition: border-color var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+}
 
-      // Limpiar el estado de "Cargando" e inyectar todos los países
-      menuPaises.clearChoices();
-      menuPaises.setChoices(arrayPaises, 'value', 'label', true);
-    })
-    .catch(error => console.error('Error al cargar la base de datos de países:', error));
-});
+.custom-select:focus {
+  border-color: var(--border-focus);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
 
-2. Tom Select (Alternativa de alto rendimiento)
-Repositorio: Tom Select (Más de 4,500 estrellas en GitHub, nacido como la evolución moderna del mítico Selectize.js).
-Está diseñado específicamente para manejar listas masivas de datos sin lag al escribir o hacer scroll.
+.custom-select:invalid {
+  color: var(--text-secondary);
+}
 
-HTML:
-<link href="https://cdn.jsdelivr.net/npm/tom-select/dist/css/tom-select.default.css" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/tom-select/dist/js/tom-select.complete.min.js"></script>
+/* Renderizado del Ícono */
+.select-icon {
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  color: var(--text-secondary);
+  pointer-events: none;
+  transition: transform var(--transition-speed) ease, color var(--transition-speed) ease;
+}
 
-<div style="max-width: 400px; margin: 20px auto;">
-  <label for="tom-pais">Selecciona tu país:</label>
-  <select id="tom-pais" placeholder="Busca un país..."></select>
-</div>
+.custom-select:focus + .select-icon {
+  color: var(--primary-color);
+  transform: translateY(-50%) rotate(180deg);
+}
 
-JavaScript:
-document.addEventListener('DOMContentLoaded', function() {
-  fetch('https://flagcdn.com/es/codes.json')
-    .then(respuesta => respuesta.json())
-    .then(datos => {
-      const arrayPaises = Object.entries(datos).map(([codigo, nombre]) => ({
-        value: codigo,
-        text: nombre
-      }));
+/* Mensaje del sistema */
+.form-feedback {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  min-height: 1.2rem;
+  transition: color 0.3s ease;
+}
 
-      new TomSelect("#tom-pais",{
-        options: arrayPaises,
-        items: [],       // Valor seleccionado por defecto (vacío)
-        valueField: 'value',
-        labelField: 'text',
-        searchField: 'text',
-        sortField: 'text' // Orden alfabético
-      });
-    });
+.form-feedback.success {
+  color: #10b981;
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    
+    // Referencias del DOM
+    const selectPaisResidencia = document.getElementById('pais_residencia');
+    const feedbackPaisResidencia = document.getElementById('pais_residencia_feedback');
+
+    // Estructura de datos (Payload)
+    const formData = {
+        pais_residencia: null
+    };
+
+    // Validamos existencia antes de inyectar
+    if (selectPaisResidencia) {
+        selectPaisResidencia.addEventListener('change', function(event) {
+            
+            // Extracción
+            const selectedValue = event.target.value;
+            const selectedText = event.target.options[event.target.selectedIndex].text;
+
+            // Actualización del estado en local
+            formData.pais_residencia = selectedValue;
+
+            // Feedback en UI
+            if (selectedValue && feedbackPaisResidencia) {
+                feedbackPaisResidencia.textContent = `País seleccionado: ${selectedText}`;
+                feedbackPaisResidencia.classList.add('success');
+                
+                // Confirmación visual
+                selectPaisResidencia.style.borderColor = "#10b981";
+                setTimeout(() => {
+                    selectPaisResidencia.style.borderColor = "";
+                }, 1500);
+            }
+
+            // Consola para debug (Listo para enviar al servidor)
+            console.log("Dato 'País' capturado:", JSON.stringify(formData));
+        });
+    }
 });
