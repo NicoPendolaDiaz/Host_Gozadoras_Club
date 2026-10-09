@@ -1,0 +1,39 @@
+{
+  "package_revision": 4,
+  "package_name": "GOZADORAS_Motor_40_Preguntas_Nicolas_R4",
+  "composition_version": "composition-controlled-12-v4-compatible-r4",
+  "snapshot_schema": "mapa-experiencia-40-v4-r4",
+  "instrument_version": "GOZADORAS-40-PREGUNTAS-EXPERIENCIA-V4-2026-10-07",
+  "instrument_fingerprint": "0403072e8346fab21f66bc2e51c197e64d73f7743defb95072f3bb95b7b6ab74",
+  "instrument_input_compatible": true,
+  "source_v4_sha256": "2d70624200b8ffdd6ea389fb7edc9811cebd51197426a1ab78161cdaf87baddf",
+  "production_delivery": false,
+  "changed_motor_files": [
+    "motor/canonical_options.json",
+    "motor/qa.py",
+    "motor/composer.py",
+    "motor/composition_catalog.json"
+  ],
+  "file_sha256": {
+    "00_LEEME_NICOLAS.md": "cf09e25891787cd811e65b0722949e79554c0592f29cf5a5f77e6219487d9623",
+    "AUDITORIA_ESTRES.md": "6a07a2854c7f69528323f4878c9aef26278659a6c42aa38872299cc3a9c7d99e",
+    "GOZADORAS_Mapa_Experiencia_40_Preguntas_V4.docx": "2d70624200b8ffdd6ea389fb7edc9811cebd51197426a1ab78161cdaf87baddf",
+    "compatibilidad_instrumento.json": "5c8e827ef8ec3def24e3a4c741af348786850a38ab8a900d2fffbf8f903a8df1",
+    "contrato_instrumento_v4.json": "f8fbb62d467e2bdf16d293f82e023d308563addbd4d13d8a95c8ee4300707481",
+    "ejecutar.py": "267974c86b68259386217e3f74bbf34b563b4ae080d9ec49aea7e2bcb411daf4",
+    "ejemplo_ausencia_p08_p24.json": "5227737ac6c39b1558f37e7fbbf91f33518cd7779c1fa9b6082c5af42014d440",
+    "ejemplo_entrada.json": "a2f8dac8dd0667261a00376e15e13a79191257ce0f8236aa55efe7a546e07bfc",
+    "ejemplo_medicamentos.json": "c902738758731751e1c4a29a60581951d5e16c412c702d93e447bada4076942f",
+    "ejemplo_salida.json": "1ceb259b9a232a35836ea27a48734920c0f31309b6e39ecd83808cab71d5b7fe",
+    "motor/canonical_options.json": "77bafec6a8f0696f146557730eca51a0393f2b269270f71c3556e9e49db2161e",
+    "motor/composer.py": "1a18466b62639e43dc7826596fc0ba49317dc13deced8a89e4db1b1e2ccb32f4",
+    "motor/composition_catalog.json": "f5dbcbb627e4b2e6629191da4ba8d566349b5be73c05f7d1c845f199caf115dd",
+    "motor/qa.py": "f1b9677bcff8436c0cc1853652baa774150c48a49d64255ac2c17ba1f94efe2e",
+    "pruebas_regresion.json": "9326a47c8a7e9a6ebe2c015ff947d20f41fdbeeea52aae3c58b807eb21aae8a8",
+    "verificacion_r4.json": "346da0face94d84fd5ac169ea8f9b4c3038adba530fec99db6d2200ae2ca9cc7",
+    "verificar_compatibilidad.py": "90fb5090b6d069eabc01e0cffa8bdea8a9f4c95e2723be18953aa0eb073ee10a",
+    "verificar_estres.py": "c8101d3ed49d9ea4c4cde31d221516ecb249a34f0ac06ab7540b0469b50ec21b",
+    "verificar_paquete.py": "1b4dc929a9641fd2f3b08a9393af26505c9e5da808ab3c74840df23527a7458d"
+  },
+  "audit_status": "PASS_TECNICO_AUDITORIA_ADVERSARIAL_ESTRES"
+}

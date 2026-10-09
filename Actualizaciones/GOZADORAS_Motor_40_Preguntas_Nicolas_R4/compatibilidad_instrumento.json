@@ -1,0 +1,24 @@
+{
+  "package_revision": 4,
+  "source": "GOZADORAS_Mapa_Experiencia_40_Preguntas_V4.docx",
+  "scope": "Entrada completa: etiquetas, IDs, estados, cardinalidades, exclusiones, ramas, omisiones, zonas y textos V4; incluye P03_MICRO. No es aprobación editorial ni prueba de la web desplegada.",
+  "instrument_input_compatible": true,
+  "question_count": 40,
+  "main_options": 253,
+  "medication_options": 10,
+  "zone_ids": 9,
+  "total_alternatives": 272,
+  "resolved": [
+    "P08_O06",
+    "P10_O08 label",
+    "P15_O07 label",
+    "P24_O17 answered",
+    "P03_MICRO with P03_M01-M10",
+    "Validación compartida CLI/API",
+    "Ramas topológicas",
+    "Texto null fuera de campos de texto",
+    "JSON/Unicode y recursos de transporte",
+    "Integridad de carga y catálogo vigente único"
+  ],
+  "production_delivery": false
+}

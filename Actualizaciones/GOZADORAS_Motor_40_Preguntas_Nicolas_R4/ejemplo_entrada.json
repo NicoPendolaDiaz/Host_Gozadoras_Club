@@ -1,0 +1,303 @@
+{
+  "session_id": "SYNTHETIC_01",
+  "snapshot_schema": "mapa-experiencia-40-v4-r4",
+  "instrument_fingerprint": "0403072e8346fab21f66bc2e51c197e64d73f7743defb95072f3bb95b7b6ab74",
+  "composition_version": "composition-controlled-12-v4-compatible-r4",
+  "snapshot": {
+    "case_id": "01",
+    "session_id": "SYNTHETIC_01",
+    "instrument_version": "GOZADORAS-40-PREGUNTAS-EXPERIENCIA-V4-2026-10-07",
+    "rules_version": "composition-controlled-12-v4-compatible-r4",
+    "application_date": "2026-10-01",
+    "context": {
+      "current_partner": "yes"
+    },
+    "answers": {
+      "P01": {
+        "option_ids": [
+          "P01_O01"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P02": {
+        "option_ids": [
+          "P02_O02"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P03": {
+        "option_ids": [
+          "P03_O15"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P04": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P05": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P06": {
+        "option_ids": [
+          "P06_O03"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P07": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P08": {
+        "option_ids": [
+          "P08_O04"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P09": {
+        "option_ids": [
+          "P09_O02"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P10": {
+        "option_ids": [
+          "P10_O01"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P11": {
+        "option_ids": [],
+        "zone_ids": [
+          "Z02",
+          "Z04"
+        ],
+        "state_code": "answered",
+        "text": null
+      },
+      "P12": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P13": {
+        "option_ids": [
+          "P13_O02"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P14": {
+        "option_ids": [
+          "P14_O02"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P15": {
+        "option_ids": [
+          "P15_O01"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P16": {
+        "option_ids": [
+          "P16_O01"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P17": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P18": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P19": {
+        "option_ids": [
+          "P19_O03"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P20": {
+        "option_ids": [
+          "P20_O07"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P21": {
+        "option_ids": [
+          "P21_O02"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P22": {
+        "option_ids": [
+          "P22_O01",
+          "P22_O12",
+          "P22_O08"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P23": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "omitted",
+        "text": null
+      },
+      "P24": {
+        "option_ids": [
+          "P24_O11"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P25": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P26": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P27": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P28": {
+        "option_ids": [
+          "P28_O01"
+        ],
+        "zone_ids": [],
+        "state_code": "answered",
+        "text": null
+      },
+      "P29": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P30": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P31": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P32": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P33": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P34": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P35": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P36": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P37": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P38": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P39": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P40": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      },
+      "P03_MICRO": {
+        "option_ids": [],
+        "zone_ids": [],
+        "state_code": "not_shown",
+        "text": null
+      }
+    }
+  }
+}
