@@ -371,11 +371,10 @@ function renderQuestion(id, viewIdx = 0) {
         metaLabel = `Vista ${viewIdx + 1} de ${vLen}` + (q.max ? ` · Elige hasta ${q.max}` : " · Elige las que correspondan");
     }
     else if (q.type === 'body_map') metaLabel = "Toca el cuerpo para marcar zonas";
-    else if (q.type === 'density_scale') metaLabel = "Elige la densidad que mejor la describe";
-    else if (q.type === 'density_field') metaLabel = "Selecciona el nivel";
-    else if (q.type === 'text') metaLabel = "Texto libre";
-    else if (q.type === 'gradient_spatial' || q.type === 'distance_pair') metaLabel = "Elige una posición";
-    else if (q.type === 'timeline_gradient') metaLabel = "Elige un momento";
+    else if (q.type === 'density_scale') metaLabel = "Cinta deslizante · Densidad bipolar";
+    else if (q.type === 'gradient_spatial') metaLabel = "Cinta deslizante · 5 posiciones";
+    else if (q.type === 'distance_pair') metaLabel = "Cinta deslizante · Distancia entre dos";
+    else if (q.type === 'timeline_gradient') metaLabel = "Secuencia temporal · Cinta deslizante";
     else metaLabel = "Elige una opción";
 
     let optHtml = q.optional ? '<span class="opt">Opcional</span>' : '';
@@ -420,29 +419,142 @@ function renderQuestion(id, viewIdx = 0) {
         html += `<textarea id="txt-ans" placeholder="${q.placeholder || 'Escribe aquí tu respuesta con calma...'}" oninput="updateTextAns()" style="width:100%; height:130px; border-radius:12px; padding:14px; font-size:15px; font-family:inherit; border:1px solid var(--line); background:var(--panel); color:var(--cream); line-height:1.5; resize:vertical;">${ans[0] || ''}</textarea>`;
         qbody.innerHTML = html;
 
-    } else if (q.type === 'density_scale') {
-        const fallbackEmojis = ['☀️', '🌤️', '⛅', '☁️', '⛈️'];
-        const scaleOpts = q.options.filter(o => !o.out_of_scale).slice(0, 5);
+    } else if (q.type === 'gradient_spatial' || q.type === 'timeline_gradient' || q.type === 'distance_pair' || q.type === 'density_scale') {
+        const scaleOpts = (q.options || []).filter(o => !o.out_of_scale).slice(0, 5);
+        const outScaleOpts = (q.options || []).filter(o => o.out_of_scale);
+        
+        let selectedInScaleIdx = -1;
+        let selectedOutScaleId = null;
+        
+        if (ans.length > 0) {
+            selectedInScaleIdx = scaleOpts.findIndex(o => o.id === ans[0]);
+            if (selectedInScaleIdx === -1) {
+                let outMatch = outScaleOpts.find(o => o.id === ans[0]);
+                if (outMatch) selectedOutScaleId = outMatch.id;
+            }
+        }
+        
+        let currentCallout = "Toca o desliza en la cinta para responder";
+        let isSelected = false;
+        if (selectedInScaleIdx >= 0) {
+            currentCallout = scaleOpts[selectedInScaleIdx].text;
+            isSelected = true;
+        } else if (selectedOutScaleId) {
+            let outOpt = outScaleOpts.find(o => o.id === selectedOutScaleId);
+            currentCallout = outOpt ? outOpt.text : currentCallout;
+            isSelected = true;
+        }
+        
         let html = headerHtml;
-        html += '<div class="dscale" style="display:flex; flex-direction:column; gap:10px; margin-bottom:16px;">';
+        
+        // 1. Secuencia temporal para P08 y P09
+        if (q.type === 'timeline_gradient') {
+            const isP08 = q.id === 'P08';
+            html += `
+            <div class="timeline-narrative-bar">
+              <div class="timeline-node ${isP08 ? 'active' : 'passed'}">
+                <span class="node-bullet">${isP08 ? '●' : '✓'}</span>
+                <span class="node-title">ANTES DE EMPEZAR</span>
+                ${isP08 ? '<span class="node-badge">Hito activo</span>' : ''}
+              </div>
+              <div class="timeline-connector ${!isP08 ? 'filled' : ''}"></div>
+              <div class="timeline-node ${!isP08 ? 'active' : 'upcoming'}">
+                <span class="node-bullet">${!isP08 ? '●' : '○'}</span>
+                <span class="node-title">CUANDO YA EMPEZÓ</span>
+                ${!isP08 ? '<span class="node-badge">Hito activo</span>' : ''}
+              </div>
+            </div>`;
+        }
+        
+        // 2. Par comparativo: Distancia entre dos para P13 y P14
+        if (q.type === 'distance_pair') {
+            const focusLabel = q.id === 'P13' ? 'Afectivamente' : 'Eróticamente';
+            const gapOffsets = [14, 48, 96, 148, 206];
+            const currentGap = selectedInScaleIdx >= 0 ? gapOffsets[selectedInScaleIdx] : 96;
+            html += `
+            <div class="distance-header-wrap">
+              <div class="distance-focus-pill">Foco: <b>${focusLabel}</b></div>
+              <div class="distance-visual-stage">
+                <div class="distance-point point-you"><span>Tú</span></div>
+                <div class="distance-point point-partner" id="distance-partner-point" style="transform: translateX(${currentGap}px);"><span>Pareja</span></div>
+              </div>
+              <div class="distance-sublabel">Observa la distancia relativa entre ambos puntos</div>
+            </div>`;
+        }
+        
+        // 3. Campo de Densidad Visual para P19 (bipolar + campo de densidad)
+        if (q.type === 'density_scale') {
+            const densityLevels = [20, 35, 50, 65, 80];
+            html += `
+            <div class="density-field-wrap">
+              <div class="density-field-label">Campo de densidad visual cotidiana</div>
+              <div class="density-field-atmosphere">`;
+            densityLevels.forEach((pct, i) => {
+                const isZoneActive = selectedInScaleIdx === i;
+                html += `
+                <div class="density-zone ${isZoneActive ? 'active' : ''}" data-idx="${i}" onclick="onGradientNodeClick(${i})">
+                  <div class="density-dots d-${pct}"></div>
+                  <span class="density-tag">${pct}%</span>
+                </div>`;
+            });
+            html += `
+              </div>
+            </div>`;
+        }
+        
+        // 4. Contenedor interactivo de la Cinta Deslizante (Gradiente de 5 puntos)
+        const isBipolar = q.id === 'P19';
+        const sliderVal = selectedInScaleIdx >= 0 ? (selectedInScaleIdx + 1) : 3;
+        
+        html += `
+        <div class="cinta-deslizante-card">
+          <div class="gradient-val-callout ${isSelected ? 'selected' : ''}" id="gradient-val-callout">
+            <span class="callout-tag">${isSelected ? 'Posición seleccionada' : 'Selecciona una posición'}</span>
+            <span class="callout-text" id="gradient-callout-text">${currentCallout}</span>
+          </div>
+          
+          <div class="cinta-track-box">
+            <div class="cinta-bar ${isBipolar ? 'bipolar' : 'standard'}"></div>
+            
+            <input type="range" class="cinta-range-slider" id="cinta-range-slider" 
+                   min="1" max="5" step="1" value="${sliderVal}" 
+                   oninput="onGradientSliderInput(this.value)" 
+                   onchange="onGradientSliderChange(this.value)" 
+                   aria-label="Cinta deslizante de 5 puntos" />
+            
+            <div class="cinta-nodes-row">`;
+        
         scaleOpts.forEach((opt, i) => {
-            const sel = ans.includes(opt.id);
-            const emoji = opt.emoji || fallbackEmojis[i] || '';
-            const boxBg = sel ? 'rgba(178,52,30,.28)' : 'rgba(80,29,34,.50)';
-            const boxBorder = sel ? 'var(--lime)' : 'var(--line)';
-            html += `<button class="dscale-item ${sel ? 'on' : ''}" onclick="toggleOpt('${opt.id}', false, false, 1)" aria-pressed="${sel}" style="display:flex; align-items:center; gap:14px; width:100%; text-align:left; padding:8px 12px; border-radius:12px; cursor:pointer; font-family:inherit; color:var(--cream); background:var(--panel); border:1px solid ${sel ? 'var(--lime)' : 'var(--line)'}; box-shadow:${sel ? '0 0 0 2px rgba(224,74,30,.35)' : 'none'}; transition:all 0.2s ease;">` +
-                `<span aria-hidden="true" style="flex:0 0 96px; height:52px; border-radius:8px; border:1px solid ${boxBorder}; background:${boxBg}; display:flex; align-items:center; justify-content:center; font-size:26px; line-height:1; user-select:none; transition:all 0.2s ease;">${emoji}</span>` +
-                `<span style="flex:1; font-size:15px; line-height:1.3; font-weight:${sel ? '700' : '400'}; color:${sel ? '#ffffff' : 'var(--cream-2)'};">${opt.text}</span>` +
-                `<span aria-hidden="true" style="flex:0 0 14px; width:14px; height:14px; border-radius:50%; border:2px solid var(--lime); background:${sel ? 'var(--lime)' : 'transparent'};"></span>` +
-                `</button>`;
+            const isNodeActive = selectedInScaleIdx === i;
+            html += `
+              <div class="cinta-node ${isNodeActive ? 'active' : ''}" data-idx="${i}" onclick="onGradientNodeClick(${i})">
+                <div class="node-pip">
+                  <span class="node-pip-inner"></span>
+                </div>
+                <span class="node-label">${opt.text}</span>
+              </div>`;
         });
-        html += '</div><div class="chips">';
-        q.options.filter(o => o.out_of_scale).forEach(opt => {
-            let sel = ans.includes(opt.id) ? 'on' : '';
-            const emojiPrefix = opt.emoji ? `<span style="margin-right:8px; font-size:16px; vertical-align:middle;">${opt.emoji}</span>` : '';
-            html += `<button class="chip ${sel} out-scale" onclick="toggleOpt('${opt.id}', false, false, 1)">${emojiPrefix}${opt.text}</button>`;
-        });
-        html += '</div>';
+        
+        html += `
+            </div>
+          </div>
+        </div>`;
+        
+        // 5. Opciones fuera de escala (separadas físicamente debajo del eje)
+        if (outScaleOpts.length > 0) {
+            html += `
+            <div class="out-scale-wrap">
+              <div class="out-scale-divider"><span>Otras situaciones</span></div>
+              <div class="chips out-scale-chips">`;
+            outScaleOpts.forEach(opt => {
+                const sel = selectedOutScaleId === opt.id ? 'on' : '';
+                html += `<button class="chip ${sel} out-scale" onclick="onGradientOutScaleClick('${opt.id}')">${opt.text}</button>`;
+            });
+            html += `
+              </div>
+            </div>`;
+        }
+        
         qbody.innerHTML = html;
 
     } else if (q.type === 'density_field') {
@@ -638,6 +750,68 @@ function renderQuestion(id, viewIdx = 0) {
         nextBtn.disabled = true;
     }
 }
+
+window.onGradientSliderInput = function(val) {
+    let q = QUESTIONS.find(x => x.id === currentQId);
+    if (!q || !q.options) return;
+    let scaleOpts = q.options.filter(o => !o.out_of_scale).slice(0, 5);
+    let idx = parseInt(val) - 1;
+    let opt = scaleOpts[idx];
+    if (!opt) return;
+    
+    answers[currentQId] = [opt.id];
+    
+    let calloutWrap = document.getElementById('gradient-val-callout');
+    let calloutText = document.getElementById('gradient-callout-text');
+    if (calloutWrap) calloutWrap.classList.add('selected');
+    if (calloutText) calloutText.textContent = opt.text;
+    
+    document.querySelectorAll('.cinta-node').forEach((node, i) => {
+        if (i === idx) node.classList.add('active');
+        else node.classList.remove('active');
+    });
+    
+    document.querySelectorAll('.out-scale-chips .chip').forEach(ch => ch.classList.remove('on'));
+    
+    let partnerPoint = document.getElementById('distance-partner-point');
+    if (partnerPoint) {
+        const gapOffsets = [14, 48, 96, 148, 206];
+        partnerPoint.style.transform = `translateX(${gapOffsets[idx] || 96}px)`;
+    }
+    
+    let densityZones = document.querySelectorAll('.density-zone');
+    if (densityZones.length > 0) {
+        densityZones.forEach((z, i) => {
+            if (i === idx) z.classList.add('active');
+            else z.classList.remove('active');
+        });
+    }
+    
+    let nextBtn = document.getElementById('nextbtn');
+    if (nextBtn) {
+        nextBtn.classList.remove('disabled');
+        nextBtn.style.opacity = '1';
+        nextBtn.disabled = false;
+    }
+};
+
+window.onGradientSliderChange = function(val) {
+    window.onGradientSliderInput(val);
+    saveState();
+};
+
+window.onGradientNodeClick = function(idx) {
+    let slider = document.getElementById('cinta-range-slider');
+    if (slider) slider.value = idx + 1;
+    window.onGradientSliderInput(idx + 1);
+    saveState();
+};
+
+window.onGradientOutScaleClick = function(optId) {
+    answers[currentQId] = [optId];
+    saveState();
+    renderQuestion(currentQId, currentView);
+};
 
 window.updateDensity = function(btn) {
     renderQuestion(currentQId, currentView); 
