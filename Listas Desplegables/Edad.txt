@@ -1,0 +1,66 @@
+Opción 1: Menú desplegable por años específicos (40, 31, 32... hasta 59)
+Esta opción utiliza un bucle de JavaScript para crear cada año de forma individual. Incluye un CSS moderno que oculta la flecha nativa del navegador (que suele ser poco estética) y la reemplaza por un diseño limpio y estandarizado.
+
+HTML:
+<div class="contenedor-etario">
+  <label for="selector-edad">Selecciona tu edad:</label>
+  <select id="selector-edad" name="edad">
+    <option value="" disabled selected>Elige una edad...</option>
+    <!-- Las opciones de 40 a 59 se inyectarán aquí con JavaScript -->
+  </select>
+</div>
+
+CSS (Diseño moderno sin dependencias):
+.contenedor-etario {
+  max-width: 300px;
+  margin: 20px auto;
+  font-family: system-ui, -apple-system, sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.contenedor-etario label {
+  font-weight: 600;
+  color: #333;
+  font-size: 0.95rem;
+}
+
+#selector-edad {
+  width: 100%;
+  padding: 10px 15px;
+  font-size: 1rem;
+  color: #333;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  cursor: pointer;
+  appearance: none; /* Oculta la flecha por defecto del navegador */
+  /* Agrega una flecha SVG personalizada para un look más premium */
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23333333%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
+  background-repeat: no-repeat;
+  background-position: right 15px top 50%;
+  background-size: 12px auto;
+  transition: border-color 0.2s ease;
+}
+
+#selector-edad:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+}
+
+JavaScript:
+document.addEventListener('DOMContentLoaded', function() {
+  const selectorEdad = document.getElementById('selector-edad');
+  const edadMinima = 40;
+  const edadMaxima = 59;
+
+  // Bucle para crear las opciones dinámicamente
+  for (let edad = edadMinima; edad <= edadMaxima; edad++) {
+    const opcion = document.createElement('option');
+    opcion.value = edad;
+    opcion.textContent = `${edad} años`;
+    selectorEdad.appendChild(opcion);
+  }
+})

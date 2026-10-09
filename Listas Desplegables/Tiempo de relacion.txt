@@ -1,0 +1,158 @@
+<!-- Componente: Tiempo de la relación actual -->
+<div class="form-group">
+  <label for="tiempo_relacion" class="form-label">Tiempo de la relación actual <span class="required" aria-hidden="true">*</span></label>
+  
+  <div class="select-wrapper">
+    <select id="tiempo_relacion" name="tiempo_relacion" class="custom-select" required aria-required="true">
+      <option value="" disabled selected>Seleccione una opción...</option>
+      <option value="menos_1_anio">Menos de 1 año</option>
+      <option value="1_a_5_anios">1 a 5 años</option>
+      <option value="6_a_10_anios">6 a 10 años</option>
+      <option value="11_a_20_anios">11 a 20 años</option>
+      <option value="mas_20_anios">Más de 20 años</option>
+      <option value="prefiero_no_responder">Prefiero no responder</option>
+    </select>
+    
+    <!-- Ícono SVG para diseño consistente -->
+    <svg class="select-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="6 9 12 15 18 9"></polyline>
+    </svg>
+  </div>
+  
+  <!-- Contenedor para el feedback de UX -->
+  <span id="tiempo_relacion_feedback" class="form-feedback" aria-live="polite"></span>
+</div>
+
+/* Variables CSS (Diseño escalable) */
+:root {
+  --primary-color: #2563eb;
+  --text-primary: #1e293b;
+  --text-secondary: #64748b;
+  --border-color: #cbd5e1;
+  --border-focus: #3b82f6;
+  --bg-color: #ffffff;
+  --error-color: #ef4444;
+  --border-radius: 8px;
+  --transition-speed: 0.2s;
+}
+
+/* Base del Formulario */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-width: 400px;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+.form-label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.required {
+  color: var(--error-color);
+}
+
+.select-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+/* Diseño del menú desplegable */
+.custom-select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 100%;
+  padding: 0.75rem 2.5rem 0.75rem 1rem;
+  font-size: 1rem;
+  color: var(--text-primary);
+  background-color: var(--bg-color);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  outline: none;
+  transition: border-color var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+}
+
+/* Interacción de usuario (Accesibilidad) */
+.custom-select:focus {
+  border-color: var(--border-focus);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+.custom-select:invalid {
+  color: var(--text-secondary);
+}
+
+/* Ícono SVG posicionado */
+.select-icon {
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  color: var(--text-secondary);
+  pointer-events: none;
+  transition: transform var(--transition-speed) ease, color var(--transition-speed) ease;
+}
+
+.custom-select:focus + .select-icon {
+  color: var(--primary-color);
+  transform: translateY(-50%) rotate(180deg);
+}
+
+/* Animaciones y mensajes del sistema */
+.form-feedback {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  min-height: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.form-feedback.success {
+  color: #10b981;
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    
+    // 1. Identificamos los elementos específicos en el DOM
+    const selectTiempoRelacion = document.getElementById('tiempo_relacion');
+    const feedbackTiempoRelacion = document.getElementById('tiempo_relacion_feedback');
+
+    // 2. Payload local (Datos listos para JSON)
+    const formData = {
+        tiempo_relacion: null
+    };
+
+    // 3. Validación y asignación del evento
+    if (selectTiempoRelacion) {
+        selectTiempoRelacion.addEventListener('change', function(event) {
+            
+            // Extracción
+            const selectedValue = event.target.value;
+            const selectedText = event.target.options[event.target.selectedIndex].text;
+
+            // Actualización del estado
+            formData.tiempo_relacion = selectedValue;
+
+            // Retroalimentación de la Interfaz (UX)
+            if (selectedValue && feedbackTiempoRelacion) {
+                feedbackTiempoRelacion.textContent = `Has seleccionado: ${selectedText}`;
+                feedbackTiempoRelacion.classList.add('success');
+                
+                // Microinteracción visual (borde de éxito)
+                selectTiempoRelacion.style.borderColor = "#10b981";
+                setTimeout(() => {
+                    selectTiempoRelacion.style.borderColor = "";
+                }, 1500);
+            }
+
+            // Consola para debug / validación de integración backend
+            console.log("Dato 'Tiempo de relación' capturado:", JSON.stringify(formData));
+        });
+    }
+});

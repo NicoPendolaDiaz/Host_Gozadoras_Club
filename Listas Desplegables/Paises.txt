@@ -1,0 +1,94 @@
+1. Choices.js + Lista Pública de Países (Recomendado)
+Repositorio: Choices.js (Más de 11,000 estrellas en GitHub).
+Es una biblioteca de Vanilla JavaScript muy ligera que transforma un <select> nativo en un menú desplegable estético con un buscador fijado en la fila superior. Para evitar ensuciar tu HTML con los 195+ países, el script consume un JSON público mantenido y actualizado (FlagCDN).
+
+HTML:
+<!-- 1. Cargar CSS de Choices.js vía CDN -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css" />
+
+<!-- 2. Contenedor de tu maqueta -->
+<div class="contenedor-pais">
+  <label for="selector-pais">País de residencia:</label>
+  <select id="selector-pais" name="pais">
+    <option value="">Cargando catálogo de países...</option>
+  </select>
+</div>
+
+<!-- 3. Cargar JavaScript de Choices.js vía CDN -->
+<script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+
+CSS (Opcional para tu maqueta):
+.contenedor-pais {
+  max-width: 400px;
+  margin: 20px auto;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+/* Personalizar sutilmente el campo de búsqueda de la fila superior */
+.choices__input--cloned {
+  border-bottom: 2px solid #007bff;
+}
+
+JavaScript:
+document.addEventListener('DOMContentLoaded', function() {
+  const elementoSelect = document.getElementById('selector-pais');
+
+  // Inicializar la estructura del desplegable con buscador
+  const menuPaises = new Choices(elementoSelect, {
+    searchEnabled: true,
+    searchPlaceholderValue: 'Escribe para buscar un país...',
+    itemSelectText: '', // Oculta el texto "Presiona enter para seleccionar"
+    noResultsText: 'No se encontraron países',
+    shouldSort: true // Ordena la lista alfabéticamente
+  });
+
+  // Consumir el listado mundial actualizado en español (Códigos ISO 3166)
+  fetch('https://flagcdn.com/es/codes.json')
+    .then(respuesta => respuesta.json())
+    .then(datos => {
+      // Transformar el JSON en el formato que requiere Choices.js
+      const arrayPaises = Object.entries(datos).map(([codigo, nombre]) => ({
+        value: codigo, // Ej: "cl"
+        label: nombre  // Ej: "Chile"
+      }));
+
+      // Limpiar el estado de "Cargando" e inyectar todos los países
+      menuPaises.clearChoices();
+      menuPaises.setChoices(arrayPaises, 'value', 'label', true);
+    })
+    .catch(error => console.error('Error al cargar la base de datos de países:', error));
+});
+
+2. Tom Select (Alternativa de alto rendimiento)
+Repositorio: Tom Select (Más de 4,500 estrellas en GitHub, nacido como la evolución moderna del mítico Selectize.js).
+Está diseñado específicamente para manejar listas masivas de datos sin lag al escribir o hacer scroll.
+
+HTML:
+<link href="https://cdn.jsdelivr.net/npm/tom-select/dist/css/tom-select.default.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/tom-select/dist/js/tom-select.complete.min.js"></script>
+
+<div style="max-width: 400px; margin: 20px auto;">
+  <label for="tom-pais">Selecciona tu país:</label>
+  <select id="tom-pais" placeholder="Busca un país..."></select>
+</div>
+
+JavaScript:
+document.addEventListener('DOMContentLoaded', function() {
+  fetch('https://flagcdn.com/es/codes.json')
+    .then(respuesta => respuesta.json())
+    .then(datos => {
+      const arrayPaises = Object.entries(datos).map(([codigo, nombre]) => ({
+        value: codigo,
+        text: nombre
+      }));
+
+      new TomSelect("#tom-pais",{
+        options: arrayPaises,
+        items: [],       // Valor seleccionado por defecto (vacío)
+        valueField: 'value',
+        labelField: 'text',
+        searchField: 'text',
+        sortField: 'text' // Orden alfabético
+      });
+    });
+});

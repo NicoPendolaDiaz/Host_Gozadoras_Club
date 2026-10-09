@@ -29,16 +29,8 @@ const QUESTIONS = [
   },
   {
     "id": "CTX01",
-    "type": "text",
-    "text": "Edad",
-    "placeholder": "Ej: 45",
-    "next_logic": "return 'CTX02';"
-  },
-  {
-    "id": "CTX02",
-    "type": "text",
-    "text": "País de residencia",
-    "placeholder": "Ej: Chile",
+    "type": "edad_pais",
+    "text": "Edad y país de residencia",
     "next_logic": "return 'CTX03';"
   },
   {

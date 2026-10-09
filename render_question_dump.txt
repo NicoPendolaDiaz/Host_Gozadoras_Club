@@ -1,0 +1,378 @@
+function renderQuestion(id, viewIdx = 0) {
+    if (id === 'END_NO_ELIGIBLE') { 
+        go('s-info'); 
+        document.getElementById('i-title').innerText = 'Fin del Cuestionario'; 
+        document.getElementById('i-text').innerText = 'Este instrumento está diseñado específicamente para mujeres que se encuentran en una relación de pareja. Agradecemos tu interés.'; 
+        document.getElementById('i-next').innerText = 'Terminar'; 
+        document.getElementById('i-next').onclick = restart; 
+        return; 
+    } 
+    if (id === 'END') {
+        summary();
+        go('s-sum');
+        return;
+    }
+    
+    currentQId = id;
+    currentView = viewIdx;
+    let q = QUESTIONS.find(x => x.id === id);
+    if (!q) {
+        console.error("Pregunta no encontrada:", id);
+        return;
+    }
+    
+    if (q.type === 'landscape') {
+        showLandscape(q);
+        return;
+    }
+    
+    if (q.type === 'info') {
+        go('s-info');
+        document.getElementById('i-title').innerText = q.title;
+        document.getElementById('i-text').innerText = q.text;
+        document.getElementById('i-next').innerText = q.button || "Continuar";
+        return;
+    }
+
+    go('s-q');
+    let qbody = document.getElementById('qbody');
+    let bubble = document.getElementById('bubble');
+    let plbl = document.getElementById('plbl');
+    let pcap = document.getElementById('pcap');
+    let chs = document.getElementById('chapters');
+    let nextBtn = document.getElementById('nextbtn');
+    let skipBtn = document.getElementById('skip');
+    let avatarEl = document.getElementById('avatar');
+    if (avatarEl) avatarEl.classList.remove('listen');
+    
+    // --- 1. Visualización de progreso y capítulos ---
+    if (id.startsWith('CTX')) {
+        if (plbl) plbl.innerText = "Situar tu mapa";
+        if (pcap) pcap.innerText = "Contexto";
+        if (chs) {
+            chs.innerHTML = '';
+            CHAPTER_LIST.forEach(() => {
+                let i = document.createElement('i');
+                let b = document.createElement('b');
+                i.appendChild(b);
+                chs.appendChild(i);
+            });
+        }
+    } else if (id.startsWith('P')) {
+        let pNum = parseInt(id.replace(/\D/g, '')) || 1;
+        if (plbl) plbl.innerText = `Pregunta ${pNum} de 40`;
+        
+        let curChIdx = 0;
+        if (pNum <= 5) curChIdx = 0;
+        else if (pNum <= 12) curChIdx = 1;
+        else if (pNum <= 18) curChIdx = 2;
+        else if (pNum <= 21) curChIdx = 3;
+        else curChIdx = 4;
+        
+        let curCh = CHAPTER_LIST[curChIdx];
+        if (pcap) pcap.innerText = curCh.name;
+        
+        if (chs) {
+            chs.innerHTML = '';
+            CHAPTER_LIST.forEach((ch, ci) => {
+                let i = document.createElement('i');
+                let b = document.createElement('b');
+                i.appendChild(b);
+                chs.appendChild(i);
+                
+                let pct = 0;
+                if (ci < curChIdx) pct = 100;
+                else if (ci > curChIdx) pct = 0;
+                else {
+                    let done = (pNum - ch.start + 1);
+                    let total = (ch.end - ch.start + 1);
+                    pct = Math.min(100, Math.max(15, Math.round((done / total) * 100)));
+                }
+                requestAnimationFrame(() => { b.style.width = pct + '%'; });
+            });
+        }
+    }
+    
+    // --- 2. Separación de Guía Munay (burbuja) y Pregunta Central (cuerpo) ---
+    let qTitle = q.text || '';
+    let bubbleText = '';
+    
+    if (id === 'CTX00') {
+        let parts = qTitle.split('\n\n');
+        if (parts.length > 1) {
+            bubbleText = parts[0].trim();
+            qTitle = parts[1].trim();
+        } else {
+            bubbleText = "Antes de comenzar, cuéntanos un poco sobre ti.";
+        }
+    } else if (MUNAY_GUIDES[id]) {
+        bubbleText = MUNAY_GUIDES[id];
+    } else {
+        const fallbacks = {
+            'single': "Una sola opción. Podrás cambiarla antes de continuar.",
+            'multiple': "Puedes elegir una o varias opciones que te identifiquen.",
+            'carousel': "Elige las opciones que más se acerquen a tu presente.",
+            'views': "Observa cada perspectiva con calma.",
+            'body_map': "Toca en el cuerpo las zonas que reconozcas hoy.",
+            'density_scale': "Siente la textura y el ritmo que mejor te describen.",
+            'density_field': "Selecciona el nivel de intensidad que sientes hoy.",
+            'gradient_spatial': "Ubica tu presente en la escala sin exigencias.",
+            'timeline_gradient': "Elige el momento o frecuencia que sientas.",
+            'distance_pair': "Observa la distancia o cercanía sin juzgar.",
+            'text': "Escribe con total libertad. Este es tu espacio seguro."
+        };
+        bubbleText = fallbacks[q.type] || "Tómate tu tiempo para explorar y responder.";
+    }
+    
+    if (bubble) bubble.innerText = bubbleText;
+    
+    // --- 3. Construcción del encabezado central de la pregunta (qtext + qmeta) ---
+    let metaLabel = '';
+    if (q.type === 'single') metaLabel = "Elige una";
+    else if (q.type === 'multiple' || q.type === 'carousel') metaLabel = q.max ? `Elige hasta ${q.max}` : "Elige varias";
+    else if (q.type === 'views') {
+        let vLen = q.views ? q.views.length : 1;
+        metaLabel = `Vista ${viewIdx + 1} de ${vLen}` + (q.max ? ` · Elige hasta ${q.max}` : " · Elige las que correspondan");
+    }
+    else if (q.type === 'body_map') metaLabel = "Toca el cuerpo para marcar zonas";
+    else if (q.type === 'density_scale') metaLabel = "Elige la densidad que mejor la describe";
+    else if (q.type === 'density_field') metaLabel = "Selecciona el nivel";
+    else if (q.type === 'text') metaLabel = "Texto libre";
+    else if (q.type === 'gradient_spatial' || q.type === 'distance_pair') metaLabel = "Elige una posición";
+    else if (q.type === 'timeline_gradient') metaLabel = "Elige un momento";
+    else metaLabel = "Elige una opción";
+
+    let optHtml = q.optional ? '<span class="opt">Opcional</span>' : '';
+    let headerHtml = `<div class="qtext">${qTitle}</div><div class="qmeta">${optHtml}<span>${metaLabel}</span></div>`;
+    
+    let ans = answers[id] || [];
+    let isMulti = q.type === 'multiple' || q.type === 'carousel' || q.type === 'body_map' || q.type === 'views';
+    
+    // --- 4. Renderizado del cuerpo interactivo con headerHtml integrado ---
+    if (q.type === 'views') {
+        let viewData = q.views[viewIdx];
+        let html = headerHtml;
+        html += `<div class="view-title" style="font-size:14px; font-weight:600; color:var(--tawny); margin-bottom:10px;">${viewData.title}</div>`;
+        html += '<div class="chips" style="display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-bottom:20px;">';
+        viewData.options.forEach(opt => {
+            let sel = ans.includes(opt.id) ? 'on' : '';
+            html += `<button class="chip ${sel}" onclick="toggleOpt('${opt.id}', true, ${!!opt.ex}, ${q.max || 99})">${opt.text}</button>`;
+        });
+        html += '</div>';
+        qbody.innerHTML = html;
+        
+    } else if (q.type === 'body_map') {
+        let html = headerHtml;
+        html += '<div class="bmap" style="position:relative; margin-bottom:20px;">' + silhouette();
+        
+        q.options.forEach(opt => {
+            if(opt.out_of_scale) return;
+            let sel = ans.includes(opt.id) ? 'on' : '';
+            html += `<div class="hot ${sel}" style="left:${ZONES[opt.id].x}%; top:${ZONES[opt.id].y}%;" onclick="toggleOpt('${opt.id}', true, false, 99)"><span></span></div>`;
+        });
+        html += '</div><div class="chips">';
+        q.options.filter(o => o.out_of_scale).forEach(opt => {
+            let sel = ans.includes(opt.id) ? 'on' : '';
+            html += `<button class="chip ${sel} out-scale" onclick="toggleOpt('${opt.id}', true, true, 99)">${opt.text}</button>`;
+        });
+        html += '</div>';
+        qbody.innerHTML = html;
+        
+    } else if (q.type === 'text') {
+        const munayImg = (q.id === 'P23') ? `<img class="munay-sentada" src="${(document.getElementById('asset-sentada') || {}).src || ''}" alt="Munay, atenta a tu respuesta">` : '';
+        let html = headerHtml + munayImg;
+        html += `<textarea id="txt-ans" placeholder="${q.placeholder || 'Escribe aquí tu respuesta con calma...'}" oninput="updateTextAns()" style="width:100%; height:130px; border-radius:12px; padding:14px; font-size:15px; font-family:inherit; border:1px solid var(--line); background:var(--panel); color:var(--cream); line-height:1.5; resize:vertical;">${ans[0] || ''}</textarea>`;
+        qbody.innerHTML = html;
+
+    } else if (q.type === 'density_scale') {
+        const fallbackEmojis = ['☀️', '🌤️', '⛅', '☁️', '⛈️'];
+        const scaleOpts = q.options.filter(o => !o.out_of_scale).slice(0, 5);
+        let html = headerHtml;
+        html += '<div class="dscale" style="display:flex; flex-direction:column; gap:10px; margin-bottom:16px;">';
+        scaleOpts.forEach((opt, i) => {
+            const sel = ans.includes(opt.id);
+            const emoji = opt.emoji || fallbackEmojis[i] || '';
+            const boxBg = sel ? 'rgba(178,52,30,.28)' : 'rgba(80,29,34,.50)';
+            const boxBorder = sel ? 'var(--lime)' : 'var(--line)';
+            html += `<button class="dscale-item ${sel ? 'on' : ''}" onclick="toggleOpt('${opt.id}', false, false, 1)" aria-pressed="${sel}" style="display:flex; align-items:center; gap:14px; width:100%; text-align:left; padding:8px 12px; border-radius:12px; cursor:pointer; font-family:inherit; color:var(--cream); background:var(--panel); border:1px solid ${sel ? 'var(--lime)' : 'var(--line)'}; box-shadow:${sel ? '0 0 0 2px rgba(224,74,30,.35)' : 'none'}; transition:all 0.2s ease;">` +
+                `<span aria-hidden="true" style="flex:0 0 96px; height:52px; border-radius:8px; border:1px solid ${boxBorder}; background:${boxBg}; display:flex; align-items:center; justify-content:center; font-size:26px; line-height:1; user-select:none; transition:all 0.2s ease;">${emoji}</span>` +
+                `<span style="flex:1; font-size:15px; line-height:1.3; font-weight:${sel ? '700' : '400'}; color:${sel ? '#ffffff' : 'var(--cream-2)'};">${opt.text}</span>` +
+                `<span aria-hidden="true" style="flex:0 0 14px; width:14px; height:14px; border-radius:50%; border:2px solid var(--lime); background:${sel ? 'var(--lime)' : 'transparent'};"></span>` +
+                `</button>`;
+        });
+        html += '</div><div class="chips">';
+        q.options.filter(o => o.out_of_scale).forEach(opt => {
+            let sel = ans.includes(opt.id) ? 'on' : '';
+            const emojiPrefix = opt.emoji ? `<span style="margin-right:8px; font-size:16px; vertical-align:middle;">${opt.emoji}</span>` : '';
+            html += `<button class="chip ${sel} out-scale" onclick="toggleOpt('${opt.id}', false, false, 1)">${emojiPrefix}${opt.text}</button>`;
+        });
+        html += '</div>';
+        qbody.innerHTML = html;
+
+    } else if (q.type === 'density_field') {
+        let level = 3;
+        if(ans[0]) {
+            let idx = q.options.findIndex(x => x.id === ans[0]);
+            if(idx >= 0 && idx < 5) level = idx + 1;
+        }
+        let opacities = {1:0.1, 2:0.3, 3:0.5, 4:0.7, 5:0.9};
+        
+        let html = headerHtml;
+        html += `<div style="position:absolute; top:0;left:0;right:0;bottom:0; background:rgba(224, 74, 30, ${opacities[level]}); pointer-events:none; transition: opacity 0.5s; z-index:-1;"></div>`;
+        html += '<div class="chips" style="margin-top:10px;">';
+        q.options.forEach(opt => {
+            let sel = ans.includes(opt.id) ? 'on' : '';
+            html += `<button class="chip ${sel}" onclick="toggleOpt('${opt.id}', false, false, 1); updateDensity(this)">${opt.text}</button>`;
+        });
+        html += '</div>';
+        qbody.innerHTML = html;
+
+    } else {
+        // generic spatial, single, multiple, carousel, etc.
+        let html = headerHtml;
+        html += '<div class="chips">';
+        if(q.options) {
+            q.options.forEach(opt => {
+                let sel = ans.includes(opt.id) ? 'on' : '';
+                html += `<button class="chip ${sel} ${opt.out_of_scale ? 'out-scale':''}" onclick="toggleOpt('${opt.id}', ${isMulti}, ${!!opt.ex}, ${q.max || 99})">${opt.text}</button>`;
+            });
+        }
+        html += '</div>';
+        qbody.innerHTML = html;
+    }
+    
+    // Reset scroll para presentar la pregunta arriba con total comodidad
+    qbody.scrollTop = 0;
+    
+    // --- 5. Actualización de botones del pie (Anterior, Omitir, Siguiente) ---
+    let canNext = ans.length > 0;
+    if(q.type === 'text') canNext = ans[0] && ans[0].trim().length > 0;
+    if(q.optional) canNext = true; 
+    
+    if (q.optional) skipBtn.style.display = 'inline-flex';
+    else skipBtn.style.display = 'none';
+    
+    if (q.type === 'views' && viewIdx < q.views.length - 1) {
+        nextBtn.innerText = "Siguiente vista";
+    } else {
+        nextBtn.innerText = "Siguiente";
+    }
+    
+    if(canNext) {
+        nextBtn.classList.remove('disabled');
+        nextBtn.style.opacity = '1';
+        nextBtn.disabled = false;
+    } else {
+        nextBtn.classList.add('disabled');
+        nextBtn.style.opacity = '0.5';
+        nextBtn.disabled = true;
+    }
+}
+
+window.updateDensity = function(btn) {
+    renderQuestion(currentQId, currentView); 
+};
+
+window.updateTextAns = function() {
+    let val = document.getElementById('txt-ans').value;
+    answers[currentQId] = [val];
+    let q = QUESTIONS.find(x => x.id === currentQId);
+    let canNext = val.trim().length > 0 || q.optional;
+    let nextBtn = document.getElementById('nextbtn');
+    if(canNext) {
+        nextBtn.classList.remove('disabled');
+        nextBtn.style.opacity = '1';
+        nextBtn.disabled = false;
+    } else {
+        nextBtn.classList.add('disabled');
+        nextBtn.style.opacity = '0.5';
+        nextBtn.disabled = true;
+    }
+};
+
+window.toggleOpt = function(optId, isMulti, isEx, max) {
+    if (!answers[currentQId]) answers[currentQId] = [];
+    let arr = answers[currentQId];
+    
+    if (!isMulti) {
+        answers[currentQId] = [optId];
+    } else {
+        if (isEx) {
+            answers[currentQId] = [optId];
+        } else {
+            let q = QUESTIONS.find(x => x.id === currentQId);
+            let optsList = q.options || [];
+            if(q.type === 'views') {
+                optsList = q.views.flatMap(v => v.options);
+            }
+            let exOpts = optsList.filter(o => o.ex).map(o => o.id);
+            answers[currentQId] = arr.filter(a => !exOpts.includes(a));
+            arr = answers[currentQId];
+            
+            if (arr.includes(optId)) {
+                answers[currentQId] = arr.filter(x => x !== optId);
+            } else {
+                if (arr.length < max) {
+                    answers[currentQId].push(optId);
+                }
+            }
+        }
+    }
+    renderQuestion(currentQId, currentView);
+};
+
+window.next = function(isSkip) {
+    if(isSkip) {
+        answers[currentQId] = ['OMITTED'];
+    }
+    
+    let q = QUESTIONS.find(x => x.id === currentQId);
+    let ans = answers[currentQId] || [];
+    
+    if (q.type === 'views' && currentView < q.views.length - 1) {
+        historyArr.push({id: currentQId, view: currentView});
+        saveState();
+        renderQuestion(currentQId, currentView + 1);
+        return;
+    }
+    
+    historyArr.push({id: currentQId, view: currentView});
+    saveState();
+    
+    let nextId = null;
+    if (q.next_logic) {
+        let func = new Function('ans', 'getAns', 'hasAny', q.next_logic);
+        nextId = func(ans, getAns, hasAny);
+    } else {
+        nextId = q.next;
+    }
+    
+    if (nextId) {
+        renderQuestion(nextId, 0);
+    }
+};
+
+window.prev = function() {
+    if (historyArr.length === 0) {
+        go('s-splash');
+        return;
+    }
+    let last = historyArr.pop();
+    saveState();
+    renderQuestion(last.id, last.view);
+};
+
+window.nextInfo = function() {
+    let q = QUESTIONS.find(x => x.id === currentQId);
+    historyArr.push({id: currentQId, view: 0});
+    saveState();
+    if (q.next) renderQuestion(q.next, 0);
+};
+
+window.nextLandscape = function() {
+    let q = QUESTIONS.find(x => x.id === currentQId);
+    historyArr.push({id: currentQId, view: 0});
+    saveState();
+    if (q.next) renderQuestion(q.next, 0);
+};
+
