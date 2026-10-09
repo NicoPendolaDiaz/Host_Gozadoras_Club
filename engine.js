@@ -463,6 +463,52 @@ function renderQuestion(id, viewIdx = 0) {
         html += '</div>';
         qbody.innerHTML = html;
 
+    } else if (q.type === 'edad_pais') {
+        let html = headerHtml;
+        html += `<div class="contenedor-etario" style="margin-top:10px;">
+  <label for="selector-edad" style="font-weight:600; color:var(--cream); font-size:0.95rem; margin-bottom:8px; display:block;">Selecciona tu edad:</label>
+  <select id="selector-edad" name="edad" onchange="updateEdadPais()" style="width:100%; padding:10px 15px; font-size:1rem; color:#333; background-color:#fff; border:1px solid #ccc; border-radius:6px; cursor:pointer; appearance:none; background-image:url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23333333%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E'); background-repeat:no-repeat; background-position:right 15px top 50%; background-size:12px auto; transition:border-color 0.2s ease; margin-bottom:20px;">
+    <option value="" disabled ${!ans[0] ? 'selected' : ''}>Elige una edad...</option>`;
+        for (let edad = 40; edad <= 59; edad++) {
+            html += `<option value="${edad}" ${ans[0] == edad ? 'selected' : ''}>${edad} años</option>`;
+        }
+        html += `  </select>
+</div>
+<div class="contenedor-pais" style="margin-top:10px; margin-bottom:20px;">
+  <label for="selector-pais" style="font-weight:600; color:var(--cream); font-size:0.95rem; margin-bottom:8px; display:block;">País de residencia:</label>
+  <select id="selector-pais" name="pais">
+    <option value="">Cargando catálogo de países...</option>
+  </select>
+</div>`;
+        qbody.innerHTML = html;
+
+        setTimeout(() => {
+            const elementoSelect = document.getElementById('selector-pais');
+            if (elementoSelect) {
+                const menuPaises = new Choices(elementoSelect, {
+                    searchEnabled: true,
+                    searchPlaceholderValue: 'Escribe para buscar un país...',
+                    itemSelectText: '', 
+                    noResultsText: 'No se encontraron países',
+                    shouldSort: true 
+                });
+                fetch('https://flagcdn.com/es/codes.json')
+                    .then(respuesta => respuesta.json())
+                    .then(datos => {
+                        const arrayPaises = Object.entries(datos).map(([codigo, nombre]) => ({
+                            value: codigo,
+                            label: nombre,
+                            selected: ans[1] === codigo
+                        }));
+                        menuPaises.clearChoices();
+                        menuPaises.setChoices(arrayPaises, 'value', 'label', true);
+                    })
+                    .catch(error => console.error('Error al cargar la base de datos de países:', error));
+                
+                elementoSelect.addEventListener('change', window.updateEdadPais);
+            }
+        }, 50);
+
     } else {
         // generic spatial, single, multiple, carousel, etc.
         let html = headerHtml;
@@ -483,6 +529,7 @@ function renderQuestion(id, viewIdx = 0) {
     // --- 5. Actualización de botones del pie (Anterior, Omitir, Siguiente) ---
     let canNext = ans.length > 0;
     if(q.type === 'text') canNext = ans[0] && ans[0].trim().length > 0;
+    if(q.type === 'edad_pais') canNext = ans[0] && ans[1];
     if(q.optional) canNext = true; 
     
     if (q.optional) skipBtn.style.display = 'inline-flex';
@@ -516,6 +563,27 @@ window.updateTextAns = function() {
     let canNext = val.trim().length > 0 || q.optional;
     let nextBtn = document.getElementById('nextbtn');
     if(canNext) {
+        nextBtn.classList.remove('disabled');
+        nextBtn.style.opacity = '1';
+        nextBtn.disabled = false;
+    } else {
+        nextBtn.classList.add('disabled');
+        nextBtn.style.opacity = '0.5';
+        nextBtn.disabled = true;
+    }
+};
+
+window.updateEdadPais = function() {
+    let edad = document.getElementById('selector-edad')?.value;
+    let pais = document.getElementById('selector-pais')?.value;
+    
+    if (edad || pais) {
+        answers[currentQId] = [edad || '', pais || ''];
+    }
+    
+    let valid = edad && pais;
+    let nextBtn = document.getElementById('nextbtn');
+    if(valid) {
         nextBtn.classList.remove('disabled');
         nextBtn.style.opacity = '1';
         nextBtn.disabled = false;
@@ -648,7 +716,7 @@ function startApp() {
     document.querySelectorAll('.sw-toggle').forEach(el=>el.addEventListener('click',()=>el.classList.toggle('on')));
 
     document.getElementById('startbtn')?.addEventListener('click', () => {
-        renderQuestion('PRE01');
+        renderQuestion('CTX00');
     });
     
     if (historyArr.length > 0) {
@@ -696,4 +764,4 @@ window.closeSheet = function(){
     if (scrim) scrim.classList.remove('on');
 };
 window.restart = function() { clearState(); go('s-splash'); };
-window.startChapter = function(n) { renderQuestion('PRE01'); };
+window.startChapter = function(n) { renderQuestion('CTX00'); };
