@@ -464,27 +464,76 @@ function renderQuestion(id, viewIdx = 0) {
         qbody.innerHTML = html;
 
     } else if (q.type === 'edad_pais') {
+        const countries = [
+            {"value":"afganistan","label":"Afganistán"}, {"value":"albania","label":"Albania"}, {"value":"alemania","label":"Alemania"},
+            {"value":"andorra","label":"Andorra"}, {"value":"angola","label":"Angola"}, {"value":"antigua_y_barbuda","label":"Antigua y Barbuda"},
+            {"value":"arabia_saudita","label":"Arabia Saudita"}, {"value":"argelia","label":"Argelia"}, {"value":"argentina","label":"Argentina"},
+            {"value":"armenia","label":"Armenia"}, {"value":"australia","label":"Australia"}, {"value":"austria","label":"Austria"},
+            {"value":"azerbaiyan","label":"Azerbaiyán"}, {"value":"bahamas","label":"Bahamas"}, {"value":"banglades","label":"Bangladés"},
+            {"value":"barbados","label":"Barbados"}, {"value":"barein","label":"Baréin"}, {"value":"belgica","label":"Bélgica"},
+            {"value":"belice","label":"Belice"}, {"value":"benin","label":"Benín"}, {"value":"bielorrusia","label":"Bielorrusia"},
+            {"value":"birmania","label":"Birmania"}, {"value":"bolivia","label":"Bolivia"}, {"value":"bosnia_y_herzegovina","label":"Bosnia y Herzegovina"},
+            {"value":"botsuana","label":"Botsuana"}, {"value":"brasil","label":"Brasil"}, {"value":"brunei","label":"Brunéi"},
+            {"value":"bulgaria","label":"Bulgaria"}, {"value":"burkina_faso","label":"Burkina Faso"}, {"value":"burundi","label":"Burundi"},
+            {"value":"butan","label":"Bután"}, {"value":"cabo_verde","label":"Cabo Verde"}, {"value":"camboya","label":"Camboya"},
+            {"value":"camerun","label":"Camerún"}, {"value":"canada","label":"Canadá"}, {"value":"catar","label":"Catar"},
+            {"value":"chad","label":"Chad"}, {"value":"chile","label":"Chile"}, {"value":"china","label":"China"},
+            {"value":"chipre","label":"Chipre"}, {"value":"ciudad_del_vaticano","label":"Ciudad del Vaticano"}, {"value":"colombia","label":"Colombia"},
+            {"value":"comoras","label":"Comoras"}, {"value":"corea_del_norte","label":"Corea del Norte"}, {"value":"corea_del_sur","label":"Corea del Sur"},
+            {"value":"costa_de_marfil","label":"Costa de Marfil"}, {"value":"costa_rica","label":"Costa Rica"}, {"value":"croacia","label":"Croacia"},
+            {"value":"cuba","label":"Cuba"}, {"value":"dinamarca","label":"Dinamarca"}, {"value":"dominica","label":"Dominica"},
+            {"value":"ecuador","label":"Ecuador"}, {"value":"egipto","label":"Egipto"}, {"value":"el_salvador","label":"El Salvador"},
+            {"value":"emiratos_arabes_unidos","label":"Emiratos Árabes Unidos"}, {"value":"eritrea","label":"Eritrea"}, {"value":"eslovaquia","label":"Eslovaquia"},
+            {"value":"eslovenia","label":"Eslovenia"}, {"value":"espana","label":"España"}, {"value":"estados_unidos","label":"Estados Unidos"},
+            {"value":"estonia","label":"Estonia"}, {"value":"esuatini","label":"Esuatini"}, {"value":"etiopia","label":"Etiopía"},
+            {"value":"filipinas","label":"Filipinas"}, {"value":"finlandia","label":"Finlandia"}, {"value":"fiyi","label":"Fiyi"},
+            {"value":"francia","label":"Francia"}, {"value":"gabon","label":"Gabón"}, {"value":"gambia","label":"Gambia"},
+            {"value":"georgia","label":"Georgia"}, {"value":"ghana","label":"Ghana"}, {"value":"granada","label":"Granada"},
+            {"value":"grecia","label":"Grecia"}, {"value":"guatemala","label":"Guatemala"}, {"value":"guinea","label":"Guinea"},
+            {"value":"guinea_ecuatorial","label":"Guinea Ecuatorial"}, {"value":"guinea_bisau","label":"Guinea-Bisáu"}, {"value":"guyana","label":"Guyana"},
+            {"value":"haiti","label":"Haití"}, {"value":"honduras","label":"Honduras"}, {"value":"hungria","label":"Hungría"},
+            {"value":"india","label":"India"}, {"value":"indonesia","label":"Indonesia"}, {"value":"irak","label":"Irak"},
+            {"value":"iran","label":"Irán"}, {"value":"irlanda","label":"Irlanda"}, {"value":"islandia","label":"Islandia"},
+            {"value":"islas_marshall","label":"Islas Marshall"}, {"value":"islas_salomon","label":"Islas Salomón"}, {"value":"israel","label":"Israel"},
+            {"value":"italia","label":"Italia"}, {"value":"jamaica","label":"Jamaica"}, {"value":"japon","label":"Japón"},
+            {"value":"jordania","label":"Jordania"}, {"value":"kazajistan","label":"Kazajistán"}, {"value":"kenia","label":"Kenia"},
+            {"value":"kirguistan","label":"Kirguistán"}, {"value":"kiribati","label":"Kiribati"}, {"value":"kuwait","label":"Kuwait"},
+            {"value":"laos","label":"Laos"}, {"value":"lesoto","label":"Lesoto"}, {"value":"letonia","label":"Letonia"},
+            {"value":"libano","label":"Líbano"}, {"value":"liberia","label":"Liberia"}, {"value":"libia","label":"Libia"},
+            {"value":"liechtenstein","label":"Liechtenstein"}, {"value":"lituania","label":"Lituania"}, {"value":"luxemburgo","label":"Luxemburgo"},
+            {"value":"madagascar","label":"Madagascar"}, {"value":"malasia","label":"Malasia"}, {"value":"malaui","label":"Malaui"},
+            {"value":"maldivas","label":"Maldivas"}, {"value":"mali","label":"Malí"}, {"value":"malta","label":"Malta"},
+            {"value":"marruecos","label":"Marruecos"}, {"value":"mauricio","label":"Mauricio"}, {"value":"mauritania","label":"Mauritania"},
+            {"value":"mexico","label":"México"}, {"value":"micronesia","label":"Micronesia"}, {"value":"moldavia","label":"Moldavia"},
+            {"value":"monaco","label":"Mónaco"}, {"value":"mongolia","label":"Mongolia"}, {"value":"montenegro","label":"Montenegro"},
+            {"value":"mozambique","label":"Mozambique"}, {"value":"namibia","label":"Namibia"}, {"value":"nauru","label":"Nauru"},
+            {"value":"nepal","label":"Nepal"}, {"value":"nicaragua","label":"Nicaragua"}, {"value":"niger","label":"Níger"},
+            {"value":"nigeria","label":"Nigeria"}, {"value":"noruega","label":"Noruega"}, {"value":"nueva_zelanda","label":"Nueva Zelanda"},
+            {"value":"oman","label":"Omán"}, {"value":"paises_bajos","label":"Países Bajos"}, {"value":"pakistan","label":"Pakistán"},
+            {"value":"palaos","label":"Palaos"}, {"value":"panama","label":"Panamá"}, {"value":"papua_nueva_guinea","label":"Papúa Nueva Guinea"},
+            {"value":"paraguay","label":"Paraguay"}, {"value":"peru","label":"Perú"}, {"value":"polonia","label":"Polonia"},
+            {"value":"portugal","label":"Portugal"}, {"value":"reino_unido","label":"Reino Unido"}, {"value":"republica_centroafricana","label":"República Centroafricana"},
+            {"value":"republica_checa","label":"República Checa"}, {"value":"republica_del_congo","label":"República del Congo"}, {"value":"republica_democratica_del_congo","label":"Rep. Democrática del Congo"},
+            {"value":"republica_dominicana","label":"República Dominicana"}, {"value":"ruanda","label":"Ruanda"}, {"value":"rumania","label":"Rumania"},
+            {"value":"rusia","label":"Rusia"}, {"value":"samoa","label":"Samoa"}, {"value":"san_cristobal_y_nieves","label":"San Cristóbal y Nieves"},
+            {"value":"san_marino","label":"San Marino"}, {"value":"san_vicente_y_las_granadinas","label":"San Vicente y las Granadinas"}, {"value":"santa_lucia","label":"Santa Lucía"},
+            {"value":"santo_tome_y_principe","label":"Santo Tomé y Príncipe"}, {"value":"senegal","label":"Senegal"}, {"value":"serbia","label":"Serbia"},
+            {"value":"seychelles","label":"Seychelles"}, {"value":"sierra_leona","label":"Sierra Leona"}, {"value":"singapur","label":"Singapur"},
+            {"value":"siria","label":"Siria"}, {"value":"somalia","label":"Somalia"}, {"value":"sri_lanka","label":"Sri Lanka"},
+            {"value":"sudafrica","label":"Sudáfrica"}, {"value":"sudan","label":"Sudán"}, {"value":"sudan_del_sur","label":"Sudán del Sur"},
+            {"value":"suecia","label":"Suecia"}, {"value":"suiza","label":"Suiza"}, {"value":"surinam","label":"Surinam"},
+            {"value":"tailandia","label":"Tailandia"}, {"value":"tanzania","label":"Tanzania"}, {"value":"tayikistan","label":"Tayikistán"},
+            {"value":"timor_oriental","label":"Timor Oriental"}, {"value":"togo","label":"Togo"}, {"value":"tonga","label":"Tonga"},
+            {"value":"trinidad_y_tobago","label":"Trinidad y Tobago"}, {"value":"tunez","label":"Túnez"}, {"value":"turkmenistan","label":"Turkmenistán"},
+            {"value":"turquia","label":"Turquía"}, {"value":"tuvalu","label":"Tuvalu"}, {"value":"ucrania","label":"Ucrania"},
+            {"value":"uganda","label":"Uganda"}, {"value":"uruguay","label":"Uruguay"}, {"value":"uzbekistan","label":"Uzbekistán"},
+            {"value":"vanuatu","label":"Vanuatu"}, {"value":"venezuela","label":"Venezuela"}, {"value":"vietnam","label":"Vietnam"},
+            {"value":"yemen","label":"Yemen"}, {"value":"yibuti","label":"Yibuti"}, {"value":"zambia","label":"Zambia"},
+            {"value":"zimbabue","label":"Zimbabue"}
+        ];
+
         let html = headerHtml;
-        html += `<style>
-  /* Igualar las medidas de Choices.js con el selector nativo de Edad */
-  .contenedor-pais .choices[data-type*="select-one"] .choices__inner {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 15px;
-    padding-right: 15px;
-    border-radius: 6px;
-    border: 1px solid #ccc;
-    font-size: 1rem;
-    color: #333;
-    background-color: #fff;
-    min-height: 44px; /* Para que coincida con la altura de edad */
-  }
-  .contenedor-pais .choices[data-type*="select-one"]::after {
-    top: 50%;
-    margin-top: -2.5px;
-    right: 15px;
-  }
-</style>
+        html += `
 <div class="contenedor-etario" style="margin-top:10px;">
   <label for="selector-edad" style="font-weight:600; color:var(--cream); font-size:0.95rem; margin-bottom:8px; display:block;">Selecciona tu edad:</label>
   <select id="selector-edad" name="edad" onchange="updateEdadPais()" style="width:100%; padding:10px 15px; font-size:1rem; color:#333; background-color:#fff; border:1px solid #ccc; border-radius:6px; cursor:pointer; appearance:none; background-image:url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23333333%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E'); background-repeat:no-repeat; background-position:right 15px top 50%; background-size:12px auto; transition:border-color 0.2s ease; margin-bottom:20px;">
@@ -496,101 +545,14 @@ function renderQuestion(id, viewIdx = 0) {
 </div>
 <div class="contenedor-pais" style="margin-top:10px; margin-bottom:20px;">
   <label for="selector-pais" style="font-weight:600; color:var(--cream); font-size:0.95rem; margin-bottom:8px; display:block;">País de residencia:</label>
-  <select id="selector-pais" name="pais">
-    <option value="">Cargando catálogo de países...</option>
-  </select>
+  <select id="selector-pais" name="pais" onchange="updateEdadPais()" style="width:100%; padding:10px 15px; font-size:1rem; color:#333; background-color:#fff; border:1px solid #ccc; border-radius:6px; cursor:pointer; appearance:none; background-image:url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23333333%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E'); background-repeat:no-repeat; background-position:right 15px top 50%; background-size:12px auto; transition:border-color 0.2s ease;">
+    <option value="" disabled ${!ans[1] ? 'selected' : ''}>Seleccione un país...</option>`;
+        countries.forEach(c => {
+            html += `<option value="${c.value}" ${ans[1] === c.value ? 'selected' : ''}>${c.label}</option>`;
+        });
+        html += `  </select>
 </div>`;
         qbody.innerHTML = html;
-
-        setTimeout(() => {
-            const elementoSelect = document.getElementById('selector-pais');
-            if (elementoSelect) {
-                const menuPaises = new Choices(elementoSelect, {
-                    searchEnabled: true,
-                    searchPlaceholderValue: 'Escribe para buscar un país...',
-                    itemSelectText: '', 
-                    noResultsText: 'No se encontraron países',
-                    shouldSort: true 
-                });
-                const countries = [
-                    {"value":"afganistan","label":"Afganistán"}, {"value":"albania","label":"Albania"}, {"value":"alemania","label":"Alemania"},
-                    {"value":"andorra","label":"Andorra"}, {"value":"angola","label":"Angola"}, {"value":"antigua_y_barbuda","label":"Antigua y Barbuda"},
-                    {"value":"arabia_saudita","label":"Arabia Saudita"}, {"value":"argelia","label":"Argelia"}, {"value":"argentina","label":"Argentina"},
-                    {"value":"armenia","label":"Armenia"}, {"value":"australia","label":"Australia"}, {"value":"austria","label":"Austria"},
-                    {"value":"azerbaiyan","label":"Azerbaiyán"}, {"value":"bahamas","label":"Bahamas"}, {"value":"banglades","label":"Bangladés"},
-                    {"value":"barbados","label":"Barbados"}, {"value":"barein","label":"Baréin"}, {"value":"belgica","label":"Bélgica"},
-                    {"value":"belice","label":"Belice"}, {"value":"benin","label":"Benín"}, {"value":"bielorrusia","label":"Bielorrusia"},
-                    {"value":"birmania","label":"Birmania"}, {"value":"bolivia","label":"Bolivia"}, {"value":"bosnia_y_herzegovina","label":"Bosnia y Herzegovina"},
-                    {"value":"botsuana","label":"Botsuana"}, {"value":"brasil","label":"Brasil"}, {"value":"brunei","label":"Brunéi"},
-                    {"value":"bulgaria","label":"Bulgaria"}, {"value":"burkina_faso","label":"Burkina Faso"}, {"value":"burundi","label":"Burundi"},
-                    {"value":"butan","label":"Bután"}, {"value":"cabo_verde","label":"Cabo Verde"}, {"value":"camboya","label":"Camboya"},
-                    {"value":"camerun","label":"Camerún"}, {"value":"canada","label":"Canadá"}, {"value":"catar","label":"Catar"},
-                    {"value":"chad","label":"Chad"}, {"value":"chile","label":"Chile"}, {"value":"china","label":"China"},
-                    {"value":"chipre","label":"Chipre"}, {"value":"ciudad_del_vaticano","label":"Ciudad del Vaticano"}, {"value":"colombia","label":"Colombia"},
-                    {"value":"comoras","label":"Comoras"}, {"value":"corea_del_norte","label":"Corea del Norte"}, {"value":"corea_del_sur","label":"Corea del Sur"},
-                    {"value":"costa_de_marfil","label":"Costa de Marfil"}, {"value":"costa_rica","label":"Costa Rica"}, {"value":"croacia","label":"Croacia"},
-                    {"value":"cuba","label":"Cuba"}, {"value":"dinamarca","label":"Dinamarca"}, {"value":"dominica","label":"Dominica"},
-                    {"value":"ecuador","label":"Ecuador"}, {"value":"egipto","label":"Egipto"}, {"value":"el_salvador","label":"El Salvador"},
-                    {"value":"emiratos_arabes_unidos","label":"Emiratos Árabes Unidos"}, {"value":"eritrea","label":"Eritrea"}, {"value":"eslovaquia","label":"Eslovaquia"},
-                    {"value":"eslovenia","label":"Eslovenia"}, {"value":"espana","label":"España"}, {"value":"estados_unidos","label":"Estados Unidos"},
-                    {"value":"estonia","label":"Estonia"}, {"value":"esuatini","label":"Esuatini"}, {"value":"etiopia","label":"Etiopía"},
-                    {"value":"filipinas","label":"Filipinas"}, {"value":"finlandia","label":"Finlandia"}, {"value":"fiyi","label":"Fiyi"},
-                    {"value":"francia","label":"Francia"}, {"value":"gabon","label":"Gabón"}, {"value":"gambia","label":"Gambia"},
-                    {"value":"georgia","label":"Georgia"}, {"value":"ghana","label":"Ghana"}, {"value":"granada","label":"Granada"},
-                    {"value":"grecia","label":"Grecia"}, {"value":"guatemala","label":"Guatemala"}, {"value":"guinea","label":"Guinea"},
-                    {"value":"guinea_ecuatorial","label":"Guinea Ecuatorial"}, {"value":"guinea_bisau","label":"Guinea-Bisáu"}, {"value":"guyana","label":"Guyana"},
-                    {"value":"haiti","label":"Haití"}, {"value":"honduras","label":"Honduras"}, {"value":"hungria","label":"Hungría"},
-                    {"value":"india","label":"India"}, {"value":"indonesia","label":"Indonesia"}, {"value":"irak","label":"Irak"},
-                    {"value":"iran","label":"Irán"}, {"value":"irlanda","label":"Irlanda"}, {"value":"islandia","label":"Islandia"},
-                    {"value":"islas_marshall","label":"Islas Marshall"}, {"value":"islas_salomon","label":"Islas Salomón"}, {"value":"israel","label":"Israel"},
-                    {"value":"italia","label":"Italia"}, {"value":"jamaica","label":"Jamaica"}, {"value":"japon","label":"Japón"},
-                    {"value":"jordania","label":"Jordania"}, {"value":"kazajistan","label":"Kazajistán"}, {"value":"kenia","label":"Kenia"},
-                    {"value":"kirguistan","label":"Kirguistán"}, {"value":"kiribati","label":"Kiribati"}, {"value":"kuwait","label":"Kuwait"},
-                    {"value":"laos","label":"Laos"}, {"value":"lesoto","label":"Lesoto"}, {"value":"letonia","label":"Letonia"},
-                    {"value":"libano","label":"Líbano"}, {"value":"liberia","label":"Liberia"}, {"value":"libia","label":"Libia"},
-                    {"value":"liechtenstein","label":"Liechtenstein"}, {"value":"lituania","label":"Lituania"}, {"value":"luxemburgo","label":"Luxemburgo"},
-                    {"value":"madagascar","label":"Madagascar"}, {"value":"malasia","label":"Malasia"}, {"value":"malaui","label":"Malaui"},
-                    {"value":"maldivas","label":"Maldivas"}, {"value":"mali","label":"Malí"}, {"value":"malta","label":"Malta"},
-                    {"value":"marruecos","label":"Marruecos"}, {"value":"mauricio","label":"Mauricio"}, {"value":"mauritania","label":"Mauritania"},
-                    {"value":"mexico","label":"México"}, {"value":"micronesia","label":"Micronesia"}, {"value":"moldavia","label":"Moldavia"},
-                    {"value":"monaco","label":"Mónaco"}, {"value":"mongolia","label":"Mongolia"}, {"value":"montenegro","label":"Montenegro"},
-                    {"value":"mozambique","label":"Mozambique"}, {"value":"namibia","label":"Namibia"}, {"value":"nauru","label":"Nauru"},
-                    {"value":"nepal","label":"Nepal"}, {"value":"nicaragua","label":"Nicaragua"}, {"value":"niger","label":"Níger"},
-                    {"value":"nigeria","label":"Nigeria"}, {"value":"noruega","label":"Noruega"}, {"value":"nueva_zelanda","label":"Nueva Zelanda"},
-                    {"value":"oman","label":"Omán"}, {"value":"paises_bajos","label":"Países Bajos"}, {"value":"pakistan","label":"Pakistán"},
-                    {"value":"palaos","label":"Palaos"}, {"value":"panama","label":"Panamá"}, {"value":"papua_nueva_guinea","label":"Papúa Nueva Guinea"},
-                    {"value":"paraguay","label":"Paraguay"}, {"value":"peru","label":"Perú"}, {"value":"polonia","label":"Polonia"},
-                    {"value":"portugal","label":"Portugal"}, {"value":"reino_unido","label":"Reino Unido"}, {"value":"republica_centroafricana","label":"República Centroafricana"},
-                    {"value":"republica_checa","label":"República Checa"}, {"value":"republica_del_congo","label":"República del Congo"}, {"value":"republica_democratica_del_congo","label":"Rep. Democrática del Congo"},
-                    {"value":"republica_dominicana","label":"República Dominicana"}, {"value":"ruanda","label":"Ruanda"}, {"value":"rumania","label":"Rumania"},
-                    {"value":"rusia","label":"Rusia"}, {"value":"samoa","label":"Samoa"}, {"value":"san_cristobal_y_nieves","label":"San Cristóbal y Nieves"},
-                    {"value":"san_marino","label":"San Marino"}, {"value":"san_vicente_y_las_granadinas","label":"San Vicente y las Granadinas"}, {"value":"santa_lucia","label":"Santa Lucía"},
-                    {"value":"santo_tome_y_principe","label":"Santo Tomé y Príncipe"}, {"value":"senegal","label":"Senegal"}, {"value":"serbia","label":"Serbia"},
-                    {"value":"seychelles","label":"Seychelles"}, {"value":"sierra_leona","label":"Sierra Leona"}, {"value":"singapur","label":"Singapur"},
-                    {"value":"siria","label":"Siria"}, {"value":"somalia","label":"Somalia"}, {"value":"sri_lanka","label":"Sri Lanka"},
-                    {"value":"sudafrica","label":"Sudáfrica"}, {"value":"sudan","label":"Sudán"}, {"value":"sudan_del_sur","label":"Sudán del Sur"},
-                    {"value":"suecia","label":"Suecia"}, {"value":"suiza","label":"Suiza"}, {"value":"surinam","label":"Surinam"},
-                    {"value":"tailandia","label":"Tailandia"}, {"value":"tanzania","label":"Tanzania"}, {"value":"tayikistan","label":"Tayikistán"},
-                    {"value":"timor_oriental","label":"Timor Oriental"}, {"value":"togo","label":"Togo"}, {"value":"tonga","label":"Tonga"},
-                    {"value":"trinidad_y_tobago","label":"Trinidad y Tobago"}, {"value":"tunez","label":"Túnez"}, {"value":"turkmenistan","label":"Turkmenistán"},
-                    {"value":"turquia","label":"Turquía"}, {"value":"tuvalu","label":"Tuvalu"}, {"value":"ucrania","label":"Ucrania"},
-                    {"value":"uganda","label":"Uganda"}, {"value":"uruguay","label":"Uruguay"}, {"value":"uzbekistan","label":"Uzbekistán"},
-                    {"value":"vanuatu","label":"Vanuatu"}, {"value":"venezuela","label":"Venezuela"}, {"value":"vietnam","label":"Vietnam"},
-                    {"value":"yemen","label":"Yemen"}, {"value":"yibuti","label":"Yibuti"}, {"value":"zambia","label":"Zambia"},
-                    {"value":"zimbabue","label":"Zimbabue"}
-                ];
-                
-                const arrayPaises = countries.map(c => ({
-                    value: c.value,
-                    label: c.label,
-                    selected: ans[1] === c.value
-                }));
-                menuPaises.clearChoices();
-                menuPaises.setChoices(arrayPaises, 'value', 'label', true);
-                
-                elementoSelect.addEventListener('change', window.updateEdadPais);
-            }
-        }, 50);
 
     } else {
         // generic spatial, single, multiple, carousel, etc.
