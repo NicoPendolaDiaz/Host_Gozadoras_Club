@@ -254,6 +254,8 @@ function renderQuestion(id, viewIdx = 0) {
     let q = QUESTIONS.find(x => x.id === id);
     if (!q) {
         console.error("Pregunta no encontrada:", id);
+        clearState();
+        go('s-splash');
         return;
     }
     
@@ -1004,7 +1006,13 @@ function startApp() {
     
     if (historyArr.length > 0) {
         let last = historyArr[historyArr.length - 1];
-        renderQuestion(last.id, last.view);
+        let q = QUESTIONS.find(x => x.id === last.id);
+        if (q) {
+            renderQuestion(last.id, last.view);
+        } else {
+            clearState();
+            go('s-splash');
+        }
     } else {
         go('s-splash');
     }
